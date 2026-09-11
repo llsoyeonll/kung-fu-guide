@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Регистрация и загрузка Легенд Кунг-Фу для Тайваньского и Приватного серверов." />
+    <title>Регистрация — Легенды Кунг-Фу</title>
+    <link rel="icon" href="favicon.ico?v=16" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
+    <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
+    <link rel="stylesheet" href="styles.css?v=39" />
+  
+    <link rel="stylesheet" href="community-auth.css?v=15" />
+    <script>document.documentElement.classList.add('nineyin-account-pending')</script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabase-config.js?v=0.0.21" defer></script>
+    <script src="account.js?v=0.0.21" defer></script>
+  </head>
+  <body>
+    <main class="site-shell inner-site-shell registration-site-shell">
+      <div class="mist" aria-hidden="true"></div>
+      <div class="golden-particles" aria-hidden="true"></div>
+      <div class="cursor-aura" aria-hidden="true"></div>
+
+      <header class="topbar" id="top">
+        <div class="topbar-inner">
+          <a class="topbar-logo" href="index.html" aria-label="Руководство Легенды Кунг-Фу — главная">
+            <span class="topbar-logo-image" aria-hidden="true"></span>
+            <span class="nine-yin-wordmark" role="img" aria-label="9 Инь"></span>
+          </a>
+          <nav class="topnav" aria-label="Основная навигация">
+            <a href="index.html">Главная</a><a href="forum/index.html">Форум</a>
+            
+            <a href="character.html">О персонаже</a>
+            <a href="partnership.html">Партнёрство и связь</a>
+            <a class="topnav-current" href="registration.html" aria-current="page">Регистрация</a>
+            <a href="topup.html">Пополнение</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="page-content registration-page-content">
+        <header class="registration-page-header">
+          <p class="collection-kicker">Начало игры</p>
+          <h1>Регистрация и установка</h1>
+          <p>Выберите сервер, создайте аккаунт и скачайте подходящую версию клиента.</p>
+        </header>
+
+        <div class="registration-server-grid">
+          <section class="registration-server-card registration-taiwan" aria-labelledby="registration-taiwan-title">
+            <header class="registration-server-heading">
+              <span class="registration-server-mark" aria-hidden="true">TW</span>
+              <div><small>Официальный сервер</small><h2 id="registration-taiwan-title">Тайвань</h2></div>
+            </header>
+
+            <div class="registration-step-list">
+              <article>
+                <span>1</span>
+                <div><h3>Создайте аккаунт</h3><p>Перейдите на официальный сайт регистрации Тайваньского сервера.</p></div>
+              </article>
+
+              <a class="registration-action-link" href="https://9y.bfage.com/account/signup/?from=http://9y.bfage.com/&amp;gid=10" target="_blank" rel="noopener noreferrer">
+                <span>Регистрация Тайвани</span><b aria-hidden="true">↗</b>
+              </a>
+
+              <aside class="registration-warning registration-warning-critical">
+                <strong>Важно!</strong>
+                <p>Номер телефона не указываем. Строку с номером телефона вообще не трогаем.</p>
+              </aside>
+
+              <article>
+                <span>2</span>
+                <div><h3>Скачайте игру и патч</h3><p>На сайте Yiuzen размещены клиент игры и необходимый патч.</p></div>
+              </article>
+
+              <a class="registration-action-link registration-download-link" href="https://yiuzen.com/" target="_blank" rel="noopener noreferrer">
+                <span>Скачать игру и патч</span><b aria-hidden="true">↗</b>
+              </a>
+
+              <aside class="registration-warning">
+                <strong>Совпадение версий</strong>
+                <p>Патч должен соответствовать текущей версии игры, иначе установить его не получится. После установки патча шрифт нормализуется благодаря английской версии: китайский текст по умолчанию отображается более жирным.</p>
+              </aside>
+
+              <section class="registration-english-patch" aria-labelledby="english-patch-title">
+                <header>
+                  <span class="registration-patch-badge" aria-hidden="true">EN</span>
+                  <div>
+                    <small>Дополнительно для Тайвани</small>
+                    <h3 id="english-patch-title">Английский патч</h3>
+                  </div>
+                </header>
+
+                <p>Английский патч находится на том же сайте, где размещена английская версия игры. Играть можно и без него — патч нужен для удобства и заменяет часть китайских символов английским текстом.</p>
+
+                <a class="registration-patch-preview" href="https://yiuzen.com/" target="_blank" rel="noopener noreferrer" aria-label="Открыть сайт и скачать английский патч">
+                  <img src="assets/taiwan-english-patch-download.png" alt="Карточка нового английского патча на сайте Yiuzen" / decoding="async" loading="lazy">
+                  <span>На сайте выберите карточку «Новый английский патч» <b aria-hidden="true">↗</b></span>
+                </a>
+
+                <div class="registration-install-guide">
+                  <h4>Установка английского патча</h4>
+                  <ol>
+                    <li>Убедитесь, что игровой клиент обновлён и запускается.</li>
+                    <li>Закройте все игровые клиенты, включая другие версии Age of Wushu.</li>
+                    <li>Скачайте английский патч на сайте Yiuzen.</li>
+                    <li>Распакуйте архив и запустите файл <code>9Y_English_Patch.exe</code>.</li>
+                    <li>Нажмите «Обзор» и выберите папку <code>res</code> в каталоге игры.</li>
+                    <li>Нажмите «Запустить патч» и дождитесь завершения установки.</li>
+                  </ol>
+                </div>
+
+                <aside class="registration-admin-warning">
+                  <span aria-hidden="true">!</span>
+                  <p><strong>Обязательно:</strong> запускайте файл патча от имени администратора.</p>
+                </aside>
+              </section>
+            </div>
+          </section>
+
+          <section class="registration-server-card registration-private" aria-labelledby="registration-private-title">
+            <header class="registration-server-heading">
+              <span class="registration-server-mark" aria-hidden="true">PS</span>
+              <div><small>Неофициальный сервер</small><h2 id="registration-private-title">Приватный сервер</h2></div>
+            </header>
+
+            <div class="registration-step-list">
+              <article>
+                <span>1</span>
+                <div><h3>Создайте аккаунт</h3><p>Откройте личный кабинет Приватного сервера и пройдите регистрацию.</p></div>
+              </article>
+
+              <a class="registration-action-link" href="http://member.jyzj.nl" target="_blank" rel="noopener noreferrer">
+                <span>Регистрация Приватного сервера</span><b aria-hidden="true">↗</b>
+              </a>
+
+              <article>
+                <span>2</span>
+                <div><h3>Скачайте клиент</h3><p>Выберите удобный вариант загрузки: отдельными частями или одним архивом.</p></div>
+              </article>
+
+              <div class="registration-download-options">
+                <a href="https://drive.google.com/drive/folders/1M7JrXypTddZzxYnTl26m3am5WznwQ8S4" target="_blank" rel="noopener noreferrer">
+                  <small>Google Drive</small><strong>Скачать по частям</strong><span aria-hidden="true">↗</span>
+                </a>
+                <a href="https://drive.google.com/file/d/17P_RZt4l9dQ-WcOioU2uZY0mLx6KKQ1H/view" target="_blank" rel="noopener noreferrer">
+                  <small>Один файл</small><strong>Скачать целиком</strong><span aria-hidden="true">↗</span>
+                </a>
+              </div>
+
+              <aside class="registration-warning registration-partner-note">
+                <strong>Русификаторы</strong>
+                <p>Актуальные русификаторы можно найти в карточках партнёров.</p>
+                <a href="partnership.html">Перейти к партнёрам →</a>
+              </aside>
+            </div>
+          </section>
+        </div>
+
+        <aside class="registration-final-note">
+          <span aria-hidden="true">!</span>
+          <div><strong>Выбирайте файлы для своего сервера</strong><p>Клиенты, патчи и русификаторы Тайвани и Приватного сервера не являются взаимозаменяемыми.</p></div>
+        </aside>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <span class="footer-ornament" aria-hidden="true"></span>
+          <p>Руководство Легенды Кунг-Фу 2026</p>
+          <span class="footer-ornament" aria-hidden="true"></span>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js?v=25" defer></script>
+      <script src="anti-copy.js?v=0.0.21" defer></script>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Жаровни и огненные механизмы Легенд Кунг-Фу: координаты, правила головоломки 5×5, особенности решения и награды." />
+    <title>Жаровни — Легенды Кунг-Фу</title>
+    <link rel="icon" href="favicon.ico?v=16" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
+    <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
+    <link rel="stylesheet" href="styles.css?v=34" />
+  
+    <link rel="stylesheet" href="community-auth.css?v=15" />
+    <script>document.documentElement.classList.add('nineyin-account-pending')</script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabase-config.js?v=0.0.21" defer></script>
+    <script src="account.js?v=0.0.21" defer></script>
+  </head>
+  <body>
+    <main class="site-shell inner-site-shell brazier-site-shell">
+      <div class="mist" aria-hidden="true"></div>
+      <div class="golden-particles" aria-hidden="true"></div>
+      <div class="cursor-aura" aria-hidden="true"></div>
+
+      <header class="topbar" id="top">
+        <div class="topbar-inner">
+          <a class="topbar-logo" href="index.html" aria-label="Руководство Легенды Кунг-Фу — главная">
+            <span class="topbar-logo-image" aria-hidden="true"></span>
+            <span class="nine-yin-wordmark" role="img" aria-label="9 Инь"></span>
+          </a>
+          <nav class="topnav" aria-label="Основная навигация">
+            <a href="index.html">Главная</a><a href="forum/index.html">Форум</a>
+            
+            <a href="character.html">О персонаже</a>
+            <a href="partnership.html">Партнёрство и связь</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="topup.html">Пополнение</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="page-content brazier-page-content">
+        <a class="brazier-back-link" href="game-content.html">← Вернуться к игровому контенту</a>
+
+        <section class="brazier-hero" aria-labelledby="brazier-title">
+          <div class="brazier-hero-copy">
+            <p class="collection-kicker">Головоломка мира</p>
+            <h1 id="brazier-title">Жаровни</h1>
+            <p class="brazier-hero-subtitle">Огненные механизмы</p>
+            <p>Активируйте все жаровни на поле 5×5, учитывая соседние клетки, сломанные механизмы и необычное поведение четвёртого ряда.</p>
+          </div>
+          <figure class="brazier-hero-art">
+            <img src="assets/braziers-fire-mechanism.webp?v=34" alt="Поле огненного механизма с зажжёнными и погасшими жаровнями" / decoding="async" loading="lazy">
+          </figure>
+        </section>
+
+        <section class="brazier-section" aria-labelledby="brazier-about-title">
+          <header class="brazier-section-heading">
+            <span class="card-kicker">Начало головоломки</span>
+            <h2 id="brazier-about-title">Где найти огненный механизм</h2>
+          </header>
+
+          <div class="brazier-location-grid">
+            <article><span>СЧ</span><div><small>Локация</small><h3>Сучжоу</h3><strong>(1325, 750)</strong></div></article>
+            <article><span>ДБ</span><div><small>Локация</small><h3>Долина Блаженных</h3><strong>(−139, 786)</strong></div></article>
+          </div>
+
+          <div class="brazier-about-copy">
+            <p><strong>Огненный механизм</strong> — головоломка, которую можно найти в двух указанных местах. У игроков с VIP-статусом есть небольшой шанс активировать VIP-случайную встречу после решения.</p>
+            <p>Головоломка доступна большую часть времени, но иногда может становиться недоступной на 1–2 часа. При входе в зону появляется случайный набор включённых и выключенных жаровен 5×5. Если поле не появилось, механизм временно недоступен.</p>
+          </div>
+        </section>
+
+        <section class="brazier-section" aria-labelledby="brazier-goal-title">
+          <header class="brazier-section-heading">
+            <span class="card-kicker">Правила</span>
+            <h2 id="brazier-goal-title">Цель и сброс поля</h2>
+          </header>
+
+          <div class="brazier-rule-grid">
+            <article>
+              <span aria-hidden="true">01</span>
+              <h3>Зажгите всё поле</h3>
+              <p>Цель — активировать все жаровни. Нажатие переключает выбранную жаровню и связанные с ней соседние позиции.</p>
+            </article>
+            <article>
+              <span aria-hidden="true">02</span>
+              <h3>Учитывайте поломки</h3>
+              <p>На поле находятся три «сломанные» жаровни. Их нельзя переключить из некоторых соседних положений.</p>
+            </article>
+            <article>
+              <span aria-hidden="true">03</span>
+              <h3>Сбросьте нерешаемое поле</h3>
+              <p>Не все комбинации решаемы. Выйдите из зоны головоломки и войдите обратно, чтобы получить новый случайный набор.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="brazier-section" aria-labelledby="brazier-patterns-title">
+          <header class="brazier-section-heading">
+            <span class="card-kicker">Схемы нажатий</span>
+            <h2 id="brazier-patterns-title">Какие жаровни переключаются</h2>
+            <p>Золотая клетка — нажатая жаровня, оранжевые клетки — позиции, которые переключаются вместе с ней.</p>
+          </header>
+
+          <div class="brazier-pattern-grid">
+            <article class="brazier-pattern-card">
+              <div class="brazier-mini-grid" aria-label="Схема нажатия угловой жаровни">
+                <i class="pressed"></i><i class="affected"></i><i></i>
+                <i class="affected"></i><i></i><i></i>
+                <i></i><i></i><i></i>
+              </div>
+              <h3>Угловая</h3>
+              <p>Переключается нажатая жаровня и две соседние по краям.</p>
+            </article>
+
+            <article class="brazier-pattern-card">
+              <div class="brazier-mini-grid" aria-label="Схема нажатия крайней неугловой жаровни">
+                <i class="affected"></i><i class="pressed"></i><i class="affected"></i>
+                <i></i><i class="affected"></i><i></i>
+                <i></i><i></i><i></i>
+              </div>
+              <h3>Крайняя, не угловая</h3>
+              <p>Переключаются горизонтальные соседи и ближайшая жаровня по вертикали внутрь поля.</p>
+            </article>
+
+            <article class="brazier-pattern-card">
+              <div class="brazier-mini-grid" aria-label="Схема нажатия центральной жаровни">
+                <i></i><i class="affected"></i><i></i>
+                <i class="affected"></i><i class="pressed"></i><i class="affected"></i>
+                <i></i><i class="affected"></i><i></i>
+              </div>
+              <h3>Срединная</h3>
+              <p>Переключается нажатая жаровня и четыре соседние: сверху, снизу, слева и справа.</p>
+            </article>
+          </div>
+
+          <aside class="brazier-special-rule">
+            <span aria-hidden="true">4</span>
+            <div><strong>Особенность четвёртого ряда</strong><p>Жаровни четвёртого ряда не зажигают третий ряд. Из-за этого обычная схема решения становится заметно сложнее.</p></div>
+          </aside>
+
+          <aside class="brazier-critical-warning">
+            <span aria-hidden="true">!</span>
+            <p><strong>Если жаровни в первой строке не зажглись, начните головоломку заново.</strong> Выйдите из зоны и вернитесь, чтобы сгенерировать новое поле.</p>
+          </aside>
+        </section>
+
+        <section class="brazier-section" aria-labelledby="brazier-rewards-title">
+          <header class="brazier-section-heading">
+            <span class="card-kicker">После решения</span>
+            <h2 id="brazier-rewards-title">Награды</h2>
+            <p>После активации всех жаровен поговорите с Му Жунхуа.</p>
+          </header>
+
+          <div class="brazier-reward-grid">
+            <article class="brazier-reward-main"><small>Гарантированная награда</small><strong>20 Травы Галок</strong></article>
+            <article><small>Случайная награда</small><strong>Порошок Поглощения Нечисти</strong></article>
+            <article><small>Случайная награда</small><strong>Вино Зелени Листьев Бамбука</strong></article>
+            <article><small>Случайная награда</small><strong>Дрожжевое Вино</strong></article>
+            <article><small>Случайная награда</small><strong>Запечённая курица</strong></article>
+          </div>
+        </section>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <span class="footer-ornament" aria-hidden="true"></span>
+          <p>Руководство Легенды Кунг-Фу 2026</p>
+          <span class="footer-ornament" aria-hidden="true"></span>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js?v=25" defer></script>
+      <script src="anti-copy.js?v=0.0.21" defer></script>
+  </body>
+</html>

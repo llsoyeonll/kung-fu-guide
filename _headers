@@ -1,0 +1,36 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), display-capture=()
+  Cross-Origin-Opener-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Permitted-Cross-Domain-Policies: none
+  X-Robots-Tag: noarchive, noimageindex
+  Content-Security-Policy: frame-ancestors 'none'; object-src 'none'; base-uri 'self'
+
+/*.html
+  Cache-Control: private, no-store, max-age=0
+
+/assets/*
+  Cross-Origin-Resource-Policy: same-origin
+  Cache-Control: public, max-age=604800
+
+/forum/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), display-capture=()
+  X-Robots-Tag: noarchive, noimageindex
+
+/*.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/forum/*.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/*.css
+  Cache-Control: public, max-age=604800
+
+/forum/*.css
+  Cache-Control: public, max-age=604800

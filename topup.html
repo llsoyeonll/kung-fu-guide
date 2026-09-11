@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Способы пополнения золота в Легендах Кунг-Фу: оплата картой VISA и контакты селлеров Тайвани и Пиратки." />
+    <title>Пополнение — Легенды Кунг-Фу</title>
+    <link rel="icon" href="favicon.ico?v=16" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
+    <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
+    <link rel="stylesheet" href="styles.css?v=33" />
+  
+    <link rel="stylesheet" href="community-auth.css?v=15" />
+    <script>document.documentElement.classList.add('nineyin-account-pending')</script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabase-config.js?v=0.0.21" defer></script>
+    <script src="account.js?v=0.0.21" defer></script>
+  </head>
+  <body>
+    <main class="site-shell inner-site-shell">
+      <div class="mist" aria-hidden="true"></div>
+      <div class="golden-particles" aria-hidden="true"></div>
+      <div class="cursor-aura" aria-hidden="true"></div>
+
+      <header class="topbar" id="top">
+        <div class="topbar-inner">
+          <a class="topbar-logo" href="index.html" aria-label="Руководство Легенды Кунг-Фу — главная">
+            <span class="topbar-logo-image" aria-hidden="true"></span>
+            <span class="nine-yin-wordmark" role="img" aria-label="9 Инь"></span>
+          </a>
+          <nav class="topnav" aria-label="Основная навигация">
+            <a href="index.html">Главная</a><a href="forum/index.html">Форум</a>
+            
+            <a href="character.html">О персонаже</a>
+            <a href="partnership.html">Партнёрство и связь</a>
+            <a href="registration.html">Регистрация</a>
+            <a class="topnav-current" href="topup.html" aria-current="page">Пополнение</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="page-content topup-page-content">
+        <header class="topup-page-header">
+          <p class="collection-kicker">Игровые услуги</p>
+          <h1>Пополнение золота</h1>
+          <p>Способы пополнения игрового баланса для игроков Тайвани и Приватного сервера.</p>
+        </header>
+
+        <section class="topup-intro" aria-labelledby="topup-intro-title">
+          <div class="topup-intro-copy">
+            <span class="card-kicker">Перед пополнением</span>
+            <h2 id="topup-intro-title">Российские карты не поддерживаются</h2>
+            <p>После установки игры и создания персонажа вы можете столкнуться с тем, что оплатить золото российской банковской картой не получится.</p>
+            <p>Для прямой оплаты необходима поддерживаемая карта <strong>VISA</strong>. Другой вариант — обратиться к одному из указанных ниже селлеров.</p>
+          </div>
+
+          <aside class="topup-rate-notice">
+            <span aria-hidden="true">$</span>
+            <div>
+              <strong>Стоимость может меняться</strong>
+              <p>Сумма пополнения зависит от текущего курса доллара. Перед переводом обязательно уточните у селлера актуальную цену.</p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="topup-sellers" aria-labelledby="topup-sellers-title">
+          <header class="topup-section-heading">
+            <span class="card-kicker">Контакты и расценки</span>
+            <h2 id="topup-sellers-title">Выберите нужный сервер</h2>
+            <p>Свяжитесь с селлером и согласуйте сумму, способ оплаты и порядок зачисления.</p>
+          </header>
+
+          <div class="topup-seller-grid">
+            <article class="topup-seller-card topup-seller-taiwan">
+              <span class="topup-seller-art" role="img" aria-label="Селлер Тайвани"></span>
+              <div class="topup-seller-copy">
+                <p class="topup-server-label"><span aria-hidden="true">✦</span> Тайваньский сервер</p>
+                <h3>Селлер Тайвани</h3>
+                <p class="topup-seller-description">У данного селлера можно пополнить золото без дополнительных вложений.</p>
+
+                <div class="topup-price-list" aria-label="Примерные расценки селлера Тайвани">
+                  <div><span>100 золота</span><strong>1044 ₽</strong></div>
+                  <div><span>20 золота</span><strong>270 ₽</strong></div>
+                  <div><span>5 долларов</span><strong>405 ₽</strong></div>
+                </div>
+
+                <a class="topup-contact-link" href="https://vk.ru/id273832270" target="_blank" rel="noopener noreferrer">
+                  <span class="topup-contact-symbol" aria-hidden="true">VK</span>
+                  <span><small>Связаться с селлером</small><strong>Открыть страницу ВК</strong></span>
+                  <b aria-hidden="true">↗</b>
+                </a>
+              </div>
+            </article>
+
+            <article class="topup-seller-card topup-seller-pirate">
+              <span class="topup-seller-art" role="img" aria-label="Селлер Пиратки"></span>
+              <div class="topup-seller-copy">
+                <p class="topup-server-label"><span aria-hidden="true">✦</span> Приватный сервер</p>
+                <h3>Селлер Пиратки</h3>
+                <p class="topup-seller-description">У данного селлера можно пополнить золото на Пиратке.</p>
+
+                <div class="topup-price-list topup-price-list-single" aria-label="Примерная стоимость золота на Пиратке">
+                  <div><span>1000 золота</span><strong>1300 ₽</strong></div>
+                </div>
+
+                <aside class="topup-seller-note">
+                  <strong>Где быстрее ответят</strong>
+                  <p>Селлер чаще бывает в Discord, чем во ВКонтакте. Ссылка на Discord указана в записи на странице ВК.</p>
+                </aside>
+
+                <a class="topup-contact-link" href="https://vk.ru/monuel_djey" target="_blank" rel="noopener noreferrer">
+                  <span class="topup-contact-symbol" aria-hidden="true">VK</span>
+                  <span><small>Контакты и Discord</small><strong>Открыть страницу ВК</strong></span>
+                  <b aria-hidden="true">↗</b>
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="pirate-crypto-topup" aria-labelledby="pirate-crypto-title">
+          <div class="pirate-crypto-copy">
+            <header>
+              <span class="card-kicker">Пополнение Пиратки</span>
+              <h2 id="pirate-crypto-title">Подарочная карта Binance в USDT</h2>
+              <p>На данный момент пополнение золота на Приватном сервере выполняется с помощью криптовалюты — например, через подарочную карту Binance в USDT.</p>
+            </header>
+
+            <ol class="pirate-crypto-steps">
+              <li><span>1</span><p>Купите подарочную карту Binance на необходимую сумму в <strong>USDT</strong>.</p></li>
+              <li><span>2</span><p>Свяжитесь в Discord с пользователем <code>the_paracetamol_ultra</code> и отправьте ему подарочную карту.</p></li>
+              <li><span>3</span><p>Получите подарочный промокод и активируйте его в личном кабинете Приватного сервера.</p></li>
+            </ol>
+
+            <div class="pirate-crypto-actions">
+              <div class="pirate-discord-contact">
+                <span aria-hidden="true">D</span>
+                <p><small>Контакт в Discord</small><strong>the_paracetamol_ultra</strong></p>
+              </div>
+
+              <a class="pirate-account-link" href="https://member.jyzj.nl/" target="_blank" rel="noopener noreferrer">
+                <span>ЛК</span>
+                <p><small>Активация промокода</small><strong>Открыть личный кабинет</strong></p>
+                <b aria-hidden="true">↗</b>
+              </a>
+            </div>
+
+            <aside class="pirate-crypto-warning">
+              <strong>Перед отправкой карты</strong>
+              <p>Убедитесь, что имя Discord написано точно: <code>the_paracetamol_ultra</code>. Криптовалютные операции обычно нельзя отменить, поэтому заранее уточните сумму и порядок обмена.</p>
+            </aside>
+          </div>
+
+          <figure class="pirate-gift-card-art">
+            <img src="assets/binance-usdt-gift-card.png?v=33" alt="Пример подарочной карты Binance номиналом 100 USDT" / decoding="async" loading="lazy">
+            <figcaption><span>Пример</span><strong>Binance Gift Card · 100 USDT</strong></figcaption>
+          </figure>
+        </section>
+
+        <aside class="topup-safety-note">
+          <span aria-hidden="true">!</span>
+          <div>
+            <strong>Безопасность сделки</strong>
+            <p>Не передавайте пароль от игрового аккаунта и данные банковской карты. До оплаты уточните итоговую сумму и способ получения золота.</p>
+          </div>
+        </aside>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <span class="footer-ornament" aria-hidden="true"></span>
+          <p>Руководство Легенды Кунг-Фу 2026</p>
+          <span class="footer-ornament" aria-hidden="true"></span>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js?v=8" defer></script>
+      <script src="anti-copy.js?v=0.0.21" defer></script>
+  </body>
+</html>

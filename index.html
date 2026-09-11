@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Руководство по школам, фракциям, нейгунам, меридианам, навыкам и предметам мира Легенды Кунг-Фу."
+    />
+    <title>Руководство Легенды Кунг-Фу</title>
+    <link rel="icon" href="favicon.ico?v=16" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
+    <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
+    <link rel="stylesheet" href="styles.css?v=54" />
+  
+    <link rel="stylesheet" href="community-auth.css?v=15" />
+    <script>document.documentElement.classList.add('nineyin-account-pending')</script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabase-config.js?v=0.0.21" defer></script>
+    <script src="account.js?v=0.0.21" defer></script>
+  </head>
+  <body class="compact-home">
+    <main class="site-shell">
+      <div class="mist" aria-hidden="true"></div>
+      <div class="golden-particles" aria-hidden="true"></div>
+      <div class="cursor-aura" aria-hidden="true"></div>
+
+      <header class="topbar" id="top">
+        <div class="topbar-inner">
+          <a class="topbar-logo" href="index.html" aria-label="Руководство Легенды Кунг-Фу — главная">
+            <span class="topbar-logo-image" aria-hidden="true"></span>
+            <span class="nine-yin-wordmark" role="img" aria-label="9 Инь"></span>
+          </a>
+          <nav class="topnav" aria-label="Основная навигация">
+            <a class="topnav-current" href="index.html" aria-current="page">Главная</a><a href="forum/index.html">Форум</a>
+            
+            <a href="character.html">О персонаже</a>
+            <a href="partnership.html">Партнёрство и связь</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="topup.html">Пополнение</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="page-content home-content">
+        <header class="hero-header">
+          <span
+            class="hero-title-image"
+            role="img"
+            aria-label="Руководство Легенды Кунг-Фу"
+          ></span>
+          <div class="hero-subtitle-line" aria-hidden="true">
+            <span></span>
+            <p>Всё, что нужно знать мастеру</p>
+            <span></span>
+          </div>
+        </header>
+
+        <nav class="primary-guide" id="sections" aria-label="Основные разделы руководства">
+          <a class="guide-card guide-card-compact" id="novichkam" href="beginners.html">
+            <span class="guide-icon guide-icon-1" aria-hidden="true"></span>
+            <span class="compact-copy">
+              <h2>Справочник новичкам</h2>
+              <p>Первые шаги, основы развития и полезные советы</p>
+              <span class="guide-action"><span>Подробнее</span><span class="guide-arrow" aria-hidden="true">→</span></span>
+            </span>
+          </a>
+
+          <a class="guide-card guide-card-compact" id="schools" href="schools.html">
+            <span class="guide-icon guide-icon-2" aria-hidden="true"></span>
+            <span class="compact-copy">
+              <h2>Школы, Фракции, Секты</h2>
+              <p>Пути развития и требования для вступления</p>
+              <span class="guide-action"><span>Подробнее</span><span class="guide-arrow" aria-hidden="true">→</span></span>
+            </span>
+          </a>
+
+          <a class="guide-card guide-card-compact" id="neiguns" href="#neiguns">
+            <span class="guide-icon guide-icon-3" aria-hidden="true"></span>
+            <span class="compact-copy">
+              <h2>Нейгуны</h2>
+              <p>Внутренняя сила и развитие энергии</p>
+              <span class="guide-action"><span>Подробнее</span><span class="guide-arrow" aria-hidden="true">→</span></span>
+            </span>
+          </a>
+
+          <a class="guide-card guide-card-compact" id="meridians" href="#meridians">
+            <span class="guide-icon guide-icon-4" aria-hidden="true"></span>
+            <span class="compact-copy">
+              <h2>Меридианы</h2>
+              <p>Каналы, усиления и схемы развития</p>
+              <span class="guide-action"><span>Подробнее</span><span class="guide-arrow" aria-hidden="true">→</span></span>
+            </span>
+          </a>
+
+          <a class="guide-card guide-card-compact" id="skills" href="#skills">
+            <span class="guide-icon guide-icon-5" aria-hidden="true"></span>
+            <span class="compact-copy">
+              <h2>Навыки</h2>
+              <p>Боевые приёмы и особенности применения</p>
+              <span class="guide-action"><span>Подробнее</span><span class="guide-arrow" aria-hidden="true">→</span></span>
+            </span>
+          </a>
+        </nav>
+
+        <div class="utility-row">
+          <a class="collection-entry" href="items.html" aria-label="Открыть Хранилище предметов">
+            <span class="collection-entry-copy">
+              <span class="card-kicker">Отдельный каталог</span>
+              <h2>Хранилище предметов</h2>
+              <p>Изображения и описания предметов, артефактов, еды, ресурсов и экипировки.</p>
+            </span>
+            <span class="collection-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="collection-entry other-entry" href="other.html" aria-label="Открыть раздел Остальное">
+            <span class="collection-entry-copy">
+              <span class="card-kicker">Люди, животные и истории</span>
+              <h2>Остальное</h2>
+              <p>NPC, животный мир и задания Легенд Кунг-Фу.</p>
+            </span>
+            <span class="collection-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="collection-entry game-content-entry" href="game-content.html" aria-label="Открыть Игровой контент">
+            <span class="collection-entry-copy">
+              <span class="card-kicker">Испытания и приключения</span>
+              <h2>Игровой Контент</h2>
+              <p>Башни, арены, острова, пески, миражи и другие игровые активности.</p>
+            </span>
+            <span class="collection-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <section class="thanks-card home-support" id="thanks" aria-labelledby="thanks-title">
+        <div class="thanks-copy">
+          <p class="thanks-kicker">Поддержать автора</p>
+          <h2 id="thanks-title"><span aria-hidden="true">♡</span>Сказать Спасибо</h2>
+          <p>Отсканируйте QR-код или нажмите на него</p>
+        </div>
+
+        <a
+          class="qr-link"
+          href="https://yoomoney.ru/fundraise/1JGO3PMF9RM.260807"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Открыть страницу поддержки автора"
+        >
+          <span class="qr-frame">
+            <span class="qr-code-image" role="img" aria-label="QR-код для поддержки автора"></span>
+          </span>
+          <span>Нажмите, чтобы открыть</span>
+        </a>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <span class="footer-ornament" aria-hidden="true"></span>
+          <p>Руководство Легенды Кунг-Фу 2026</p>
+          <span class="footer-ornament" aria-hidden="true"></span>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js?v=8" defer></script>
+      <script src="anti-copy.js?v=0.0.21" defer></script>
+  </body>
+</html>

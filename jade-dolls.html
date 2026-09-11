@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Гайд по Яшмовым Куклам, очистке, замене и улучшению атрибутов в Легендах Кунг-Фу." />
+    <title>Гайд по Яшмовым Куклам — Легенды Кунг-Фу</title>
+    <link rel="icon" href="favicon.ico?v=16" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
+    <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
+    <link rel="stylesheet" href="styles.css?v=54" />
+  
+    <link rel="stylesheet" href="community-auth.css?v=15" />
+    <script>document.documentElement.classList.add('nineyin-account-pending')</script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabase-config.js?v=0.0.21" defer></script>
+    <script src="account.js?v=0.0.21" defer></script>
+  </head>
+  <body>
+    <main class="site-shell inner-site-shell">
+      <div class="mist" aria-hidden="true"></div><div class="golden-particles" aria-hidden="true"></div><div class="cursor-aura" aria-hidden="true"></div>
+      <header class="topbar" id="top"><div class="topbar-inner"><a class="topbar-logo" href="index.html" aria-label="Руководство Легенды Кунг-Фу — главная"><span class="topbar-logo-image" aria-hidden="true"></span><span class="nine-yin-wordmark" role="img" aria-label="9 Инь"></span></a><nav class="topnav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="forum/index.html">Форум</a><a href="character.html">О персонаже</a><a href="partnership.html">Партнёрство и связь</a><a href="registration.html">Регистрация</a><a href="topup.html">Пополнение</a></nav></div></header>
+
+      <article class="page-content jade-doll-guide-page">
+        <nav class="inner-breadcrumb" aria-label="Навигационная цепочка"><a href="index.html">Главная</a><span>›</span><a href="beginners.html">Справочник новичкам</a><span>›</span><span>Яшмовые Куклы</span></nav>
+
+        <header class="jade-doll-hero">
+          <div class="jade-doll-hero-copy">
+            <p class="collection-kicker">Дополнительные характеристики</p>
+            <h1>Гайд по куклам<br />Легенды Кунг-Фу</h1>
+            <p class="jade-doll-byline">Сделано для сайта «Руководство Легенды Кунг-Фу»</p>
+            <p class="jade-doll-author"><span>Автор</span><strong>Soyeon</strong></p>
+          </div>
+          <img src="assets/jade-doll-icon.svg?v=49" alt="Яшмовая кукла" / decoding="async" loading="lazy">
+        </header>
+
+        <section class="jade-doll-intro" aria-labelledby="jade-dolls-title">
+          <div class="jade-doll-section-heading"><span>01</span><div><p>Назначение предмета</p><h2 id="jade-dolls-title">Яшмовые Куклы</h2></div></div>
+          <div class="jade-doll-intro-grid">
+            <div class="jade-doll-prose">
+              <p><strong>Яшмовые Куклы</strong> — вспомогательные предметы, которые дают персонажу дополнительные характеристики.</p>
+              <p>Для очистки используются <strong>Ваучеры Яшмовой Куклы</strong>. Быструю очистку можно провести при наличии этих ваучеров.</p>
+            </div>
+            <figure class="jade-doll-item-card"><img src="assets/jade-doll-item.png?v=50" alt="Яшмовая Кукла" draggable="false" / decoding="async" loading="lazy"><figcaption>Яшмовая Кукла</figcaption></figure>
+            <aside class="jade-doll-voucher-note"><strong>Быстрая очистка</strong><p>Проверьте количество Ваучеров Яшмовой Куклы перед началом очистки.</p></aside>
+          </div>
+        </section>
+
+        <section class="jade-doll-section" aria-labelledby="builds-title">
+          <div class="jade-doll-section-heading"><span>02</span><div><p>Основные направления</p><h2 id="builds-title">Обычно куклы собираются против</h2></div></div>
+          <div class="jade-doll-builds-grid">
+            <article><span class="jade-doll-damage-mark damage-external">ВН</span><div><h3>Сомкнутые Пальцы</h3><p>Характеристики против <strong>внешнего урона</strong>.</p></div></article>
+            <article><span class="jade-doll-damage-mark damage-zhen">ЖЕН</span><div><h3>Снежный Пост</h3><p>Характеристики против <strong>Жен урона</strong>.</p></div></article>
+            <article><span class="jade-doll-damage-mark damage-man">МУЖ</span><div><h3>Дланей Будды</h3><p>Характеристики против <strong>Муж урона</strong>.</p></div></article>
+          </div>
+        </section>
+
+        <section class="jade-doll-section jade-doll-stats-section" aria-labelledby="stats-title">
+          <div class="jade-doll-section-heading"><span>03</span><div><p>Полный список параметров</p><h2 id="stats-title">Характеристики куклы</h2></div></div>
+
+          <aside class="jade-doll-stats-warning"><span aria-hidden="true">!</span><div><strong>В вашей кукле не должно быть</strong><p>Здоровья, Ци и Стойкости блока. Эти характеристики не оставляем при сборке куклы.</p></div></aside>
+
+          <div class="jade-doll-stats-layout">
+            <figure class="jade-doll-stats-image"><img src="assets/jade-doll-stats.svg?v=52" alt="Чёткая таблица характеристик Яшмовой Куклы" draggable="false" / decoding="async" loading="lazy"><figcaption>Все характеристики Яшмовой Куклы</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="jade-doll-section" aria-labelledby="actions-title">
+          <div class="jade-doll-section-heading"><span>04</span><div><p>Действия с куклой</p><h2 id="actions-title">Основные возможности</h2></div></div>
+          <div class="jade-doll-actions-grid">
+            <article><span>ЗМ</span><h3>Замена</h3><p>Выберите улучшенный атрибут для замены дополнительного атрибута. Яшмовой Кукле нельзя назначить несколько дополнительных атрибутов одного типа.</p></article>
+            <article><span>ОЧ</span><h3>Очистка</h3><p>Используйте Серебро или Ваучеры Яшмовой Куклы для заточки и получения дополнительных атрибутов. Стоимость серебряной заточки увеличивается с каждым использованием и сбрасывается на следующий день.</p></article>
+            <article><span>МД</span><h3>Модернизация</h3><p>Используется для повышения уровня и значения дополнительных атрибутов. Качество атрибута определяет величину увеличения параметров.</p></article>
+          </div>
+        </section>
+
+        <section class="jade-doll-section jade-doll-cleaning-section" aria-labelledby="cleaning-title">
+          <div class="jade-doll-section-heading"><span>05</span><div><p>Игровой интерфейс</p><h2 id="cleaning-title">Очистка куклы</h2></div></div>
+          <div class="jade-doll-cleaning-grid">
+            <figure><img src="assets/jade-doll-cleaning.png?v=49" alt="Окно очистки Яшмовой Куклы" draggable="false" / decoding="async" loading="lazy"><figcaption>Окно очистки и улучшения Яшмовой Куклы</figcaption></figure>
+            <aside class="jade-doll-journal-note"><span>!</span><div><strong>Подсказка</strong><p>Журнал сохраняет характеристики, полученные при очистке. После выхода из системы журнал очищается. Информация журнала отображается в каталоге <code>bin64</code> игрового клиента.</p></div></aside>
+          </div>
+        </section>
+
+        <section class="jade-doll-section" aria-labelledby="rules-title">
+          <div class="jade-doll-section-heading"><span>06</span><div><p>Порядок использования</p><h2 id="rules-title">Правила</h2></div></div>
+          <ol class="jade-doll-rules">
+            <li><span>01</span><div><h3>Заточка</h3><p>Перетащите Яшмовую Куклу Золотого или Яшмового качества из рюкзака в слот в верхней части левой панели либо щёлкните по ней правой кнопкой мыши. Нажмите «Заточить», чтобы использовать Серебро или Ваучеры Яшмовой Куклы. После заточки кукла случайным образом получает дополнительные атрибуты Медного, Серебряного, Золотого или Яшмового качества, а также некоторое количество Халцедонов.</p></div></li>
+            <li><span>02</span><div><h3>Замена</h3><p>Если у куклы меньше 5 дополнительных атрибутов, улучшенный атрибут можно добавить к текущим либо использовать для замены одного из них. Если у куклы уже 5 дополнительных атрибутов, доступна только замена одного из текущих.</p></div></li>
+            <li><span>03</span><div><h3>Ограничение атрибутов</h3><p>Яшмовой Кукле нельзя назначить несколько дополнительных атрибутов одного типа. Если заменяемый атрибут имеет уровень выше первого, при замене вы получите некоторое количество Халцедонов в зависимости от его уровня.</p></div></li>
+            <li><span>04</span><div><h3>Улучшение</h3><p>Дополнительный атрибут, полученный через заточку, имеет 1-й уровень. Нажмите «Улучшить», чтобы потратить Халцедоны и повысить уровень атрибута. Халцедоны можно получить при заточке и замене. Качество Яшмовой Куклы определяет возможность повышения уровня, а качество дополнительного атрибута — величину прироста параметров.</p></div></li>
+          </ol>
+        </section>
+
+        <a class="meridian-back-link" href="beginners.html"><span aria-hidden="true">←</span> Вернуться в справочник новичка</a>
+      </article>
+
+      <footer class="site-footer"><div class="footer-inner"><span class="footer-ornament" aria-hidden="true"></span><p>Руководство Легенды Кунг-Фу 2026</p><span class="footer-ornament" aria-hidden="true"></span></div></footer>
+    </main><script src="script.js?v=8" defer></script>
+      <script src="anti-copy.js?v=0.0.21" defer></script>
+  </body>
+</html>

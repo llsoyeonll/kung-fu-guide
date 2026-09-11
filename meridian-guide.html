@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Гайд по акупунктуре, энергии Ци, техникам и Пилюлям Ганодермы в Легендах Кунг-Фу." />
+    <title>Гайд по акупунктуре — Легенды Кунг-Фу</title>
+    <link rel="icon" href="favicon.ico?v=16" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
+    <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
+    <link rel="stylesheet" href="styles.css?v=41" />
+  
+    <link rel="stylesheet" href="community-auth.css?v=15" />
+    <script>document.documentElement.classList.add('nineyin-account-pending')</script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabase-config.js?v=0.0.21" defer></script>
+    <script src="account.js?v=0.0.21" defer></script>
+  </head>
+  <body>
+    <main class="site-shell inner-site-shell">
+      <div class="mist" aria-hidden="true"></div>
+      <div class="golden-particles" aria-hidden="true"></div>
+      <div class="cursor-aura" aria-hidden="true"></div>
+
+      <header class="topbar" id="top">
+        <div class="topbar-inner">
+          <a class="topbar-logo" href="index.html" aria-label="Руководство Легенды Кунг-Фу — главная">
+            <span class="topbar-logo-image" aria-hidden="true"></span>
+            <span class="nine-yin-wordmark" role="img" aria-label="9 Инь"></span>
+          </a>
+          <nav class="topnav" aria-label="Основная навигация">
+            <a href="index.html">Главная</a><a href="forum/index.html">Форум</a>
+            
+            <a href="character.html">О персонаже</a>
+            <a href="partnership.html">Партнёрство и связь</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="topup.html">Пополнение</a>
+          </nav>
+        </div>
+      </header>
+
+      <article class="page-content acupuncture-guide-page">
+        <nav class="inner-breadcrumb" aria-label="Навигационная цепочка">
+          <a href="index.html">Главная</a><span>›</span>
+          <a href="beginners.html">Справочник новичкам</a><span>›</span>
+          <span>Гайд по акупунктуре</span>
+        </nav>
+
+        <header class="acupuncture-hero">
+          <div class="acupuncture-hero-copy">
+            <p class="collection-kicker">Система развития персонажа</p>
+            <h1>Гайд по акупунктуре<br />Легенды Кунг-Фу</h1>
+            <p class="acupuncture-byline">Сделано для сайта «Руководство Легенды Кунг-Фу»</p>
+            <p class="acupuncture-author"><span>Автор</span><strong>Soyeon</strong></p>
+          </div>
+          <img src="assets/meridian-guide-icon.svg" alt="Схема энергетических точек акупунктуры" / decoding="async" loading="lazy">
+        </header>
+
+        <section class="acupuncture-intro" aria-labelledby="meridians-title">
+          <div class="acupuncture-section-heading">
+            <span>01</span>
+            <div><p>Основа развития</p><h2 id="meridians-title">Меридианы</h2></div>
+          </div>
+          <div class="acupuncture-prose">
+            <p><strong>Меридианы</strong> — это система развития персонажа. Повышение их уровня улучшает характеристики героя: здоровье, Ци, критический удар и защиту от нейгунов. Для развития меридианов требуется Ци, которую можно получить в бою, за участие в активностях, использование бытовых навыков и с помощью Пилюль Ци.</p>
+            <p>Каждая Великая школа имеет собственные связанные <strong>Меридиан</strong> и <strong>Обратный Меридиан</strong>. У каждого меридиана есть несколько каналов с акупунктурными точками. Открытие этих узлов повышает максимальный уровень меридиана. Продвижение по точкам тесно связано с развитием внутренних искусств школы.</p>
+          </div>
+          <aside class="acupuncture-limit-callout">
+            <span class="acupuncture-limit-value">3 <i>→</i> 8</span>
+            <p>Изначально доступны только 3 активных меридиана. С помощью Пилюль Ганодермы лимит можно увеличить до 8.</p>
+          </aside>
+        </section>
+
+        <section class="acupuncture-section" aria-labelledby="concepts-title">
+          <div class="acupuncture-section-heading">
+            <span>02</span>
+            <div><p>Термины системы</p><h2 id="concepts-title">Основные понятия</h2></div>
+          </div>
+          <div class="acupuncture-concepts-grid">
+            <article><span>КТ</span><h3>Канал и точки</h3><p>У каждого меридиана есть определённое количество точек. Например, у меридиана Ци их 8.</p></article>
+            <article><span>ОБ</span><h3>Оборот</h3><p>Уровни развития акупунктуры.</p></article>
+            <article><span>С</span><h3>Сокровище</h3><p>Предмет, увеличивающий характеристику акупунктуры. Каждое сокровище имеет собственный параметр.</p></article>
+            <article><span>Т</span><h3>Техника</h3><p>Пассивное умение, которое становится доступно после открытия меридиана.</p></article>
+            <article><span>ОТ</span><h3>Очки техник</h3><p>Начисляются за открытие акупунктурных точек.</p></article>
+            <article><span>СЛ</span><h3>Слоты техник</h3><p>Необходимы для использования техник и открываются за очки техник. Первый слот стоит 1 очко, каждый следующий — вдвое больше.</p></article>
+            <article><span>ЦИ</span><h3>Истинная Ци</h3><p>Аналог очков умений. Используется для развития акупунктуры и повышения уровня каналов.</p></article>
+          </div>
+          <div class="acupuncture-slot-summary">
+            <div><strong>8</strong><span>слотов техник доступно сейчас</span></div>
+            <div><strong>355</strong><span>очков — суммарная стоимость</span></div>
+          </div>
+          <aside class="acupuncture-art-note"><strong>Умения Искусства</strong> помогают убрать стадию приёма «Оттяг» и сразу нанести следующий удар. При этом игроки не могут самостоятельно менять умения Искусства.</aside>
+        </section>
+
+        <section class="acupuncture-section qi-section" aria-labelledby="qi-title">
+          <div class="acupuncture-section-heading">
+            <span>03</span>
+            <div><p>Ресурс развития</p><h2 id="qi-title">Ци</h2></div>
+          </div>
+          <div class="qi-overview-grid">
+            <div class="acupuncture-prose">
+              <p><strong>Ци</strong> — это опыт, необходимый для повышения уровня меридианов. Ежедневное количество Ци определяется рангом персонажа: чем выше ранг, тем выше дневной лимит.</p>
+              <p>Ци, не полученная из-за недостижения дневного лимита, переносится в дополнительный резерв. Он может накапливаться до 30 дней и становится доступен после достижения обычного дневного лимита. Когда лимит исчерпан, игрок получает уведомление.</p>
+            </div>
+            <aside class="qi-reserve-card"><span>30</span><strong>дней</strong><p>Максимальный срок накопления дополнительного резерва Ци.</p></aside>
+          </div>
+
+          <div class="qi-boosts" aria-label="Усиления получения Ци">
+            <article><span>×5</span><div><h3>VIP-подписка</h3><p>Умножает получение Ци в пять раз.</p></div></article>
+            <article><span>+40%</span><div><h3>«Молодой герой»</h3><p>Увеличивает дневной лимит Ци на 40%. Бонус действует только на дневной лимит и не накапливается.</p></div></article>
+          </div>
+        </section>
+
+        <section class="acupuncture-section" aria-labelledby="obtaining-title">
+          <div class="acupuncture-section-heading">
+            <span>04</span>
+            <div><p>Основные источники</p><h2 id="obtaining-title">Получение Ци</h2></div>
+          </div>
+          <p class="acupuncture-section-lead">Некоторые способы получения Ци перечислены ниже.</p>
+          <div class="qi-sources-list">
+            <article class="qi-source-featured">
+              <img src="assets/qi-yellow-pill.png" alt="Жёлтые пилюли Ци" / decoding="async" loading="lazy">
+              <div><h3>Жёлтая пилюля Ци</h3><p>Нанесение урона навыками боевых искусств генерирует Ци пропорционально нанесённому урону. Для большинства игроков это основной источник Ци.</p></div>
+            </article>
+            <article><span>01</span><div><h3>Пилюли Ци</h3><p>Пилюли, например Пилюля Мистического Духа, дают прирост Ци. Это частая награда за задания и игровые активности.</p></div></article>
+            <article><span>02</span><div><h3>Опыт</h3><p>При получении опыта персонажу также начисляется некоторое количество Ци.</p></div></article>
+            <article><span>03</span><div><h3>Бытовые навыки</h3><p>Действия бытовых навыков генерируют Ци. Музыканты с подпиской «Молодой герой» могут использовать бесконечный режим музыкальной практики для получения Ци в режиме AFK.</p></div></article>
+            <article><span>04</span><div><h3>Командная практика</h3><p>Достижение ежедневного лимита командной практики даёт персонажу дополнительное количество Ци.</p></div></article>
+          </div>
+        </section>
+
+        <section class="acupuncture-section ganoderma-section" aria-labelledby="ganoderma-title">
+          <div class="acupuncture-section-heading">
+            <span>05</span>
+            <div><p>Расширение лимита</p><h2 id="ganoderma-title">Пилюли Земной Ганодермы</h2></div>
+          </div>
+          <p class="acupuncture-section-lead"><strong>Пилюля Ганодермы</strong> — расходуемый предмет, который навсегда увеличивает максимальное количество активных меридианов. С помощью этих пилюль исходный лимит можно последовательно расширить с 3 до 8.</p>
+
+          <div class="ganoderma-table-wrap">
+            <table class="ganoderma-table">
+              <thead><tr><th>Название</th><th>Предмет</th><th>Действие</th></tr></thead>
+              <tbody>
+                <tr><td>Жёлтая Пилюля Земной Ганодермы</td><td><img src="assets/ganoderma-yellow.png" alt="Жёлтая Пилюля Земной Ганодермы" / decoding="async" loading="lazy"></td><td><strong>4-й меридиан</strong><span>Открывает дополнительный слот</span></td></tr>
+                <tr><td>Зелёная Пилюля Земной Ганодермы</td><td><img src="assets/ganoderma-green.png" alt="Зелёная Пилюля Земной Ганодермы" / decoding="async" loading="lazy"></td><td><strong>5-й меридиан</strong><span>Открывает дополнительный слот</span></td></tr>
+                <tr><td>Пурпурная Пилюля Земной Ганодермы</td><td><img src="assets/ganoderma-purple.png" alt="Пурпурная Пилюля Земной Ганодермы" / decoding="async" loading="lazy"></td><td><strong>6-й меридиан</strong><span>Открывает дополнительный слот</span></td></tr>
+                <tr><td>Пилюля Земной Ганодермы Тысячелетия</td><td><img src="assets/ganoderma-millennium.png" alt="Пилюля Земной Ганодермы Тысячелетия" / decoding="async" loading="lazy"></td><td><strong>7-й меридиан</strong><span>Открывает дополнительный слот</span></td></tr>
+                <tr><td>Пилюля Нефритовой Ганодермы Тысячелетия</td><td><img src="assets/ganoderma-jade-millennium.png" alt="Пилюля Нефритовой Ганодермы Тысячелетия" / decoding="async" loading="lazy"></td><td><strong>8-й меридиан</strong><span>Открывает максимальный слот</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <aside class="ganoderma-location-note">
+            <span aria-hidden="true">⌖</span>
+            <div><strong>Где получить</strong><p>Пилюли можно найти у главы школы после развития нейгунов, у менялы предметов в секте, а также в Долине Злодеев по координатам <b>(872, 419)</b> — при условии, что персонаж не состоит в школе.</p></div>
+          </aside>
+        </section>
+
+        <a class="meridian-back-link" href="beginners.html"><span aria-hidden="true">←</span> Вернуться в справочник новичка</a>
+      </article>
+
+      <footer class="site-footer">
+        <div class="footer-inner"><span class="footer-ornament" aria-hidden="true"></span><p>Руководство Легенды Кунг-Фу 2026</p><span class="footer-ornament" aria-hidden="true"></span></div>
+      </footer>
+    </main>
+    <script src="script.js?v=8" defer></script>
+      <script src="anti-copy.js?v=0.0.21" defer></script>
+  </body>
+</html>

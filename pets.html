@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Питомцы в Легендах Кунг-Фу: активный компаньон, восстановление цингуна, временные питомцы и Усадьба Зверей." />
+    <title>Питомцы — Легенды Кунг-Фу</title>
+    <link rel="icon" href="favicon.ico?v=16" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
+    <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
+    <link rel="stylesheet" href="styles.css?v=35" />
+  
+    <link rel="stylesheet" href="community-auth.css?v=15" />
+    <script>document.documentElement.classList.add('nineyin-account-pending')</script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabase-config.js?v=0.0.21" defer></script>
+    <script src="account.js?v=0.0.21" defer></script>
+  </head>
+  <body>
+    <main class="site-shell inner-site-shell pet-guide-site-shell">
+      <div class="mist" aria-hidden="true"></div>
+      <div class="golden-particles" aria-hidden="true"></div>
+      <div class="cursor-aura" aria-hidden="true"></div>
+
+      <header class="topbar" id="top">
+        <div class="topbar-inner">
+          <a class="topbar-logo" href="index.html" aria-label="Руководство Легенды Кунг-Фу — главная">
+            <span class="topbar-logo-image" aria-hidden="true"></span>
+            <span class="nine-yin-wordmark" role="img" aria-label="9 Инь"></span>
+          </a>
+          <nav class="topnav" aria-label="Основная навигация">
+            <a href="index.html">Главная</a><a href="forum/index.html">Форум</a>
+            
+            <a class="topnav-current" href="character.html" aria-current="page">О персонаже</a>
+            <a href="partnership.html">Партнёрство и связь</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="topup.html">Пополнение</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="page-content pet-guide-page-content">
+        <header class="collection-page-header pet-page-header">
+          <p class="collection-kicker"><a href="character.html">О персонаже</a></p>
+          <h1>Питомцы</h1>
+          <p>Животные-компаньоны, которые сопровождают персонажа и открывают дополнительные возможности.</p>
+        </header>
+
+        <section class="pet-intro" aria-labelledby="pet-intro-title">
+          <div class="pet-intro-copy">
+            <span class="card-kicker">Компаньоны игрока</span>
+            <h2 id="pet-intro-title">Кто такие питомцы</h2>
+            <p><strong>Питомец</strong> — это животное-компаньон игрока. Можно собирать разных питомцев, но единовременно активным может быть только один.</p>
+            <p>В зависимости от типа питомец следует за игроком, сидит на плече или размещается на спине персонажа. Некоторые компаньоны являются временными и исчезают через несколько дней.</p>
+          </div>
+
+          <figure class="pet-intro-art">
+            <img src="assets/pets-companion-sheep.png?v=35" alt="Два декоративных питомца-барашка" / decoding="async" loading="lazy">
+            <figcaption><span>Коллекция</span><strong>Разные виды компаньонов</strong></figcaption>
+          </figure>
+        </section>
+
+        <section class="pet-feature-grid" aria-label="Основные особенности питомцев">
+          <article>
+            <span aria-hidden="true">1</span>
+            <div><small>Активный питомец</small><h2>Только один одновременно</h2><p>Собирайте всю коллекцию и выбирайте подходящего компаньона перед путешествием.</p></div>
+          </article>
+
+          <article>
+            <span aria-hidden="true">+5</span>
+            <div><small>Медитация</small><h2>Восстановление цингуна</h2><p>Все питомцы, кроме воздушного змея, восстанавливают по 5 очков цингуна в секунду во время медитации.</p></div>
+          </article>
+
+          <article>
+            <span aria-hidden="true">兽</span>
+            <div><small>Доступная фракция</small><h2>Усадьба Зверей</h2><p>Владельцы питомцев могут присоединиться к Усадьбе Зверей.</p></div>
+          </article>
+        </section>
+
+        <aside class="pet-temporary-note">
+          <span aria-hidden="true">⌛</span>
+          <div><strong>Обратите внимание на срок</strong><p>Некоторые питомцы выдаются временно. Проверяйте описание предмета, чтобы узнать, исчезнет ли компаньон через несколько дней.</p></div>
+        </aside>
+
+        <section class="content-placeholder pet-catalog-placeholder" aria-label="Будущий каталог питомцев">
+          <span class="standalone-icon pet-icon" aria-hidden="true"></span>
+          <div><strong>Каталог питомцев</strong><p>Карточки питомцев, способы получения и дополнительные бонусы будут добавлены позднее.</p></div>
+        </section>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <span class="footer-ornament" aria-hidden="true"></span>
+          <p>Руководство Легенды Кунг-Фу 2026</p>
+          <span class="footer-ornament" aria-hidden="true"></span>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js?v=8" defer></script>
+      <script src="anti-copy.js?v=0.0.21" defer></script>
+  </body>
+</html>

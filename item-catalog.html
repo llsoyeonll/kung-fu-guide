@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Каталог полезных предметов мира Легенды Кунг-Фу." />
+    <title>Предметы — Хранилище предметов</title>
+    <link rel="icon" href="favicon.ico?v=16" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
+    <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
+    <link rel="stylesheet" href="styles.css?v=20" />
+  
+    <link rel="stylesheet" href="community-auth.css?v=15" />
+    <script>document.documentElement.classList.add('nineyin-account-pending')</script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabase-config.js?v=0.0.21" defer></script>
+    <script src="account.js?v=0.0.21" defer></script>
+  </head>
+  <body>
+    <main class="site-shell inner-site-shell">
+      <div class="mist" aria-hidden="true"></div>
+      <div class="golden-particles" aria-hidden="true"></div>
+      <div class="cursor-aura" aria-hidden="true"></div>
+
+      <header class="topbar" id="top">
+        <div class="topbar-inner">
+          <a class="topbar-logo" href="index.html" aria-label="Руководство Легенды Кунг-Фу — главная">
+            <span class="topbar-logo-image" aria-hidden="true"></span>
+            <span class="nine-yin-wordmark" role="img" aria-label="9 Инь"></span>
+          </a>
+          <nav class="topnav" aria-label="Основная навигация">
+            <a href="index.html">Главная</a><a href="forum/index.html">Форум</a>
+            
+            <a href="character.html">О персонаже</a>
+            <a href="partnership.html">Партнёрство и связь</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="topup.html">Пополнение</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="page-content collection-page-content item-directory-page">
+        <header class="collection-page-header item-directory-header">
+          <a class="catalog-back-link" href="items.html">← Хранилище предметов</a>
+          <p class="collection-kicker">Каталог игровых ценностей</p>
+          <h1>Предметы</h1>
+          <p>Выберите тип в оглавлении. Все предметы выбранного типа отображаются ниже.</p>
+        </header>
+
+        <nav class="item-type-nav" aria-label="Типы предметов">
+          <a class="item-type-link item-type-current" href="#help-items" aria-current="true">
+            <span class="item-type-number">01</span>
+            <span>
+              <strong>Предмет помощи</strong>
+              <small>VIP, услуги и полезные возможности</small>
+            </span>
+          </a>
+        </nav>
+
+        <section class="item-type-section" id="help-items" aria-labelledby="help-items-title">
+          <header class="item-type-heading">
+            <span class="card-kicker">Тип предметов</span>
+            <h2 id="help-items-title">Предмет помощи</h2>
+            <p>Предметы, открывающие дополнительные игровые возможности и временные привилегии.</p>
+          </header>
+
+          <div class="catalog-items-grid">
+            <article class="catalog-item-card">
+              <header class="catalog-item-heading">
+                <span class="catalog-item-icon vip-card-icon" role="img" aria-label="VIP-карта"></span>
+                <span>
+                  <span class="card-kicker">Предмет помощи</span>
+                  <h3>VIP-карта</h3>
+                </span>
+              </header>
+              <p class="catalog-item-description">Предмет символизирует особый статус в Цзянху. Щёлкните по нему правой кнопкой мыши, чтобы получить <mark>30 дней Цзянху VIP</mark>.</p>
+              <aside class="catalog-item-important">
+                <strong>Важно</strong>
+                <p>Покупается в <span class="catalog-highlight">«Лавке»</span> за <mark>60 золота</mark>. После покупки предмет можно передать другому игроку.</p>
+              </aside>
+              <footer class="catalog-item-code nineyin-private-item-code" data-private-item-code="vip-card" hidden>
+                <span>Код предмета</span>
+                <code></code>
+              </footer>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <span class="footer-ornament" aria-hidden="true"></span>
+          <p>Руководство Легенды Кунг-Фу 2026</p>
+          <span class="footer-ornament" aria-hidden="true"></span>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js?v=8" defer></script>
+      <script src="anti-copy.js?v=0.0.21" defer></script>
+      <script src="admin-item-codes.js" defer></script>
+  </body>
+</html>

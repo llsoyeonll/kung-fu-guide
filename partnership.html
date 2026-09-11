@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Связь с администратором руководства Легенды Кунг-Фу, сотрудничество и сообщества игроков." />
+    <title>Партнёрство и связь — Легенды Кунг-Фу</title>
+    <link rel="icon" href="favicon.ico?v=16" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
+    <link rel="stylesheet" href="styles.css?v=55" />
+  
+    <link rel="stylesheet" href="community-auth.css?v=15" />
+    <script>document.documentElement.classList.add('nineyin-account-pending')</script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabase-config.js?v=0.0.21" defer></script>
+    <script src="account.js?v=0.0.21" defer></script>
+  </head>
+  <body>
+    <main class="site-shell inner-site-shell partnership-site-shell">
+      <div class="mist" aria-hidden="true"></div>
+      <div class="golden-particles" aria-hidden="true"></div>
+      <div class="cursor-aura" aria-hidden="true"></div>
+
+      <header class="topbar" id="top">
+        <div class="topbar-inner">
+          <a class="topbar-logo" href="index.html" aria-label="Руководство Легенды Кунг-Фу — главная">
+            <span class="topbar-logo-image" aria-hidden="true"></span>
+            <span class="nine-yin-wordmark" role="img" aria-label="9 Инь"></span>
+          </a>
+          <nav class="topnav" aria-label="Основная навигация">
+            <a href="index.html">Главная</a><a href="forum/index.html">Форум</a>
+            
+            <a href="character.html">О персонаже</a>
+            <a class="topnav-current" href="partnership.html" aria-current="page">Партнёрство и связь</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="topup.html">Пополнение</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="page-content partnership-page-content">
+        <header class="partnership-page-header">
+          <p class="collection-kicker">Сотрудничество и сообщества</p>
+          <h1>Партнёрство и связь</h1>
+          <p>Контакты администратора сайта, игровые сообщества и способы предложить новый материал для руководства.</p>
+        </header>
+
+        <section class="admin-profile" aria-labelledby="admin-name">
+          <span class="admin-profile-art" role="img" aria-label="Администратор сайта Soyeon"></span>
+
+          <div class="admin-profile-copy">
+            <p class="admin-role"><span aria-hidden="true">✦</span> Администратор сайта</p>
+            <h2 id="admin-name">Soyeon</h2>
+
+            <dl class="admin-nicknames">
+              <div>
+                <dt>Никнейм на Тайване</dt>
+                <dd lang="zh-Hant">金世贤</dd>
+              </div>
+              <div>
+                <dt>Никнейм на Пиратке</dt>
+                <dd>Soyeon</dd>
+              </div>
+            </dl>
+
+            <div class="admin-description">
+              <p>Древний игрок с ОБТ русского сервера, продолжающий играть по настоящее время.</p>
+              <p>Для сотрудничества свяжитесь со мной. Если вы хотите получить информацию или предложить контент для сайта, напишите мне лично. Также можно вступить в общий чат активных игроков для участия в опросах и обсуждения предложений.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact-hub" aria-labelledby="contact-hub-title">
+          <header class="contact-hub-heading">
+            <span class="card-kicker">Контакты и приглашения</span>
+            <h2 id="contact-hub-title">Связаться и присоединиться</h2>
+            <p>Выберите личный контакт или подходящее игровое сообщество.</p>
+          </header>
+
+          <div class="contact-link-grid">
+            <a class="contact-link-card contact-vk" href="https://vk.ru/id800943937" target="_blank" rel="noreferrer">
+              <span class="contact-link-symbol" aria-hidden="true">VK</span>
+              <span class="contact-link-copy">
+                <small>Личная страница</small>
+                <strong>Страница ВК</strong>
+                <span>Написать администратору</span>
+              </span>
+              <span class="contact-link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <article class="contact-link-card contact-discord contact-handle-card">
+              <span class="contact-link-symbol" aria-hidden="true">D</span>
+              <span class="contact-link-copy">
+                <small>Личный Discord</small>
+                <strong>soyeon2000</strong>
+                <span>Никнейм для личной связи</span>
+              </span>
+            </article>
+
+            <a class="contact-link-card contact-discord" href="https://discord.gg/JvearqVgk6" target="_blank" rel="noreferrer">
+              <span class="contact-link-symbol" aria-hidden="true">D</span>
+              <span class="contact-link-copy">
+                <small>Общий чат</small>
+                <strong>Discord сообщества</strong>
+                <span>Опросы, информация и предложения</span>
+              </span>
+              <span class="contact-link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="contact-link-card contact-discord" href="https://discord.gg/KUbdqHpSAY" target="_blank" rel="noreferrer">
+              <span class="contact-link-symbol" aria-hidden="true">D</span>
+              <span class="contact-link-copy">
+                <small>Игровой сервер</small>
+                <strong>Discord Пиратки</strong>
+                <span>Присоединиться к игрокам сервера</span>
+              </span>
+              <span class="contact-link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="contact-link-card contact-vk" href="https://vk.ru/ageofwushu_tv" target="_blank" rel="noreferrer">
+              <span class="contact-link-symbol" aria-hidden="true">VK</span>
+              <span class="contact-link-copy">
+                <small>Новости и публикации</small>
+                <strong>Наше сообщество ВК</strong>
+                <span>Материалы по Легендам Кунг-Фу</span>
+              </span>
+              <span class="contact-link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+          </div>
+        </section>
+
+        <section class="partner-section" aria-labelledby="partner-title">
+          <header class="partner-section-heading">
+            <span class="card-kicker">Проверенный контакт</span>
+            <h2 id="partner-title">Партнёр</h2>
+            <p>Перевод, русификатор и пополнение золота для игроков Тайвани и Приватного сервера.</p>
+          </header>
+
+          <div class="partner-profile">
+            <div class="partner-profile-copy">
+              <p class="partner-role"><span aria-hidden="true">✦</span> Переводчик Тайвани · Селлер Пиратки</p>
+              <h3>Unholy Daddy</h3>
+
+              <p class="partner-description">Занимается переводом и пополнением золота на игровой аккаунт. Полученный от селлера код необходимо активировать в личном кабинете Приватного сервера в разделе <strong>«Промокоды»</strong>.</p>
+
+              <dl class="partner-facts">
+                <div>
+                  <dt>Discord</dt>
+                  <dd>Unholy Daddy</dd>
+                </div>
+                <div>
+                  <dt>Стоимость</dt>
+                  <dd><mark>1000 золота — 1300 ₽</mark></dd>
+                </div>
+                <div>
+                  <dt>Оплата</dt>
+                  <dd>Рубли и другие валюты</dd>
+                </div>
+              </dl>
+
+              <aside class="partner-warning">
+                <strong>Перед пополнением</strong>
+                <p>Свяжитесь с партнёром, уточните актуальную стоимость, доступный способ оплаты и порядок активации кода.</p>
+              </aside>
+            </div>
+
+            <span class="partner-profile-art" role="img" aria-label="Партнёр Unholy Daddy"></span>
+          </div>
+
+          <div class="partner-links" aria-label="Ссылки партнёра">
+            <a class="contact-link-card contact-vk" href="https://vk.ru/monuel_djey" target="_blank" rel="noreferrer">
+              <span class="contact-link-symbol" aria-hidden="true">VK</span>
+              <span class="contact-link-copy">
+                <small>Личный контакт</small>
+                <strong>Страница партнёра ВК</strong>
+                <span>Связаться по переводу или пополнению</span>
+              </span>
+              <span class="contact-link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="contact-link-card translator-link" href="https://drive.google.com/drive/folders/136B99foN6l28kJ6SgJmTDLtlvGal0R4i" target="_blank" rel="noreferrer">
+              <span class="contact-link-symbol" aria-hidden="true">RU</span>
+              <span class="contact-link-copy">
+                <small>Google Drive</small>
+                <strong>Русификатор для Тайвани</strong>
+                <span>Открыть папку с файлами</span>
+              </span>
+              <span class="contact-link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="contact-link-card private-account-link" href="https://member.jyzj.nl/" target="_blank" rel="noreferrer">
+              <span class="contact-link-symbol" aria-hidden="true">ЛК</span>
+              <span class="contact-link-copy">
+                <small>Приватный сервер</small>
+                <strong>Личный кабинет</strong>
+                <span>Промокоды и управление аккаунтом</span>
+              </span>
+              <span class="contact-link-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <section class="translator-guide" aria-labelledby="translator-guide-title">
+            <header>
+              <span class="card-kicker">Установка файлов</span>
+              <h3 id="translator-guide-title">Инструкция к русификатору</h3>
+            </header>
+            <ol>
+              <li><span>1</span><p>Скачайте файл русификатора и поместите его в папку <code>res</code> внутри папки игры.</p></li>
+              <li><span>2</span><p>Запустите лаунчер и выберите вариант <strong>«Традиционный (?)»</strong>.</p></li>
+              <li><span>3</span><p>Запустите игру и проверьте отображение перевода.</p></li>
+            </ol>
+            <p class="translator-guide-note"><strong>Требует уточнения:</strong> перед установкой спросите у партнёра, какой именно вариант языка необходимо выбрать в лаунчере.</p>
+          </section>
+
+          <div class="partner-divider" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+
+          <section class="taiwan-seller-block" aria-labelledby="taiwan-seller-title">
+            <header class="secondary-partner-heading">
+              <span class="card-kicker">Пополнение и игровые инструменты</span>
+              <h3 id="taiwan-seller-title">Селлер Тайвани</h3>
+              <p>Поможет пополнить золото на официальном сервере и оплатить ботов для Тайвани и Пиратки.</p>
+            </header>
+
+            <div class="partner-profile partner-profile-secondary">
+              <span class="partner-profile-art taiwan-seller-art" role="img" aria-label="Партнёр — селлер Тайвани"></span>
+
+              <div class="partner-profile-copy">
+                <p class="partner-role"><span aria-hidden="true">✦</span> Партнёр · Селлер Тайвани</p>
+                <h3>Пополнение Тайвани</h3>
+                <p class="partner-description">Помогает с пополнением золота и оплатой ботов. Стоимость рассчитывается с учётом текущего курса доллара. Пополнение официального сервера Тайвани выполняется специальными картами <strong>MyCard Taiwan</strong>.</p>
+
+                <div class="seller-price-grid" aria-label="Ориентировочные цены">
+                  <article>
+                    <small>ZDN · один аккаунт</small>
+                    <strong>5 $</strong>
+                    <span>на один месяц</span>
+                  </article>
+                  <article>
+                    <small>ZDN · один ПК</small>
+                    <strong>15 $</strong>
+                    <span>на один месяц</span>
+                  </article>
+                  <article>
+                    <small>Тайвань · официальный сервер</small>
+                    <strong>≈ 1350 ₽</strong>
+                    <span>за 100 золота</span>
+                  </article>
+                  <article>
+                    <small>Способ пополнения</small>
+                    <strong>MyCard</strong>
+                    <span>карты Taiwan</span>
+                  </article>
+                </div>
+
+                <aside class="partner-warning seller-rate-warning">
+                  <strong>Цена меняется</strong>
+                  <p>Все значения указаны ориентировочно. Перед оплатой уточните у партнёра актуальную цену по текущему курсу доллара.</p>
+                </aside>
+              </div>
+            </div>
+
+            <div class="seller-contact-row">
+              <a class="contact-link-card contact-vk" href="https://vk.ru/id273832270" target="_blank" rel="noreferrer">
+                <span class="contact-link-symbol" aria-hidden="true">VK</span>
+                <span class="contact-link-copy">
+                  <small>Связь с селлером</small>
+                  <strong>Страница ВК</strong>
+                  <span>Уточнить курс, оплату ботов и пополнение Тайвани</span>
+                </span>
+                <span class="contact-link-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </section>
+
+          <div class="partner-divider" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+
+          <section class="pirate-translator-block" aria-labelledby="pirate-translator-title">
+            <header class="secondary-partner-heading">
+              <span class="card-kicker">Локализация Приватного сервера</span>
+              <h3 id="pirate-translator-title">Переводчик Пиратки</h3>
+              <p>Автор русификатора и GUI-файлов интерфейса для актуальной версии игры.</p>
+            </header>
+
+            <div class="partner-profile pirate-translator-profile">
+              <div class="partner-profile-copy">
+                <p class="partner-role"><span aria-hidden="true">✦</span> Партнёр · Переводчик Пиратки</p>
+                <h3>iBoda</h3>
+                <p class="partner-description">Первоначальный создатель русификатора для прошлого Приватного сервера. После долгих лет вернулся в игру и заново создаёт собственный перевод, а также GUI-файлы игрового интерфейса.</p>
+
+                <dl class="partner-facts translator-facts">
+                  <div>
+                    <dt>Никнейм на Пиратке</dt>
+                    <dd>iBoda</dd>
+                  </div>
+                  <div>
+                    <dt>Discord</dt>
+                    <dd>i_boda</dd>
+                  </div>
+                </dl>
+
+                <aside class="partner-warning translator-inside-note">
+                  <strong>Инструкция внутри</strong>
+                  <p>Инструкция по установке находится непосредственно в папке с русификатором.</p>
+                </aside>
+              </div>
+
+              <span class="partner-profile-art pirate-translator-art" role="img" aria-label="Переводчик Пиратки iBoda"></span>
+            </div>
+
+            <div class="seller-contact-row translator-download-row">
+              <a class="contact-link-card translator-link" href="https://drive.google.com/drive/folders/1JVI87aM-a-dM2DZsAkeJNxCqJJCrOGd9" target="_blank" rel="noreferrer">
+                <span class="contact-link-symbol" aria-hidden="true">RU</span>
+                <span class="contact-link-copy">
+                  <small>Google Drive · инструкция внутри</small>
+                  <strong>Русификатор Пиратки от iBoda</strong>
+                  <span>Скачать перевод и GUI-файлы интерфейса</span>
+                </span>
+                <span class="contact-link-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </section>
+        </section>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <span class="footer-ornament" aria-hidden="true"></span>
+          <p>Руководство Легенды Кунг-Фу 2026</p>
+          <span class="footer-ornament" aria-hidden="true"></span>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js?v=8" defer></script>
+      <script src="anti-copy.js?v=0.0.21" defer></script>
+  </body>
+</html>

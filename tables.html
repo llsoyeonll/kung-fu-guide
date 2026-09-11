@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Полезные таблицы по развитию персонажа в игре Легенды Кунг-Фу." />
+    <title>Полезные таблицы — Легенды Кунг-Фу</title>
+    <link rel="icon" href="favicon.ico?v=16" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
+    <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
+    <link rel="stylesheet" href="styles.css?v=28" />
+  
+    <link rel="stylesheet" href="community-auth.css?v=15" />
+    <script>document.documentElement.classList.add('nineyin-account-pending')</script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabase-config.js?v=0.0.21" defer></script>
+    <script src="account.js?v=0.0.21" defer></script>
+  </head>
+  <body>
+    <main class="site-shell inner-site-shell">
+      <div class="mist" aria-hidden="true"></div>
+      <div class="golden-particles" aria-hidden="true"></div>
+      <div class="cursor-aura" aria-hidden="true"></div>
+
+      <header class="topbar" id="top">
+        <div class="topbar-inner">
+          <a class="topbar-logo" href="index.html" aria-label="Руководство Легенды Кунг-Фу — главная">
+            <span class="topbar-logo-image" aria-hidden="true"></span>
+            <span class="nine-yin-wordmark" role="img" aria-label="9 Инь"></span>
+          </a>
+          <nav class="topnav" aria-label="Основная навигация">
+            <a href="index.html">Главная</a><a href="forum/index.html">Форум</a>
+            
+            <a class="topnav-current" href="character.html">О персонаже</a>
+            <a href="partnership.html">Партнёрство и связь</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="topup.html">Пополнение</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="page-content tables-page-content">
+        <header class="tables-page-header">
+          <a class="catalog-back-link" href="character.html">← О персонаже</a>
+          <p class="collection-kicker">Справочные материалы</p>
+          <h1>Полезные таблицы</h1>
+          <p>Используйте оглавление для быстрого перехода или переключайте таблицы стрелками.</p>
+        </header>
+
+        <nav class="table-contents" aria-label="Оглавление таблиц">
+          <span class="table-contents-label">Оглавление</span>
+          <button class="table-contents-link is-active" type="button" data-table-index="0" aria-current="true">
+            <span>01</span>
+            <strong>Ранги персонажа</strong>
+          </button>
+          <button class="table-contents-link" type="button" data-table-index="1">
+            <span>02</span>
+            <strong>Мировые сокровища</strong>
+          </button>
+          <button class="table-contents-link" type="button" data-table-index="2">
+            <span>03</span>
+            <strong>Секты и фракции</strong>
+          </button>
+          <button class="table-contents-link" type="button" data-table-index="3">
+            <span>04</span>
+            <strong>Мировые нейгуны</strong>
+          </button>
+          <button class="table-contents-link" type="button" data-table-index="4">
+            <span>05</span>
+            <strong>Фонари</strong>
+          </button>
+          <button class="table-contents-link" type="button" data-table-index="5">
+            <span>06</span>
+            <strong>Вступление в секты</strong>
+          </button>
+          <button class="table-contents-link" type="button" data-table-index="6">
+            <span>07</span>
+            <strong>Обмен нейгунов 1–3</strong>
+          </button>
+          <button class="table-contents-link" type="button" data-table-index="7">
+            <span>08</span>
+            <strong>Школьные нейгуны</strong>
+          </button>
+        </nav>
+
+        <section class="table-carousel" data-table-carousel aria-label="Просмотр полезных таблиц">
+          <header class="table-carousel-toolbar">
+            <button class="table-arrow table-arrow-prev" type="button" data-table-prev aria-label="Предыдущая таблица">←</button>
+            <div class="table-carousel-title">
+              <span data-table-counter>01 / 01</span>
+              <h2 data-table-title>Таблица рангов персонажа</h2>
+            </div>
+            <button class="table-arrow table-arrow-next" type="button" data-table-next aria-label="Следующая таблица">→</button>
+          </header>
+
+          <div class="table-slides">
+            <article class="table-slide is-active" id="character-ranks" data-table-slide data-title="Таблица рангов персонажа">
+              <div class="table-scroll" tabindex="0" aria-label="Таблица прокручивается горизонтально на небольшом экране">
+                <table class="rank-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Русский</th>
+                      <th scope="col">Английский</th>
+                      <th scope="col">Китайский</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Слабость</td><td lang="en">Weak Body and Mind</td><td lang="zh-Hans">不堪一击</td></tr>
+                    <tr><td>Новичок</td><td lang="en">Lacking Understanding</td><td lang="zh-Hans">初学乍练</td></tr>
+                    <tr><td>База</td><td lang="en">First Understanding</td><td lang="zh-Hans">初窥门径</td></tr>
+                    <tr><td>Скромный Успех</td><td lang="en">Untapped Potential</td><td lang="zh-Hans">略有小成</td></tr>
+                    <tr><td>Уверенность</td><td lang="en">Realized Potential</td><td lang="zh-Hans">驾轻就熟</td></tr>
+                    <tr><td>Осознание</td><td lang="en">One With Nature</td><td lang="zh-Hans">融会贯通</td></tr>
+                    <tr><td>Апогей</td><td lang="en">Martial Intuition</td><td lang="zh-Hans">炉火纯青</td></tr>
+                    <tr><td>Из Ряда Вон</td><td lang="en">Flows With Chi</td><td lang="zh-Hans">出类拔萃</td></tr>
+                    <tr><td>Верх Мастерства</td><td lang="en">Spiritually Balanced</td><td lang="zh-Hans">神乎其技</td></tr>
+                    <tr><td>Искусство</td><td lang="en">Mentally Balanced</td><td lang="zh-Hans">出神入化</td></tr>
+                    <tr><td>Гроза Царей</td><td lang="en">Expert of Self</td><td lang="zh-Hans">傲视群雄</td></tr>
+                    <tr><td>Совершенство</td><td lang="en">Peak of Power</td><td lang="zh-Hans">登峰造极</td></tr>
+                    <tr><td>Божественность</td><td lang="en">Enlightened Virtuoso</td><td lang="zh-Hans">无与伦比</td></tr>
+                    <tr><td>Всепобеждающий</td><td lang="en">Infallible Martial Arts Master</td><td lang="zh-Hans">所向披靡</td></tr>
+                    <tr><td>Великий Мастер</td><td lang="en">Grand Master</td><td lang="zh-Hans">一代宗师</td></tr>
+                    <tr><td>Чемпион</td><td lang="en">Matchless In Kung Fu</td><td lang="zh-Hans">神功盖世</td></tr>
+                    <tr><td>Первенство</td><td lang="en">Unrivalled</td><td lang="zh-Hans">举世无双</td></tr>
+                    <tr><td>Шок</td><td lang="en">Shock The World</td><td lang="zh-Hans">惊世骇俗</td></tr>
+                    <tr><td>Потрясение</td><td lang="en">Shake The World</td><td lang="zh-Hans">撼天动地</td></tr>
+                    <tr><td>Бессмертие</td><td lang="en">Surpass The World</td><td lang="zh-Hans">震古铄今</td></tr>
+                    <tr><td>Мудрость</td><td lang="en">Divine</td><td lang="zh-Hans">超凡入圣</td></tr>
+                    <tr><td>Миротворец</td><td lang="en">Overawe The World</td><td lang="zh-Hans">威镇寰宇</td></tr>
+                    <tr><td>Уникум</td><td lang="en">Unique</td><td lang="zh-Hans">空前绝后</td></tr>
+                    <tr><td>Гармония Человека и Природы</td><td lang="en">God And Man in Harmony</td><td lang="zh-Hans">天人合一</td></tr>
+                    <tr><td>Тайна</td><td lang="en">Keep Your Own Counsel</td><td lang="zh-Hans">深藏不露</td></tr>
+                    <tr><td>Непостижимый</td><td lang="en">Unfathomable</td><td lang="zh-Hans">深不可测</td></tr>
+                    <tr><td>Возвращение к Естеству</td><td lang="en">Recover Original Simplicity</td><td lang="zh-Hans">返璞归真</td></tr>
+                    <tr><td>Владелец Судеб</td><td lang="en">Mastering Your Destiny</td><td lang="zh-Hans">功參造化</td></tr>
+                    <tr><td>Покоритель Небес</td><td lang="en">Conqueror of Heaven</td><td lang="zh-Hans">武伐天人</td></tr>
+                    <tr><td>Покоритель Планет</td><td lang="en">Overturning the Cosmos</td><td lang="zh-Hans">乾坤斗转</td></tr>
+                    <tr><td>Дитя Луны</td><td lang="en">Moon Raker</td><td lang="zh-Hans">移星摘月</td></tr>
+                    <tr><td>Дитя Солнца</td><td lang="en">Sun Raider</td><td lang="zh-Hans">搏日擒天</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="table-slide" id="world-treasures" data-table-slide data-title="Таблица мировых сокровищ" hidden>
+              <div class="table-scroll" tabindex="0" aria-label="Таблица прокручивается горизонтально на небольшом экране">
+                <table class="rank-table treasure-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Ранг</th>
+                      <th scope="col"><span class="table-header-icon world-treasure-icon-1" role="img" aria-label="Мировое сокровище 1"></span><small>Сокровище 1</small></th>
+                      <th scope="col"><span class="table-header-icon world-treasure-icon-2" role="img" aria-label="Мировое сокровище 2"></span><small>Сокровище 2</small></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Слабость</td><td>Создание персонажа</td><td>—</td></tr>
+                    <tr><td>Новичок</td><td>—</td><td>—</td></tr>
+                    <tr><td>База</td><td>—</td><td>—</td></tr>
+                    <tr><td>Скромный Успех</td><td>—</td><td>—</td></tr>
+                    <tr><td>Уверенность</td><td>—</td><td>—</td></tr>
+                    <tr><td>Осознание</td><td>—</td><td>—</td></tr>
+                    <tr><td>Апогей</td><td>—</td><td>—</td></tr>
+                    <tr><td>Из Ряда Вон</td><td>—</td><td>—</td></tr>
+                    <tr><td>Верх Мастерства</td><td>—</td><td>1–3</td></tr>
+                    <tr><td>Искусство</td><td>—</td><td>4–8</td></tr>
+                    <tr><td>Гроза Царей</td><td>—</td><td>9–13</td></tr>
+                    <tr><td>Совершенство</td><td>—</td><td>14–18</td></tr>
+                    <tr><td>Божественность</td><td>1–3</td><td>19–23</td></tr>
+                    <tr><td>Всепобеждающий</td><td>4–8</td><td>24–28</td></tr>
+                    <tr><td>Великий Мастер</td><td>9–13</td><td>29–33</td></tr>
+                    <tr><td>Чемпион</td><td>14–18</td><td>34–38</td></tr>
+                    <tr><td>Первенство</td><td>19–23</td><td>39–43</td></tr>
+                    <tr><td>Шок</td><td>24–28</td><td>44–48</td></tr>
+                    <tr><td>Потрясение</td><td>29–33</td><td>49</td></tr>
+                    <tr><td>Бессмертие</td><td>34–38</td><td>—</td></tr>
+                    <tr><td>Мудрость</td><td>39–43</td><td>—</td></tr>
+                    <tr><td>Миротворец</td><td>44–48</td><td>—</td></tr>
+                    <tr><td>Уникум</td><td>49</td><td>—</td></tr>
+                    <tr><td>Гармония Человека и Природы</td><td>—</td><td>—</td></tr>
+                    <tr><td>Тайна</td><td>—</td><td>—</td></tr>
+                    <tr><td>Непостижимый</td><td>—</td><td>—</td></tr>
+                    <tr><td>Возвращение к Естеству</td><td>—</td><td>—</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="table-slide" id="sects-and-factions" data-table-slide data-title="Таблица сект и фракций" hidden>
+              <div class="table-scroll" tabindex="0" aria-label="Широкая таблица прокручивается горизонтально">
+                <table class="rank-table sects-factions-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Ранг</th>
+                      <th scope="col">Сюй</th>
+                      <th scope="col">Шень</th>
+                      <th scope="col">Звери</th>
+                      <th scope="col">Цветы<br>Безродные<br>Персики</th>
+                      <th scope="col">Секта 1</th>
+                      <th scope="col">Секта 2</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Слабость</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                    <tr><td>Новичок</td><td>1–4</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                    <tr><td>База</td><td>5–9</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                    <tr><td>Скромный Успех</td><td>10–14</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                    <tr><td>Уверенность</td><td>15–19</td><td>1–4</td><td>—</td><td>—</td><td>1–4</td><td>—</td></tr>
+                    <tr><td>Осознание</td><td>20–24</td><td>5–9</td><td>—</td><td>—</td><td>5–9</td><td>—</td></tr>
+                    <tr><td>Апогей</td><td>25–29</td><td>10–14</td><td>1–4</td><td>—</td><td>10–14</td><td>—</td></tr>
+                    <tr><td>Из Ряда Вон</td><td>30–34</td><td>15–19</td><td>5–9</td><td>—</td><td>15–19</td><td>—</td></tr>
+                    <tr><td>Верх Мастерства</td><td>35–39</td><td>20–24</td><td>10–14</td><td>1–4</td><td>20–24</td><td>1–4</td></tr>
+                    <tr><td>Искусство</td><td>40–44</td><td>25–29</td><td>15–19</td><td>5–9</td><td>25–29</td><td>5–9</td></tr>
+                    <tr><td>Гроза Царей</td><td>45–49</td><td>30–34</td><td>20–24</td><td>10–14</td><td>30–34</td><td>10–14</td></tr>
+                    <tr><td>Совершенство</td><td>50–54</td><td>35–39</td><td>25–29</td><td>15–19</td><td>35–39</td><td>15–19</td></tr>
+                    <tr><td>Божественность</td><td>55–59</td><td>40–44</td><td>30–34</td><td>20–24</td><td>40–44</td><td>20–24</td></tr>
+                    <tr><td>Всепобеждающий</td><td>60–64</td><td>45–49</td><td>35–39</td><td>25–29</td><td>45–49</td><td>25–29</td></tr>
+                    <tr><td>Великий Мастер</td><td>65–69</td><td>50–54</td><td>40–44</td><td>30–34</td><td>—</td><td>30–34</td></tr>
+                    <tr><td>Чемпион</td><td>70–71</td><td>55–59</td><td>45–49</td><td>35–39</td><td>—</td><td>35–39</td></tr>
+                    <tr><td>Первенство</td><td>75–79</td><td>60–61</td><td>50–54</td><td>40–44</td><td>—</td><td>40–44</td></tr>
+                    <tr><td>Шок</td><td>80–84</td><td>65–69</td><td>55–59</td><td>45–49</td><td>—</td><td>45–49</td></tr>
+                    <tr><td>Потрясение</td><td>85–86</td><td>70–71</td><td>60–61</td><td>50–51</td><td>—</td><td>50–51</td></tr>
+                    <tr><td>Бессмертие</td><td>87–89</td><td>72–74</td><td>62–64</td><td>52–54</td><td>—</td><td>52–54</td></tr>
+                    <tr><td>Мудрость</td><td>90–91</td><td>75–76</td><td>65–66</td><td>55–56</td><td>—</td><td>55–56</td></tr>
+                    <tr><td>Миротворец</td><td>92–93</td><td>77–78</td><td>67–68</td><td>57–58</td><td>—</td><td>57–58</td></tr>
+                    <tr><td>Уникум</td><td>94–98</td><td>79–83</td><td>69–73</td><td>59–63</td><td>—</td><td>59–63</td></tr>
+                    <tr><td>Гармония Человека и Природы</td><td>99–102</td><td>84–88</td><td>74–78</td><td>64–66</td><td>—</td><td>64–66</td></tr>
+                    <tr><td>Тайна</td><td>103–108</td><td>89–96</td><td>79–81</td><td>67–72</td><td>—</td><td>67–72</td></tr>
+                    <tr><td>Непостижимый</td><td>?</td><td>?</td><td>?</td><td>?</td><td>—</td><td>81</td></tr>
+                    <tr><td>Возвращение к Естеству</td><td>Не предусмотрено!</td><td></td><td></td><td></td><td></td><td></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="table-slide" id="world-neiguns" data-table-slide data-title="Таблица мировых нейгунов" hidden>
+              <div class="world-neigun-banner">
+                <span class="world-neigun-icons" aria-label="Иконки мировых нейгунов">
+                  <span class="world-neigun-icon world-neigun-icon-1" role="img" aria-label="Мировой нейгун 1"></span>
+                  <span class="world-neigun-icon world-neigun-icon-2" role="img" aria-label="Мировой нейгун 2"></span>
+                  <span class="world-neigun-icon world-neigun-icon-3" role="img" aria-label="Мировой нейгун 3"></span>
+                  <span class="world-neigun-icon world-neigun-icon-4" role="img" aria-label="Мировой нейгун 4"></span>
+                </span>
+              </div>
+              <div class="table-scroll" tabindex="0" aria-label="Таблица прокручивается горизонтально на небольшом экране">
+                <table class="rank-table world-neigun-table">
+                  <thead>
+                    <tr><th scope="col">Ранг</th><th scope="col">Уровень мирового нейгуна</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Слабость</td><td>Создание персонажа</td></tr>
+                    <tr><td>Новичок</td><td>—</td></tr>
+                    <tr><td>База</td><td>—</td></tr>
+                    <tr><td>Скромный Успех</td><td>—</td></tr>
+                    <tr><td>Уверенность</td><td>—</td></tr>
+                    <tr><td>Осознание</td><td>—</td></tr>
+                    <tr><td>Апогей</td><td>1–3</td></tr>
+                    <tr><td>Из Ряда Вон</td><td>4–8</td></tr>
+                    <tr><td>Верх Мастерства</td><td>9–13</td></tr>
+                    <tr><td>Искусство</td><td>14–18</td></tr>
+                    <tr><td>Гроза Царей</td><td>19–23</td></tr>
+                    <tr><td>Совершенство</td><td>21–28</td></tr>
+                    <tr><td>Божественность</td><td>29–33</td></tr>
+                    <tr><td>Всепобеждающий</td><td>31–38</td></tr>
+                    <tr><td>Великий Мастер</td><td>39–43</td></tr>
+                    <tr><td>Чемпион</td><td>44–48</td></tr>
+                    <tr><td>Первенство</td><td>49–53</td></tr>
+                    <tr><td>Шок</td><td>54–58</td></tr>
+                    <tr><td>Потрясение</td><td>59–61</td></tr>
+                    <tr><td>Бессмертие</td><td>62–64</td></tr>
+                    <tr><td>Мудрость</td><td>65–66</td></tr>
+                    <tr><td>Миротворец</td><td>67–69</td></tr>
+                    <tr><td>Уникум</td><td>70–71</td></tr>
+                    <tr><td>Гармония Человека и Природы</td><td>72–74</td></tr>
+                    <tr><td>Тайна</td><td>75–81</td></tr>
+                    <tr><td>Непостижимый</td><td>82–85</td></tr>
+                    <tr><td>Возвращение к Естеству</td><td>86</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="table-slide" id="lanterns" data-table-slide data-title="Таблица фонарей" hidden>
+              <div class="table-scroll lantern-table-scroll" tabindex="0" aria-label="Длинная таблица NPC и наград">
+                <table class="rank-table lantern-table">
+                  <thead><tr><th scope="col">№</th><th scope="col">NPC</th><th scope="col">Награда</th></tr></thead>
+                  <tbody>
+                    <tr><td>1</td><td>Ань Сюэянь</td><td>Артефакт + «Меч Ветра» (Свиток)</td></tr>
+                    <tr><td>2</td><td>Бай Фу</td><td>Сближение</td></tr>
+                    <tr><td>3</td><td>Бай Цзюань</td><td>Артефакт</td></tr>
+                    <tr><td>4</td><td>Барчук Вэй</td><td>Артефакт + Обработанная шкура обезьяны</td></tr>
+                    <tr><td>5</td><td>Безмятежный горец</td><td>[Кулак Великого Предела (Древняя Книга)] Потрёпанная книга</td></tr>
+                    <tr><td>6</td><td>Безумный Даос</td><td>Приглашение на Хуашань (1)</td></tr>
+                    <tr><td>7</td><td>Богатый купец</td><td>Артефакт + Вяз 2 шт.</td></tr>
+                    <tr><td>8</td><td>Большое войско</td><td>Грецкий орех ×2</td></tr>
+                    <tr><td>9</td><td>Бродяга</td><td>Артефакт + «Внутренняя Алхимия» 1–17</td></tr>
+                    <tr><td>10</td><td>Бу Маньцай</td><td>Запечённая курица 4 шт.</td></tr>
+                    <tr><td>11</td><td>Быстрый меч</td><td>Артефакт + Рецепт</td></tr>
+                    <tr><td>12</td><td>Ван Жун</td><td>Миндаль 2 шт.</td></tr>
+                    <tr><td>13</td><td>Ван Лун</td><td>Артефакт + Ноты для музыканта</td></tr>
+                    <tr><td>14</td><td>Ван Цон</td><td>Женьшень из Кореи</td></tr>
+                    <tr><td>15</td><td>Вэй Сюаньцюн</td><td>«Канон Меридиана» — Свиток</td></tr>
+                    <tr><td>16</td><td>Вэнь Шанюэ</td><td>Эвкалипт + Артефакт</td></tr>
+                    <tr><td>17</td><td>Госпожа Чжан</td><td>Артефакт</td></tr>
+                    <tr><td>18</td><td>Гу Синьло</td><td>«Канон Меридиана» — Свиток</td></tr>
+                    <tr><td>19</td><td>Дань Шипин</td><td>Корень дикорастущего пиона + Бунчук 2 шт.</td></tr>
+                    <tr><td>20</td><td>Дин Янь</td><td>Печь для ядов</td></tr>
+                    <tr><td>21</td><td>Доу Цзятянь</td><td>Слиток олова и Артефакт</td></tr>
+                    <tr><td>22</td><td>Дядюшка Лу</td><td>Порошок поглощения нечисти 2 шт.</td></tr>
+                    <tr><td>23</td><td>Загадочный человек</td><td>Рекомендация Школы Безродных</td></tr>
+                    <tr><td>24</td><td>Закоулок Колокольчиков</td><td>Артефакт</td></tr>
+                    <tr><td>25</td><td>И Сян</td><td>[Кулак Великого Предела (Древняя Книга)] Потрёпанная книга</td></tr>
+                    <tr><td>26</td><td>И Чао</td><td>Артефакт + Рецепт аптекаря</td></tr>
+                    <tr><td>27</td><td>И Шэнцзе</td><td>Стол портного 1 уровня</td></tr>
+                    <tr><td>28</td><td>И Юэчань</td><td>Артефакт + Сближение</td></tr>
+                    <tr><td>29</td><td>Инь Фэн</td><td>Рецепт для мастера ядов и Артефакт</td></tr>
+                    <tr><td>30</td><td>Лан Хунтао</td><td>Артефакт</td></tr>
+                    <tr><td>31</td><td>Ли Таньцю</td><td>Триста детских песен (продолжение)</td></tr>
+                    <tr><td>32</td><td>Ли Цюхэ</td><td>[Кулак Великого Предела (Древняя Книга)] Потрёпанная книга</td></tr>
+                    <tr><td>33</td><td>Лин Сюань</td><td>Фрагмент нэйгуна Учёных</td></tr>
+                    <tr><td>34</td><td>Лингу Чун</td><td>Замысел картины</td></tr>
+                    <tr><td>35</td><td>Ло Эр</td><td>Корень дикорастущего пиона и Артефакт</td></tr>
+                    <tr><td>36</td><td>Лу Саньнян</td><td>Артефакт + Зоолит</td></tr>
+                    <tr><td>37</td><td>Лу Ся</td><td>Наковальня 1 уровня</td></tr>
+                    <tr><td>38</td><td>Лу Юньсяо</td><td>Пион 2 шт.</td></tr>
+                    <tr><td>39</td><td>Лун Чэнь</td><td>Артефакт</td></tr>
+                    <tr><td>40</td><td>Лю Чжэньшу</td><td>Зелень Листьев Бамбука ×2</td></tr>
+                    <tr><td>41</td><td>Люй Шангуан</td><td>Малахит + Артефакт</td></tr>
+                    <tr><td>42</td><td>Ма Сэнь</td><td>Артефакт + Самоучитель игры в шахматы</td></tr>
+                    <tr><td>43</td><td>Моу Хуа</td><td>Трава + Рецепт</td></tr>
+                    <tr><td>44</td><td>Мужун Вэйюй</td><td>Артефакт</td></tr>
+                    <tr><td>45</td><td>Нин Шо</td><td>Артефакт + Рецепт портного</td></tr>
+                    <tr><td>46</td><td>Нэн Чжуаньдоу</td><td>Стол ювелира 2 уровня</td></tr>
+                    <tr><td>47</td><td>Оуян Сян</td><td>Печь для ядов (Мази) + Кусок чистого золота</td></tr>
+                    <tr><td>48</td><td>Пан Жуйюань</td><td>Песок На Ветру и Артефакт / «Свет Нефрита» — Свиток</td></tr>
+                    <tr><td>49</td><td>Пань Шеньи</td><td>[Битьё Собак (Древняя Книга)] Потрёпанная книга</td></tr>
+                    <tr><td>50</td><td>Патрулирующий монах</td><td>[Когти Дракона (Древняя Книга)] Потрёпанная книга</td></tr>
+                    <tr><td>51</td><td>Пахотные Земли</td><td>Артефакт + Шёлк Духа Воды ×2</td></tr>
+                    <tr><td>52</td><td>Пи Сыху</td><td>Артефакт + Строй</td></tr>
+                    <tr><td>53</td><td>Построить небольшой город</td><td>«Восстание против Неба» — Свиток</td></tr>
+                    <tr><td>54</td><td>Простолюдин</td><td>Артефакт</td></tr>
+                    <tr><td>55</td><td>Пу Циньчжи</td><td>Стойка на аптекаря</td></tr>
+                    <tr><td>56</td><td>Пэн Ланьвань</td><td>Артефакт + Рецепт для повара</td></tr>
+                    <tr><td>57</td><td>Пэн Чангуй</td><td>[Битьё Собак (Древняя Книга)] Потрёпанная книга + Божественная Поступь/Сближение</td></tr>
+                    <tr><td>58</td><td>Ракша</td><td>Потрёпанная книга [Чистый Дух] / [Учение Пяти Стихий] / [Пурпурный Ореол] / [Заходящее Солнце]</td></tr>
+                    <tr><td>59</td><td>Рубашка Горного духа</td><td>Мысли бабочки</td></tr>
+                    <tr><td>60</td><td>Собачка</td><td>Артефакт и золотая шмотка</td></tr>
+                    <tr><td>61</td><td>Соболь</td><td>Соболиный мех 2 шт.</td></tr>
+                    <tr><td>62</td><td>Старуха Тянь</td><td>Артефакт + Обработанная шкура обезьяны</td></tr>
+                    <tr><td>63</td><td>Старый Попрошайка</td><td>Запечённая курица</td></tr>
+                    <tr><td>64</td><td>Су Сю-Юнь</td><td>Наковальня 2 уровня</td></tr>
+                    <tr><td>65</td><td>Су Чжао</td><td>Артефакт + Рецепт портного</td></tr>
+                    <tr><td>66</td><td>Сун Ляньчжэнь</td><td>Артефакт и Рецепт на кузнеца</td></tr>
+                    <tr><td>67</td><td>Сун Сюньцин</td><td>Стол портного 1 уровня</td></tr>
+                    <tr><td>68</td><td>Сун Чжэньшань</td><td>Артефакт + Рецепт мастера ядов</td></tr>
+                    <tr><td>69</td><td>Сыту Цзин</td><td>Артефакт + Зенит + Рецепт</td></tr>
+                    <tr><td>70</td><td>Сю Дачэн</td><td>Печь для ядов</td></tr>
+                    <tr><td>71</td><td>Сюань Цзи</td><td>Артефакт</td></tr>
+                    <tr><td>72</td><td>Сяо Лань</td><td>Эвкалипт + Артефакт</td></tr>
+                    <tr><td>73</td><td>Сяо Минь</td><td>Наковальня 1 уровня</td></tr>
+                    <tr><td>74</td><td>Сяо Хоу</td><td>Печь для ядов или Стойка на аптекаря</td></tr>
+                    <tr><td>75</td><td>Сяо Хэтао</td><td>Грецкий орех ×2</td></tr>
+                    <tr><td>76</td><td>Тайшу Ну</td><td>Артефакт + «Жестокая Песнь» (Свиток)</td></tr>
+                    <tr><td>77</td><td>Тан Ваньшуан</td><td>Артефакт + «Демон Небес» (Свиток)</td></tr>
+                    <tr><td>78</td><td>Тан Чуньлай</td><td>«Демон Небес» (Свиток) + Рецепт портного</td></tr>
+                    <tr><td>79</td><td>Тао Цзеюнь</td><td>Рецепт для книжника и Артефакт</td></tr>
+                    <tr><td>80</td><td>Ту Сянсюй</td><td>Рецепт на 1 кл. стола</td></tr>
+                    <tr><td>81</td><td>Тун Цзяньбо</td><td>Артефакт + Корень пиона</td></tr>
+                    <tr><td>82</td><td>Тунь Дань</td><td>Артефакт + Рецепт портного</td></tr>
+                    <tr><td>83</td><td>У Диншань</td><td>Артефакт и Строй из КЗО</td></tr>
+                    <tr><td>84</td><td>У Жуй</td><td>Свежая рыба ×2</td></tr>
+                    <tr><td>85</td><td>У Сюэли</td><td>Артефакт + Рецепт</td></tr>
+                    <tr><td>86</td><td>У Ся</td><td>Вино</td></tr>
+                    <tr><td>87</td><td>У Чонг</td><td>Жимолость</td></tr>
+                    <tr><td>88</td><td>Фай Сы</td><td>Божественная Поступь</td></tr>
+                    <tr><td>89</td><td>Фу Гаосюань</td><td>Песок На Ветру и Артефакт / «Свет Нефрита» — Свиток</td></tr>
+                    <tr><td>90</td><td>Фэн Инь</td><td>Чёрный порошок / Золотой порошок ×4</td></tr>
+                    <tr><td>91</td><td>Хун Бао</td><td>Стойка на аптекаря</td></tr>
+                    <tr><td>92</td><td>Хун Бофан</td><td>Божественная поступь</td></tr>
+                    <tr><td>93</td><td>Хун Яньчэн</td><td>Артефакт и Рецепт ювелира</td></tr>
+                    <tr><td>94</td><td>Хэ Лэй</td><td>Артефакт и Рецепт для аптекаря</td></tr>
+                    <tr><td>95</td><td>Хэ Пяоя</td><td>Артефакт + Ноты для музыканта</td></tr>
+                    <tr><td>96</td><td>Цан Янь</td><td>Свиток 2-го нэйгуна Удана и Артефакт</td></tr>
+                    <tr><td>97</td><td>Цао Тянь</td><td>Стол портного 2 уровня</td></tr>
+                    <tr><td>98</td><td>Цзи Го</td><td>Артефакт и Рецепт для книжника</td></tr>
+                    <tr><td>99</td><td>Цзи Ляньчжу</td><td>Артефакт</td></tr>
+                    <tr><td>100</td><td>Цзи Чень</td><td>Артефакт и Свиток «Внутренняя Алхимия»</td></tr>
+                    <tr><td>101</td><td>Цзи Чэнь</td><td>Артефакт</td></tr>
+                    <tr><td>102</td><td>Цзинь Ули</td><td>Артефакт + Рецепт портного</td></tr>
+                    <tr><td>103</td><td>Цзинь Чжунлян</td><td>Стол портного 1 уровня</td></tr>
+                    <tr><td>104</td><td>Цзу Син</td><td>[Когти Дракона (Древняя Книга)] Потрёпанная книга</td></tr>
+                    <tr><td>105</td><td>Цзы Нин</td><td>Печь для ядов</td></tr>
+                    <tr><td>106</td><td>Цзэн Ин</td><td>Артефакт + Рецепт аптекаря</td></tr>
+                    <tr><td>107</td><td>Цзэн Сюй</td><td>Артефакт и Слиток цинка ×1</td></tr>
+                    <tr><td>108</td><td>Цзэн Шилу</td><td>[Кулак Великого Предела (Древняя Книга)] Потрёпанная книга</td></tr>
+                    <tr><td>109</td><td>Цзян Цзинькунь</td><td>Артефакт + Рецепт</td></tr>
+                    <tr><td>110</td><td>Цзяо Цзяньхунь</td><td>«Сферический Кулак» — Свиток ×20</td></tr>
+                    <tr><td>111</td><td>Цин Фа</td><td>[Когти Дракона (Древняя Книга)] Потрёпанная книга</td></tr>
+                    <tr><td>112</td><td>Цин Фу</td><td>[Когти Дракона (Древняя Книга)] Потрёпанная книга</td></tr>
+                    <tr><td>113</td><td>Цин Шоу</td><td>Артефакт + Рецепт портного</td></tr>
+                    <tr><td>114</td><td>Цинь Фэй</td><td>Стол ювелира 1 уровня</td></tr>
+                    <tr><td>115</td><td>Цуй Чэнь</td><td>Артефакт</td></tr>
+                    <tr><td>116</td><td>Цянь Тетоу</td><td>Артефакт + Рецепт ювелира</td></tr>
+                    <tr><td>117</td><td>Ча Сяо</td><td>Артефакт + Рецепт</td></tr>
+                    <tr><td>118</td><td>Чай Минсюнь</td><td>Артефакт + Необработанная шкура барана</td></tr>
+                    <tr><td>119</td><td>Че Кенао</td><td>Прибавка ко всем статам +25 на 7 дней</td></tr>
+                    <tr><td>120</td><td>Чжан Си</td><td>Артефакт + «Канон Меридиана» — Свиток 3 шт.</td></tr>
+                    <tr><td>121</td><td>Чжан Фулань</td><td>Артефакт и Зоолит ×1</td></tr>
+                    <tr><td>122</td><td>Чжань Цзюнь</td><td>Артефакт + Рецепт портного</td></tr>
+                    <tr><td>123</td><td>Чжоу Лун</td><td>Артефакт и Шелковица</td></tr>
+                    <tr><td>124</td><td>Чжоу Сыюй</td><td>Артефакт + Ледяная Луна</td></tr>
+                    <tr><td>125</td><td>Чжоу Хэян</td><td>Артефакт + Рецепт ювелира</td></tr>
+                    <tr><td>126</td><td>Чжу Цзинь</td><td>Артефакт + Кониза</td></tr>
+                    <tr><td>127</td><td>Чжу Эр</td><td>Сближение</td></tr>
+                    <tr><td>128</td><td>Чжунсунь Сюй</td><td>Артефакт + «Канон Меридиана» — Свиток</td></tr>
+                    <tr><td>129</td><td>Чиу И</td><td>Фрагмент [Сомкнутые Пальцы]</td></tr>
+                    <tr><td>130</td><td>Чудак</td><td>Миндаль 1 шт.</td></tr>
+                    <tr><td>131</td><td>Чэн Бицзюнь</td><td>[Битьё Собак (Древняя Книга)] Потрёпанная книга</td></tr>
+                    <tr><td>132</td><td>Чэн Чанъи</td><td>[Битьё Собак (Древняя Книга)] Потрёпанная книга</td></tr>
+                    <tr><td>133</td><td>Чэнь Я</td><td>Артефакт + Самоучитель игры в шахматы Дан Ху (16)</td></tr>
+                    <tr><td>134</td><td>Ши Фэй</td><td>Артефакт + Шелковица</td></tr>
+                    <tr><td>135</td><td>Ши Цюнь</td><td>Божественная поступь</td></tr>
+                    <tr><td>136</td><td>Ю Чжи</td><td>Артефакт + Серебряная / Золотая шмотка</td></tr>
+                    <tr><td>137</td><td>Юань Тешань</td><td>Печь для ядов</td></tr>
+                    <tr><td>138</td><td>Юй Гуфэн</td><td>Артефакт + Рецепт аптекаря</td></tr>
+                    <tr><td>139</td><td>Юйчи Линъюн</td><td>Артефакт + Скил на скрытое оружие</td></tr>
+                    <tr><td>140</td><td>Юэ Минкэ</td><td>Фрагмент альбома</td></tr>
+                    <tr><td>141</td><td>Юэ Минкэ</td><td>Свиток мирового Нэйгуна / Старинное вино из ста трав / (Полёт Мысли) Отрывок</td></tr>
+                    <tr><td>142</td><td>Янь Жунцин</td><td>Артефакт</td></tr>
+                    <tr><td>143</td><td>Яо Сянь</td><td>«Пять Канонов» — Свиток</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="table-slide" id="sect-entry" data-table-slide data-title="Вступление в секты" hidden>
+              <div class="table-scroll" tabindex="0" aria-label="Таблица условий вступления в секты">
+                <table class="rank-table sect-entry-table">
+                  <thead><tr><th scope="col">Секта</th><th scope="col">Условия, NPC и координаты</th></tr></thead>
+                  <tbody>
+                    <tr><td>Остров Сияющих Надежд</td><td>Чтобы противостоять злым силам в Улине, вступившим в сговор с сектой Во, Остров Сияющих Надежд набирает доблестных воинов. Желающие присоединиться могут обратиться к официанту в гостинице в Чэнду <strong>(526, 604)</strong>.</td></tr>
+                    <tr><td>Морской Дворец</td><td>Морской Дворец создан для противодействия злым боевым искусствам Монголии и набирает благотворителей. Желающие присоединиться могут обратиться к Ван Лао в Нанкине <strong>(1552, 1023)</strong>.</td></tr>
+                    <tr><td>Дамба Няньло</td><td>Женщине-скиталице необходимо поговорить с Чжао Чжо в Нанкине <strong>(1431, 1738)</strong> на берегу реки Циньхуай. Мужчине-скитальцу необходимо участвовать в событиях Цветочного шоу Дамбы через Шань Юэюэ: Нанкин <strong>(1564, 697)</strong>, Сучжоу <strong>(641, 437)</strong> или Чэнду <strong>(966, 751)</strong>.</td></tr>
+                    <tr><td>Древняя Гробница</td><td>Немощный старик возле таверны Пекина знает, как попасть в Древнюю Гробницу. Он случайным образом появляется возле таверны по координатам <strong>(485, 96)</strong>, <strong>(488, 165)</strong>, <strong>(478, 194)</strong> или <strong>(543, 254)</strong>. Местоположение сбрасывается каждые полчаса.</td></tr>
+                    <tr><td>Мастерская Радости</td><td>Мастерская Радости набирает праведников Цзянху для присоединения к Дворцу Вечной Радости. За подробностями обратитесь к Бе И в Нанкине <strong>(1580, 698)</strong>.</td></tr>
+                    <tr><td>Лагерь Шэньцзи</td><td>Любой игрок-скиталец может обратиться к Мяо Эрпи в винном доме Пекина <strong>(494, 165)</strong> за дополнительной информацией.</td></tr>
+                    <tr><td>Секта Дхармы</td><td>Представитель Дхармы набирает учеников для увеличения влияния в Цзянху. Подробности можно узнать у Чжан Цюаня за городом Лоян <strong>(1030, 764)</strong>.</td></tr>
+                    <tr><td>Секта Горы Хуа</td><td>Хуашань ведёт набор. Для получения дополнительной информации ищите Четыре каравая на окраине Лояна <strong>(1120, 1093)</strong>.</td></tr>
+                    <tr><td>Кровавая Сабля</td><td>Таинственный человек близ Сучжоу знает, как попасть в секту Кровавого Клинка. Поговорите с ним в Сучжоу <strong>(747, 431)</strong>, чтобы вступить.</td></tr>
+                    <tr><td>Дворец Святой Воды</td><td>Ученицы Эмэй могут обратиться к настоятельнице Цзюэ Чунь <strong>(489, 124)</strong>. Другой путь: персонажу женского пола с уровнем Духовного равновесия необходимо найти Цзыту Чжуна в таверне Чэнду <strong>(550, 597)</strong>. Ученики мужского пола не принимаются.</td></tr>
+                    <tr><td>Братство Дальнего Востока</td><td>Ученики Цзянху могут поговорить с А-Ци из Братства Дальнего Востока в Сучжоу <strong>(765, 468)</strong>.</td></tr>
+                    <tr><td>Павильон Звёздного Неба</td><td>Любой игрок-скиталец может обратиться к Страннику на втором этаже винной лавки в усадьбе Яньюй <strong>(484, 1083)</strong>.</td></tr>
+                    <tr><td>Пять Бессмертных</td><td>Найдите нищего в Деревне Фонарей, чтобы узнать, как справиться с бедствием яда насекомых. При достижении уровня Духовного равновесия найдите его по координатам <strong>(885, 740)</strong>.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="table-slide" id="neigun-exchange" data-table-slide data-title="Обмен нейгунов 1, 2, 3" hidden>
+              <div class="table-scroll" tabindex="0" aria-label="Таблица NPC для обмена нейгунов">
+                <table class="rank-table neigun-exchange-table">
+                  <thead><tr><th scope="col">Школа</th><th scope="col">NPC / координаты</th></tr></thead>
+                  <tbody>
+                    <tr><td>Нищие</td><td>556, 340</td></tr>
+                    <tr><td>Шаолинь</td><td>856, 407</td></tr>
+                    <tr><td>Блаженные</td><td>265, 83</td></tr>
+                    <tr><td>Учёные</td><td>312, 482</td></tr>
+                    <tr><td>Тан</td><td>1055, −348</td></tr>
+                    <tr><td>Эмей</td><td>633, −147</td></tr>
+                    <tr><td>Удан</td><td>545, −13</td></tr>
+                    <tr><td>Лейбы</td><td>310, −49 (0)?</td></tr>
+                    <tr><td>Минги</td><td>—</td></tr>
+                    <tr><td>Тяньшани</td><td>—</td></tr>
+                    <tr><td>Куньлуни</td><td>−412, −608</td></tr>
+                    <tr><td>Синьтянь</td><td>—</td></tr>
+                    <tr><td>Шаманы</td><td>−4228, −5582</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="table-slide" id="school-neiguns" data-table-slide data-title="Школьные нейгуны" hidden>
+              <div class="table-scroll" tabindex="0" aria-label="Широкая таблица школьных нейгунов">
+                <table class="rank-table school-neigun-table">
+                  <thead><tr><th scope="col">Ранг</th><th scope="col">Нейгун 1</th><th scope="col">Нейгун 2</th><th scope="col">Нейгун 3</th><th scope="col">Нейгун 4</th><th scope="col">Нейгун 5</th><th scope="col">Нейгун 6</th></tr></thead>
+                  <tbody>
+                    <tr><td>Слабость</td><td>Создание персонажа</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Новичок</td><td>1–4</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                    <tr><td>База</td><td>5–9</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                    <tr><td>Скромный Успех</td><td>10–14</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                    <tr><td>Уверенность</td><td>15–19</td><td>1–4</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                    <tr><td>Осознание</td><td>20–24</td><td>5–9</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                    <tr><td>Апогей</td><td>25–29</td><td>10–14</td><td>1–4</td><td>—</td><td>—</td><td>—</td></tr>
+                    <tr><td>Из Ряда Вон</td><td>30–34</td><td>15–29</td><td>5–9</td><td>—</td><td>—</td><td>—</td></tr>
+                    <tr><td>Верх Мастерства</td><td>35–36</td><td>20–24</td><td>10–14</td><td>1–4</td><td>—</td><td>—</td></tr>
+                    <tr><td>Искусство</td><td>—</td><td>25–29</td><td>15–19</td><td>5</td><td>—</td><td></td></tr>
+                    <tr><td>Гроза Царей</td><td>—</td><td>30–34</td><td>20–24</td><td>10</td><td>1–4</td><td>—</td></tr>
+                    <tr><td>Совершенство</td><td>—</td><td>35–36</td><td>25–29</td><td>15</td><td>5–9</td><td>—</td></tr>
+                    <tr><td>Божественность</td><td>—</td><td>—</td><td>30–34</td><td>20</td><td>10–14</td><td>—</td></tr>
+                    <tr><td>Всепобеждающий</td><td>—</td><td>—</td><td>35–36</td><td>25</td><td>15–19</td><td>1–4</td></tr>
+                    <tr><td>Великий Мастер</td><td>—</td><td>—</td><td>Реворк</td><td>30</td><td>20–24</td><td>5–9</td></tr>
+                    <tr><td>Чемпион</td><td>—</td><td>—</td><td>—</td><td>35</td><td>25–29</td><td>10–14</td></tr>
+                    <tr><td>Первенство</td><td>—</td><td>—</td><td>—</td><td>40</td><td>30–34</td><td>15–19</td></tr>
+                    <tr><td>Шок</td><td>—</td><td>—</td><td>—</td><td>45</td><td>35–39</td><td>20–24</td></tr>
+                    <tr><td>Потрясение</td><td>—</td><td>—</td><td>—</td><td>49</td><td>39–41</td><td>25–29</td></tr>
+                    <tr><td>Бессмертие</td><td>—</td><td>—</td><td>—</td><td>Реворк</td><td>42–43</td><td>30–34</td></tr>
+                    <tr><td>Мудрость</td><td>—</td><td>—</td><td>—</td><td>—</td><td>44–46</td><td>35–38</td></tr>
+                    <tr><td>Миротворец</td><td>—</td><td>—</td><td>—</td><td>—</td><td>47–48</td><td>39–41</td></tr>
+                    <tr><td>Уникум</td><td>—</td><td>—</td><td>—</td><td>—</td><td>49</td><td>42–43</td></tr>
+                    <tr><td>Гармония Человека и Природы</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Реворк</td><td>44–45</td></tr>
+                    <tr><td>Тайна</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>46–49</td></tr>
+                    <tr><td>Непостижимый</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Реворк</td></tr>
+                    <tr><td>Возвращение к Естеству</td><td>Не предусмотрено!</td><td></td><td></td><td></td><td></td><td></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <span class="footer-ornament" aria-hidden="true"></span>
+          <p>Руководство Легенды Кунг-Фу 2026</p>
+          <span class="footer-ornament" aria-hidden="true"></span>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js?v=25" defer></script>
+      <script src="anti-copy.js?v=0.0.21" defer></script>
+  </body>
+</html>

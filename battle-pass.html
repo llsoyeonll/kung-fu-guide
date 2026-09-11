@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Боевой пропуск Тайвани в Легендах Кунг-Фу: правила, уровни, обычные и дополнительные награды." />
+    <title>Боевой пропуск — Легенды Кунг-Фу</title>
+    <link rel="icon" href="favicon.ico?v=16" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
+    <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
+    <link rel="stylesheet" href="styles.css?v=32" />
+  
+    <link rel="stylesheet" href="community-auth.css?v=15" />
+    <script>document.documentElement.classList.add('nineyin-account-pending')</script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabase-config.js?v=0.0.21" defer></script>
+    <script src="account.js?v=0.0.21" defer></script>
+  </head>
+  <body>
+    <main class="site-shell inner-site-shell battle-pass-site-shell">
+      <div class="mist" aria-hidden="true"></div>
+      <div class="golden-particles" aria-hidden="true"></div>
+      <div class="cursor-aura" aria-hidden="true"></div>
+
+      <header class="topbar" id="top">
+        <div class="topbar-inner">
+          <a class="topbar-logo" href="index.html" aria-label="Руководство Легенды Кунг-Фу — главная">
+            <span class="topbar-logo-image" aria-hidden="true"></span>
+            <span class="nine-yin-wordmark" role="img" aria-label="9 Инь"></span>
+          </a>
+          <nav class="topnav" aria-label="Основная навигация">
+            <a href="index.html">Главная</a><a href="forum/index.html">Форум</a>
+            
+            <a href="character.html">О персонаже</a>
+            <a href="partnership.html">Партнёрство и связь</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="topup.html">Пополнение</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="page-content battle-pass-page-content">
+        <a class="battle-pass-back-link" href="game-content.html">← Вернуться к игровому контенту</a>
+
+        <header class="battle-pass-page-header">
+          <p class="collection-kicker">Боевой пропуск · Тайвань</p>
+          <h1>Путь усердия</h1>
+          <p>Получайте опыт за активность, повышайте уровень пропуска и забирайте награды обычной и дополнительной веток.</p>
+        </header>
+
+        <section class="battle-pass-overview" aria-labelledby="pass-info-title">
+          <div class="battle-pass-info">
+            <span class="card-kicker">Информация о пропуске</span>
+            <h2 id="pass-info-title">Как повышать уровень</h2>
+            <ol class="battle-pass-rules">
+              <li><span>1</span><p>Каждое очко активности даёт <strong>1 единицу опыта</strong> в боевой пропуск.</p></li>
+              <li><span>2</span><p>За <strong>2 дина</strong> можно активировать дополнительную награду, получить 10 уровней пропуска и 45 ячеек на складе.</p></li>
+              <li><span>3</span><p>На <strong>30-м уровне</strong> выдаётся костюм события.</p></li>
+              <li><span>4</span><p>Для покупки доступны 10 уровней. Стоимость каждого уровня — <strong>100 л цельного</strong>.</p></li>
+              <li><span>5</span><p>Если рюкзак заполнен, все награды будут отправлены на игровую почту.</p></li>
+              <li><span>6</span><p>Максимальный уровень боевого пропуска — <strong>100</strong>.</p></li>
+            </ol>
+          </div>
+
+          <figure class="battle-pass-costume">
+            <img src="assets/battle-pass-taiwan-costume.png?v=32" alt="Мужской и женский костюмы боевого пропуска" / decoding="async" loading="lazy">
+            <figcaption><span>Награда события</span><strong>Костюм 30-го уровня</strong></figcaption>
+          </figure>
+        </section>
+
+        <section class="battle-pass-tabs" aria-label="Выбор версии боевого пропуска">
+          <input class="battle-pass-tab-input" type="radio" name="battle-pass-server" id="battle-pass-taiwan" checked />
+          <input class="battle-pass-tab-input" type="radio" name="battle-pass-server" id="battle-pass-pirate" />
+
+          <div class="battle-pass-tab-list" role="tablist" aria-label="Версия боевого пропуска">
+            <label for="battle-pass-taiwan" role="tab"><small>Официальный сервер</small><strong>Тайвань</strong></label>
+            <label for="battle-pass-pirate" role="tab"><small>Приватный сервер</small><strong>Пиратка</strong></label>
+          </div>
+
+          <div class="battle-pass-tab-panels">
+            <div class="battle-pass-tab-panel battle-pass-tab-panel-taiwan">
+
+        <section class="battle-pass-section" aria-labelledby="pass-levels-title">
+          <header class="battle-pass-section-heading">
+            <span class="card-kicker">Награды за прогресс</span>
+            <h2 id="pass-levels-title">Уровни боевого пропуска</h2>
+            <p>Обычная награда доступна всем игрокам, дополнительная открывается после активации пропуска за 2 дина.</p>
+          </header>
+
+          <div class="battle-pass-table-scroll" tabindex="0" aria-label="Таблица наград по уровням боевого пропуска">
+            <table class="battle-pass-table battle-pass-levels-table">
+              <thead><tr><th scope="col">Уровень</th><th scope="col">Обычная награда</th><th scope="col">За 2 дина</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>Набор «Усердие-1»</td><td>Набор «Усердные Тренировки-1»</td></tr>
+                <tr><td>2</td><td>Пилюля Сбора Ци ×1</td><td>Пилюля Сбора Ци ×2</td></tr>
+                <tr><td>3</td><td>Лучший Инструмент Для Починки ×2</td><td>Лучший Инструмент Для Починки ×4</td></tr>
+                <tr><td>4</td><td>Эликсир Тьмы (Событие) ×2</td><td>Эликсир Тьмы (Событие) ×6</td></tr>
+                <tr><td>5</td><td>Таблетка Самостоятельного Обучения ×2</td><td>Набор «Усердные Тренировки-2»</td></tr>
+                <tr><td>6</td><td>Тяньшанский Якон ×1</td><td>Тяньшанский Якон ×2</td></tr>
+                <tr><td>7</td><td>Пилюля Сбора Ци ×1</td><td>Пилюля Сбора Ци ×2</td></tr>
+                <tr><td>8</td><td>Лучший Инструмент Для Починки ×2</td><td>Лучший Инструмент Для Починки ×4</td></tr>
+                <tr><td>9</td><td>Эликсир Тьмы (Событие) ×2</td><td>Эликсир Тьмы (Событие) ×6</td></tr>
+                <tr><td>10</td><td>Набор «Усердие-2»</td><td>Набор «Усердные Тренировки-3»</td></tr>
+                <tr><td>11</td><td>Тяньшанский Якон ×1</td><td>Тяньшанский Якон ×2</td></tr>
+                <tr><td>12</td><td>Пилюля Сбора Ци ×1</td><td>Пилюля Сбора Ци ×2</td></tr>
+                <tr><td>13</td><td>Лучший Инструмент Для Починки ×2</td><td>Лучший Инструмент Для Починки ×4</td></tr>
+                <tr><td>14</td><td>Эликсир Тьмы (Событие) ×2</td><td>Эликсир Тьмы (Событие) ×6</td></tr>
+                <tr><td>15</td><td>Таблетка Самостоятельного Обучения ×2</td><td>Набор «Усердные Тренировки-2»</td></tr>
+                <tr><td>16</td><td>Тяньшанский Якон ×1</td><td>Тяньшанский Якон ×2</td></tr>
+                <tr><td>17</td><td>Пилюля Сбора Ци ×1</td><td>Пилюля Сбора Ци ×2</td></tr>
+                <tr><td>18</td><td>Лучший Инструмент Для Починки ×2</td><td>Лучший Инструмент Для Починки ×4</td></tr>
+                <tr><td>19</td><td>Эликсир Тьмы (Событие) ×2</td><td>Эликсир Тьмы (Событие) ×6</td></tr>
+                <tr><td>20</td><td>Набор «Усердие-2»</td><td>Набор «Усердные Тренировки-4»</td></tr>
+                <tr><td>21</td><td>Тяньшанский Якон ×1</td><td>Тяньшанский Якон ×2</td></tr>
+                <tr><td>22</td><td>Пилюля Сбора Ци ×1</td><td>Пилюля Сбора Ци ×2</td></tr>
+                <tr><td>23</td><td>Лучший Инструмент Для Починки ×2</td><td>Лучший Инструмент Для Починки ×4</td></tr>
+                <tr><td>24</td><td>Эликсир Тьмы (Событие) ×2</td><td>Эликсир Тьмы (Событие) ×6</td></tr>
+                <tr><td>25</td><td>Таблетка Самостоятельного Обучения ×2</td><td>Набор «Усердные Тренировки-2»</td></tr>
+                <tr><td>26</td><td>Тяньшанский Якон ×1</td><td>Тяньшанский Якон ×2</td></tr>
+                <tr><td>27</td><td>Пилюля Сбора Ци ×1</td><td>Пилюля Сбора Ци ×2</td></tr>
+                <tr><td>28</td><td>Лучший Инструмент Для Починки ×2</td><td>Лучший Инструмент Для Починки ×4</td></tr>
+                <tr><td>29</td><td>Эликсир Тьмы (Событие) ×2</td><td>Эликсир Тьмы (Событие) ×6</td></tr>
+                <tr><td>30</td><td>Набор «Усердие-2»</td><td>Набор «Усердные Тренировки-5»</td></tr>
+                <tr><td>31</td><td>Тяньшанский Якон ×1</td><td>Тяньшанский Якон ×2</td></tr>
+                <tr><td>32</td><td>Пилюля Сбора Ци ×1</td><td>Пилюля Сбора Ци ×2</td></tr>
+                <tr><td>33</td><td>Лучший Инструмент Для Починки ×2</td><td>Лучший Инструмент Для Починки ×4</td></tr>
+                <tr><td>34</td><td>Эликсир Тьмы (Событие) ×2</td><td>Эликсир Тьмы (Событие) ×6</td></tr>
+                <tr><td>35</td><td>Таблетка Самостоятельного Обучения ×2</td><td>Набор «Усердные Тренировки-2»</td></tr>
+                <tr><td>36</td><td>Тяньшанский Якон ×1</td><td>Тяньшанский Якон ×2</td></tr>
+                <tr><td>37</td><td>Пилюля Сбора Ци ×1</td><td>Пилюля Сбора Ци ×2</td></tr>
+                <tr><td>38</td><td>Лучший Инструмент Для Починки ×2</td><td>Лучший Инструмент Для Починки ×4</td></tr>
+                <tr><td>39</td><td>Эликсир Тьмы (Событие) ×2</td><td>Эликсир Тьмы (Событие) ×6</td></tr>
+                <tr><td>40</td><td>Набор «Усердие-2»</td><td>Набор «Усердные Тренировки-6»</td></tr>
+                <tr><td>41</td><td>Тяньшанский Якон ×1</td><td>Тяньшанский Якон ×2</td></tr>
+                <tr><td>42</td><td>Пилюля Сбора Ци ×1</td><td>Пилюля Сбора Ци ×2</td></tr>
+                <tr><td>43</td><td>Лучший Инструмент Для Починки ×2</td><td>Лучший Инструмент Для Починки ×4</td></tr>
+                <tr><td>44</td><td>Эликсир Тьмы (Событие) ×2</td><td>Эликсир Тьмы (Событие) ×6</td></tr>
+                <tr><td>45</td><td>Таблетка Самостоятельного Обучения ×2</td><td>Набор «Усердные Тренировки-2»</td></tr>
+                <tr><td>46</td><td>Тяньшанский Якон ×1</td><td>Тяньшанский Якон ×2</td></tr>
+                <tr><td>47</td><td>Пилюля Сбора Ци ×1</td><td>Пилюля Сбора Ци ×2</td></tr>
+                <tr><td>48</td><td>Лучший Инструмент Для Починки ×2</td><td>Лучший Инструмент Для Починки ×4</td></tr>
+                <tr><td>49</td><td>Эликсир Тьмы (Событие) ×2</td><td>Эликсир Тьмы (Событие) ×6</td></tr>
+                <tr><td>50</td><td>Набор «Усердие-3»</td><td>Набор «Усердные Тренировки-7»</td></tr>
+                <tr><td>51</td><td>Пакет Выращивания ×1</td><td>Пакет Выращивания ×1</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="battle-pass-section" aria-labelledby="pass-bundles-title">
+          <header class="battle-pass-section-heading">
+            <span class="card-kicker">Содержимое коробок</span>
+            <h2 id="pass-bundles-title">Наборы и награды</h2>
+            <p>Подробная расшифровка наборов, встречающихся в таблице уровней.</p>
+          </header>
+
+          <div class="battle-pass-table-scroll" tabindex="0" aria-label="Таблица содержимого наборов боевого пропуска">
+            <table class="battle-pass-table battle-pass-bundles-table">
+              <thead><tr><th scope="col">Набор</th><th scope="col">Награда</th></tr></thead>
+              <tbody>
+                <tr><td>Набор «Усердие-1»</td><td>Тяньшанский Якон ×1; Набор «Расширение».</td></tr>
+                <tr><td>Набор «Усердные Тренировки-1»</td><td>Тяньшанский Якон ×1; Коробка «Изумрудная Сумка».</td></tr>
+                <tr><td>Набор «Усердные Тренировки-2»</td><td>Таблетка Самостоятельного Обучения ×4; Изысканная Пилюля Ночного Обучения ×10.</td></tr>
+                <tr><td>Набор «Усердие-2»</td><td>Таблетка Сухожилий (30 дней) ×20; Ваучер на Артефакт (7 дней) ×10; Приказ Древней Гробницы (2) ×1; Пилюля Сбора Ци ×2; Тяньшанский Якон ×1.</td></tr>
+                <tr><td>Набор «Усердные Тренировки-3»</td><td>Таблетка Самостоятельного Обучения ×4; Изысканная Пилюля Ночного Обучения ×10; Приказ Древней Гробницы (2) ×3; Ваучер на Артефакт ×30; Цветной Мешок «Золото» ×2; Тяньшанский Якон ×2; Пилюля Сбора Ци ×3; Таблетка Сухожилий ×80.</td></tr>
+                <tr><td>Набор «Усердные Тренировки-4»</td><td>Таблетка Сухожилий (30 дней) ×80; Пилюля Сбора Ци ×3; Таблетка Самостоятельного Обучения ×4; Ваучер на Артефакт ×30; Приказ Древней Гробницы (2) ×3; Изысканная Пилюля Ночного Совершенствования ×10; Тяньшанский Якон ×3; Коробка «Спящее Зло — 100 шт.» ×3; Приказ Древней Гробницы (1) ×5.</td></tr>
+                <tr><td>Набор «Усердные Тренировки-5»</td><td>Таблетка Сухожилий (30 дней) ×80; Пилюля Сбора Ци ×3; Ваучер на Артефакт (7 дней) ×30; Таблетка Самостоятельного Обучения ×4; Изысканная Таблетка Ночного Обучения ×10; Тяньшанский Якон ×3; Костюм Пропуска; Скидочный Купон «Герой Занят» ×20; Приказ Древней Гробницы (2) ×3.</td></tr>
+                <tr><td>Набор «Усердные Тренировки-6»</td><td>Коробка «Случайный Навык» ×1; Приказ Древней Гробницы (2) ×3; Пилюля Сбора Ци ×3; Таблетка Сухожилий (30 дней) ×80; Ваучер на Артефакт (7 дней) ×30; Тяньшанский Якон ×3; Таблетка Самостоятельного Обучения ×4; Изысканная Таблетка Ночного Обучения ×10.</td></tr>
+                <tr><td>Набор «Усердие-3»</td><td>Таблетка Сухожилий (30 дней) ×20; Тяньшанский Якон ×1; Пилюля Сбора Ци ×2; Ваучер на Артефакт (7 дней); Коробка «Случайный Приём» ×1; Приказ Древней Гробницы; Тикет Сброса Нефритовой Куклы (100) ×1; Подтверждение Обмена Артефакта (2) ×1.</td></tr>
+                <tr><td>Набор «Усердные Тренировки-7»</td><td>Таблетка Сухожилий (30 дней) ×30; Тикет Сброса Нефритовой Куклы ×400; Тяньшанский Якон ×3; Пилюля Сбора Ци ×3; Изысканная Пилюля Ночного Обучения ×10; Приказ Древней Гробницы (2) ×3; Коробка «Случайный Навык» ×1; Ваучер на Артефакт (7 дней) ×30; Таблетка Самостоятельного Обучения ×4.</td></tr>
+                <tr><td>Пакет Выращивания ×1</td><td>Содержит 1, 2, 5 или 19 Таблеток Сухожилий (30 дней).</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+            </div>
+
+            <div class="battle-pass-tab-panel battle-pass-tab-panel-pirate">
+              <aside class="battle-pass-upgraded-reward" aria-labelledby="upgraded-reward-title">
+                <header>
+                  <span class="card-kicker">Дополнительный бонус</span>
+                  <h2 id="upgraded-reward-title">Улучшенная награда</h2>
+                </header>
+                <ul>
+                  <li><span>Связанное золото</span><strong>×1000</strong></li>
+                  <li><span>Купон Обмена на Древний Навык</span><strong>×40</strong></li>
+                  <li><span>Жетон Усердия</span><strong>×30</strong></li>
+                  <li><span>Сертификат Лора 2-х звёзд</span><strong>×4</strong></li>
+                  <li><span>Верховный Жетон · Золотой</span><strong>×1</strong></li>
+                </ul>
+              </aside>
+
+              <section class="battle-pass-section" aria-labelledby="pirate-levels-title">
+                <header class="battle-pass-section-heading">
+                  <span class="card-kicker">Награды за прогресс</span>
+                  <h2 id="pirate-levels-title">Уровни пропуска Пиратки</h2>
+                  <p>В таблице отдельно указаны обычная награда, VIP-награда за 2 дина и количество предметов.</p>
+                </header>
+
+                <div class="battle-pass-table-scroll" tabindex="0" aria-label="Таблица наград боевого пропуска Пиратки">
+                  <table class="battle-pass-table battle-pass-pirate-table">
+                    <thead><tr><th scope="col">Уровень</th><th scope="col">Обычная награда</th><th scope="col">Кол-во</th><th scope="col">VIP-награда за 2 дина</th><th scope="col">Кол-во</th></tr></thead>
+                    <tbody>
+                      <tr><td>1</td><td>Усердный Набор Цзянху (I)</td><td>1</td><td>Бонусный Усердный Набор Цзянху (I)</td><td>1</td></tr>
+                      <tr><td>2</td><td>Пилюля Сбора Ци</td><td>1</td><td>Связанное Золото</td><td>100</td></tr>
+                      <tr><td>3</td><td>Продвинутый Ремонтный Инструмент</td><td>2</td><td>Купон Обмена на Древний Навык</td><td>4</td></tr>
+                      <tr><td>4</td><td>Эликсир Тьмы (Событие)</td><td>2</td><td>Эликсир Тьмы (Событие)</td><td>6</td></tr>
+                      <tr><td>5</td><td>Пилюля Самостоятельного Обучения</td><td>2</td><td>Бонусный Усердный Набор Цзянху (II)</td><td>1</td></tr>
+                      <tr><td>6</td><td>Снежный Лотос</td><td>1</td><td>Снежный Лотос</td><td>2</td></tr>
+                      <tr><td>7</td><td>Пилюля Сбора Ци</td><td>1</td><td>Связанное Золото</td><td>100</td></tr>
+                      <tr><td>8</td><td>Продвинутый Ремонтный Инструмент</td><td>2</td><td>Купон Обмена на Древний Навык</td><td>4</td></tr>
+                      <tr><td>9</td><td>Эликсир Тьмы (Событие)</td><td>2</td><td>Эликсир Тьмы (Событие)</td><td>6</td></tr>
+                      <tr><td>10</td><td>Усердный Набор Цзянху (II)</td><td>1</td><td>Бонусный Усердный Набор Цзянху (III)</td><td>1</td></tr>
+                      <tr><td>11</td><td>Снежный Лотос</td><td>1</td><td>Снежный Лотос</td><td>2</td></tr>
+                      <tr><td>12</td><td>Пилюля Сбора Ци</td><td>1</td><td>Связанное Золото</td><td>100</td></tr>
+                      <tr><td>13</td><td>Продвинутый Ремонтный Инструмент</td><td>2</td><td>Купон Обмена на Древний Навык</td><td>4</td></tr>
+                      <tr><td>14</td><td>Эликсир Тьмы (Событие)</td><td>2</td><td>Эликсир Тьмы (Событие)</td><td>6</td></tr>
+                      <tr><td>15</td><td>Пилюля Самостоятельного Обучения</td><td>1</td><td>Бонусный Усердный Набор Цзянху (IV)</td><td>1</td></tr>
+                      <tr><td>16</td><td>Снежный Лотос</td><td>1</td><td>Снежный Лотос</td><td>2</td></tr>
+                      <tr><td>17</td><td>Пилюля Сбора Ци</td><td>1</td><td>Связанное Золото</td><td>100</td></tr>
+                      <tr><td>18</td><td>Продвинутый Ремонтный Инструмент</td><td>2</td><td>Купон Обмена на Древний Навык</td><td>4</td></tr>
+                      <tr><td>19</td><td>Эликсир Тьмы (Событие)</td><td>2</td><td>Эликсир Тьмы (Событие)</td><td>6</td></tr>
+                      <tr><td>20</td><td>Усердный Набор Цзянху (II)</td><td>1</td><td>Бонусный Усердный Набор Цзянху (V)</td><td>1</td></tr>
+                      <tr><td>21</td><td>Снежный Лотос</td><td>1</td><td>Снежный Лотос</td><td>2</td></tr>
+                      <tr><td>22</td><td>Пилюля Сбора Ци</td><td>1</td><td>Связанное Золото</td><td>100</td></tr>
+                      <tr><td>23</td><td>Продвинутый Ремонтный Инструмент</td><td>2</td><td>Купон Обмена на Древний Навык</td><td>4</td></tr>
+                      <tr><td>24</td><td>Эликсир Тьмы (Событие)</td><td>2</td><td>Эликсир Тьмы (Событие)</td><td>6</td></tr>
+                      <tr><td>25</td><td>Пилюля Самостоятельного Обучения</td><td>1</td><td>Бонусный Усердный Набор Цзянху (VI)</td><td>1</td></tr>
+                      <tr><td>26</td><td>Снежный Лотос</td><td>1</td><td>Снежный Лотос</td><td>2</td></tr>
+                      <tr><td>27</td><td>Пилюля Сбора Ци</td><td>1</td><td>Связанное Золото</td><td>100</td></tr>
+                      <tr><td>28</td><td>Продвинутый Ремонтный Инструмент</td><td>2</td><td>Купон Обмена на Древний Навык</td><td>4</td></tr>
+                      <tr><td>29</td><td>Эликсир Тьмы (Событие)</td><td>2</td><td>Эликсир Тьмы (Событие)</td><td>6</td></tr>
+                      <tr><td>30</td><td>Усердный Набор Цзянху (III)</td><td>1</td><td>Бонусный Усердный Набор Цзянху (VII)</td><td>1</td></tr>
+                      <tr><td>31</td><td>Снежный Лотос</td><td>1</td><td>Снежный Лотос</td><td>2</td></tr>
+                      <tr><td>32</td><td>Пилюля Сбора Ци</td><td>1</td><td>Связанное Золото</td><td>100</td></tr>
+                      <tr><td>33</td><td>Продвинутый Ремонтный Инструмент</td><td>2</td><td>Купон Обмена на Древний Навык</td><td>4</td></tr>
+                      <tr><td>34</td><td>Эликсир Тьмы (Событие)</td><td>2</td><td>Эликсир Тьмы (Событие)</td><td>6</td></tr>
+                      <tr><td>35</td><td>Пилюля Самостоятельного Обучения</td><td>1</td><td>Бонусный Усердный Набор Цзянху (VIII)</td><td>1</td></tr>
+                      <tr><td>36</td><td>Снежный Лотос</td><td>1</td><td>Снежный Лотос</td><td>2</td></tr>
+                      <tr><td>37</td><td>Пилюля Сбора Ци</td><td>1</td><td>Связанное Золото</td><td>100</td></tr>
+                      <tr><td>38</td><td>Продвинутый Ремонтный Инструмент</td><td>2</td><td>Купон Обмена на Древний Навык</td><td>4</td></tr>
+                      <tr><td>39</td><td>Эликсир Тьмы (Событие)</td><td>2</td><td>Эликсир Тьмы (Событие)</td><td>6</td></tr>
+                      <tr><td>40</td><td>Усердный Набор Цзянху (III)</td><td>1</td><td>Бонусный Усердный Набор Цзянху (IX)</td><td>1</td></tr>
+                      <tr><td>41</td><td>Снежный Лотос</td><td>1</td><td>Снежный Лотос</td><td>2</td></tr>
+                      <tr><td>42</td><td>Пилюля Сбора Ци</td><td>1</td><td>Связанное Золото</td><td>100</td></tr>
+                      <tr><td>43</td><td>Продвинутый Ремонтный Инструмент</td><td>2</td><td>Купон Обмена на Древний Навык</td><td>4</td></tr>
+                      <tr><td>44</td><td>Эликсир Тьмы (Событие)</td><td>2</td><td>Эликсир Тьмы (Событие)</td><td>6</td></tr>
+                      <tr><td>45</td><td>Пилюля Самостоятельного Обучения</td><td>1</td><td>Бонусный Усердный Набор Цзянху (X)</td><td>1</td></tr>
+                      <tr><td>46</td><td>Снежный Лотос</td><td>1</td><td>Снежный Лотос</td><td>2</td></tr>
+                      <tr><td>47</td><td>Пилюля Сбора Ци</td><td>1</td><td>Связанное Золото</td><td>100</td></tr>
+                      <tr><td>48</td><td>Продвинутый Ремонтный Инструмент</td><td>2</td><td>Купон Обмена на Древний Навык</td><td>4</td></tr>
+                      <tr><td>49</td><td>Эликсир Тьмы (Событие)</td><td>2</td><td>Эликсир Тьмы (Событие)</td><td>6</td></tr>
+                      <tr><td>50</td><td>Усердный Набор Цзянху (III)</td><td>1</td><td>Бонусный Усердный Набор Цзянху (XII)</td><td>1</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <span class="footer-ornament" aria-hidden="true"></span>
+          <p>Руководство Легенды Кунг-Фу 2026</p>
+          <span class="footer-ornament" aria-hidden="true"></span>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js?v=25" defer></script>
+      <script src="anti-copy.js?v=0.0.21" defer></script>
+  </body>
+</html>

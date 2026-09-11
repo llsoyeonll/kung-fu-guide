@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Лазурная Стража: описание фракции, требования для вступления, нейгун и боевые навыки." />
+    <title>Лазурная Стража — Легенды Кунг-Фу</title>
+    <link rel="icon" href="favicon.ico?v=16" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
+    <link rel="stylesheet" href="styles.css?v=19" />
+  
+    <link rel="stylesheet" href="community-auth.css?v=15" />
+    <script>document.documentElement.classList.add('nineyin-account-pending')</script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabase-config.js?v=0.0.21" defer></script>
+    <script src="account.js?v=0.0.21" defer></script>
+  </head>
+  <body>
+    <main class="site-shell inner-site-shell azure-site-shell">
+      <div class="mist" aria-hidden="true"></div>
+      <div class="golden-particles" aria-hidden="true"></div>
+      <div class="cursor-aura" aria-hidden="true"></div>
+      <header class="topbar" id="top">
+        <div class="topbar-inner">
+          <a class="topbar-logo" href="index.html" aria-label="Руководство Легенды Кунг-Фу — главная">
+            <span class="topbar-logo-image" aria-hidden="true"></span>
+            <span class="nine-yin-wordmark" role="img" aria-label="9 Инь"></span>
+          </a>
+          <nav class="topnav" aria-label="Основная навигация">
+            <a href="index.html">Главная</a><a href="forum/index.html">Форум</a>
+            
+            <a href="character.html">О персонаже</a>
+            <a href="partnership.html">Партнёрство и связь</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="topup.html">Пополнение</a>
+          </nav>
+        </div>
+      </header>
+
+      <article class="azure-page">
+        <section class="azure-hero" aria-labelledby="azure-title">
+          <div class="azure-hero-copy">
+            <a class="azure-back-link" href="schools.html#factions-list">← Школы, фракции и секты</a>
+            <p class="azure-kicker">Фракция убийц</p>
+            <h1 id="azure-title">Лазурная Стража</h1>
+            <p class="azure-lead">Фракция убийц в лазурных одеяниях, специализирующаяся на стремительном ближнем бое.</p>
+            <dl class="azure-facts">
+              <div><dt>Оружие</dt><dd>Два кольца</dd></div>
+              <div><dt>Свойство</dt><dd>Гармония</dd></div>
+              <div><dt>Путь в локацию</dt><dd>Через Ченду</dd></div>
+            </dl>
+          </div>
+          <span class="azure-hero-art" role="img" aria-label="Воительница Лазурной Стражи с двумя кольцами среди бамбука и пандой"></span>
+        </section>
+
+        <section class="azure-section requirements-section" aria-labelledby="requirements-title">
+          <header class="azure-section-heading">
+            <p class="azure-kicker">Вступление</p>
+            <h2 id="requirements-title">Требования фракции</h2>
+          </header>
+          <div class="requirement-grid">
+            <section class="requirement-card">
+              <h3>Общие требования</h3>
+              <ul>
+                <li>Нейгун 2.</li>
+                <li>Повторное вступление через 24 дня.</li>
+                <li>Не находиться в розыске.</li>
+                <li>Не занимать должность.</li>
+              </ul>
+            </section>
+            <section class="requirement-card">
+              <h3>Личные требования</h3>
+              <ul>
+                <li>Не состоять в браке.</li>
+                <li>Игрок без школы или под маской — выходы 2 и 3.</li>
+                <li>Бирка морали не «Зло».</li>
+                <li>Не евнух.</li>
+                <li>Профессия художника, музыканта, шахматиста или книжника минимум 4 уровня.</li>
+              </ul>
+            </section>
+            <section class="requirement-card combat-requirement-card">
+              <h3>Боевые требования</h3>
+              <p>Ранг <strong>«Гроза Царей»</strong>.</p>
+            </section>
+          </div>
+          <aside class="encounter-note" aria-labelledby="encounter-title">
+            <span class="encounter-mark" aria-hidden="true">✦</span>
+            <div>
+              <h3 id="encounter-title">Лазурная Стража — Случайная Встреча</h3>
+              <p>Бирка морали не «Зло». Случайная встреча становится доступна после открытия второго нейгуна.</p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="azure-section neigun-section" aria-labelledby="neigun-title">
+          <header class="neigun-heading">
+            <span class="yin-zhen-icon" role="img" aria-label="Иконка нейгуна Лазурная Стена, свойство Гармония"></span>
+            <div>
+              <p class="azure-kicker">Нейгун фракции</p>
+              <h2 id="neigun-title">Лазурная Стена</h2>
+            </div>
+          </header>
+          <div class="neigun-layout">
+            <section class="stats-panel" aria-labelledby="stats-title">
+              <h3 id="stats-title">Характеристики нейгуна</h3>
+              <dl class="stats-grid">
+                <div><dt>Мощь</dt><dd>+265</dd></div>
+                <div><dt>Ловкость</dt><dd>+210</dd></div>
+                <div><dt>Дыхание</dt><dd>+322</dd></div>
+                <div><dt>Дух</dt><dd>+225</dd></div>
+                <div><dt>Выносливость</dt><dd>+216</dd></div>
+                <div><dt>Здоровье</dt><dd>+9840</dd></div>
+                <div><dt>Ци</dt><dd>+2660</dd></div>
+                <div><dt>Стойкость блока</dt><dd>+9420</dd></div>
+                <div><dt>Защита от атак</dt><dd>+215</dd></div>
+              </dl>
+            </section>
+            <section class="buffs-panel" aria-labelledby="buffs-title">
+              <h3 id="buffs-title">Эффекты и усиления</h3>
+              <div class="buff-grid">
+                <article class="buff-card">
+                  <h4>Поступь Летящих Гусей</h4>
+                  <p>При использовании нейгуна восстанавливает 4 очка цингуна.</p>
+                </article>
+                <article class="buff-card">
+                  <h4>Лёгкость Синего Одеяния</h4>
+                  <p>После использования <strong class="effect-name">«Поступи Летящих Гусей»</strong> на 12 секунд увеличивает урон от внутренних и внешних искусств на 30%. Время отката: 60 секунд.</p>
+                </article>
+                <article class="buff-card">
+                  <h4>Поглощение Души</h4>
+                  <p>Каждая критическая атака сокращает время отката <strong class="effect-name">«Лёгкости Синего Одеяния»</strong> на 2 секунды — максимум 10 раз — и добавляет дополнительный урон к следующему удару.</p>
+                </article>
+                <article class="buff-card">
+                  <h4>Тень Синего Одеяния</h4>
+                  <p>При накоплении 20 критических ударов следующая активация <strong class="effect-name">«Поступи Летящих Гусей»</strong> также вызовет эффект <strong class="effect-name">«Лёгкости Синего Одеяния»</strong> и скроет ваше тело на 1 секунду: в это время персонаж не может быть выбран целью.</p>
+                </article>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="azure-section special-skills-section" aria-labelledby="special-skills-title">
+          <header class="azure-section-heading special-skills-heading">
+            <p class="azure-kicker">Небесная Сфера</p>
+            <h2 id="special-skills-title">Специальные навыки</h2>
+            <p>Пять режимов сферы для ослабления противника, защиты союзников и восстановления устройства.</p>
+          </header>
+
+          <div class="special-skills-grid">
+            <article class="special-skill-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon skill-emerald-radiance" role="img" aria-label="Иконка навыка Изумрудное Сияние"></span>
+                <div>
+                  <p class="skill-use">Одиночная цель · без урона по площади</p>
+                  <h3>Изумрудное Сияние</h3>
+                </div>
+              </header>
+              <p class="skill-flavor">«Полная луна, безграничный свет яшмы».</p>
+              <p>Переключает Небесную Сферу в режим <strong class="effect-name">«Яшмовое Сияние»</strong>. Атаки по целям с менее чем <mark>30% здоровья</mark> накладывают эффект: <mark>восстановление здоровья −70%</mark> на 5 секунд.</p>
+              <p class="skill-note">Эффект активируется только один раз. После срабатывания Небесная Сфера ломается и требует починки для смены режима.</p>
+            </article>
+
+            <article class="special-skill-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon skill-lotus-chain" role="img" aria-label="Иконка навыка Цепь Лотоса"></span>
+                <div>
+                  <p class="skill-use">Одиночная цель</p>
+                  <h3>Цепь Лотоса</h3>
+                </div>
+              </header>
+              <p class="skill-flavor">«Изумрудные волны связывают лотосы, три паруса в одной волне».</p>
+              <p>Активирует режим <strong class="effect-name">«Цепь Лотосов»</strong>. Атаки по целям с защитными бафами — щитом, поглощением урона и подобными эффектами — с шансом <mark>70%</mark> снимают их и накладывают на цель иммунитет к дебафам на 5 секунд.</p>
+              <p class="skill-note">Эффект одноразовый. После активации сфера ломается и требует ремонта.</p>
+            </article>
+
+            <article class="special-skill-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon skill-protective-mountain" role="img" aria-label="Иконка навыка Защитная Гора"></span>
+                <div>
+                  <p class="skill-use">Одиночная цель</p>
+                  <h3>Защитная Гора</h3>
+                </div>
+              </header>
+              <p class="skill-flavor">«Серебряный заслон распростёрт, ненавистны лишь бесконечные дороги».</p>
+              <p>Активирует режим Небесной Сферы <strong class="effect-name">«Гора-Щит»</strong>. При получении урона с уровнем здоровья ниже <mark>30%</mark> вы получаете щит, поглощающий <mark>3500 ед. урона</mark>.</p>
+              <p class="skill-note">Эффект <strong class="effect-name">«Гора-Щит»</strong> срабатывает лишь однажды. После активации сфера ломается и требует ремонта.</p>
+            </article>
+
+            <article class="special-skill-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon skill-proud-gaze" role="img" aria-label="Иконка навыка Гордый Взор"></span>
+                <div>
+                  <p class="skill-use">Тайник · мир демонов</p>
+                  <h3>Гордый Взор</h3>
+                </div>
+              </header>
+              <p class="skill-flavor">«Нетерпеливое сердце, вольный дух, победный клич».</p>
+              <p>Создаёт <mark>25-метровую ауру</mark> <strong class="effect-name">«Надменности»</strong>, которая даёт союзникам внутри <mark>+20% к шансу критического удара</mark> и <mark>+10% к урону</mark>.</p>
+              <p class="skill-note">Доступно только в режимах <strong class="effect-name">«Битва с демоном»</strong> и <strong class="effect-name">«Кладоискательство»</strong>.</p>
+            </article>
+
+            <article class="special-skill-card special-skill-card-wide">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon skill-ultimate-calm" role="img" aria-label="Иконка навыка Предельное Спокойствие"></span>
+                <div>
+                  <p class="skill-use">Одиночная цель · только 1 уровень</p>
+                  <h3>Предельное Спокойствие</h3>
+                </div>
+              </header>
+              <div class="skill-wide-copy">
+                <div>
+                  <p class="skill-flavor">«В безмолвии покоя, в таинственной глубине дыхание размеренно и непрерывно».</p>
+                  <p>Позволяет починить Небесную Сферу. Навык остаётся на первом уровне и дальше не прокачивается.</p>
+                </div>
+                <p class="skill-note">Для починки требуется <mark>15 очков Небесной Энергии</mark>. Также можно отправиться в локацию «Павильон Синих Одеяний» и найти Малого Кэ по координатам <mark>1107, 1331</mark>, чтобы попросить его починить Небесную Сферу.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="azure-section combat-skills-section" aria-labelledby="combat-skills-title">
+          <header class="azure-section-heading special-skills-heading">
+            <p class="azure-kicker">Искусство двух колец</p>
+            <h2 id="combat-skills-title">Боевые навыки</h2>
+            <p>Восемь приёмов Лазурной Стражи для ослабления защиты, контроля противника и стремительного сближения.</p>
+          </header>
+
+          <div class="special-skills-grid combat-skills-grid">
+            <article class="special-skill-card combat-skill-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon combat-listen-bamboo" role="img" aria-label="Иконка навыка Слушать Бамбук"></span>
+                <div>
+                  <p class="skill-use">Урон по площади · перед собой</p>
+                  <h3>Слушать Бамбук</h3>
+                </div>
+              </header>
+              <p>Наносит урон врагам в радиусе 5 метров впереди. При попадании по цели без парирования накладывает дебафф <strong class="effect-name">«Слушать Бамбук»</strong>: сопротивление Инь снижается на <mark>10%</mark> на 5 секунд. Эффект складывается до <mark>3 раз</mark>.</p>
+              <p class="skill-note">Радиус увеличивается до <mark>15 метров</mark> при наличии эффекта <strong class="effect-name">«Трансформация Плоти»</strong>. Его можно получить в Святилище Шаманов в Пещере Горного Духа, координаты <mark>77, −124</mark>.</p>
+            </article>
+
+            <article class="special-skill-card combat-skill-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon combat-grassy-arrows" role="img" aria-label="Иконка навыка Травянистые Стрелы"></span>
+                <div>
+                  <p class="skill-use">Одиночная цель · сближение</p>
+                  <h3>Травянистые Стрелы</h3>
+                </div>
+              </header>
+              <p>Наносит урон цели. Если финальный удар попадает по цели без парирования, накладывает эффект <strong class="effect-name">«Травяные Стрелы»</strong>: скорость передвижения снижается на <mark>25%</mark> на 5 секунд. Эффект складывается до <mark>3 раз</mark>.</p>
+              <p class="skill-note">Можно комбинировать с навыком полёта для быстрого рывка к противнику.</p>
+            </article>
+
+            <article class="special-skill-card combat-skill-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon combat-unfathomable-cloud" role="img" aria-label="Иконка навыка Непостижимое Облако"></span>
+                <div>
+                  <p class="skill-use">Рывок · контроль</p>
+                  <h3>Непостижимое Облако</h3>
+                </div>
+              </header>
+              <p>Стремительный рывок вперёд на <mark>10 метров</mark>, наносящий урон всем врагам на пути. Непарировавшие противники опрокидываются и получают <strong class="effect-name">оглушение</strong> на <mark>2 секунды</mark>.</p>
+              <p class="skill-note">Навык нельзя использовать в воздухе.</p>
+            </article>
+
+            <article class="special-skill-card combat-skill-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon combat-green-hills" role="img" aria-label="Иконка навыка Зелёные Холмы"></span>
+                <div>
+                  <p class="skill-use">Урон по площади · усиление</p>
+                  <h3>Зелёные Холмы</h3>
+                </div>
+              </header>
+              <p>Наносит урон врагам в радиусе 5 метров впереди и накладывает на непарировавших противников <strong class="effect-name">оглушение</strong> на <mark>2 секунды</mark>.</p>
+              <p class="skill-note">Одновременно активирует состояние <strong class="effect-name">«Зелёные Холмы»</strong>, увеличивающее скорость передвижения на <mark>50%</mark> на 6 секунд.</p>
+            </article>
+
+            <article class="special-skill-card combat-skill-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon combat-southern-storm" role="img" aria-label="Иконка навыка Южная Буря"></span>
+                <div>
+                  <p class="skill-use">Урон по площади · контроль</p>
+                  <h3>Южная Буря</h3>
+                </div>
+              </header>
+              <p>Наносит урон врагам в радиусе 6 метров. Непарировавшая цель без статуса <strong class="effect-name">«Нефритовая Жаба»</strong> получает статус <strong class="effect-name">«Южная Буря»</strong>: ослепление и блокировку цингуна на <mark>1,5 секунды</mark>.</p>
+              <p>Если на цели уже есть <strong class="effect-name">«Нефритовая Жаба»</strong>, она будет парализована на <mark>3 секунды</mark>.</p>
+              <p class="skill-note">При наличии статуса <strong class="effect-name">«Зелёные Холмы»</strong> персонаж входит в состояние <strong class="effect-name">«Жёлтый Тиран»</strong>.</p>
+            </article>
+
+            <article class="special-skill-card combat-skill-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon combat-jade-toad" role="img" aria-label="Иконка навыка Нефритовая Жаба"></span>
+                <div>
+                  <p class="skill-use">Урон по площади · замедление</p>
+                  <h3>Нефритовая Жаба</h3>
+                </div>
+              </header>
+              <p>Наносит урон врагам в радиусе 5 метров впереди. Если финальный удар попадает по цели без парирования, накладывает эффект <strong class="effect-name">«Травяные Стрелы»</strong>: скорость передвижения снижается на <mark>25%</mark> на 5 секунд. Эффект складывается до <mark>3 раз</mark>.</p>
+              <p class="skill-note">Умение можно использовать вместе с навыком полёта для быстрого сближения с противником.</p>
+            </article>
+
+            <article class="special-skill-card combat-skill-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon combat-lunar-breath" role="img" aria-label="Иконка навыка Лунное Дыхание"></span>
+                <div>
+                  <p class="skill-use">Пробитие парирования</p>
+                  <h3>Лунное Дыхание</h3>
+                </div>
+              </header>
+              <p>Наносит урон врагам в радиусе 5 метров впереди. При пробитии парирования накладывает <strong class="effect-name">блокировку умений</strong> на <mark>3 секунды</mark>.</p>
+              <p class="skill-note">Скорость выполнения повышается при наличии эффекта <strong class="effect-name">«Трансформация Плоти»</strong>, получаемого в Святилище Шаманов в Пещере Горного Духа, координаты <mark>77, −124</mark>.</p>
+            </article>
+
+            <article class="special-skill-card combat-skill-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon combat-secluded-contemplation" role="img" aria-label="Иконка навыка Уединённое Созерцание"></span>
+                <div>
+                  <p class="skill-use">Защита · контратака</p>
+                  <h3>Уединённое Созерцание</h3>
+                </div>
+              </header>
+              <p>Активирует состояние <strong class="effect-name">«Обращение Защиты в Нападение»</strong> на <mark>5 секунд</mark>. При атаке во время парирования прерывает атаку противника и выполняет контратаку в радиусе 6 метров.</p>
+              <p class="skill-note">Не действует на <strong class="effect-name">«Супер Броню»</strong> и может быть отменено финтом. Повышение уровня навыка увеличивает урон контратаки.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="azure-section reworks-section" aria-labelledby="reworks-title">
+          <header class="azure-section-heading special-skills-heading">
+            <p class="azure-kicker">Комплект «Крылатый Змей»</p>
+            <h2 id="reworks-title">Улучшение навыков — реворки</h2>
+            <p>Дополнительные эффекты активируются в ячейке эффектов и изменяются после открытия всего комплекта.</p>
+          </header>
+
+          <div class="reworks-grid">
+            <article class="special-skill-card rework-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon rework-green-hills" role="img" aria-label="Иконка реворка Зелёные Холмы"></span>
+                <div>
+                  <p class="skill-use">Улучшение навыка</p>
+                  <h3>Зелёные Холмы</h3>
+                </div>
+              </header>
+              <p>Незначительно увеличивает урон навыка. При попадании по врагам, ослеплённым этим набором, сокращает время восстановления умения на <mark>2 секунды</mark>.</p>
+              <p>После активации всех навыков комплекта <strong class="set-name">[Крылатый Змей]</strong> эффекты этого набора изменяются.</p>
+              <p class="skill-note">Активируется в ячейке эффектов.</p>
+            </article>
+
+            <article class="special-skill-card rework-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon rework-jade-toad" role="img" aria-label="Иконка реворка Нефритовая Жаба"></span>
+                <div>
+                  <p class="skill-use">Улучшение навыка</p>
+                  <h3>Нефритовая Жаба</h3>
+                </div>
+              </header>
+              <p>Незначительно повышает урон и увеличивает скорость выполнения приёмов.</p>
+              <p>После активации всех навыков комплекта <strong class="set-name">[Крылатый Змей]</strong> эффекты этого набора изменяются.</p>
+              <p class="skill-note">Активируется в ячейке эффектов.</p>
+            </article>
+
+            <article class="special-skill-card rework-card">
+              <header class="special-skill-card-heading">
+                <span class="special-skill-icon rework-unfathomable-cloud" role="img" aria-label="Иконка реворка Непостижимое Облако"></span>
+                <div>
+                  <p class="skill-use">Улучшение навыка</p>
+                  <h3>Непостижимое Облако</h3>
+                </div>
+              </header>
+              <p>Незначительно увеличивает урон навыка. Враги на пути, не сумевшие парировать атаку, получают дебафф <strong class="effect-name">«Непостижимое Облако»</strong>: шанс получить критический удар повышается на <mark>5%</mark>.</p>
+              <p>После завершения дебаффа на цель накладывается <strong class="effect-name">ослепление</strong> на <mark>3 секунды</mark>. При активации всего комплекта <strong class="set-name">[Крылатый Змей]</strong> эффекты набора изменяются.</p>
+              <p class="skill-note">Активируется в ячейке эффектов.</p>
+            </article>
+          </div>
+        </section>
+      </article>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <span class="footer-ornament" aria-hidden="true"></span>
+          <p>Руководство Легенды Кунг-Фу 2026</p>
+          <span class="footer-ornament" aria-hidden="true"></span>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js?v=8" defer></script>
+      <script src="anti-copy.js?v=0.0.21" defer></script>
+  </body>
+</html>
