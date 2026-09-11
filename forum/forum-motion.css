@@ -1,0 +1,184 @@
+
+/* Forum v38 — единая лёгкая анимация на каждой странице. */
+html { background: #020912; }
+body {
+  animation: forumPageFade .48s ease-out both;
+}
+
+@keyframes forumPageFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Шапка на каждой странице мягко появляется сверху. */
+.site-header {
+  animation: forumHeaderIn .62s cubic-bezier(.2,.75,.25,1) both !important;
+}
+@keyframes forumHeaderIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Логотип живой, но без тяжёлого постоянного движения. */
+.brand-mark {
+  animation: forumLogoBreath 5.8s ease-in-out infinite !important;
+}
+@keyframes forumLogoBreath {
+  0%,100% { filter: drop-shadow(0 0 9px rgba(255,193,72,.22)); }
+  50% { filter: drop-shadow(0 0 17px rgba(255,193,72,.43)); }
+}
+
+/* Главная форума. */
+.forum-banner {
+  animation: forumBannerIn .78s .08s cubic-bezier(.2,.75,.25,1) both !important;
+}
+.forum-title-art {
+  animation: none !important;
+  transform: none !important;
+}
+@keyframes forumBannerIn {
+  from { opacity: 0; transform: translateY(9px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Внутренние страницы: Пользователи / Мой профиль / Создать запись. */
+.community-hero {
+  animation: forumHeroIn .62s .08s cubic-bezier(.2,.75,.25,1) both;
+}
+@keyframes forumHeroIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Элементы, которые JS открывает по мере появления. */
+.forum-motion-ready .motion-reveal {
+  opacity: 0;
+  transform: translateY(15px);
+  transition:
+    opacity .55s ease,
+    transform .55s cubic-bezier(.2,.75,.25,1),
+    border-color .2s ease,
+    box-shadow .2s ease;
+  transition-delay: var(--motion-delay, 0ms);
+}
+.forum-motion-ready .motion-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Карточки получают небольшой живой hover. */
+.post-card,
+.user-card,
+.profile-card,
+.profile-about,
+.profile-edit,
+.create-card,
+.forum-toolbar {
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease !important;
+}
+.post-card:hover,
+.user-card:hover,
+.profile-card:hover,
+.create-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(214,164,77,.42) !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,.16), 0 0 18px rgba(214,164,77,.045);
+}
+
+/* Мой профиль: аватар чуть светится, чтобы страница имела свой характер. */
+.profile-avatar {
+  animation: profileAvatarGlow 5s ease-in-out infinite;
+}
+@keyframes profileAvatarGlow {
+  0%,100% { box-shadow: 0 0 22px rgba(214,164,77,.10); }
+  50% { box-shadow: 0 0 34px rgba(214,164,77,.21); }
+}
+
+/* Создание записи: мягкая подсветка полей при работе с ними. */
+.create-form input,
+.create-form select,
+.create-form textarea,
+.profile-form input,
+.profile-form select,
+.profile-form textarea,
+.user-search input {
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.create-form input:focus,
+.create-form select:focus,
+.create-form textarea:focus,
+.profile-form input:focus,
+.profile-form select:focus,
+.profile-form textarea:focus,
+.user-search input:focus {
+  border-color: rgba(232,188,104,.58) !important;
+  box-shadow: 0 0 0 3px rgba(214,164,77,.07), 0 0 18px rgba(214,164,77,.05);
+}
+
+/* Те же выбранные ранее мягкие золотые крупинки — теперь на ВСЕХ страницах форума. */
+.forum-global-sparks {
+  position: fixed;
+  top: 76px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 18;
+}
+.forum-global-sparks .spark {
+  width: 5px !important;
+  height: 5px !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle, rgba(255,248,223,.94) 0%, rgba(245,203,112,.78) 46%, rgba(245,203,112,.14) 72%, rgba(245,203,112,0) 100%) !important;
+  box-shadow: 0 0 7px rgba(247,202,108,.20), 0 0 14px rgba(247,202,108,.07) !important;
+  animation: forumSoftGrainFall linear infinite !important;
+}
+.forum-global-sparks .spark::after { display: none !important; }
+.forum-global-sparks .spark:nth-child(3n) { width: 3px !important; height: 3px !important; }
+.forum-global-sparks .spark:nth-child(n+15) { display: none !important; }
+@keyframes forumSoftGrainFall {
+  0%   { opacity: 0; transform: translate3d(0,-8vh,0) scale(.75); }
+  14%  { opacity: .62; }
+  45%  { opacity: .55; transform: translate3d(8px,38vh,0) scale(1); }
+  72%  { opacity: .38; transform: translate3d(-6px,70vh,0) scale(.92); }
+  100% { opacity: 0; transform: translate3d(5px,108vh,0) scale(.82); }
+}
+.forum-global-sparks .s1  { left: 4%;  animation-duration: 17s !important; animation-delay: -2s !important; }
+.forum-global-sparks .s2  { left: 12%; animation-duration: 20s !important; animation-delay: -9s !important; }
+.forum-global-sparks .s3  { left: 20%; animation-duration: 18s !important; animation-delay: -5s !important; }
+.forum-global-sparks .s4  { left: 28%; animation-duration: 21s !important; animation-delay: -13s !important; }
+.forum-global-sparks .s5  { left: 35%; animation-duration: 19s !important; animation-delay: -7s !important; }
+.forum-global-sparks .s6  { left: 43%; animation-duration: 22s !important; animation-delay: -16s !important; }
+.forum-global-sparks .s7  { left: 51%; animation-duration: 18.5s !important; animation-delay: -11s !important; }
+.forum-global-sparks .s8  { left: 59%; animation-duration: 21s !important; animation-delay: -4s !important; }
+.forum-global-sparks .s9  { left: 66%; animation-duration: 19.5s !important; animation-delay: -14s !important; }
+.forum-global-sparks .s10 { left: 73%; animation-duration: 22s !important; animation-delay: -8s !important; }
+.forum-global-sparks .s11 { left: 80%; animation-duration: 18s !important; animation-delay: -15s !important; }
+.forum-global-sparks .s12 { left: 87%; animation-duration: 20.5s !important; animation-delay: -6s !important; }
+.forum-global-sparks .s13 { left: 93%; animation-duration: 22s !important; animation-delay: -12s !important; }
+.forum-global-sparks .s14 { left: 97%; animation-duration: 19s !important; animation-delay: -3s !important; }
+
+@media (max-width: 900px) {
+  .forum-global-sparks .spark:nth-child(n+10) { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .site-header,
+  .brand-mark,
+  .forum-banner,
+  .forum-title-art,
+  .community-hero,
+  .profile-avatar,
+  .forum-global-sparks .spark {
+    animation: none !important;
+  }
+  .forum-global-sparks { display: none !important; }
+  .forum-motion-ready .motion-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

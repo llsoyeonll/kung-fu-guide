@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="62%"><stop offset="0" stop-color="#173d3c"/><stop offset="1" stop-color="#061827"/></radialGradient>
+    <linearGradient id="jade" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c8f1c6"/><stop offset=".42" stop-color="#55b894"/><stop offset="1" stop-color="#17665f"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0a6"/><stop offset=".45" stop-color="#e3ad42"/><stop offset="1" stop-color="#855217"/></linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <circle cx="90" cy="90" r="76" fill="url(#bg)" stroke="url(#gold)" stroke-width="3"/>
+  <circle cx="90" cy="90" r="65" fill="none" stroke="#d9b35b" stroke-opacity=".3"/>
+  <g filter="url(#glow)" stroke="url(#gold)" stroke-width="3" stroke-linejoin="round">
+    <circle cx="90" cy="54" r="17" fill="url(#jade)"/>
+    <path d="M75 72c-13 10-19 27-17 48h64c2-21-4-38-17-48-8 7-22 7-30 0Z" fill="url(#jade)"/>
+    <path d="M75 85 48 105l9 11 25-17M105 85l27 20-9 11-25-17" fill="none" stroke-linecap="round"/>
+    <path d="M72 120 63 145M108 120l9 25" fill="none" stroke-linecap="round"/>
+    <path d="M69 48c8-17 34-17 42 0-8-5-34-5-42 0Z" fill="url(#gold)"/>
+    <circle cx="90" cy="93" r="8" fill="url(#gold)"/>
+  </g>
+</svg>

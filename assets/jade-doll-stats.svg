@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 870" role="img" aria-labelledby="title desc">
+  <title id="title">Характеристики Яшмовой Куклы</title>
+  <desc id="desc">Все доступные характеристики. Здоровье, Ци и Стойкость блока отмечены как нежелательные.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#061c2b"/><stop offset="1" stop-color="#020e19"/></linearGradient>
+    <linearGradient id="head" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#173c36"/><stop offset=".5" stop-color="#5b451b"/><stop offset="1" stop-color="#173c36"/></linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>
+      .cell{fill:#082334;stroke:#8f6a2b;stroke-width:1.4}.bad{fill:#4b2020;stroke:#c6604e;stroke-width:1.5}
+      .txt{fill:#b9e7b5;font:600 18px Arial,DejaVu Sans,sans-serif}.bad-txt{fill:#ffb39f;font:700 18px Arial,DejaVu Sans,sans-serif}
+      .num{fill:#d6b45d;font:700 12px Arial,DejaVu Sans,sans-serif}.bad-num{fill:#ff8069;font:700 12px Arial,DejaVu Sans,sans-serif}
+    </style>
+  </defs>
+  <rect width="680" height="870" rx="14" fill="url(#bg)"/>
+  <rect x="12" y="12" width="656" height="846" rx="10" fill="none" stroke="#b58a39" stroke-width="2"/>
+  <path d="M28 28h54M28 28v54M652 28h-54M652 28v54M28 842h54M28 842v-54M652 842h-54M652 842v-54" fill="none" stroke="#e1bd66" stroke-width="2"/>
+  <rect x="28" y="28" width="624" height="76" rx="8" fill="url(#head)" stroke="#c59a45"/>
+  <text x="340" y="62" text-anchor="middle" fill="#ffedb1" font-family="Georgia,DejaVu Serif,serif" font-size="28" font-weight="700">Характеристики</text>
+  <text x="340" y="88" text-anchor="middle" fill="#91d6ba" font-family="Arial,DejaVu Sans,sans-serif" font-size="14" letter-spacing="2">ЯШМОВОЙ КУКЛЫ</text>
+
+  <!-- Левая колонка -->
+  <g transform="translate(28 126)"><rect class="bad" width="302" height="46" rx="5"/><text class="bad-num" x="14" y="28">01</text><text class="bad-txt" x="48" y="30">Здоровье</text><text x="282" y="29" text-anchor="end" fill="#ff8069" font-size="18">×</text></g>
+  <g transform="translate(28 180)"><rect class="bad" width="302" height="46" rx="5"/><text class="bad-num" x="14" y="28">02</text><text class="bad-txt" x="48" y="30">Ци</text><text x="282" y="29" text-anchor="end" fill="#ff8069" font-size="18">×</text></g>
+  <g transform="translate(28 234)"><rect class="bad" width="302" height="46" rx="5"/><text class="bad-num" x="14" y="28">03</text><text class="bad-txt" x="48" y="30">Стойкость блока</text><text x="282" y="29" text-anchor="end" fill="#ff8069" font-size="18">×</text></g>
+  <g transform="translate(28 288)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">04</text><text class="txt" x="48" y="30">Внешняя защита</text></g>
+  <g transform="translate(28 342)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">05</text><text class="txt" x="48" y="30" font-size="16">Игнор. внеш. защиты</text></g>
+  <g transform="translate(28 396)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">06</text><text class="txt" x="48" y="30">Бонус внеш. урона</text></g>
+  <g transform="translate(28 450)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">07</text><text class="txt" x="48" y="30">Сниж. внеш. урона</text></g>
+  <g transform="translate(28 504)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">08</text><text class="txt" x="48" y="30">Защита Муж</text></g>
+  <g transform="translate(28 558)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">09</text><text class="txt" x="48" y="30">Защита Жен</text></g>
+  <g transform="translate(28 612)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">10</text><text class="txt" x="48" y="30">Защита Инь</text></g>
+  <g transform="translate(28 666)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">11</text><text class="txt" x="48" y="30">Защита Ян</text></g>
+  <g transform="translate(28 720)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">12</text><text class="txt" x="48" y="30">Игнор. защиты Муж</text></g>
+
+  <!-- Правая колонка -->
+  <g transform="translate(350 126)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">13</text><text class="txt" x="48" y="30">Игнор. защиты Жен</text></g>
+  <g transform="translate(350 180)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">14</text><text class="txt" x="48" y="30">Игнор. защиты Инь</text></g>
+  <g transform="translate(350 234)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">15</text><text class="txt" x="48" y="30">Игнор. защиты Ян</text></g>
+  <g transform="translate(350 288)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">16</text><text class="txt" x="48" y="30">Бонус Муж урона</text></g>
+  <g transform="translate(350 342)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">17</text><text class="txt" x="48" y="30">Бонус Жен урона</text></g>
+  <g transform="translate(350 396)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">18</text><text class="txt" x="48" y="30">Бонус Инь урона</text></g>
+  <g transform="translate(350 450)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">19</text><text class="txt" x="48" y="30">Бонус Ян урона</text></g>
+  <g transform="translate(350 504)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">20</text><text class="txt" x="48" y="30">Сниж. Муж урона</text></g>
+  <g transform="translate(350 558)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">21</text><text class="txt" x="48" y="30">Сниж. Жен урона</text></g>
+  <g transform="translate(350 612)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">22</text><text class="txt" x="48" y="30">Сниж. Инь урона</text></g>
+  <g transform="translate(350 666)"><rect class="cell" width="302" height="46" rx="5"/><text class="num" x="14" y="28">23</text><text class="txt" x="48" y="30">Сниж. Ян урона</text></g>
+
+  <g transform="translate(350 728)"><rect width="302" height="38" rx="19" fill="#351d1c" stroke="#b95647"/><circle cx="22" cy="19" r="8" fill="#dc654f" filter="url(#glow)"/><text x="40" y="24" fill="#ffc0ae" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700">Красным — не использовать</text></g>
+  <text x="340" y="820" text-anchor="middle" fill="#6d8d91" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" letter-spacing="1.4">РУКОВОДСТВО ЛЕГЕНДЫ КУНГ-ФУ</text>
+</svg>

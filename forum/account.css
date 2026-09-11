@@ -1,0 +1,259 @@
+
+:root{
+  --nya-bg:#020b14;--nya-panel:#061725;--nya-panel2:#081d2c;--nya-gold:#d6a44d;--nya-gold2:#f1ca78;
+  --nya-text:#eef2f4;--nya-muted:#9aa9b6;--nya-line:rgba(214,164,77,.34);--nya-danger:#e78178
+}
+html.nineyin-account-pending body{overflow:hidden}
+body.nineyin-access-granted{overflow:auto}
+.nya-overlay{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;padding:20px;background:rgba(1,8,14,.88);backdrop-filter:blur(9px)}
+.nya-overlay[hidden]{display:none!important}
+.nya-panel{width:min(620px,calc(100vw - 28px));max-height:calc(100dvh - 30px);overflow:auto;border:1px solid var(--nya-line);background:radial-gradient(circle at 50% 0,rgba(214,164,77,.08),transparent 30%),linear-gradient(180deg,var(--nya-panel2),var(--nya-panel));box-shadow:0 30px 100px #000c,inset 0 0 0 1px rgba(255,225,160,.03);color:var(--nya-text);font-family:"Golos Text",system-ui,sans-serif}
+.nya-head{padding:28px 30px 16px;text-align:center;border-bottom:1px solid rgba(214,164,77,.16)}
+.nya-emblem{width:62px;height:62px;object-fit:contain;filter:drop-shadow(0 0 13px rgba(238,182,67,.32));margin-bottom:8px}
+.nya-head small{display:block;color:var(--nya-gold);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.nya-head h2{margin:6px 0 7px;color:#ffe3a0;font-family:"Cormorant Garamond",Georgia,serif;font-size:34px;line-height:1.08;font-weight:700}
+.nya-head p{max-width:48ch;margin:0 auto;color:var(--nya-muted);font-size:14px;line-height:1.55}
+.nya-demo{margin:12px auto 0;padding:7px 10px;width:max-content;max-width:100%;border:1px solid rgba(214,164,77,.22);color:#dec58e;background:rgba(214,164,77,.05);font-size:11px}
+.nya-tabs{display:grid;grid-template-columns:1fr 1fr;margin:20px 30px 0;border:1px solid rgba(214,164,77,.18)}
+.nya-tabs button{height:43px;border:0;background:#061827;color:#9dabb7;font:700 12px/1 "Golos Text",sans-serif;letter-spacing:.07em;text-transform:uppercase;cursor:pointer}
+.nya-tabs button.active{background:linear-gradient(180deg,rgba(214,164,77,.17),rgba(214,164,77,.05));color:#ffe2a0;box-shadow:inset 0 -1px var(--nya-gold)}
+.nya-body{padding:24px 30px 30px}
+.nya-view[hidden]{display:none!important}
+.nya-form{display:grid;gap:16px}
+.nya-field{display:grid;gap:7px}
+.nya-field>span,.nya-label{color:#d9c28f;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.nya-field input,.nya-field select,.nya-field textarea{width:100%;border:1px solid rgba(214,164,77,.24);outline:0;background:#03131f;color:#edf2f4;padding:12px 13px;font:500 14px/1.45 "Golos Text",sans-serif;transition:border-color .18s,box-shadow .18s}
+.nya-field textarea{min-height:110px;resize:vertical}
+.nya-field input:focus,.nya-field select:focus,.nya-field textarea:focus{border-color:#d6a44d;box-shadow:0 0 0 3px rgba(214,164,77,.08)}
+.nya-primary,.nya-secondary{min-height:46px;border:1px solid #d6a44d;background:linear-gradient(180deg,rgba(214,164,77,.17),rgba(214,164,77,.06));color:#ffe5aa;font-weight:700;cursor:pointer}
+.nya-secondary{border-color:rgba(214,164,77,.23);background:#061827;color:#c9d1d8}
+.nya-primary:disabled,.nya-secondary:disabled{opacity:.5;cursor:wait}
+.nya-message{min-height:19px;margin:0;color:#c3cdd4;font-size:13px;line-height:1.45}
+.nya-message.error{color:#f0a19a}.nya-message.success{color:#e8cf94}
+.nya-notice{padding:11px 12px;border-left:2px solid var(--nya-gold);background:rgba(214,164,77,.05);color:#aeb9c2;font-size:12px;line-height:1.5}
+.nya-avatar-row{display:grid;grid-template-columns:112px 1fr;gap:18px;align-items:center}
+.nya-avatar{width:112px;height:112px;border-radius:50%;object-fit:cover;border:2px solid rgba(214,164,77,.68);box-shadow:0 0 22px rgba(214,164,77,.1)}
+.nya-avatar-actions{display:grid;gap:8px}.nya-avatar-actions input{font-size:12px}.nya-avatar-actions small{color:#8495a2;line-height:1.45}
+.nya-auth-only{display:none!important}body.nineyin-authenticated .nya-auth-only{display:initial!important}body.nineyin-authenticated .nya-guest-only{display:none!important}
+.nya-inline-user{display:none;align-items:center;gap:8px;color:#dfc78f;text-decoration:none}.nineyin-authenticated .nya-inline-user{display:flex}
+.nya-inline-user img{width:31px;height:31px;border-radius:50%;object-fit:cover;border:1px solid rgba(214,164,77,.55)}
+.nya-logout{border:0;background:none;color:#9faebb;cursor:pointer}
+.nya-logout:hover{color:#ffe3a0}
+@media(max-width:600px){.nya-head{padding:24px 20px 14px}.nya-tabs{margin:16px 20px 0}.nya-body{padding:20px}.nya-avatar-row{grid-template-columns:1fr;justify-items:center}.nya-avatar-actions{text-align:center}.nya-head h2{font-size:29px}}
+
+
+/* 0.0.15 auth polish — decorative access window, public demo label hidden */
+html.nineyin-account-pending body>*:not(#nineyinAccountRoot){visibility:hidden!important}
+.nya-demo{display:none!important}
+.nya-overlay{background:radial-gradient(circle at 50% 8%,rgba(25,57,84,.34),transparent 35%),rgba(1,7,13,.94)!important;backdrop-filter:blur(10px)!important}
+.nya-panel{position:relative;width:min(720px,calc(100vw - 30px))!important;border-color:rgba(236,193,99,.68)!important;background:linear-gradient(rgba(3,16,27,.86),rgba(3,15,25,.94)),url('forum-bg-v23.jpg') center/cover no-repeat!important;box-shadow:0 34px 110px #000e,0 0 42px rgba(212,158,59,.12),inset 0 0 0 1px rgba(255,226,154,.08)!important}
+.nya-panel:before,.nya-panel:after{content:"";position:absolute;z-index:2;pointer-events:none;width:86px;height:86px;opacity:.9;background:linear-gradient(135deg,transparent 42%,rgba(232,186,91,.82) 43% 45%,transparent 46%),linear-gradient(45deg,transparent 42%,rgba(232,186,91,.55) 43% 45%,transparent 46%)}
+.nya-panel:before{left:9px;top:9px}.nya-panel:after{right:9px;bottom:9px;transform:rotate(180deg)}
+.nya-head{padding:30px 34px 20px!important;background:radial-gradient(circle at 50% 0,rgba(232,177,64,.14),transparent 44%)!important}.nya-emblem{width:78px!important;height:78px!important}.nya-head h2{font-size:40px!important;text-shadow:0 0 14px rgba(232,178,66,.18)}
+.nya-tabs{margin:24px 34px 0!important;border-color:rgba(214,164,77,.32)!important}.nya-tabs button{height:48px!important}.nya-body{padding:26px 34px 34px!important}.nya-primary{min-height:50px!important;background:linear-gradient(180deg,rgba(214,164,77,.26),rgba(128,86,23,.14))!important}
+@media(max-width:620px){.nya-head{padding:25px 20px 17px!important}.nya-head h2{font-size:32px!important}.nya-tabs{margin:18px 20px 0!important}.nya-body{padding:22px 20px 26px!important}}
+
+
+/* 0.0.15 — Access Gate v2: no corner crosses + subtle animations */
+.nya-panel::before,
+.nya-panel::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+
+.nya-overlay {
+  overflow: hidden !important;
+  animation: nyaOverlayIn .38s ease-out both;
+}
+.nya-overlay::before,
+.nya-overlay::after {
+  content: "";
+  position: fixed;
+  inset: -12%;
+  z-index: -1;
+  pointer-events: none;
+  background-repeat: repeat;
+}
+.nya-overlay::before {
+  background-image:
+    radial-gradient(circle, rgba(255,224,151,.50) 0 1px, transparent 1.6px),
+    radial-gradient(circle, rgba(216,164,77,.28) 0 1px, transparent 1.8px);
+  background-size: 105px 105px, 175px 175px;
+  background-position: 20px 15px, 70px 35px;
+  opacity: .20;
+  animation: nyaDustDrift 22s linear infinite;
+}
+.nya-overlay::after {
+  background:
+    radial-gradient(circle at 50% 10%, rgba(238,183,68,.14), transparent 28%),
+    radial-gradient(circle at 8% 82%, rgba(214,164,77,.07), transparent 22%),
+    radial-gradient(circle at 93% 74%, rgba(214,164,77,.06), transparent 19%);
+  animation: nyaGlowBreathe 6s ease-in-out infinite alternate;
+}
+
+.nya-panel {
+  overflow: auto !important;
+  animation: nyaPanelIn .62s cubic-bezier(.16,.84,.27,1) both;
+  transform-origin: 50% 46%;
+}
+.nya-head {
+  overflow: hidden;
+}
+.nya-head::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,222,147,.35), #ffd879, rgba(255,222,147,.35), transparent);
+  box-shadow: 0 0 18px rgba(240,180,64,.35);
+  animation: nyaLineShine 4.8s ease-in-out infinite;
+}
+.nya-emblem {
+  animation: nyaEmblemFloat 4.2s ease-in-out infinite, nyaEmblemGlow 3.4s ease-in-out infinite alternate;
+}
+.nya-head small,
+.nya-head h2,
+.nya-head p {
+  animation: nyaTextRise .62s ease both;
+}
+.nya-head small { animation-delay: .09s; }
+.nya-head h2 { animation-delay: .14s; }
+.nya-head p { animation-delay: .20s; }
+
+.nya-tabs {
+  animation: nyaTextRise .62s .24s ease both;
+}
+.nya-tabs button {
+  position: relative;
+  overflow: hidden;
+  transition: color .22s ease, background .22s ease, box-shadow .22s ease, transform .22s ease !important;
+}
+.nya-tabs button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 25%, rgba(255,232,174,.14) 48%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform .5s ease;
+}
+.nya-tabs button:hover::after,
+.nya-tabs button.active::after { transform: translateX(120%); }
+.nya-tabs button:hover { color: #ffe4a2 !important; }
+
+.nya-view:not([hidden]) {
+  animation: nyaViewIn .34s ease-out both;
+}
+.nya-field,
+.nya-notice,
+.nya-message,
+.nya-primary,
+.nya-avatar-row {
+  animation: nyaFieldIn .42s ease both;
+}
+.nya-field:nth-child(1) { animation-delay: .03s; }
+.nya-field:nth-child(2) { animation-delay: .08s; }
+.nya-field:nth-child(3) { animation-delay: .13s; }
+.nya-field:nth-child(4) { animation-delay: .18s; }
+
+.nya-field input,
+.nya-field select,
+.nya-field textarea {
+  transition: border-color .22s ease, box-shadow .22s ease, background .22s ease, transform .22s ease !important;
+}
+.nya-field input:focus,
+.nya-field select:focus,
+.nya-field textarea:focus {
+  transform: translateY(-1px);
+}
+.nya-primary {
+  position: relative;
+  overflow: hidden;
+  transition: transform .22s ease, box-shadow .22s ease, filter .22s ease !important;
+}
+.nya-primary::before {
+  content: "";
+  position: absolute;
+  top: -80%;
+  left: -35%;
+  width: 28%;
+  height: 260%;
+  transform: rotate(18deg);
+  background: linear-gradient(90deg, transparent, rgba(255,245,208,.30), transparent);
+  animation: nyaButtonSweep 5.2s ease-in-out infinite;
+}
+.nya-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 24px rgba(214,164,77,.16), inset 0 0 20px rgba(255,230,158,.06) !important;
+}
+
+@keyframes nyaOverlayIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes nyaPanelIn {
+  from { opacity: 0; transform: translateY(18px) scale(.975); filter: blur(3px); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+@keyframes nyaViewIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes nyaTextRise {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes nyaFieldIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes nyaEmblemFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes nyaEmblemGlow {
+  from { filter: drop-shadow(0 0 12px rgba(238,182,67,.28)); }
+  to { filter: drop-shadow(0 0 24px rgba(238,182,67,.55)); }
+}
+@keyframes nyaLineShine {
+  0%,100% { opacity: .35; transform: scaleX(.78); }
+  50% { opacity: 1; transform: scaleX(1); }
+}
+@keyframes nyaDustDrift {
+  from { transform: translate3d(0,0,0); }
+  to { transform: translate3d(48px,84px,0); }
+}
+@keyframes nyaGlowBreathe {
+  from { opacity: .55; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.025); }
+}
+@keyframes nyaButtonSweep {
+  0%,62% { left: -35%; opacity: 0; }
+  68% { opacity: .85; }
+  86% { left: 112%; opacity: .25; }
+  100% { left: 112%; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nya-overlay,
+  .nya-overlay::before,
+  .nya-overlay::after,
+  .nya-panel,
+  .nya-emblem,
+  .nya-head small,
+  .nya-head h2,
+  .nya-head p,
+  .nya-tabs,
+  .nya-view:not([hidden]),
+  .nya-field,
+  .nya-notice,
+  .nya-message,
+  .nya-primary,
+  .nya-avatar-row,
+  .nya-primary::before,
+  .nya-head::before {
+    animation: none !important;
+  }
+}
