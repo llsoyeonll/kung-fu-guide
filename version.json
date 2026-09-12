@@ -1,12 +1,15 @@
 {
-  "version": "0.0.21",
+  "version": "0.0.26",
   "guide_base": "v55-old-design",
-  "forum": "0.0.21",
+  "forum": "0.0.26",
   "auth_gate": true,
   "demo_badge_visible": false,
   "performance_optimized": true,
   "sticker_comments_hotfix": true,
   "protected_build": true,
   "protection_profile": "enhanced-client-side",
-  "cross_watermark": true
+  "cross_watermark": true,
+  "email_confirmation_required": true,
+  "email_repeat_field": true,
+  "email_confirmation_resend": true
 }
