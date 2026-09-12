@@ -265,3 +265,6 @@ html.nineyin-account-pending body>*:not(#nineyinAccountRoot){visibility:hidden!i
 .nya-blocked-card h3{margin:0 0 10px;color:#ffd7d7;font-family:"Cormorant Garamond",serif;font-size:28px}
 .nya-blocked-card p{margin:0;color:#f0c5c5;line-height:1.65}
 .nya-blocked-logout{margin-top:14px}
+
+.nya-blocked-contact{display:flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;margin-top:14px}
+.nya-blocked-logout{margin-top:10px;width:100%}
