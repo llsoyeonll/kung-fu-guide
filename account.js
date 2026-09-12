@@ -9,6 +9,7 @@
   const storePrefix = cfg.storagePrefix || 'nineyin-community';
   const keys = {users:`${storePrefix}:demo-users`, session:`${storePrefix}:demo-session`, posts:`${storePrefix}:demo-posts`, categories:`${storePrefix}:demo-categories`};
   const defaultCategories=['Новости','Гайды','Русификатор','Технические проблемы','Обсуждения'];
+  const BLOCK_MESSAGE='Аккаунт заблокирован при подозрении на бот-активность. Для восстановления доступа свяжитесь с администратором.';
   let client = null, user = null, profile = null, accessResolved = false;
   let resolveReady, resolveAccess;
   const ready = new Promise(r => resolveReady=r);
@@ -24,32 +25,6 @@
   const demoWrite = (key, value) => localStorage.setItem(key, JSON.stringify(value));
   const randomId = () => crypto.randomUUID ? crypto.randomUUID() : `demo-${Date.now()}-${Math.random().toString(16).slice(2)}`;
   async function hash(text){ const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text)); return [...new Uint8Array(buf)].map(x=>x.toString(16).padStart(2,'0')).join(''); }
-  function getEmailRedirectTo(){
-    return location.hostname.endsWith('github.io')
-      ? `${location.origin}/${location.pathname.split('/').filter(Boolean)[0]}/`
-      : `${location.origin}/`;
-  }
-  function normalizeEmail(value){ return String(value||'').trim().toLowerCase(); }
-  function validateRegistrationEmail(email){
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(email)) throw new Error('Введите корректный email.');
-    const [local,domain='']=email.split('@');
-    if(!local || local.startsWith('.') || local.endsWith('.') || local.includes('..')) throw new Error('Проверьте адрес email — в имени ящика есть ошибка.');
-    const typoDomains={
-      'gamil.com':'gmail.com','gmial.com':'gmail.com','gmai.com':'gmail.com','gmail.con':'gmail.com','gmail.cm':'gmail.com',
-      'yadnex.ru':'yandex.ru','yndex.ru':'yandex.ru','yandex.r':'yandex.ru','yanex.ru':'yandex.ru',
-      'mail.r':'mail.ru','mai.ru':'mail.ru','mail.ry':'mail.ru','bk.r':'bk.ru','inbox.r':'inbox.ru'
-    };
-    if(typoDomains[domain]) throw new Error(`Проверьте домен почты. Возможно, вы имели в виду ${typoDomains[domain]}.`);
-    return email;
-  }
-  function emailConfirmed(authUser){ return Boolean(authUser?.email_confirmed_at || authUser?.confirmed_at); }
-  function authErrorMessage(err){
-    const msg=String(err?.message||err||'');
-    if(/email not confirmed/i.test(msg)) return 'Email не подтверждён. Откройте письмо подтверждения и перейдите по ссылке, затем войдите снова.';
-    if(/invalid login credentials/i.test(msg)) return 'Неверный email или пароль.';
-    if(/rate limit|too many requests|email rate limit/i.test(msg)) return 'Слишком много попыток. Подождите немного и повторите.';
-    return msg || 'Ошибка авторизации.';
-  }
 
   function injectUI(){
     if(byId('nineyinAccountRoot')) return;
@@ -59,17 +34,18 @@
         <div class="nya-head"><img class="nya-emblem" src="${safe(brandIcon)}" alt=""><small>СООБЩЕСТВО 9 ИНЬ</small><h2 id="nyaTitle">Доступ к сайту</h2><p id="nyaSubtitle">Войдите в общий аккаунт Руководства и Форума.</p></div>
         <div class="nya-tabs" id="nyaTabs"><button type="button" data-nya-tab="login" class="active">Войти</button><button type="button" data-nya-tab="register">Регистрация</button></div>
         <div class="nya-body">
-          <div class="nya-view" data-nya-view="login"><form class="nya-form" id="nyaLoginForm"><label class="nya-field"><span>Email</span><input name="email" type="email" required autocomplete="email"></label><label class="nya-field"><span>Пароль</span><input name="password" type="password" required minlength="8" autocomplete="current-password"></label><p class="nya-message" id="nyaLoginMessage"></p><button class="nya-primary" type="submit">Войти</button><button class="nya-secondary" id="nyaResendConfirmation" type="button">Повторно отправить письмо подтверждения</button></form></div>
-          <div class="nya-view" data-nya-view="register" hidden><form class="nya-form" id="nyaRegisterForm"><label class="nya-field"><span>Email</span><input name="email" type="email" required autocomplete="email"></label><label class="nya-field"><span>Повторите Email</span><input name="email2" type="email" required autocomplete="email"></label><label class="nya-field"><span>Пароль</span><input name="password" type="password" required minlength="8" autocomplete="new-password"></label><label class="nya-field"><span>Повторите пароль</span><input name="password2" type="password" required minlength="8" autocomplete="new-password"></label><div class="nya-notice"><strong>Проверка почты обязательна.</strong> После регистрации мы отправим письмо со ссылкой подтверждения. Пока пользователь не перейдёт по ссылке, вход и создание профиля будут заблокированы. На Форуме в разделе «Пользователи» будут видны только фото профиля и игровой ник. Email остаётся скрытым.</div><p class="nya-message" id="nyaRegisterMessage"></p><button class="nya-primary" type="submit">Создать аккаунт</button></form></div>
+          <div class="nya-view" data-nya-view="login"><form class="nya-form" id="nyaLoginForm"><label class="nya-field"><span>Email</span><input name="email" type="email" required autocomplete="email"></label><label class="nya-field"><span>Пароль</span><input name="password" type="password" required minlength="8" autocomplete="current-password"></label><p class="nya-message" id="nyaLoginMessage"></p><button class="nya-primary" type="submit">Войти</button></form></div>
+          <div class="nya-view" data-nya-view="register" hidden><form class="nya-form" id="nyaRegisterForm"><label class="nya-field"><span>Email</span><input name="email" type="email" required autocomplete="email"></label><label class="nya-field"><span>Пароль</span><input name="password" type="password" required minlength="8" autocomplete="new-password"></label><label class="nya-field"><span>Повторите пароль</span><input name="password2" type="password" required minlength="8" autocomplete="new-password"></label><div class="nya-notice">После регистрации нужно заполнить профиль. На Форуме в разделе «Пользователи» будут видны только фото профиля и игровой ник. Остальная информация хранится в разделе «Мой профиль». Email остаётся скрытым.</div><p class="nya-message" id="nyaRegisterMessage"></p><button class="nya-primary" type="submit">Создать аккаунт</button></form></div>
           <div class="nya-view" data-nya-view="profile" hidden><form class="nya-form" id="nyaProfileForm"><div class="nya-avatar-row"><img class="nya-avatar" id="nyaAvatarPreview" src="${safe(defaultAvatar)}" alt="Фото профиля"><div class="nya-avatar-actions"><span class="nya-label">Фото профиля</span><input id="nyaAvatarFile" type="file" accept="image/png,image/jpeg,image/webp"><small>Можно пропустить — тогда останется стандартное изображение «Нет фото профиля».</small></div></div><label class="nya-field"><span>Имя на сайте</span><input name="display_name" maxlength="40" required placeholder="Например: Soyeon"></label><label class="nya-field"><span>Игровой никнейм</span><input name="game_nickname" maxlength="60" required placeholder="Ваш ник в игре"></label><label class="nya-field"><span>Сервер</span><select name="server" required><option value="">Выберите сервер</option><option value="taiwan">Тайвань</option><option value="pirate">Пиратка</option><option value="both">Тайвань и Пиратка</option></select></label><label class="nya-field"><span>О себе</span><textarea name="about" maxlength="1000" required placeholder="Расскажите немного о себе и своём опыте в игре"></textarea></label><p class="nya-message" id="nyaProfileMessage"></p><button class="nya-primary" type="submit">Сохранить профиль и открыть сайт</button></form></div>
+          <div class="nya-view" data-nya-view="blocked" hidden><div class="nya-blocked-card"><div class="nya-blocked-symbol" aria-hidden="true">!</div><h3>Доступ ограничен</h3><p>${safe(BLOCK_MESSAGE)}</p></div><button class="nya-primary nya-blocked-logout" id="nyaBlockedLogout" type="button">Выйти из аккаунта</button></div>
         </div>
       </section></div>`;
     document.body.append(root);
     root.querySelectorAll('[data-nya-tab]').forEach(b=>b.addEventListener('click',()=>showView(b.dataset.nyaTab)));
     byId('nyaLoginForm').addEventListener('submit',onLogin);
     byId('nyaRegisterForm').addEventListener('submit',onRegister);
-    byId('nyaResendConfirmation').addEventListener('click',onResendConfirmation);
     byId('nyaProfileForm').addEventListener('submit',onProfileSave);
+    byId('nyaBlockedLogout')?.addEventListener('click',()=>logout());
     byId('nyaAvatarFile').addEventListener('change',async e=>{const f=e.target.files?.[0]; if(!f) return; const blob=await prepareImage(f,768,.86); byId('nyaAvatarPreview').src=URL.createObjectURL(blob)});
     document.querySelectorAll('[data-nineyin-login]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();openAuth('login')}));
     document.querySelectorAll('[data-nineyin-register]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();openAuth('register')}));
@@ -78,12 +54,21 @@
   function showView(name){
     document.querySelectorAll('[data-nya-view]').forEach(v=>v.hidden=v.dataset.nyaView!==name);
     document.querySelectorAll('[data-nya-tab]').forEach(b=>b.classList.toggle('active',b.dataset.nyaTab===name));
-    byId('nyaTabs').hidden = name==='profile';
-    byId('nyaTitle').textContent = name==='profile' ? 'Создайте профиль' : 'Доступ к сайту';
-    byId('nyaSubtitle').textContent = name==='profile' ? 'Заполните обязательные данные. Фото можно оставить стандартным.' : 'Войдите в общий аккаунт Руководства и Форума.';
+    byId('nyaTabs').hidden = name==='profile' || name==='blocked';
+    if(name==='profile'){
+      byId('nyaTitle').textContent='Создайте профиль';
+      byId('nyaSubtitle').textContent='Заполните обязательные данные. Фото можно оставить стандартным.';
+    }else if(name==='blocked'){
+      byId('nyaTitle').textContent='Аккаунт заблокирован';
+      byId('nyaSubtitle').textContent='Доступ к Руководству и Форуму временно ограничен.';
+    }else{
+      byId('nyaTitle').textContent='Доступ к сайту';
+      byId('nyaSubtitle').textContent='Войдите в общий аккаунт Руководства и Форума.';
+    }
   }
   function openAuth(tab='login'){ byId('nyaOverlay').hidden=false; document.documentElement.classList.add('nineyin-account-pending'); document.body.classList.remove('nineyin-access-granted'); showView(tab); }
-  function closeGate(){ byId('nyaOverlay').hidden=true; document.documentElement.classList.remove('nineyin-account-pending'); document.documentElement.classList.add('nineyin-access-granted'); document.body.classList.add('nineyin-access-granted','nineyin-authenticated'); updateAccountUI(); if(!accessResolved){accessResolved=true;resolveAccess({user,profile,demo});} window.dispatchEvent(new CustomEvent('nineyin:access-granted',{detail:{user,profile,demo}})); }
+  function showBlocked(){ byId('nyaOverlay').hidden=false; document.documentElement.classList.add('nineyin-account-pending'); document.documentElement.classList.remove('nineyin-access-granted'); document.body.classList.remove('nineyin-access-granted','nineyin-authenticated'); clearSessionPrefix(profileCachePrefix); showView('blocked'); }
+  function closeGate(){ if(profile?.is_blocked){showBlocked();return;} byId('nyaOverlay').hidden=true; document.documentElement.classList.remove('nineyin-account-pending'); document.documentElement.classList.add('nineyin-access-granted'); document.body.classList.add('nineyin-access-granted','nineyin-authenticated'); updateAccountUI(); if(!accessResolved){accessResolved=true;resolveAccess({user,profile,demo});} window.dispatchEvent(new CustomEvent('nineyin:access-granted',{detail:{user,profile,demo}})); }
   function updateAccountUI(){
     const name=profile?.display_name || user?.email?.split('@')[0] || 'Профиль';
     const avatar=profile?.avatar_url || defaultAvatar;
@@ -118,63 +103,30 @@
   async function loadProfile(){
     if(!user){profile=null;return null}
     if(demo){const users=demoRead(keys.users,{}); profile=users[user.email]?.profile || null; return profile}
-    const {data,error}=await client.from('profiles').select('*').eq('id',user.id).maybeSingle(); if(error) throw error; profile=await hydrateProfile(data); if(profile) writeSessionJson(`${profileCachePrefix}${user.id}`,profile); return profile;
+    const {data,error}=await client.from('profiles').select('*').eq('id',user.id).maybeSingle(); if(error) throw error; profile=data?.is_blocked ? {...data,avatar_url:defaultAvatar} : await hydrateProfile(data); if(profile) writeSessionJson(`${profileCachePrefix}${user.id}`,profile); return profile;
   }
   async function refreshProfile(){
     await loadProfile();
+    if(profile?.is_blocked){showBlocked();return profile;}
     updateAccountUI();
     return profile;
   }
   async function onLogin(e){
     e.preventDefault(); const btn=e.submitter; btn.disabled=true; message('nyaLoginMessage','Выполняется вход...');
     try{
-      const fd=new FormData(e.currentTarget), email=normalizeEmail(fd.get('email')), password=String(fd.get('password'));
-      validateRegistrationEmail(email);
+      const fd=new FormData(e.currentTarget), email=String(fd.get('email')).trim().toLowerCase(), password=String(fd.get('password'));
       if(demo){const users=demoRead(keys.users,{}), rec=users[email]; if(!rec || rec.password_hash!==await hash(password)) throw new Error('Неверный email или пароль.'); localStorage.setItem(keys.session,email); user={id:rec.id,email,created_at:rec.created_at};}
-      else {
-        const {data,error}=await client.auth.signInWithPassword({email,password});
-        if(error) throw error;
-        if(!emailConfirmed(data.user)){
-          await client.auth.signOut().catch(()=>{});
-          user=null; profile=null;
-          throw new Error('Email не подтверждён. Откройте письмо подтверждения и перейдите по ссылке, затем войдите снова.');
-        }
-        user=data.user;
-      }
-      await loadProfile(); if(!profile?.profile_completed) {fillProfileForm(); showView('profile');} else closeGate();
-    }catch(err){message('nyaLoginMessage',authErrorMessage(err),'error')}finally{btn.disabled=false}
+      else {const {data,error}=await client.auth.signInWithPassword({email,password}); if(error) throw error; user=data.user;}
+      await loadProfile(); if(profile?.is_blocked){showBlocked();return;} if(!profile?.profile_completed) {fillProfileForm(); showView('profile');} else closeGate();
+    }catch(err){message('nyaLoginMessage',err.message||'Не удалось войти.','error')}finally{btn.disabled=false}
   }
   async function onRegister(e){
-    e.preventDefault(); const btn=e.submitter; btn.disabled=true; message('nyaRegisterMessage','Проверяем данные и создаём аккаунт...');
+    e.preventDefault(); const btn=e.submitter; btn.disabled=true; message('nyaRegisterMessage','Создаём аккаунт...');
     try{
-      const fd=new FormData(e.currentTarget), email=validateRegistrationEmail(normalizeEmail(fd.get('email'))), email2=normalizeEmail(fd.get('email2')), p=String(fd.get('password')),p2=String(fd.get('password2'));
-      if(email!==email2) throw new Error('Email и повторный Email не совпадают. Проверьте адрес.');
-      if(p!==p2) throw new Error('Пароли не совпадают.'); if(p.length<8) throw new Error('Минимум 8 символов.');
+      const fd=new FormData(e.currentTarget), email=String(fd.get('email')).trim().toLowerCase(), p=String(fd.get('password')),p2=String(fd.get('password2')); if(p!==p2) throw new Error('Пароли не совпадают.'); if(p.length<8) throw new Error('Минимум 8 символов.');
       if(demo){const users=demoRead(keys.users,{}); if(users[email]) throw new Error('Такой email уже зарегистрирован.'); const rec={id:randomId(),email,password_hash:await hash(p),created_at:new Date().toISOString(),role:Object.keys(users).length===0?'admin':'user',profile:null}; users[email]=rec;demoWrite(keys.users,users);localStorage.setItem(keys.session,email);user={id:rec.id,email,created_at:rec.created_at};profile=null;fillProfileForm();showView('profile');}
-      else {
-        const {data,error}=await client.auth.signUp({email,password:p,options:{emailRedirectTo:getEmailRedirectTo()}});
-        if(error) throw error;
-        const loginForm=byId('nyaLoginForm'); if(loginForm?.elements?.email) loginForm.elements.email.value=email;
-        if(!data.session || !emailConfirmed(data.user)){
-          if(data.session) await client.auth.signOut().catch(()=>{});
-          user=null; profile=null;
-          showView('login');
-          message('nyaLoginMessage','Письмо подтверждения отправлено. Аккаунт пока не активирован: откройте письмо и перейдите по ссылке. Если адрес введён неверно или такого ящика не существует, доступ к сайту получить не получится.','success');
-          return;
-        }
-        user=data.user;await loadProfile();fillProfileForm();showView('profile');
-      }
-    }catch(err){message('nyaRegisterMessage',authErrorMessage(err),'error')}finally{btn.disabled=false}
-  }
-  async function onResendConfirmation(){
-    const btn=byId('nyaResendConfirmation'); if(!btn || demo) return;
-    btn.disabled=true; message('nyaLoginMessage','Отправляем письмо подтверждения...');
-    try{
-      const form=byId('nyaLoginForm'); const email=validateRegistrationEmail(normalizeEmail(form?.elements?.email?.value));
-      const {error}=await client.auth.resend({type:'signup',email,options:{emailRedirectTo:getEmailRedirectTo()}});
-      if(error) throw error;
-      message('nyaLoginMessage','Если этот адрес зарегистрирован и ещё не подтверждён, письмо отправлено. Проверьте также папку «Спам».','success');
-    }catch(err){message('nyaLoginMessage',authErrorMessage(err),'error')}finally{btn.disabled=false}
+      else {const {data,error}=await client.auth.signUp({email,password:p,options:{emailRedirectTo:(location.hostname.endsWith('github.io')?location.origin+'/'+location.pathname.split('/').filter(Boolean)[0]+'/':location.origin+'/')}}); if(error) throw error; if(!data.session){showView('login');message('nyaLoginMessage','Аккаунт создан. Подтвердите email по письму, затем войдите.','success');return} user=data.user;await loadProfile();fillProfileForm();showView('profile');}
+    }catch(err){message('nyaRegisterMessage',err.message||'Не удалось зарегистрироваться.','error')}finally{btn.disabled=false}
   }
   function fillProfileForm(){
     const f=byId('nyaProfileForm'); if(!f)return; f.elements.display_name.value=profile?.display_name||'';f.elements.game_nickname.value=profile?.game_nickname||'';f.elements.server.value=profile?.server||'';f.elements.about.value=profile?.about||'';byId('nyaAvatarPreview').src=profile?.avatar_url||defaultAvatar;
@@ -198,7 +150,7 @@
   async function logout(){ if(demo)localStorage.removeItem(keys.session);else await client.auth.signOut();clearSessionPrefix(profileCachePrefix);clearSessionPrefix(signedCachePrefix);user=null;profile=null;document.body.classList.remove('nineyin-authenticated','nineyin-access-granted');document.documentElement.classList.remove('nineyin-access-granted');openAuth('login');window.dispatchEvent(new Event('nineyin:logout')); }
   async function listProfiles(){
     if(demo){const users=demoRead(keys.users,{});return Object.values(users).map(x=>x.profile).filter(x=>x?.profile_completed).sort((a,b)=>String(b.created_at).localeCompare(String(a.created_at)))}
-    const {data,error}=await client.from('profiles').select('id,game_nickname,avatar_path,created_at').eq('profile_completed',true).order('created_at',{ascending:false});if(error)throw error;return await Promise.all((data||[]).map(hydrateProfile));
+    const {data,error}=await client.from('profiles').select('id,game_nickname,avatar_path,created_at,role,is_blocked,blocked_at').eq('profile_completed',true).order('created_at',{ascending:false});if(error)throw error;return await Promise.all((data||[]).map(hydrateProfile));
   }
   async function saveOwnProfile(values,file){
     let avatarPath=profile?.avatar_path||null;if(file){const blob=await prepareImage(file,768,.86);avatarPath=demo?await blobToDataUrl(blob):await uploadFile('avatars',blob,`${user.id}/avatar.webp`)}
@@ -262,6 +214,26 @@
     return Object.fromEntries((data||[]).map(row=>[row.item_key,row.item_code]));
   }
   function isAdmin(){return profile?.role==='admin'}
+  async function setUserBlocked(targetId,blocked){
+    if(!demo) await refreshProfile();
+    if(!isAdmin()) throw new Error('Блокировать пользователей может только администратор.');
+    targetId=String(targetId||'').trim();
+    if(!targetId) throw new Error('Пользователь не выбран.');
+    if(user?.id===targetId && blocked) throw new Error('Нельзя заблокировать собственный аккаунт администратора.');
+    if(demo){
+      const users=demoRead(keys.users,{});
+      const rec=Object.values(users).find(x=>x?.profile?.id===targetId);
+      if(!rec?.profile) throw new Error('Пользователь не найден.');
+      if(rec.profile.role==='admin' && blocked) throw new Error('Аккаунт администратора нельзя заблокировать.');
+      rec.profile.is_blocked=Boolean(blocked);
+      rec.profile.blocked_at=blocked?new Date().toISOString():null;
+      demoWrite(keys.users,users);
+      return {id:targetId,is_blocked:Boolean(blocked),blocked_at:rec.profile.blocked_at};
+    }
+    const {data,error}=await client.rpc('admin_set_user_block',{p_target_uid:targetId,p_blocked:Boolean(blocked)});
+    if(error) throw error;
+    return Array.isArray(data)?data[0]:data;
+  }
   async function listCategories(){
     if(demo){let rows=demoRead(keys.categories,null);if(!Array.isArray(rows)){rows=defaultCategories.map((name,i)=>({id:`default-${i+1}`,name,sort_order:i+1,active:true}));demoWrite(keys.categories,rows)}return rows.filter(x=>x.active!==false).sort((a,b)=>(a.sort_order||0)-(b.sort_order||0)||String(a.name).localeCompare(String(b.name),'ru'))}
     const {data,error}=await client.from('forum_categories').select('id,name,sort_order,active').eq('active',true).order('sort_order',{ascending:true}).order('name',{ascending:true});if(error)throw error;return data||[];
@@ -287,27 +259,16 @@
   function getCurrent(){return {user,profile,demo,defaultAvatar}}
   async function applySession(session){
     user=session?.user||null;
-    if(user && !demo && !emailConfirmed(user)){
-      await client.auth.signOut().catch(()=>{});
-      user=null; profile=null;
-      openAuth('login');
-      message('nyaLoginMessage','Email не подтверждён. Перейдите по ссылке из письма, затем войдите снова.','error');
-      return;
-    }
     if(!user){
       profile=null;
       openAuth('login');
       return;
     }
-    const cached=readSessionJson(`${profileCachePrefix}${user.id}`);
-    if(cached?.id===user.id && cached?.profile_completed){
-      profile=cached;
-      closeGate();
-      // Refresh silently so navigation is instant while role/profile changes still propagate.
-      loadProfile().then(()=>updateAccountUI()).catch(err=>console.warn('Profile refresh failed:',err));
+    await loadProfile();
+    if(profile?.is_blocked){
+      showBlocked();
       return;
     }
-    await loadProfile();
     if(profile?.profile_completed){
       closeGate();
     }else{
@@ -327,7 +288,8 @@
         }
         if(user){
           await loadProfile();
-          if(profile?.profile_completed) closeGate();
+          if(profile?.is_blocked) showBlocked();
+          else if(profile?.profile_completed) closeGate();
           else {fillProfileForm();openAuth('login');showView('profile');}
         }else openAuth('login');
       }else{
@@ -347,6 +309,6 @@
     }
     resolveReady({demo,user,profile});
   }
-  window.NineYinAccount={ready,access,getCurrent,refreshProfile,listProfiles,saveOwnProfile,createPost,getPost,listPosts,listCategories,addCategory,removeCategory,setPostPinned,getPrivateItemCodes,isAdmin,logout,openAuth,defaultAvatar,isDemo:()=>demo};
+  window.NineYinAccount={version:'0.0.26',ready,access,getCurrent,refreshProfile,listProfiles,saveOwnProfile,createPost,getPost,listPosts,listCategories,addCategory,removeCategory,setPostPinned,getPrivateItemCodes,isAdmin,setUserBlocked,logout,openAuth,defaultAvatar,isDemo:()=>demo};
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();

@@ -91,3 +91,14 @@
 .comment-sticker-wrap{margin-top:8px}.comment-sticker{display:block;width:auto;height:auto;max-width:min(180px,52vw);max-height:180px;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(0,0,0,.2))}
 @media(max-width:720px){.sticker-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.sticker-option img{height:86px}.selected-sticker{grid-template-columns:72px minmax(0,1fr) auto}.selected-sticker>span{display:none}.selected-sticker img{width:72px;height:72px}}
 @media(max-width:430px){.sticker-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+/* Admin user blocking controls */
+.user-card-blocked{opacity:.72;border-color:rgba(187,74,74,.7)!important;box-shadow:inset 0 0 28px rgba(120,22,32,.11)}
+.user-admin-state{margin-top:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.user-admin-state.active{color:#9fc9a8}
+.user-admin-state.blocked{color:#e69b9b}
+.user-block-btn{margin-top:8px;width:100%;min-height:34px;border:1px solid rgba(201,157,70,.55);background:rgba(201,157,70,.08);color:#e8c97e;cursor:pointer;font:600 12px "Golos Text",sans-serif}
+.user-block-btn:hover{background:rgba(201,157,70,.16)}
+.user-block-btn.unblock{border-color:rgba(108,170,118,.55);color:#b9dfc0;background:rgba(68,128,78,.10)}
+.user-block-btn:disabled{opacity:.45;cursor:not-allowed}

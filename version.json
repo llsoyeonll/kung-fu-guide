@@ -5,11 +5,5 @@
   "auth_gate": true,
   "demo_badge_visible": false,
   "performance_optimized": true,
-  "sticker_comments_hotfix": true,
-  "protected_build": true,
-  "protection_profile": "enhanced-client-side",
-  "cross_watermark": true,
-  "email_confirmation_required": true,
-  "email_repeat_field": true,
-  "email_confirmation_resend": true
+  "sticker_comments_hotfix": true
 }
