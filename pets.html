@@ -8,13 +8,13 @@
     <link rel="icon" href="favicon.ico?v=16" sizes="any" />
     <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
     <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
-    <link rel="stylesheet" href="styles.css?v=0.0.30" />
+    <link rel="stylesheet" href="styles.css?v=0.0.33" />
   
     <link rel="stylesheet" href="community-auth.css?v=0.0.30" />
     <script>document.documentElement.classList.add('nineyin-account-pending')</script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
-    <script src="i18n.js?v=0.0.30" defer></script><script src="supabase-config.js?v=0.0.30" defer></script>
-    <script src="account.js?v=0.0.30" defer></script>
+    <script src="i18n.js?v=0.0.33" defer></script><script src="supabase-config.js?v=0.0.33" defer></script>
+    <script src="account.js?v=0.0.33" defer></script>
   </head>
   <body>
     <main class="site-shell inner-site-shell pet-guide-site-shell">
@@ -82,9 +82,175 @@
           <div><strong>Обратите внимание на срок</strong><p>Некоторые питомцы выдаются временно. Проверяйте описание предмета, чтобы узнать, исчезнет ли компаньон через несколько дней.</p></div>
         </aside>
 
-        <section class="content-placeholder pet-catalog-placeholder" aria-label="Будущий каталог питомцев">
-          <span class="standalone-icon pet-icon" aria-hidden="true"></span>
-          <div><strong>Каталог питомцев</strong><p>Карточки питомцев, способы получения и дополнительные бонусы будут добавлены позднее.</p></div>
+        <section class="pet-catalog-section" aria-labelledby="pet-catalog-title">
+          <header class="pet-catalog-heading">
+            <p class="card-kicker">Коллекция питомцев</p>
+            <h2 id="pet-catalog-title">Полезные питомцы</h2>
+            <p>Карточки питомцев с названием, описанием и служебным кодом. Код доступен только администратору.</p>
+          </header>
+          <div class="pet-catalog-grid">
+
+          <article class="pet-catalog-card">
+            <figure class="pet-catalog-image">
+              <img src="assets/pets/pet-brown-eagle.webp?v=0.0.33" alt="Коричневый Орел" loading="lazy" decoding="async" />
+            </figure>
+            <div class="pet-catalog-copy">
+              <h3>Коричневый Орел</h3>
+              <p>Бесконечные голуби</p>
+              <div class="pet-admin-code nineyin-private-item-code"
+                   data-private-item-code="pet-brown-eagle"
+                   data-show-empty-code="true"
+                   hidden>
+                <span>Код питомца</span>
+                <code>Не указан</code>
+              </div>
+            </div>
+          </article>
+          <article class="pet-catalog-card">
+            <figure class="pet-catalog-image">
+              <img src="assets/pets/pet-519750a5.webp?v=0.0.33" alt="Питомец без указанного названия" loading="lazy" decoding="async" />
+            </figure>
+            <div class="pet-catalog-copy">
+              <h3>Название будет добавлено</h3>
+              <p>Описание будет добавлено.</p>
+              <div class="pet-admin-code nineyin-private-item-code"
+                   data-private-item-code="pet-519750a5"
+                   data-show-empty-code="true"
+                   hidden>
+                <span>Код питомца</span>
+                <code>Не указан</code>
+              </div>
+            </div>
+          </article>
+          <article class="pet-catalog-card">
+            <figure class="pet-catalog-image">
+              <img src="assets/pets/pet-59f0488c.webp?v=0.0.33" alt="Питомец без указанного названия" loading="lazy" decoding="async" />
+            </figure>
+            <div class="pet-catalog-copy">
+              <h3>Название будет добавлено</h3>
+              <p>Описание будет добавлено.</p>
+              <div class="pet-admin-code nineyin-private-item-code"
+                   data-private-item-code="pet-59f0488c"
+                   data-show-empty-code="true"
+                   hidden>
+                <span>Код питомца</span>
+                <code>Не указан</code>
+              </div>
+            </div>
+          </article>
+          <article class="pet-catalog-card">
+            <figure class="pet-catalog-image">
+              <img src="assets/pets/pet-88031eb9.webp?v=0.0.33" alt="Питомец без указанного названия" loading="lazy" decoding="async" />
+            </figure>
+            <div class="pet-catalog-copy">
+              <h3>Название будет добавлено</h3>
+              <p>Описание будет добавлено.</p>
+              <div class="pet-admin-code nineyin-private-item-code"
+                   data-private-item-code="pet-88031eb9"
+                   data-show-empty-code="true"
+                   hidden>
+                <span>Код питомца</span>
+                <code>Не указан</code>
+              </div>
+            </div>
+          </article>
+          <article class="pet-catalog-card">
+            <figure class="pet-catalog-image">
+              <img src="assets/pets/pet-84caf75d.webp?v=0.0.33" alt="Питомец без указанного названия" loading="lazy" decoding="async" />
+            </figure>
+            <div class="pet-catalog-copy">
+              <h3>Название будет добавлено</h3>
+              <p>Описание будет добавлено.</p>
+              <div class="pet-admin-code nineyin-private-item-code"
+                   data-private-item-code="pet-84caf75d"
+                   data-show-empty-code="true"
+                   hidden>
+                <span>Код питомца</span>
+                <code>Не указан</code>
+              </div>
+            </div>
+          </article>
+          <article class="pet-catalog-card">
+            <figure class="pet-catalog-image">
+              <img src="assets/pets/pet-b3643a85.webp?v=0.0.33" alt="Питомец без указанного названия" loading="lazy" decoding="async" />
+            </figure>
+            <div class="pet-catalog-copy">
+              <h3>Название будет добавлено</h3>
+              <p>Описание будет добавлено.</p>
+              <div class="pet-admin-code nineyin-private-item-code"
+                   data-private-item-code="pet-b3643a85"
+                   data-show-empty-code="true"
+                   hidden>
+                <span>Код питомца</span>
+                <code>Не указан</code>
+              </div>
+            </div>
+          </article>
+          <article class="pet-catalog-card">
+            <figure class="pet-catalog-image">
+              <img src="assets/pets/pet-c245804e.webp?v=0.0.33" alt="Питомец без указанного названия" loading="lazy" decoding="async" />
+            </figure>
+            <div class="pet-catalog-copy">
+              <h3>Название будет добавлено</h3>
+              <p>Описание будет добавлено.</p>
+              <div class="pet-admin-code nineyin-private-item-code"
+                   data-private-item-code="pet-c245804e"
+                   data-show-empty-code="true"
+                   hidden>
+                <span>Код питомца</span>
+                <code>Не указан</code>
+              </div>
+            </div>
+          </article>
+          <article class="pet-catalog-card">
+            <figure class="pet-catalog-image">
+              <img src="assets/pets/pet-416e7155.webp?v=0.0.33" alt="Питомец без указанного названия" loading="lazy" decoding="async" />
+            </figure>
+            <div class="pet-catalog-copy">
+              <h3>Название будет добавлено</h3>
+              <p>Описание будет добавлено.</p>
+              <div class="pet-admin-code nineyin-private-item-code"
+                   data-private-item-code="pet-416e7155"
+                   data-show-empty-code="true"
+                   hidden>
+                <span>Код питомца</span>
+                <code>Не указан</code>
+              </div>
+            </div>
+          </article>
+          <article class="pet-catalog-card">
+            <figure class="pet-catalog-image">
+              <img src="assets/pets/pet-f5723cc4.webp?v=0.0.33" alt="Питомец без указанного названия" loading="lazy" decoding="async" />
+            </figure>
+            <div class="pet-catalog-copy">
+              <h3>Название будет добавлено</h3>
+              <p>Описание будет добавлено.</p>
+              <div class="pet-admin-code nineyin-private-item-code"
+                   data-private-item-code="pet-f5723cc4"
+                   data-show-empty-code="true"
+                   hidden>
+                <span>Код питомца</span>
+                <code>Не указан</code>
+              </div>
+            </div>
+          </article>
+          <article class="pet-catalog-card">
+            <figure class="pet-catalog-image">
+              <img src="assets/pets/pet-3f31653c.webp?v=0.0.33" alt="Питомец без указанного названия" loading="lazy" decoding="async" />
+            </figure>
+            <div class="pet-catalog-copy">
+              <h3>Название будет добавлено</h3>
+              <p>Описание будет добавлено.</p>
+              <div class="pet-admin-code nineyin-private-item-code"
+                   data-private-item-code="pet-3f31653c"
+                   data-show-empty-code="true"
+                   hidden>
+                <span>Код питомца</span>
+                <code>Не указан</code>
+              </div>
+            </div>
+          </article>
+          </div>
         </section>
       </div>
 
@@ -96,7 +262,8 @@
         </div>
       </footer>
     </main>
-    <script src="script.js?v=0.0.30" defer></script>
-      <script src="anti-copy.js?v=0.0.30" defer></script>
+    <script src="script.js?v=0.0.33" defer></script>
+      <script src="admin-item-codes.js?v=0.0.33" defer></script>
+      <script src="anti-copy.js?v=0.0.33" defer></script>
   </body>
 </html>

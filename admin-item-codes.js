@@ -11,10 +11,16 @@
       const map=await NineYinAccount.getPrivateItemCodes(keys);
       nodes.forEach(node=>{
         const code=map[node.dataset.privateItemCode];
-        if(!code) return;
         const codeEl=node.querySelector('code');
-        if(codeEl) codeEl.textContent=code;
-        node.hidden=false;
+        if(code){
+          if(codeEl) codeEl.textContent=code;
+          node.hidden=false;
+          return;
+        }
+        if(node.dataset.showEmptyCode==='true'){
+          if(codeEl && !codeEl.textContent.trim()) codeEl.textContent='Не указан';
+          node.hidden=false;
+        }
       });
     }catch(err){
       console.error('Private item code load failed:',err);

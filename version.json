@@ -1,7 +1,7 @@
 {
-  "version": "0.0.32",
+  "version": "0.0.33",
   "guide_base": "v55-old-design",
-  "forum": "0.0.32",
+  "forum": "0.0.33",
   "auth_gate": true,
   "demo_badge_visible": false,
   "performance_optimized": true,
@@ -13,5 +13,10 @@
   "shaman_sanctuary_school": true,
   "profile_default_avatar": "no_outer_frame",
   "guide_artwork": "accepted_0.0.32",
-  "ganoderma_table": "right"
+  "ganoderma_table": "right",
+  "character_icons": "new_pet_and_tables",
+  "pets_catalog": 10,
+  "pets_columns_desktop": 5,
+  "sects_catalog": 13,
+  "pet_codes_admin_only": true
 }
