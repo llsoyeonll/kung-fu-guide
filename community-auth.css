@@ -249,3 +249,8 @@ body.nineyin-access-granted{overflow:auto}
 
 .nya-blocked-contact{display:flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;margin-top:14px}
 .nya-blocked-logout{margin-top:10px;width:100%}
+
+/* 0.0.29 — переключатель языка внутри входа/регистрации */
+.nya-panel{position:relative}
+.nya-lang-toggle{position:absolute;z-index:4;top:12px;right:12px;min-width:44px;padding:7px 9px;border:1px solid rgba(226,183,93,.55);background:rgba(4,18,29,.92);color:#f0d28b;font:700 11px/1 Arial,sans-serif;letter-spacing:.08em;cursor:pointer}
+.nya-lang-toggle:hover{border-color:#f1ca70;color:#fff0bf}

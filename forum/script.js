@@ -11,7 +11,7 @@ function automaticCover(category,server){
 let allPosts=[],activeFilter='all',searchTerm='',page=1;const perPage=5;
 const postsEl=document.getElementById('posts'),numbersEl=document.getElementById('pageNumbers'),searchInput=document.getElementById('searchInput'),prevBtn=document.getElementById('prevPage'),nextBtn=document.getElementById('nextPage');
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function serverLabel(s){return s==='taiwan'?'Тайвань':s==='pirate'?'Пиратка':'Обсуждения'}
+function serverLabel(s){return s==='taiwan'?'Тайвань':s==='pirate'?'Пиратка CN':'Обсуждения'}
 function sortPosts(items){return [...items].sort((a,b)=>Number(Boolean(b.pinned))-Number(Boolean(a.pinned)) || String(b.pinned_at||b.created_at||'').localeCompare(String(a.pinned_at||a.created_at||'')) || String(b.created_at||'').localeCompare(String(a.created_at||'')))}
 function filtered(){let items=activeFilter==='all'?allPosts:allPosts.filter(p=>p.server===activeFilter);if(searchTerm){const q=searchTerm.toLowerCase();items=items.filter(p=>`${p.title} ${p.excerpt} ${p.category} ${p.author}`.toLowerCase().includes(q))}return sortPosts(items)}
 function render(){

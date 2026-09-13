@@ -102,3 +102,8 @@
 .user-block-btn:hover{background:rgba(201,157,70,.16)}
 .user-block-btn.unblock{border-color:rgba(108,170,118,.55);color:#b9dfc0;background:rgba(68,128,78,.10)}
 .user-block-btn:disabled{opacity:.45;cursor:not-allowed}
+
+/* 0.0.29 — сервер и статус подтверждения в каталоге пользователей */
+.user-card-simple .user-server{margin-top:2px;max-width:100%;white-space:normal;line-height:1.25;text-transform:none;font-size:10px}
+.user-card-unconfirmed{border-color:rgba(214,164,77,.5)!important;box-shadow:inset 0 0 26px rgba(214,164,77,.07)}
+.user-admin-state.unconfirmed{color:#e2b75f}

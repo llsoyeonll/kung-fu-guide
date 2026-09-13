@@ -8747,7 +8747,7 @@ body.protected-content img{-webkit-user-drag:none;user-select:none;-webkit-user-
 .nineyin-private-item-code[hidden]{display:none!important}
 @media print{body>*:not(.nineyin-capture-guard){display:none!important}.nineyin-capture-guard{display:block!important;opacity:1!important}}
 
-/* 0.0.21 performance pass */
+/* 0.0.20 performance pass */
 .cursor-aura{display:none!important}
 .topbar{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background-color:rgba(3,14,25,.97)!important;animation:none!important}
 .guide-card,.directory-card,.collection-entry,.section-block,.content-card{content-visibility:auto;contain-intrinsic-size:1px 360px}
@@ -8758,13 +8758,11 @@ body.protected-content img{-webkit-user-drag:none;user-select:none;-webkit-user-
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
 }
 
-/* v0.0.21 protected build */
-body.protected-content{-webkit-user-select:none!important;user-select:none!important;-webkit-touch-callout:none!important}
-body.protected-content input,body.protected-content textarea,body.protected-content select,body.protected-content option,body.protected-content [contenteditable="true"]{-webkit-user-select:text!important;user-select:text!important}
-body.protected-content img{-webkit-user-drag:none!important;user-drag:none!important;-webkit-touch-callout:none!important}
-.nineyin-protected-image{position:relative!important;display:inline-block!important;max-width:100%!important;line-height:0!important;overflow:hidden!important}
-.nineyin-protected-image>img{display:block!important;max-width:100%!important}
-.nineyin-image-watermark{position:absolute!important;left:50%!important;top:50%!important;z-index:7!important;pointer-events:none!important;white-space:nowrap!important;color:rgba(255,245,210,.22)!important;font-family:"Cormorant Garamond",Georgia,serif!important;font-size:clamp(20px,3.2vw,48px)!important;font-style:italic!important;font-weight:600!important;letter-spacing:.08em!important;text-shadow:0 1px 2px rgba(0,0,0,.28)!important;transform-origin:center!important}
-.nineyin-image-watermark.mark-a{transform:translate(-50%,-50%) rotate(-31deg)!important}
-.nineyin-image-watermark.mark-b{transform:translate(-50%,-50%) rotate(31deg)!important}
-@media print{html,body{background:#000!important}body>*{display:none!important}body::before{content:"Печать страницы отключена"!important;display:block!important;padding:40px!important;color:#fff!important;font:600 18px sans-serif!important}}
+/* 0.0.29 — изображения школ, фракций и сект */
+.development-slot.directory-image-card{position:relative;overflow:hidden;padding:0;display:flex;align-items:flex-end;justify-content:center;border-style:solid;border-color:rgba(230,183,93,.48);background:#061523;isolation:isolate}
+.development-slot.directory-image-card::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 48%,rgba(1,9,16,.18) 62%,rgba(1,9,16,.96) 100%);pointer-events:none}
+.development-slot.directory-image-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .28s ease,filter .28s ease}
+.development-slot.directory-image-card span{position:relative;z-index:2;width:100%;padding:13px 9px;color:#fff0c4;text-shadow:0 2px 8px #000;font-size:clamp(.92rem,1.2vw,1.18rem);line-height:1.12}
+.development-slot.directory-link-card{cursor:pointer;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.development-slot.directory-link-card:hover,.development-slot.directory-link-card:focus-visible{transform:translateY(-4px);border-color:var(--gold-bright);box-shadow:0 16px 32px rgba(0,0,0,.42),0 0 18px rgba(230,183,93,.14)}
+.development-slot.directory-link-card:hover img,.development-slot.directory-link-card:focus-visible img{transform:scale(1.035);filter:brightness(1.06)}

@@ -1,5 +1,5 @@
 {
-  "version": "0.0.27",
+  "version": "0.0.29",
   "guide_base": "v55-old-design",
   "forum": "0.0.26",
   "auth_gate": true,

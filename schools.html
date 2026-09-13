@@ -1,116 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Школы, фракции и секты мира Легенды Кунг-Фу." />
-    <title>Школы, Фракции, Секты — Легенды Кунг-Фу</title>
-    <link rel="icon" href="favicon.ico?v=16" sizes="any" />
-    <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
-    <link rel="apple-touch-icon" href="assets/site-icon.webp?v=8" />
-    <link rel="stylesheet" href="styles.css?v=55" />
-  
-    <link rel="stylesheet" href="community-auth.css?v=15" />
-    <script>document.documentElement.classList.add('nineyin-account-pending')</script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
-    <script src="supabase-config.js?v=0.0.27" defer></script>
-    <script src="account.js?v=0.0.27" defer></script>
-  </head>
-  <body>
-    <main class="site-shell inner-site-shell">
-      <div class="mist" aria-hidden="true"></div>
-      <div class="golden-particles" aria-hidden="true"></div>
-      <div class="cursor-aura" aria-hidden="true"></div>
-
-      <header class="topbar" id="top">
-        <div class="topbar-inner">
-          <a class="topbar-logo" href="index.html" aria-label="Руководство Легенды Кунг-Фу — главная">
-            <span class="topbar-logo-image" aria-hidden="true"></span>
-            <span class="nine-yin-wordmark" role="img" aria-label="9 Инь"></span>
-          </a>
-          <nav class="topnav" aria-label="Основная навигация">
-            <a href="index.html">Главная</a><a href="forum/index.html">Форум</a>
-            
-            <a href="character.html">О персонаже</a>
-            <a href="partnership.html">Партнёрство и связь</a>
-            <a href="registration.html">Регистрация</a>
-            <a href="topup.html">Пополнение</a>
-          </nav>
-        </div>
-      </header>
-
-      <div class="page-content collection-page-content directory-page-content schools-page-content">
-        <header class="collection-page-header">
-          <p class="collection-kicker">Пути развития</p>
-          <h1>Школы, Фракции, Секты</h1>
-          <p>Три больших направления со своими условиями вступления, особенностями и возможностями.</p>
-        </header>
-
-        <div class="development-groups" aria-label="Школы, фракции и секты">
-          <section class="development-group" id="schools-list" aria-labelledby="schools-title">
-            <header class="development-group-header">
-              <span class="directory-icon directory-icon-school" aria-hidden="true">Ш</span>
-              <span class="development-group-copy">
-                <span class="card-kicker">Направление обучения</span>
-                <h2 id="schools-title">Школы</h2>
-                <p>Основные направления обучения, требования для вступления и доступные боевые стили.</p>
-              </span>
-            </header>
-            <div class="development-slots">
-              <article class="development-slot"><span>Скоро появится</span></article>
-              <article class="development-slot"><span>Скоро появится</span></article>
-              <article class="development-slot"><span>Скоро появится</span></article>
-              <article class="development-slot"><span>Скоро появится</span></article>
-            </div>
-          </section>
-
-          <section class="development-group" id="factions-list" aria-labelledby="factions-title">
-            <header class="development-group-header">
-              <span class="directory-icon directory-icon-faction" aria-hidden="true">Ф</span>
-              <span class="development-group-copy">
-                <span class="card-kicker">Союзы мира</span>
-                <h2 id="factions-title">Фракции</h2>
-                <p>Особенности репутации, задания и награды за развитие отношений.</p>
-              </span>
-            </header>
-            <div class="development-slots">
-              <a class="development-slot faction-card azure-guard-card" href="azure-guard.html" aria-label="Открыть страницу фракции Лазурная Стража">
-                <span>Лазурная Стража</span>
-              </a>
-              <article class="development-slot"><span>Скоро появится</span></article>
-              <article class="development-slot"><span>Скоро появится</span></article>
-              <article class="development-slot"><span>Скоро появится</span></article>
-            </div>
-          </section>
-
-          <section class="development-group" id="sects-list" aria-labelledby="sects-title">
-            <header class="development-group-header">
-              <span class="directory-icon directory-icon-sect" aria-hidden="true">С</span>
-              <span class="development-group-copy">
-                <span class="card-kicker">Особые пути</span>
-                <h2 id="sects-title">Секты</h2>
-                <p>Условия принятия, уникальные навыки и ограничения особых путей развития.</p>
-              </span>
-            </header>
-            <div class="development-slots">
-              <article class="development-slot"><span>Скоро появится</span></article>
-              <article class="development-slot"><span>Скоро появится</span></article>
-              <article class="development-slot"><span>Скоро появится</span></article>
-              <article class="development-slot"><span>Скоро появится</span></article>
-            </div>
-          </section>
-        </div>
-      </div>
-
-      <footer class="site-footer">
-        <div class="footer-inner">
-          <span class="footer-ornament" aria-hidden="true"></span>
-          <p>Руководство Легенды Кунг-Фу 2026</p>
-          <span class="footer-ornament" aria-hidden="true"></span>
-        </div>
-      </footer>
-    </main>
-    <script src="script.js?v=8" defer></script>
-      <script src="anti-copy.js?v=0.0.27" defer></script>
-  </body>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Школы, фракции и секты мира Легенды Кунг-Фу." name="description"/>
+<title>Школы, Фракции, Секты — Легенды Кунг-Фу</title>
+<link href="favicon.ico?v=16" rel="icon" sizes="any"/>
+<link href="assets/site-icon.webp?v=16" rel="icon" type="image/png"/>
+<link href="assets/site-icon.webp?v=8" rel="apple-touch-icon"/>
+<link href="styles.css?v=0.0.29" rel="stylesheet"/>
+<link href="community-auth.css?v=0.0.29" rel="stylesheet"/>
+<script>document.documentElement.classList.add('nineyin-account-pending')</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script defer="" src="supabase-config.js?v=0.0.29"></script>
+<script defer="" src="account.js?v=0.0.29"></script>
+<script src="i18n.js?v=0.0.29" defer></script></head>
+<body>
+<main class="site-shell inner-site-shell">
+<div aria-hidden="true" class="mist"></div>
+<div aria-hidden="true" class="golden-particles"></div>
+<div aria-hidden="true" class="cursor-aura"></div>
+<header class="topbar" id="top">
+<div class="topbar-inner">
+<a aria-label="Руководство Легенды Кунг-Фу — главная" class="topbar-logo" href="index.html">
+<span aria-hidden="true" class="topbar-logo-image"></span>
+<span aria-label="9 Инь" class="nine-yin-wordmark" role="img"></span>
+</a>
+<nav aria-label="Основная навигация" class="topnav">
+<a href="index.html">Главная</a><a href="forum/index.html">Форум</a>
+<a href="character.html">О персонаже</a>
+<a href="partnership.html">Партнёрство и связь</a>
+<a href="registration.html">Регистрация</a>
+<a href="topup.html">Пополнение</a>
+</nav>
+</div>
+</header>
+<div class="page-content collection-page-content directory-page-content schools-page-content">
+<header class="collection-page-header">
+<p class="collection-kicker">Пути развития</p>
+<h1>Школы, Фракции, Секты</h1>
+<p>Три больших направления со своими условиями вступления, особенностями и возможностями.</p>
+</header>
+<div aria-label="Школы, фракции и секты" class="development-groups">
+<section aria-labelledby="schools-title" class="development-group" id="schools-list">
+<header class="development-group-header">
+<span aria-hidden="true" class="directory-icon directory-icon-school">Ш</span>
+<span class="development-group-copy">
+<span class="card-kicker">Направление обучения</span>
+<h2 id="schools-title">Школы</h2>
+<p>Основные направления обучения, требования для вступления и доступные боевые стили.</p>
+</span>
+</header>
+<div class="development-slots"><article class="development-slot directory-image-card"><img alt="Эмей" decoding="async" loading="lazy" src="assets/directory/school-emei.webp"/><span>Эмей</span></article><article class="development-slot directory-image-card"><img alt="Лейб-Гвардия" decoding="async" loading="lazy" src="assets/directory/school-royal-guard.webp"/><span>Лейб-Гвардия</span></article><article class="development-slot directory-image-card"><img alt="Города Наказаний" decoding="async" loading="lazy" src="assets/directory/school-punishment-city.webp"/><span>Города Наказаний</span></article><article class="development-slot directory-image-card"><img alt="Блаженных" decoding="async" loading="lazy" src="assets/directory/school-blessed.webp"/><span>Блаженных</span></article><article class="development-slot directory-image-card"><img alt="Тан" decoding="async" loading="lazy" src="assets/directory/school-tang.webp"/><span>Тан</span></article><article class="development-slot directory-image-card"><img alt="Шаолинь" decoding="async" loading="lazy" src="assets/directory/school-shaolin.webp"/><span>Шаолинь</span></article><article class="development-slot directory-image-card"><img alt="Ученые" decoding="async" loading="lazy" src="assets/directory/school-scholars.webp"/><span>Ученые</span></article><article class="development-slot directory-image-card"><img alt="Минг" decoding="async" loading="lazy" src="assets/directory/school-ming.webp"/><span>Минг</span></article><article class="development-slot directory-image-card"><img alt="Куньлунь" decoding="async" loading="lazy" src="assets/directory/school-kunlun.webp"/><span>Куньлунь</span></article><article class="development-slot directory-image-card"><img alt="Удан" decoding="async" loading="lazy" src="assets/directory/school-wudang.webp"/><span>Удан</span></article><article class="development-slot directory-image-card"><img alt="Нищих" decoding="async" loading="lazy" src="assets/directory/school-beggars.webp"/><span>Нищих</span></article><article class="development-slot directory-image-card"><img alt="Тяньшань" decoding="async" loading="lazy" src="assets/directory/school-tianshan.webp"/><span>Тяньшань</span></article></div>
+</section>
+<section aria-labelledby="factions-title" class="development-group" id="factions-list">
+<header class="development-group-header">
+<span aria-hidden="true" class="directory-icon directory-icon-faction">Ф</span>
+<span class="development-group-copy">
+<span class="card-kicker">Союзы мира</span>
+<h2 id="factions-title">Фракции</h2>
+<p>Особенности репутации, задания и награды за развитие отношений.</p>
+</span>
+</header>
+<div class="development-slots"><a aria-label="Открыть страницу Лазурная Стража" class="development-slot directory-image-card directory-link-card" href="azure-guard.html"><img alt="Лазурная Стража" decoding="async" loading="lazy" src="assets/azure-guard.png?v=11"/><span>Лазурная Стража</span></a><article class="development-slot directory-image-card"><img alt="Клан Безродных" decoding="async" loading="lazy" src="assets/directory/faction-rootless.webp"/><span>Клан Безродных</span></article><article class="development-slot directory-image-card"><img alt="Усадьба Зверей" decoding="async" loading="lazy" src="assets/directory/faction-beast-villa.webp"/><span>Усадьба Зверей</span></article><article class="development-slot directory-image-card"><img alt="Дворец Цветов" decoding="async" loading="lazy" src="assets/directory/faction-flower-palace.webp"/><span>Дворец Цветов</span></article><article class="development-slot directory-image-card"><img alt="Усадьба Сюй" decoding="async" loading="lazy" src="assets/directory/faction-xu-manor.webp"/><span>Усадьба Сюй</span></article><article class="development-slot directory-image-card"><img alt="Остров Персиков" decoding="async" loading="lazy" src="assets/directory/faction-peach-island.webp"/><span>Остров Персиков</span></article><article class="development-slot directory-image-card"><img alt="Семья Шень" decoding="async" loading="lazy" src="assets/directory/faction-shen-family.webp"/><span>Семья Шень</span></article><article class="development-slot directory-image-card"><img alt="Храм Небесного Колеса" decoding="async" loading="lazy" src="assets/directory/faction-heavenly-wheel.webp"/><span>Храм Небесного Колеса</span></article></div>
+</section>
+<section aria-labelledby="sects-title" class="development-group" id="sects-list">
+<header class="development-group-header">
+<span aria-hidden="true" class="directory-icon directory-icon-sect">С</span>
+<span class="development-group-copy">
+<span class="card-kicker">Особые пути</span>
+<h2 id="sects-title">Секты</h2>
+<p>Условия принятия, уникальные навыки и ограничения особых путей развития.</p>
+</span>
+</header>
+<div class="development-slots"><article class="development-slot directory-image-card"><img alt="Остров Сияющих Надежд" decoding="async" loading="lazy" src="assets/directory/sect-shining-hope.webp"/><span>Остров Сияющих Надежд</span></article></div>
+</section>
+</div>
+</div>
+<footer class="site-footer">
+<div class="footer-inner">
+<span aria-hidden="true" class="footer-ornament"></span>
+<p>Руководство Легенды Кунг-Фу 2026</p>
+<span aria-hidden="true" class="footer-ornament"></span>
+</div>
+</footer>
+</main>
+<script defer="" src="script.js?v=0.0.29"></script>
+<script defer="" src="anti-copy.js?v=0.0.29"></script>
+</body>
 </html>
