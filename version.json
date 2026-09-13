@@ -1,9 +1,12 @@
 {
-  "version": "0.0.29",
+  "version": "0.0.30",
   "guide_base": "v55-old-design",
-  "forum": "0.0.26",
+  "forum": "0.0.30",
   "auth_gate": true,
   "demo_badge_visible": false,
   "performance_optimized": true,
-  "sticker_comments_hotfix": true
+  "sticker_comments_hotfix": true,
+  "directory_six_columns": true,
+  "meridian_compact_layout": true,
+  "hide_auth_users_without_email": true
 }

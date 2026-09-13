@@ -8766,3 +8766,120 @@ body.protected-content img{-webkit-user-drag:none;user-select:none;-webkit-user-
 .development-slot.directory-link-card{cursor:pointer;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 .development-slot.directory-link-card:hover,.development-slot.directory-link-card:focus-visible{transform:translateY(-4px);border-color:var(--gold-bright);box-shadow:0 16px 32px rgba(0,0,0,.42),0 0 18px rgba(230,183,93,.14)}
 .development-slot.directory-link-card:hover img,.development-slot.directory-link-card:focus-visible img{transform:scale(1.035);filter:brightness(1.06)}
+
+
+/* ================================================================
+   Patch 0.0.30 — compact directory + compact meridian guide
+   ================================================================ */
+
+/* Schools / factions / sects: six cards per row on wide screens. */
+.schools-page-content .development-slots {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+.schools-page-content .development-slot {
+  width: auto;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+}
+.schools-page-content .development-slot.directory-image-card span {
+  padding: 10px 7px;
+  font-size: clamp(.78rem, .92vw, 1rem);
+  line-height: 1.08;
+}
+@media (max-width: 1180px) {
+  .schools-page-content .development-slots { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 860px) {
+  .schools-page-content .development-slots { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .schools-page-content .development-slots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 390px) {
+  .schools-page-content .development-slots { grid-template-columns: 1fr; }
+}
+
+/* Meridian guide: denser vertical rhythm and split Ganoderma section. */
+.acupuncture-guide-page { width: min(1240px, calc(100% - 40px)); }
+.acupuncture-intro,
+.acupuncture-section { margin-top: 50px; }
+.acupuncture-section-heading { margin-bottom: 20px; }
+.acupuncture-concepts-grid article { min-height: 156px; padding: 20px 19px; }
+.qi-sources-list article { padding: 17px 20px; }
+.qi-boosts article { padding: 18px 20px; }
+
+.ganoderma-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(290px, .82fr);
+  gap: 18px;
+  align-items: start;
+}
+.ganoderma-layout .ganoderma-table-wrap { margin-top: 0; }
+.ganoderma-layout .ganoderma-table { min-width: 0; table-layout: fixed; }
+.ganoderma-layout .ganoderma-table th,
+.ganoderma-layout .ganoderma-table td { padding: 12px 14px; }
+.ganoderma-layout .ganoderma-table th:nth-child(1),
+.ganoderma-layout .ganoderma-table td:nth-child(1) { width: 43%; }
+.ganoderma-layout .ganoderma-table th:nth-child(2),
+.ganoderma-layout .ganoderma-table td:nth-child(2) { width: 92px; }
+.ganoderma-layout .ganoderma-table th:nth-child(3),
+.ganoderma-layout .ganoderma-table td:nth-child(3) { width: auto; }
+.ganoderma-layout .ganoderma-table img { width: 54px; height: 54px; }
+
+.ganoderma-side { display: grid; gap: 14px; }
+.ganoderma-summary-card {
+  padding: 22px;
+  border: 1px solid rgba(230,183,93,.30);
+  border-top: 2px solid rgba(230,183,93,.72);
+  background: linear-gradient(145deg, rgba(70,49,15,.13), rgba(3,22,35,.90));
+}
+.ganoderma-summary-card .ganoderma-summary-value {
+  display: block;
+  margin-bottom: 12px;
+  color: #efd078;
+  font: 700 2rem/1 Georgia, "Times New Roman", serif;
+}
+.ganoderma-summary-card h3 {
+  margin: 0 0 10px;
+  color: #e9cd89;
+  font: 700 1.12rem/1.15 Georgia, "Times New Roman", serif;
+}
+.ganoderma-summary-card p {
+  margin: 0;
+  color: #aebfc7;
+  font-size: .84rem;
+  line-height: 1.65;
+}
+.ganoderma-summary-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+}
+.ganoderma-summary-points span {
+  padding: 9px 10px;
+  border: 1px solid rgba(76,206,213,.18);
+  color: #9fb5bd;
+  background: rgba(37,166,180,.045);
+  font-size: .72rem;
+  line-height: 1.35;
+}
+.ganoderma-summary-points strong { color: #62dce0; }
+.ganoderma-side .ganoderma-location-note {
+  margin-top: 0;
+  grid-template-columns: 38px 1fr;
+  gap: 12px;
+  padding: 17px 18px;
+}
+.ganoderma-side .ganoderma-location-note > span { width: 34px; height: 34px; }
+
+@media (max-width: 900px) {
+  .ganoderma-layout { grid-template-columns: 1fr; }
+  .ganoderma-layout .ganoderma-table { min-width: 680px; table-layout: auto; }
+  .ganoderma-summary-points { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .ganoderma-summary-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
