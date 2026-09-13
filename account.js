@@ -311,6 +311,6 @@
     }
     resolveReady({demo,user,profile});
   }
-  window.NineYinAccount={version:'0.0.30',ready,access,getCurrent,refreshProfile,listProfiles,saveOwnProfile,createPost,getPost,listPosts,listCategories,addCategory,removeCategory,setPostPinned,getPrivateItemCodes,isAdmin,setUserBlocked,logout,openAuth,defaultAvatar,isDemo:()=>demo};
+  window.NineYinAccount={version:'0.0.32',ready,access,getCurrent,refreshProfile,listProfiles,saveOwnProfile,createPost,getPost,listPosts,listCategories,addCategory,removeCategory,setPostPinned,getPrivateItemCodes,isAdmin,setUserBlocked,logout,openAuth,defaultAvatar,isDemo:()=>demo};
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();

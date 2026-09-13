@@ -8,13 +8,13 @@
     <link rel="icon" href="favicon.ico?v=16" sizes="any" />
     <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
     <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
-    <link rel="stylesheet" href="styles.css?v=0.0.30" />
+    <link rel="stylesheet" href="styles.css?v=0.0.32" />
   
     <link rel="stylesheet" href="community-auth.css?v=0.0.30" />
     <script>document.documentElement.classList.add('nineyin-account-pending')</script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
-    <script src="i18n.js?v=0.0.30" defer></script><script src="supabase-config.js?v=0.0.30" defer></script>
-    <script src="account.js?v=0.0.30" defer></script>
+    <script src="i18n.js?v=0.0.32" defer></script><script src="supabase-config.js?v=0.0.32" defer></script>
+    <script src="account.js?v=0.0.32" defer></script>
   </head>
   <body>
     <main class="site-shell inner-site-shell">
@@ -53,7 +53,7 @@
             <p class="acupuncture-byline">Сделано для сайта «Руководство Легенды Кунг-Фу»</p>
             <p class="acupuncture-author"><span>Автор</span><strong>Soyeon</strong></p>
           </div>
-          <img src="assets/meridian-guide-icon.svg" alt="Схема энергетических точек акупунктуры" / decoding="async" loading="lazy">
+          <img src="assets/meridian-guide-icon.webp?v=0.0.32" alt="Схема энергетических точек акупунктуры" / decoding="async" loading="lazy">
         </header>
 
         <section class="acupuncture-intro" aria-labelledby="meridians-title">
@@ -135,19 +135,6 @@
             <div><p>Расширение лимита</p><h2 id="ganoderma-title">Пилюли Земной Ганодермы</h2></div>
           </div>
           <div class="ganoderma-layout">
-            <div class="ganoderma-table-wrap">
-              <table class="ganoderma-table">
-                <thead><tr><th>Название</th><th>Предмет</th><th>Действие</th></tr></thead>
-                <tbody>
-                  <tr><td>Жёлтая Пилюля Земной Ганодермы</td><td><img src="assets/ganoderma-yellow.png" alt="Жёлтая Пилюля Земной Ганодермы" / decoding="async" loading="lazy"></td><td><strong>4-й меридиан</strong><span>Открывает дополнительный слот</span></td></tr>
-                  <tr><td>Зелёная Пилюля Земной Ганодермы</td><td><img src="assets/ganoderma-green.png" alt="Зелёная Пилюля Земной Ганодермы" / decoding="async" loading="lazy"></td><td><strong>5-й меридиан</strong><span>Открывает дополнительный слот</span></td></tr>
-                  <tr><td>Пурпурная Пилюля Земной Ганодермы</td><td><img src="assets/ganoderma-purple.png" alt="Пурпурная Пилюля Земной Ганодермы" / decoding="async" loading="lazy"></td><td><strong>6-й меридиан</strong><span>Открывает дополнительный слот</span></td></tr>
-                  <tr><td>Пилюля Земной Ганодермы Тысячелетия</td><td><img src="assets/ganoderma-millennium.png" alt="Пилюля Земной Ганодермы Тысячелетия" / decoding="async" loading="lazy"></td><td><strong>7-й меридиан</strong><span>Открывает дополнительный слот</span></td></tr>
-                  <tr><td>Пилюля Нефритовой Ганодермы Тысячелетия</td><td><img src="assets/ganoderma-jade-millennium.png" alt="Пилюля Нефритовой Ганодермы Тысячелетия" / decoding="async" loading="lazy"></td><td><strong>8-й меридиан</strong><span>Открывает максимальный слот</span></td></tr>
-                </tbody>
-              </table>
-            </div>
-
             <div class="ganoderma-side">
               <aside class="ganoderma-summary-card">
                 <span class="ganoderma-summary-value">3 → 8</span>
@@ -160,11 +147,23 @@
                   <span><strong>7–8</strong><br>Редкие пилюли</span>
                 </div>
               </aside>
-
               <aside class="ganoderma-location-note">
                 <span aria-hidden="true">⌖</span>
                 <div><strong>Где получить</strong><p>Пилюли можно найти у главы школы после развития нейгунов, у менялы предметов в секте, а также в Долине Злодеев по координатам <b>(872, 419)</b> — при условии, что персонаж не состоит в школе.</p></div>
               </aside>
+            </div>
+
+            <div class="ganoderma-table-wrap">
+              <table class="ganoderma-table">
+                <thead><tr><th>Название</th><th>Предмет</th><th>Действие</th></tr></thead>
+                <tbody>
+                  <tr><td>Жёлтая Пилюля Земной Ганодермы</td><td><img src="assets/ganoderma-yellow.png" alt="Жёлтая Пилюля Земной Ганодермы" / decoding="async" loading="lazy"></td><td><strong>4-й меридиан</strong><span>Открывает дополнительный слот</span></td></tr>
+                  <tr><td>Зелёная Пилюля Земной Ганодермы</td><td><img src="assets/ganoderma-green.png" alt="Зелёная Пилюля Земной Ганодермы" / decoding="async" loading="lazy"></td><td><strong>5-й меридиан</strong><span>Открывает дополнительный слот</span></td></tr>
+                  <tr><td>Пурпурная Пилюля Земной Ганодермы</td><td><img src="assets/ganoderma-purple.png" alt="Пурпурная Пилюля Земной Ганодермы" / decoding="async" loading="lazy"></td><td><strong>6-й меридиан</strong><span>Открывает дополнительный слот</span></td></tr>
+                  <tr><td>Пилюля Земной Ганодермы Тысячелетия</td><td><img src="assets/ganoderma-millennium.png" alt="Пилюля Земной Ганодермы Тысячелетия" / decoding="async" loading="lazy"></td><td><strong>7-й меридиан</strong><span>Открывает дополнительный слот</span></td></tr>
+                  <tr><td>Пилюля Нефритовой Ганодермы Тысячелетия</td><td><img src="assets/ganoderma-jade-millennium.png" alt="Пилюля Нефритовой Ганодермы Тысячелетия" / decoding="async" loading="lazy"></td><td><strong>8-й меридиан</strong><span>Открывает максимальный слот</span></td></tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
@@ -176,7 +175,7 @@
         <div class="footer-inner"><span class="footer-ornament" aria-hidden="true"></span><p>Руководство Легенды Кунг-Фу 2026</p><span class="footer-ornament" aria-hidden="true"></span></div>
       </footer>
     </main>
-    <script src="script.js?v=0.0.30" defer></script>
-      <script src="anti-copy.js?v=0.0.30" defer></script>
+    <script src="script.js?v=0.0.32" defer></script>
+      <script src="anti-copy.js?v=0.0.32" defer></script>
   </body>
 </html>
