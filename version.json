@@ -1,12 +1,14 @@
 {
-  "version": "0.0.30",
+  "version": "0.0.31",
   "guide_base": "v55-old-design",
-  "forum": "0.0.30",
+  "forum": "0.0.31",
   "auth_gate": true,
   "demo_badge_visible": false,
   "performance_optimized": true,
   "sticker_comments_hotfix": true,
   "directory_six_columns": true,
   "meridian_compact_layout": true,
-  "hide_auth_users_without_email": true
+  "hide_auth_users_without_email": true,
+  "avatar_cropper": true,
+  "shaman_sanctuary_school": true
 }
