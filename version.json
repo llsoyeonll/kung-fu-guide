@@ -14,9 +14,9 @@
   "profile_default_avatar": "no_outer_frame",
   "guide_artwork": "accepted_0.0.32",
   "ganoderma_table": "right",
-  "character_icons": "new_pet_and_tables",
-  "pets_catalog": 10,
-  "pets_columns_desktop": 5,
-  "sects_catalog": 13,
-  "pet_codes_admin_only": true
+  "pet_catalog_pages": 2,
+  "pets_per_page": 10,
+  "pet_codes_admin_only": true,
+  "sects_archive_added": true,
+  "character_icons": "new_0.0.33"
 }
