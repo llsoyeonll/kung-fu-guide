@@ -1,0 +1,74 @@
+[
+  {
+    "path": "README_PATCH_0.0.34.txt",
+    "bytes": 2625
+  },
+  {
+    "path": "assets/pets/pet-03-01.webp",
+    "bytes": 195286
+  },
+  {
+    "path": "assets/pets/pet-03-02.webp",
+    "bytes": 204714
+  },
+  {
+    "path": "assets/pets/pet-03-03.webp",
+    "bytes": 181006
+  },
+  {
+    "path": "assets/pets/pet-03-04.webp",
+    "bytes": 188736
+  },
+  {
+    "path": "assets/pets/pet-03-05.webp",
+    "bytes": 186050
+  },
+  {
+    "path": "assets/pets/pet-03-06.webp",
+    "bytes": 177554
+  },
+  {
+    "path": "assets/pets/pet-03-07.webp",
+    "bytes": 192814
+  },
+  {
+    "path": "assets/pets/pet-03-08.webp",
+    "bytes": 188654
+  },
+  {
+    "path": "assets/pets/pet-03-09.webp",
+    "bytes": 212980
+  },
+  {
+    "path": "assets/pets/pet-03-10.webp",
+    "bytes": 211634
+  },
+  {
+    "path": "forum/forum-upgrade-0.0.34.js",
+    "bytes": 9767
+  },
+  {
+    "path": "forum/index.html",
+    "bytes": 6166
+  },
+  {
+    "path": "forum/post.html",
+    "bytes": 3930
+  },
+  {
+    "path": "forum/profile.html",
+    "bytes": 6161
+  },
+  {
+    "path": "pets.js",
+    "bytes": 4081
+  },
+  {
+    "path": "script.js",
+    "bytes": 11271
+  },
+  {
+    "path": "supabase/0.0.34_forum_status.sql",
+    "bytes": 351
+  }
+]
