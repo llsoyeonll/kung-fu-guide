@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = '0.0.34';
+  const VERSION = '0.0.35';
 
   function addStyles() {
     if (document.getElementById('forum-upgrade-0034-style')) return;
@@ -14,6 +14,20 @@
       }
       .topic-status.waiting{color:#f3c86d;border-color:rgba(216,166,73,.64);background:rgba(105,73,18,.22)}
       .topic-status.completed{color:#8dd4b0;border-color:rgba(70,159,116,.58);background:rgba(25,93,64,.22)}
+      .post-side-badges{
+        display:grid;gap:7px;align-self:center;justify-self:end;min-width:90px;
+      }
+      .post-side-badges .server-tag,
+      .post-side-badges .topic-status{
+        width:100%;min-width:90px;box-sizing:border-box;
+      }
+      .post-view-badges-stack{
+        display:inline-grid;gap:7px;align-items:stretch;vertical-align:top;
+      }
+      .post-view-badges-stack .server-tag,
+      .post-view-badges-stack .topic-status{
+        min-width:104px;box-sizing:border-box;
+      }
       .post-status-editor{
         display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:0 28px 20px;padding:12px 14px;
         border:1px solid rgba(214,164,77,.2);background:rgba(4,17,28,.68);
@@ -86,13 +100,29 @@
     function paint() {
       posts.querySelectorAll('.post-card[data-post-id]').forEach(card => {
         const id = String(card.dataset.postId || '');
-        const top = card.querySelector('.post-topline');
-        if (!top || top.querySelector('.topic-status')) return;
+        const server = card.querySelector('.post-side .server-tag');
+        if (!server) return;
+
+        let stack = server.closest('.post-side-badges');
+        if (!stack) {
+          stack = document.createElement('div');
+          stack.className = 'post-side-badges';
+          server.insertAdjacentElement('beforebegin', stack);
+          stack.appendChild(server);
+        }
+
+        let badge = stack.querySelector('.topic-status');
+        if (!badge) {
+          badge = document.createElement('span');
+          stack.appendChild(badge);
+        }
+
         const info = statusInfo(map[id] || 'waiting');
-        const badge = document.createElement('span');
         badge.className = `topic-status ${info.key}`;
         badge.textContent = info.label;
-        top.appendChild(badge);
+
+        // Если старая версия успела вставить статус рядом с категорией — удаляем его.
+        card.querySelectorAll('.post-topline .topic-status').forEach(oldBadge => oldBadge.remove());
       });
     }
 
@@ -154,10 +184,24 @@
     const tags = await waitFor('.post-view-tags');
     if (!tags) return;
 
-    let badge = tags.querySelector('.topic-status');
+    const server = tags.querySelector('.server-tag');
+    if (!server) return;
+
+    let stack = server.closest('.post-view-badges-stack');
+    if (!stack) {
+      stack = document.createElement('span');
+      stack.className = 'post-view-badges-stack';
+      server.insertAdjacentElement('beforebegin', stack);
+      stack.appendChild(server);
+    }
+
+    // Удаляем статус из общей строки тегов, если он остался после старой версии.
+    tags.querySelectorAll(':scope > .topic-status').forEach(oldBadge => oldBadge.remove());
+
+    let badge = stack.querySelector('.topic-status');
     if (!badge) {
       badge = document.createElement('span');
-      tags.appendChild(badge);
+      stack.appendChild(badge);
     }
 
     function paint(value) {

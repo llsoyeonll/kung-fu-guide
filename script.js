@@ -295,3 +295,102 @@ if (tableCarousel) {
     introPetImage.setAttribute("fetchpriority", "high");
   }
 })();
+
+
+/* ==========================================================
+   0.0.35 — исправление вступительного блока питомцев
+   ========================================================== */
+(() => {
+  if (document.getElementById("nineyin-patch-0035")) return;
+
+  const style = document.createElement("style");
+  style.id = "nineyin-patch-0035";
+  style.textContent = `
+    .pet-intro{
+      grid-template-columns:minmax(0,1fr) minmax(340px,420px)!important;
+      align-items:stretch!important;
+    }
+
+    .pet-intro-copy{
+      min-width:0!important;
+      overflow:hidden!important;
+      box-sizing:border-box!important;
+      padding:42px 34px!important;
+    }
+
+    .pet-intro-copy p{
+      max-width:100%!important;
+      overflow-wrap:break-word!important;
+    }
+
+    .pet-intro-art{
+      position:relative!important;
+      display:flex!important;
+      width:auto!important;
+      max-width:100%!important;
+      min-width:0!important;
+      min-height:0!important;
+      margin:0!important;
+      padding:22px!important;
+      flex-direction:column!important;
+      align-items:center!important;
+      justify-content:center!important;
+      gap:10px!important;
+      box-sizing:border-box!important;
+      overflow:hidden!important;
+    }
+
+    .pet-intro-art::before{
+      inset:10px!important;
+    }
+
+    .pet-intro-art img{
+      display:block!important;
+      width:100%!important;
+      max-width:360px!important;
+      height:auto!important;
+      aspect-ratio:1/1!important;
+      margin:0 auto!important;
+      object-fit:cover!important;
+      box-sizing:border-box!important;
+    }
+
+    .pet-intro-art figcaption{
+      position:static!important;
+      display:block!important;
+      width:min(100%,360px)!important;
+      right:auto!important;
+      bottom:auto!important;
+      left:auto!important;
+      margin:0 auto!important;
+      box-sizing:border-box!important;
+    }
+
+    @media(max-width:900px){
+      .pet-intro{
+        grid-template-columns:1fr!important;
+      }
+
+      .pet-intro-art{
+        grid-row:1!important;
+        padding:20px!important;
+      }
+
+      .pet-intro-art img,
+      .pet-intro-art figcaption{
+        max-width:440px!important;
+      }
+    }
+
+    @media(max-width:600px){
+      .pet-intro-copy{
+        padding:27px 18px!important;
+      }
+
+      .pet-intro-art{
+        padding:14px!important;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+})();
