@@ -40,6 +40,34 @@
     );
   }
 
+  // 0.0.36: новая четвёртая страница — 10 добавленных пользователем питомцев.
+  if (grid && !grid.querySelector('[data-pet-page="4"]')) {
+    const newCards = Array.from({length: 10}, (_, index) => {
+      const n = index + 1;
+      const nn = String(n).padStart(2, '0');
+      return `<article class="pet-catalog-card" data-pet-page="4">
+        <div class="pet-card-image-wrap">
+          <img src="assets/pets/pet-04-${nn}.webp?v=0.0.36" alt="Без названия" width="1254" height="1254" loading="lazy" decoding="async">
+        </div>
+        <div class="pet-card-copy">
+          <h3>Без названия</h3>
+          <p>Нет описания</p>
+          <div class="pet-code-row" data-private-pet-code="pet_p4_${nn}" hidden>
+            <span>КОД ПИТОМЦА</span><strong>Не указан</strong>
+          </div>
+        </div>
+      </article>`;
+    }).join('');
+    grid.insertAdjacentHTML('beforeend', newCards);
+  }
+
+  if (numberBox && !numberBox.querySelector('[data-pet-page-button="4"]')) {
+    numberBox.insertAdjacentHTML(
+      'beforeend',
+      '<button class="pet-page-number" type="button" data-pet-page-button="4">4</button>'
+    );
+  }
+
   const cards = [...document.querySelectorAll('[data-pet-page]')];
   const buttons = [...document.querySelectorAll('[data-pet-page-button]')];
   const prev = document.getElementById('petPrevPage');
