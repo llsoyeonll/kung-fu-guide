@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = '0.0.35';
+  const VERSION = '0.0.35-hotfix.1';
 
   function addStyles() {
     if (document.getElementById('forum-upgrade-0034-style')) return;
@@ -118,8 +118,9 @@
         }
 
         const info = statusInfo(map[id] || 'waiting');
-        badge.className = `topic-status ${info.key}`;
-        badge.textContent = info.label;
+        const nextClass = `topic-status ${info.key}`;
+        if (badge.className !== nextClass) badge.className = nextClass;
+        if (badge.textContent !== info.label) badge.textContent = info.label;
 
         // Если старая версия успела вставить статус рядом с категорией — удаляем его.
         card.querySelectorAll('.post-topline .topic-status').forEach(oldBadge => oldBadge.remove());
@@ -127,7 +128,8 @@
     }
 
     const observer = new MutationObserver(() => paint());
-    observer.observe(posts, { childList: true, subtree: true });
+    // Observe list replacement and pagination, not mutations made by paint().
+    observer.observe(posts, { childList: true });
     await refreshMap();
   }
 
