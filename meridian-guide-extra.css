@@ -371,197 +371,102 @@
   .mg-school-order{columns:1}
 }
 
-/* 0.0.40 — увеличенный обзор, компактный квадратный блок вкладок и декор. */
-.mg-extension#meridian-overview{
-  position:relative;
-}
-.mg-extension#meridian-overview::before,
-.mg-extension#meridian-overview::after{
-  content:'';
-  position:absolute;
-  pointer-events:none;
-  inset:auto;
-  width:140px;
-  height:140px;
-  opacity:.22;
-  background:radial-gradient(circle, rgba(91,208,214,.55) 0%, rgba(91,208,214,.08) 42%, rgba(91,208,214,0) 72%);
-  filter:blur(2px);
-}
-.mg-extension#meridian-overview::before{top:82px; left:-34px;}
-.mg-extension#meridian-overview::after{right:-26px; bottom:26px;}
 
+/* 0.0.41 — крупный обзор без декоративных рамок и компактный блок вкладок. */
 .mg-overview-figure{
-  position:relative;
-  max-width:980px;
-  margin:20px auto 18px;
-  padding:14px 16px 18px;
-  border:1px solid rgba(230,183,93,.20);
-  background:
-    linear-gradient(180deg, rgba(8,33,48,.96), rgba(5,23,36,.92)),
-    radial-gradient(circle at top left, rgba(85,189,199,.16), rgba(85,189,199,0) 38%);
-  box-shadow:
-    inset 0 0 0 1px rgba(230,183,93,.08),
-    0 18px 40px rgba(0,0,0,.22);
-}
-.mg-overview-figure::before,
-.mg-overview-figure::after{
-  content:'';
-  position:absolute;
-  width:48px;
-  height:48px;
-  border-color:rgba(230,183,93,.62);
-  pointer-events:none;
-}
-.mg-overview-figure::before{
-  top:10px;
-  left:10px;
-  border-top:1px solid;
-  border-left:1px solid;
-}
-.mg-overview-figure::after{
-  right:10px;
-  bottom:10px;
-  border-right:1px solid;
-  border-bottom:1px solid;
+  width:min(100%,1080px);
+  max-width:1080px;
+  margin:18px auto 16px;
+  padding:0;
+  border:0;
+  background:transparent;
+  box-shadow:none;
 }
 .mg-overview-figure>img{
   display:block;
-  width:min(100%, 900px);
+  width:100%;
   max-width:100%;
-  max-height:420px;
+  max-height:none;
+  height:auto;
   margin:0 auto;
-  padding:10px;
+  padding:0;
+  border:1px solid rgba(230,183,93,.34);
+  background:#061826;
+  box-shadow:none;
   box-sizing:border-box;
-  border:1px solid rgba(230,183,93,.30);
-  background:#071b2a;
-  box-shadow:0 0 0 1px rgba(85,189,199,.08), 0 14px 28px rgba(0,0,0,.25);
 }
 .mg-overview-figure figcaption{
-  padding:12px 6px 0;
+  padding:9px 4px 0;
   text-align:center;
-  color:#d2d9dc;
-  font-size:.8rem;
-  letter-spacing:.01em;
+  color:#c7d1d6;
+  font-size:.78rem;
 }
 
+/* Компактная композиция: слева три коротких блока, справа — Основы Школ I. */
 .mg-tabs-info{
-  position:relative;
-  max-width:920px;
-  margin:18px auto 18px;
-  padding:4px;
+  width:min(100%,960px);
+  max-width:960px;
+  margin:16px auto;
+  padding:0;
   display:grid;
-  grid-template-columns:repeat(2, minmax(0,1fr));
+  grid-template-columns:minmax(0,.88fr) minmax(420px,1.35fr);
   grid-template-areas:
     "wander schools1"
     "schools2 schools1"
     "jianghu schools1";
-  gap:12px;
+  gap:10px 12px;
   align-items:stretch;
-}
-.mg-tabs-info::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  border:1px solid rgba(95,205,212,.08);
-  pointer-events:none;
+  border:0;
+  background:transparent;
 }
 .mg-tabs-info>article{
-  position:relative;
-  overflow:hidden;
-  min-height:112px;
-  padding:15px 16px;
-  border:1px solid rgba(230,183,93,.20);
-  background:
-    linear-gradient(145deg, rgba(6,31,44,.96), rgba(3,20,32,.95)),
-    radial-gradient(circle at top right, rgba(96,208,214,.09), rgba(96,208,214,0) 36%);
-  box-shadow:
-    inset 0 0 0 1px rgba(95,205,212,.07),
-    0 10px 22px rgba(0,0,0,.16);
+  min-height:0;
+  padding:14px 16px;
+  border:1px solid rgba(230,183,93,.22);
+  background:rgba(5,26,39,.86);
+  box-shadow:none;
+  overflow:visible;
 }
 .mg-tabs-info>article::before,
-.mg-tabs-info>article::after{
-  content:'';
-  position:absolute;
-  pointer-events:none;
-}
-.mg-tabs-info>article::before{
-  inset:8px;
-  border:1px solid rgba(255,255,255,.025);
-}
-.mg-tabs-info>article::after{
-  top:-14px;
-  right:-14px;
-  width:70px;
-  height:70px;
-  border-radius:50%;
-  background:radial-gradient(circle, rgba(95,205,212,.26) 0%, rgba(95,205,212,.05) 42%, rgba(95,205,212,0) 74%);
-}
+.mg-tabs-info>article::after{content:none!important;display:none!important;}
+.mg-tab-wander{grid-area:wander;}
+.mg-tab-schools2{grid-area:schools2;}
+.mg-tab-jianghu{grid-area:jianghu;}
+.mg-tab-schools1{grid-area:schools1;}
 .mg-tabs-info h3{
-  margin:0 0 8px;
-  padding-left:11px;
-  border-left:3px solid rgba(92,211,216,.85);
+  margin:0 0 7px;
+  padding-left:10px;
+  border-left:3px solid rgba(92,211,216,.8);
   color:#f0cf82;
-  font-size:1.14rem;
-  line-height:1.28;
+  font-size:1.13rem;
+  line-height:1.3;
 }
-.mg-tabs-info p{margin:0; line-height:1.5;}
-.mg-tabs-info>article:nth-child(1),
-.mg-tabs-info>article:nth-child(3),
-.mg-tabs-info>article:nth-child(4){
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-.mg-tabs-info>article:nth-child(1) h3::after{content:' ✦'; color:#64d4d8;}
-.mg-tabs-info>article:nth-child(2) h3::after{content:' ⟡'; color:#64d4d8;}
-.mg-tabs-info>article:nth-child(3) h3::after{content:' ✦'; color:#64d4d8;}
-.mg-tabs-info>article:nth-child(4) h3::after{content:' ◎'; color:#64d4d8;}
+.mg-tabs-info h3::after{content:none!important;}
+.mg-tabs-info p{margin:0;line-height:1.5;}
 .mg-school-order{
-  margin:10px 0 0;
+  margin:9px 0 0;
   padding-left:23px;
   columns:2;
-  column-gap:30px;
+  column-gap:28px;
 }
-.mg-school-order li{
-  break-inside:avoid;
-  padding:1px 0;
-  line-height:1.45;
-}
-.mg-note{
-  position:relative;
-  overflow:hidden;
-}
-.mg-note::after{
-  content:'';
-  position:absolute;
-  right:10px;
-  bottom:10px;
-  width:42px;
-  height:42px;
-  border-right:1px solid rgba(230,183,93,.22);
-  border-bottom:1px solid rgba(230,183,93,.22);
-  pointer-events:none;
-}
+.mg-school-order li{padding:1px 0;line-height:1.45;break-inside:avoid;}
+
+/* Убираем декоративный угол из заметок, добавленный в 0.0.40. */
+.mg-note::after{content:none!important;display:none!important;}
 
 @media(max-width:1000px){
-  .mg-overview-figure{max-width:900px;}
-  .mg-tabs-info{max-width:880px;}
+  .mg-overview-figure{width:min(100%,1000px);}
+  .mg-tabs-info{grid-template-columns:minmax(0,.82fr) minmax(360px,1.3fr);}
 }
 @media(max-width:760px){
-  .mg-overview-figure{padding:12px 12px 16px;}
-  .mg-overview-figure>img{max-height:360px;}
+  .mg-overview-figure{width:100%;}
   .mg-tabs-info{
-    max-width:none;
+    width:100%;
     grid-template-columns:1fr;
     grid-template-areas:
       "wander"
-      "schools1"
       "schools2"
-      "jianghu";
-    gap:10px;
+      "jianghu"
+      "schools1";
   }
-  .mg-tabs-info>article{min-height:0;}
-}
-@media(max-width:600px){
-  .mg-overview-figure>img{max-height:310px; padding:8px;}
 }
