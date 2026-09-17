@@ -1,0 +1,16 @@
+/* Единая типографика гайдов — 0.0.38; шрифты хранятся на самом сайте. */
+@font-face{font-family:'Golos Text Guide';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/golos-text-400.ttf') format('truetype')}
+@font-face{font-family:'Golos Text Guide';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/golos-text-500.ttf') format('truetype')}
+@font-face{font-family:'Golos Text Guide';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/golos-text-600.ttf') format('truetype')}
+@font-face{font-family:'Golos Text Guide';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/golos-text-700.ttf') format('truetype')}
+:is(.acupuncture-guide-page,.meridian-guide-page,.jade-doll-guide-page,.guide-article),
+:is(.acupuncture-guide-page,.meridian-guide-page,.jade-doll-guide-page,.guide-article) :is(h1,h2,h3,h4,p,a,span,strong,em,b,i,small,li,dt,dd,th,td,caption,figcaption,button,label),
+.mg-lightbox,.mg-lightbox p{font-family:'Golos Text Guide','Golos Text',Arial,sans-serif!important;font-variant-numeric:lining-nums tabular-nums!important;font-feature-settings:'lnum' 1,'tnum' 1!important;letter-spacing:normal}
+:is(.acupuncture-guide-page,.meridian-guide-page,.jade-doll-guide-page,.guide-article){font-size:16px;line-height:1.75;font-weight:400}
+:is(.acupuncture-guide-page,.meridian-guide-page,.jade-doll-guide-page,.guide-article) :is(p,li,td){font-weight:400}
+:is(.acupuncture-guide-page,.meridian-guide-page,.jade-doll-guide-page,.guide-article) :is(h2,h3,h4,strong,b){font-weight:600}
+:is(.acupuncture-guide-page,.jade-doll-guide-page) h1{font-size:clamp(1.8rem,3.5vw,3rem);font-weight:700;line-height:1.2}
+.acupuncture-guide-page .acupuncture-section-heading h2{font-size:clamp(1.45rem,2.8vw,2rem);line-height:1.28}
+.acupuncture-guide-page .mg-subtitle{font-size:1.25rem;line-height:1.45}
+.acupuncture-guide-page .mg-extension{font-size:.96rem;line-height:1.8}
+.acupuncture-guide-page .mg-extension .mg-step-node{font-weight:600;font-size:.85rem;line-height:1.4}

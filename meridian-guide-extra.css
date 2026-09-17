@@ -59,3 +59,53 @@
 .mg-lightbox-close{position:absolute;top:5px;right:7px;width:36px;height:36px;font-size:28px;line-height:1;border:1px solid #a78b4d;background:#102333;color:#f5deb0;cursor:pointer}
 @media(max-width:900px){.mg-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.mg-tabs-info{grid-template-columns:1fr}.mg-tabs-info>article:nth-child(2){grid-column:auto;grid-row:auto}.mg-books{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.mg-toc{padding:22px}.mg-toc ol{grid-template-columns:1fr}.mg-cards,.mg-other-items{grid-template-columns:1fr}.mg-combo-images{gap:10px}.mg-combo-images img{height:260px}.mg-books{gap:10px}.mg-figure figcaption{padding:10px;font-size:.78rem}.mg-cards>article{padding:20px}.mg-note{padding:16px}.mg-table th,.mg-table td{padding:11px 12px}.mg-school-order{columns:1}.mg-formula{padding:20px 16px}}
+
+/* 0.0.38 — компактная верстка, отдельные подписи и изображения целиком. */
+.mg-recap{margin:24px 0;padding:24px 26px;background:rgba(7,31,44,.85);border-left:3px solid #62cdd2}
+.mg-recap ul{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.mg-recap li{position:relative;padding-left:20px}
+.mg-recap li::before{content:'';position:absolute;left:0;top:.7em;width:6px;height:6px;border-radius:50%;background:#67d0d4}
+.mg-recap li>strong{display:block;color:#efd08a}
+.mg-recap li p{margin:4px 0 0}
+.mg-combo-images{max-width:760px;gap:20px;align-items:stretch}
+.mg-combo-images .mg-figure{display:flex;flex-direction:column;align-self:stretch;margin:0;overflow:visible;border:0;background:transparent}
+.mg-combo-images figcaption{position:static;display:block;flex:0 0 auto;padding:0 0 14px;background:transparent;border:0;min-height:72px}
+.mg-combo-images figcaption strong{font-size:1rem;color:#efd08a;line-height:1.4}
+.mg-combo-images .mg-image-button{display:flex;align-items:center;justify-content:center;box-sizing:border-box;min-width:0;width:100%;height:370px;min-height:0;padding:16px;border:1px solid rgba(230,183,93,.35);border-radius:0;overflow:hidden;background:#061826;line-height:0}
+.mg-combo-images .mg-image-button img{position:static;display:block;flex:0 1 auto;width:auto!important;height:auto!important;max-width:100%!important;max-height:100%!important;object-fit:contain;object-position:center;aspect-ratio:auto;transform:none}
+.mg-steps{list-style:none;padding:0;margin:20px 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.mg-steps li{padding:20px;background:rgba(5,29,42,.93);border:1px solid rgba(103,199,204,.25);min-width:0;display:flex;flex-direction:column;gap:14px}
+.mg-step-node{display:inline-block;align-self:flex-start;padding:5px 10px;color:#7cdee1;border:1px solid rgba(103,199,204,.35);border-radius:4px}
+.mg-steps li>div{display:flex;flex-direction:column;flex:1}
+.mg-steps h4{margin:0 0 10px;color:#eed59a;font-size:1rem;line-height:1.4}
+.mg-steps p{font-size:.9rem;line-height:1.7;margin:0 0 15px}
+.mg-step-points{display:block;margin-top:auto;color:#80d9d8;font-weight:600}
+.mg-formula{margin:18px 0;padding:18px 22px;text-align:left;background:rgba(61,126,134,.08);border:0;border-left:3px solid #c7a354}
+.mg-formula>strong{font-size:1.08rem;line-height:1.6}
+.mg-formula p{font-size:.88rem;margin:5px 0 0}
+.mg-books{grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;align-items:start}
+.mg-books .mg-figure{overflow:hidden;background:transparent}
+.mg-books .mg-image-button{padding:8px;background:#061826}
+.mg-books .mg-image-button img{position:static;width:100%;height:auto;max-width:100%;object-fit:contain;transform:none}
+.mg-books figcaption{font-size:.78rem;line-height:1.5;padding:12px 10px;border-top:1px solid rgba(230,183,93,.2)}
+.mg-books figcaption span{font-size:.69rem}
+.mg-other-items{display:flex;flex-direction:column;gap:26px}
+.mg-other-items>.mg-item-row{display:grid;grid-template-columns:210px minmax(0,1fr);gap:26px;align-items:start;padding:24px;border:1px solid rgba(230,183,93,.23);background:rgba(5,26,39,.8)}
+.mg-other-items .mg-figure{width:100%;max-width:210px;margin:0;background:transparent}
+.mg-other-items .mg-image-button{padding:8px;background:#061826}
+.mg-other-items .mg-image-button img{width:100%;height:auto;object-fit:contain}
+.mg-other-items .mg-figure figcaption{border-top:1px solid rgba(230,183,93,.2);font-size:.82rem}
+.mg-item-details{min-width:0}
+.mg-item-details>.mg-note{margin:0}
+.mg-item-details>.mg-table-wrap{margin:0}
+.mg-item-details h3{font-size:1.25rem;margin:0 0 16px}
+.mg-item-details .mg-table{font-size:.88rem;line-height:1.5}
+.mg-item-details .mg-table caption{padding:10px 16px;font-size:.88rem}
+.mg-item-details .mg-table th,.mg-item-details .mg-table td{padding:9px 16px}
+@media(max-width:1000px){.mg-books{grid-template-columns:repeat(3,minmax(0,1fr));max-width:760px}.mg-steps{grid-template-columns:1fr}.mg-steps li{display:grid;grid-template-columns:100px minmax(0,1fr);gap:18px}.mg-step-points{margin-top:0}}
+@media(max-width:600px){.mg-combo-images{grid-template-columns:1fr;max-width:330px;gap:24px}.mg-combo-images figcaption{min-height:0}.mg-combo-images .mg-image-button{height:350px}.mg-books{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.mg-other-items>.mg-item-row{grid-template-columns:1fr;padding:18px;gap:20px}.mg-other-items .mg-figure{max-width:180px;margin:0 auto}.mg-steps li{display:flex;padding:18px}.mg-recap{padding:20px}.mg-formula{padding:16px}.mg-item-details .mg-table th,.mg-item-details .mg-table td{padding:9px 10px}}
+/* Общая .page-content использует flex; для длинной статьи нужен обычный поток. */
+.acupuncture-guide-page{display:block}
+.acupuncture-guide-page>.acupuncture-section{width:100%;min-width:0}
+.mg-other-items{max-width:1000px;margin-inline:auto}
+.mg-item-details .mg-table th,.mg-item-details .mg-table td{padding-top:7px;padding-bottom:7px}
