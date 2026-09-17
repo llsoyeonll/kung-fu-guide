@@ -1,0 +1,61 @@
+/* Дополнение к существующему гайду — 0.0.37 */
+.mg-toc{margin:30px 0;padding:26px 30px;border:1px solid rgba(230,183,93,.3);background:linear-gradient(135deg,rgba(6,29,43,.97),rgba(7,39,48,.93))}
+.mg-toc h2{margin:0 0 18px;color:#efd08a;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.65rem}
+.mg-toc ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 34px;margin:0;padding-left:24px;color:#62d9df;list-style-type:decimal-leading-zero}
+.mg-toc a{color:#c6d5dc;text-decoration:none;line-height:1.55}
+.mg-toc a:hover{color:#f5d899;text-decoration:underline}
+.acupuncture-guide-page [id]{scroll-margin-top:100px}
+.mg-extension{color:#bdcbd2;font-size:.96rem;line-height:1.8;overflow-wrap:break-word}
+.mg-extension p{margin:0 0 16px}
+.mg-extension strong{color:#eed59a}
+.mg-extension a{color:#78dce0;text-underline-offset:3px}
+.mg-extension h3{font-family:"Cormorant Garamond",Georgia,serif;color:#efd08a;font-size:1.4rem;line-height:1.3;margin:0 0 14px}
+.mg-extension h3.mg-subtitle{font-size:1.65rem;margin:30px 0 18px}
+.mg-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:20px 0}
+.mg-cards>article{min-width:0;padding:23px;border:1px solid rgba(230,183,93,.23);background:linear-gradient(145deg,rgba(6,31,44,.95),rgba(3,20,32,.95))}
+.mg-cards p:last-child{margin-bottom:0}
+.mg-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.mg-tabs-info{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr)}
+.mg-tabs-info>article:nth-child(2){grid-column:2;grid-row:1 / span 3}
+.mg-school-order{margin:12px 0 0;padding-left:26px;columns:2;column-gap:30px}
+.mg-school-order li{break-inside:avoid;padding:3px 0}
+.mg-school-order li::marker{color:#62d9df}
+.mg-note{margin:20px 0;padding:19px 22px;border:1px solid rgba(84,211,216,.25);border-left:3px solid #57c9ce;background:rgba(32,163,175,.07);line-height:1.75}
+.mg-damage-tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.mg-damage-tags span{min-width:90px;padding:10px 22px;border:1px solid rgba(230,183,93,.4);color:#efd08a;background:#092638;text-align:center;font-weight:700}
+.mg-figure{min-width:0;margin:0 0 22px;padding:0;overflow:hidden;border:1px solid rgba(230,183,93,.32);background:#061826}
+.mg-image-button{appearance:none;display:block;width:100%;border:0;padding:0;background:transparent;cursor:zoom-in;color:inherit;font:inherit}
+.mg-image-button img{display:block;width:100%;height:auto;object-fit:contain;margin:0}
+.mg-image-button:focus-visible,.mg-toc a:focus-visible,.mg-lightbox-close:focus-visible{outline:3px solid #6ce0e1;outline-offset:-3px}
+.mg-figure figcaption{padding:13px 16px;color:#ead299;font-size:.88rem;line-height:1.5}
+.mg-figure figcaption span{display:block;margin-top:5px;color:#9ab4c0;font-size:.74rem}
+.mg-combo-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:880px;margin:24px auto}
+.mg-combo-images .mg-image-button{background:#051320}
+.mg-combo-images img{height:420px;object-fit:contain}
+.mg-books{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px 0}
+.mg-books .mg-figure{margin:0}
+.mg-steps{padding-left:24px}
+.mg-steps li{padding:0 0 15px 6px}
+.mg-steps li::marker{color:#69dadd;font-weight:700}
+.mg-formula{padding:26px;text-align:center;border:1px solid rgba(230,183,93,.4);background:linear-gradient(120deg,rgba(174,133,52,.1),rgba(7,39,50,.8));margin:18px 0}
+.mg-formula>span{display:block;color:#79d8dc;font-size:.82rem;margin-bottom:10px}
+.mg-formula>strong{display:block;font-size:clamp(1.04rem,2.2vw,1.4rem);line-height:1.5}
+.mg-formula p{margin:10px 0 0}
+.mg-other-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.mg-other-items>article{min-width:0}
+.mg-other-items .mg-figure{max-width:420px;margin:0 auto 22px}
+.mg-table-wrap{overflow-x:auto;border:1px solid rgba(230,183,93,.25);margin-top:24px;background:rgba(5,25,37,.93)}
+.mg-table{border-collapse:collapse;width:100%;text-align:left;font-size:.9rem;line-height:1.6}
+.mg-table caption{text-align:left;padding:16px 19px;font-size:1.05rem;font-weight:700;color:#efd08a;background:rgba(30,84,93,.2)}
+.mg-table th,.mg-table td{padding:13px 18px;border-bottom:1px solid rgba(131,172,186,.15);vertical-align:top}
+.mg-table thead th{color:#6fdbde;background:rgba(38,111,121,.12)}
+.mg-table tbody th{color:#e6d3a5;font-weight:600}
+.mg-table tr:last-child>*{border-bottom:0}
+.mg-coordinates{white-space:nowrap;color:#88e3e1;font-variant-numeric:tabular-nums}
+.mg-lightbox{width:fit-content;max-width:96vw;max-height:94dvh;margin:auto;padding:44px 16px 12px;border:1px solid #b89a54;background:#06121e;color:#ead299;overflow:auto;box-sizing:border-box}
+.mg-lightbox::backdrop{background:rgba(0,7,14,.9)}
+.mg-lightbox img{display:block;max-width:calc(96vw - 36px);max-height:76dvh;width:auto;height:auto;object-fit:contain;margin:0 auto}
+.mg-lightbox p{text-align:center;font-size:.9rem;line-height:1.5;margin:12px 0 0}
+.mg-lightbox-close{position:absolute;top:5px;right:7px;width:36px;height:36px;font-size:28px;line-height:1;border:1px solid #a78b4d;background:#102333;color:#f5deb0;cursor:pointer}
+@media(max-width:900px){.mg-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.mg-tabs-info{grid-template-columns:1fr}.mg-tabs-info>article:nth-child(2){grid-column:auto;grid-row:auto}.mg-books{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.mg-toc{padding:22px}.mg-toc ol{grid-template-columns:1fr}.mg-cards,.mg-other-items{grid-template-columns:1fr}.mg-combo-images{gap:10px}.mg-combo-images img{height:260px}.mg-books{gap:10px}.mg-figure figcaption{padding:10px;font-size:.78rem}.mg-cards>article{padding:20px}.mg-note{padding:16px}.mg-table th,.mg-table td{padding:11px 12px}.mg-school-order{columns:1}.mg-formula{padding:20px 16px}}
