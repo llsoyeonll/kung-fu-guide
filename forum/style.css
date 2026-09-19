@@ -1878,3 +1878,70 @@ body.protected-content img{-webkit-user-drag:none;user-select:none;-webkit-user-
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
 }
+
+/* ==========================================================================
+   0.0.45 — Единый шрифт форума и основного сайта
+   ========================================================================== */
+@font-face{
+  font-family:'Golos Text Guide';
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url('../assets/fonts/golos-text-400.ttf') format('truetype');
+}
+@font-face{
+  font-family:'Golos Text Guide';
+  font-style:normal;
+  font-weight:500;
+  font-display:swap;
+  src:url('../assets/fonts/golos-text-500.ttf') format('truetype');
+}
+@font-face{
+  font-family:'Golos Text Guide';
+  font-style:normal;
+  font-weight:600;
+  font-display:swap;
+  src:url('../assets/fonts/golos-text-600.ttf') format('truetype');
+}
+@font-face{
+  font-family:'Golos Text Guide';
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url('../assets/fonts/golos-text-700.ttf') format('truetype');
+}
+
+html,
+body,
+body *,
+button,
+input,
+select,
+textarea,
+table,
+th,
+td,
+caption,
+code,
+pre,
+kbd,
+samp{
+  font-family:'Golos Text Guide','Golos Text',Arial,sans-serif !important;
+  font-variant-numeric:lining-nums tabular-nums !important;
+  font-feature-settings:'lnum' 1,'tnum' 1 !important;
+  font-kerning:normal;
+}
+
+button,
+input,
+select,
+textarea{
+  font:inherit !important;
+}
+
+body{
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
