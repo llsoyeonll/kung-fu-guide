@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
     <link rel="stylesheet" href="styles.css?v=0.0.30" />
     <link rel="stylesheet" href="community-auth.css?v=0.0.30" />
-    <link rel="stylesheet" href="meridians-catalog.css?v=0.0.44" />
+    <link rel="stylesheet" href="meridians-catalog.css?v=0.0.47" />
     <script>document.documentElement.classList.add('nineyin-account-pending')</script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
     <script src="i18n.js?v=0.0.30" defer></script><script src="supabase-config.js?v=0.0.30" defer></script>
@@ -129,25 +129,36 @@
               <h2 id="school-title">Школа</h2>
             </div>
           </div>
-          <div class="meridian-future-grid" aria-label="Будущие карточки школьных меридианов">
-            <article class="future-meridian-card">
-              <p class="future-card-kicker">Место для меридиана</p>
-              <h3>Название Меридиана</h3>
-              <div class="future-card-meta"><span>Круг: —</span><span>★ ★ ★ ★ ★</span></div>
-              <p>Краткое описание, основные характеристики и оценка направленности.</p>
-            </article>
-            <article class="future-meridian-card">
-              <p class="future-card-kicker">Место для меридиана</p>
-              <h3>Название Меридиана</h3>
-              <div class="future-card-meta"><span>Круг: —</span><span>★ ★ ★ ★ ★</span></div>
-              <p>Готовый формат для компактного вывода 2–3 меридианов в одну строку.</p>
-            </article>
-            <article class="future-meridian-card future-meridian-card-muted">
-              <p class="future-card-kicker">Место для меридиана</p>
-              <h3>Название Меридиана</h3>
-              <div class="future-card-meta"><span>Круг: —</span><span>★ ★ ★ ★ ★</span></div>
-              <p>Карточка-заготовка под будущие школьные акупунктуры.</p>
-            </article>
+
+          <div class="school-meridian-block">
+            <div class="school-subsection-copy">
+              <h3>Основы Школ I</h3>
+              <p>Старая вкладка со школами. Порядок в списке — сверху от Куньлуня и вниз до Тяньшаня.</p>
+            </div>
+            <div class="school-meridian-grid" aria-label="Меридианы Основы Школ I">
+              <article class="school-meridian-card"><img src="assets/meridians/schools/01-kunlun.png" alt="Куньлунь" decoding="async" loading="lazy" /><div><span>01</span><h4>Куньлунь</h4><p>Без описания</p></div></article>
+              <article class="school-meridian-card"><img src="assets/meridians/schools/02-punishment-city.png" alt="Город Наказаний" decoding="async" loading="lazy" /><div><span>02</span><h4>Город Наказаний</h4><p>Без описания</p></div></article>
+              <article class="school-meridian-card"><img src="assets/meridians/schools/03-snakes.png" alt="Змей" decoding="async" loading="lazy" /><div><span>03</span><h4>Змей</h4><p>Без описания</p></div></article>
+              <article class="school-meridian-card"><img src="assets/meridians/schools/04-blissful.png" alt="Блаженные" decoding="async" loading="lazy" /><div><span>04</span><h4>Блаженные</h4><p>Без описания</p></div></article>
+              <article class="school-meridian-card"><img src="assets/meridians/schools/05-beggars.png" alt="Нищие" decoding="async" loading="lazy" /><div><span>05</span><h4>Нищие</h4><p>Без описания</p></div></article>
+              <article class="school-meridian-card"><img src="assets/meridians/schools/06-wudang.png" alt="Удан" decoding="async" loading="lazy" /><div><span>06</span><h4>Удан</h4><p>Без описания</p></div></article>
+              <article class="school-meridian-card"><img src="assets/meridians/schools/07-scholars.png" alt="Ученые" decoding="async" loading="lazy" /><div><span>07</span><h4>Ученые</h4><p>Без описания</p></div></article>
+              <article class="school-meridian-card"><img src="assets/meridians/schools/08-tang.png" alt="Тан" decoding="async" loading="lazy" /><div><span>08</span><h4>Тан</h4><p>Без описания</p></div></article>
+              <article class="school-meridian-card"><img src="assets/meridians/schools/09-imperial-guard.png" alt="Лейб-Гвардия" decoding="async" loading="lazy" /><div><span>09</span><h4>Лейб-Гвардия</h4><p>Без описания</p></div></article>
+              <article class="school-meridian-card"><img src="assets/meridians/schools/10-shaolin.png" alt="Шаолинь" decoding="async" loading="lazy" /><div><span>10</span><h4>Шаолинь</h4><p>Без описания</p></div></article>
+              <article class="school-meridian-card"><img src="assets/meridians/schools/11-ming-cult.png" alt="Культ Минг" decoding="async" loading="lazy" /><div><span>11</span><h4>Культ Минг</h4><p>Без описания</p></div></article>
+              <article class="school-meridian-card"><img src="assets/meridians/schools/12-tianshan.png" alt="Тяньшань" decoding="async" loading="lazy" /><div><span>12</span><h4>Тяньшань</h4><p>Без описания</p></div></article>
+            </div>
+          </div>
+
+          <div class="school-meridian-block school-meridian-block-secondary">
+            <div class="school-subsection-copy">
+              <h3>Основы Школ II</h3>
+              <p><strong>Святилище Шаманов.</strong> В эту вкладку будут добавляться следующие школы.</p>
+            </div>
+            <div class="school-meridian-grid school-meridian-grid-secondary" aria-label="Меридианы Основы Школ II">
+              <article class="school-meridian-card"><img src="assets/meridians/schools/13-shaman-sanctuary.png" alt="Святилище Шаманов" decoding="async" loading="lazy" /><div><span>01</span><h4>Святилище Шаманов</h4><p>Без описания</p></div></article>
+            </div>
           </div>
         </section>
 
