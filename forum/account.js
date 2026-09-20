@@ -160,6 +160,27 @@
     if(demo){const users=demoRead(keys.users,{});return Object.values(users).map(x=>x.profile).filter(Boolean).map(x=>({...x,email_confirmed:true,profile_completed:Boolean(x.profile_completed)})).sort((a,b)=>String(b.created_at).localeCompare(String(a.created_at)))}
     const {data,error}=await client.rpc('list_community_profiles');if(error)throw error;return await Promise.all((data||[]).map(hydrateProfile));
   }
+  async function getUserLoginHistory(targetId){
+    if(!demo) await refreshProfile();
+    if(!isAdmin()) throw new Error('Историю входов может просматривать только администратор.');
+    targetId=String(targetId||'').trim();
+    if(!targetId) throw new Error('Пользователь не выбран.');
+    if(demo) return [];
+    const {data,error}=await client.rpc('admin_list_login_history',{p_user_id:targetId});
+    if(error) throw error;
+    return data||[];
+  }
+  async function resolveUserLoginGeo(targetId){
+    if(!demo) await refreshProfile();
+    if(!isAdmin()) throw new Error('Геолокацию входов может просматривать только администратор.');
+    targetId=String(targetId||'').trim();
+    if(!targetId) throw new Error('Пользователь не выбран.');
+    if(demo) return {ok:true,updated:0,checked_ips:0,failures:[]};
+    const {data,error}=await client.functions.invoke('resolve-login-geo',{body:{user_id:targetId}});
+    if(error) throw error;
+    if(data?.error) throw new Error(data.error);
+    return data||{ok:true};
+  }
   async function saveOwnProfile(values,file){
     let avatarPath=profile?.avatar_path||null;if(file){const blob=await prepareImage(file,768,.86);avatarPath=demo?await blobToDataUrl(blob):await uploadFile('avatars',blob,`${user.id}/avatar.webp`)}
     const data={display_name:String(values.display_name||'').trim(),game_nickname:String(values.game_nickname||'').trim(),server:String(values.server||''),about:String(values.about||'').trim(),profile_completed:true,updated_at:new Date().toISOString()};
@@ -403,6 +424,6 @@
     }
     resolveReady({demo,user,profile});
   }
-  window.NineYinAccount={version:'0.0.32',ready,access,getCurrent,refreshProfile,listProfiles,saveOwnProfile,createPost,getPost,listPosts,createComment,listComments,deleteComment,listCategories,addCategory,removeCategory,setPostPinned,getPrivateItemCodes,isAdmin,setUserBlocked,logout,openAuth,defaultAvatar,isDemo:()=>demo};
+  window.NineYinAccount={version:'0.0.50',ready,access,getCurrent,refreshProfile,listProfiles,getUserLoginHistory,resolveUserLoginGeo,saveOwnProfile,createPost,getPost,listPosts,createComment,listComments,deleteComment,listCategories,addCategory,removeCategory,setPostPinned,getPrivateItemCodes,isAdmin,setUserBlocked,logout,openAuth,defaultAvatar,isDemo:()=>demo};
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
