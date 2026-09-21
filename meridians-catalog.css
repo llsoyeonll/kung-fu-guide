@@ -195,3 +195,55 @@
   .jianghu-meridian-card img{width:56px;height:56px;}
 }
 
+/* 0.0.54 — компактные карточки меридианов сект */
+.sect-meridian-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+.sect-meridian-card{
+  display:grid;
+  grid-template-columns:64px minmax(0,1fr);
+  gap:10px;
+  align-items:start;
+  padding:10px;
+  border:1px solid rgba(230,183,93,.16);
+  background:linear-gradient(145deg,rgba(6,28,41,.92),rgba(4,20,32,.96));
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.02);
+}
+.sect-meridian-card img{
+  display:block;
+  width:64px;
+  height:64px;
+  object-fit:cover;
+  border:1px solid rgba(230,183,93,.16);
+  background:#061826;
+}
+.sect-meridian-card span{
+  display:inline-block;
+  margin-bottom:5px;
+  color:#67d0d4;
+  font-size:.8rem;
+  letter-spacing:.05em;
+}
+.sect-meridian-card h3{
+  margin:0 0 5px;
+  color:#f0cf82;
+  font-size:1rem;
+  line-height:1.25;
+}
+.sect-meridian-card p{
+  margin:0;
+  color:#d8e0e2;
+  line-height:1.4;
+  font-size:.9rem;
+}
+@media (max-width:1080px){
+  .sect-meridian-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:640px){
+  .sect-meridian-grid{grid-template-columns:1fr;}
+  .sect-meridian-card{grid-template-columns:56px minmax(0,1fr);}
+  .sect-meridian-card img{width:56px;height:56px;}
+}
+

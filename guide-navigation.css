@@ -1,0 +1,58 @@
+.guide-floating-nav{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:9990;
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.guide-floating-nav button{
+  display:grid;
+  place-items:center;
+  width:46px;
+  height:46px;
+  padding:0;
+  border:1px solid rgba(230,183,93,.42);
+  border-radius:50%;
+  background:linear-gradient(180deg,rgba(5,34,48,.96),rgba(3,20,31,.97));
+  color:#f0cf82;
+  font:inherit;
+  font-size:1.28rem;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 7px 20px rgba(0,0,0,.28),inset 0 0 0 1px rgba(255,255,255,.03);
+  transition:transform .18s ease,border-color .18s ease,color .18s ease,opacity .18s ease;
+}
+.guide-floating-nav button:hover{
+  transform:translateY(-2px);
+  border-color:rgba(103,208,212,.65);
+  color:#8be8ec;
+}
+.guide-floating-nav .guide-to-top{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(8px);
+}
+.guide-floating-nav .guide-to-top.is-visible{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+@media(max-width:640px){
+  .guide-floating-nav{
+    right:12px;
+    bottom:12px;
+    gap:7px;
+  }
+  .guide-floating-nav button{
+    width:42px;
+    height:42px;
+    font-size:1.15rem;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .guide-floating-nav button{transition:none}
+}
