@@ -6,6 +6,7 @@
       const href = (link.getAttribute('href') || '').split('#')[0];
       if (href.endsWith('partnership.html')) link.textContent = 'Партнеры';
       if (href.endsWith('topup.html')) link.remove();
+      if (href.endsWith('character.html')) link.remove();
     });
   };
 
