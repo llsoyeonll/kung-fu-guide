@@ -9,26 +9,10 @@
     <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
     <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
     <link rel="stylesheet" href="styles.css?v=0.0.32" />
-  
     <link rel="stylesheet" href="community-auth.css?v=0.0.30" />
     <style>
-      .beginner-card-icon.beginner-art-icon{
-        display:block;
-        width:76px;
-        height:76px;
-        min-width:76px;
-        overflow:hidden;
-        border:1px solid rgba(224,176,73,.55);
-        background-image:url('assets/beginner-icons-set.jpg?v=0.0.38');
-        background-repeat:no-repeat;
-        background-size:307px 204px;
-        background-color:#071b28;
-        box-shadow:0 0 18px rgba(224,176,73,.17), inset 0 0 18px rgba(41,171,180,.08);
-      }
-      .beginner-art-meridians{background-position:-49px -5px;}
-      .beginner-art-dolls{background-position:-186px -5px;}
-      .beginner-art-pets{background-position:-49px -107px;}
-      .beginner-art-tables{background-position:-186px -107px;}
+      .beginner-card-icon{overflow:hidden}
+      .beginner-card-icon img{display:block;width:100%;height:100%;object-fit:cover}
     </style>
     <script>document.documentElement.classList.add('nineyin-account-pending')</script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
@@ -63,7 +47,7 @@
 
         <section class="content-directory-grid beginner-directory-grid" aria-label="Руководства для новичков">
           <a class="directory-card beginner-meridian-card" href="meridian-guide.html">
-            <span class="beginner-card-icon beginner-art-icon beginner-art-meridians" aria-hidden="true"></span>
+            <span class="beginner-card-icon" aria-hidden="true"><img src="assets/beginner-meridians.webp?v=0.0.37" alt="" decoding="async" loading="lazy"></span>
             <span class="directory-copy">
               <span class="directory-card-kicker">Акупунктура и энергия ци</span>
               <h2>Гайд по меридианам</h2>
@@ -73,7 +57,7 @@
           </a>
 
           <a class="directory-card beginner-doll-card" href="jade-dolls.html">
-            <span class="beginner-card-icon beginner-art-icon beginner-art-dolls" aria-hidden="true"></span>
+            <span class="beginner-card-icon" aria-hidden="true"><img src="assets/beginner-jade-dolls.webp?v=0.0.37" alt="" decoding="async" loading="lazy"></span>
             <span class="directory-copy">
               <span class="directory-card-kicker">Заточка и дополнительные атрибуты</span>
               <h2>Яшмовые Куклы</h2>
@@ -83,7 +67,7 @@
           </a>
 
           <a class="directory-card" href="pets.html">
-            <span class="beginner-card-icon beginner-art-icon beginner-art-pets" aria-hidden="true"></span>
+            <span class="beginner-card-icon" aria-hidden="true"><img src="assets/beginner-pets.webp?v=0.0.37" alt="" decoding="async" loading="lazy"></span>
             <span class="directory-copy">
               <span class="directory-card-kicker">Спутники и бонусы</span>
               <h2>Полезные питомцы</h2>
@@ -93,7 +77,7 @@
           </a>
 
           <a class="directory-card" href="tables.html">
-            <span class="beginner-card-icon beginner-art-icon beginner-art-tables" aria-hidden="true"></span>
+            <span class="beginner-card-icon" aria-hidden="true"><img src="assets/beginner-tables.webp?v=0.0.37" alt="" decoding="async" loading="lazy"></span>
             <span class="directory-copy">
               <span class="directory-card-kicker">Справочные материалы</span>
               <h2>Полезные таблицы</h2>
@@ -107,6 +91,6 @@
       <footer class="site-footer"><div class="footer-inner"><span class="footer-ornament" aria-hidden="true"></span><p>Руководство Легенды Кунг-Фу 2026</p><span class="footer-ornament" aria-hidden="true"></span></div></footer>
     </main>
     <script src="script.js?v=0.0.30" defer></script>
-      <script src="anti-copy.js?v=0.0.30" defer></script>
+    <script src="anti-copy.js?v=0.0.30" defer></script>
   </body>
 </html>
