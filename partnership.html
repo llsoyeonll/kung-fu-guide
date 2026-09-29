@@ -22,6 +22,46 @@
       .seller-price-grid.seller-price-grid-single {
         grid-template-columns: 1fr !important;
       }
+      .bot-partners-block {
+        margin-top: 24px;
+      }
+      .bot-partner-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 18px;
+      }
+      .bot-partner-card {
+        border: 1px solid rgba(202, 164, 78, 0.42);
+        background: rgba(5, 22, 34, 0.74);
+        padding: 22px;
+      }
+      .bot-partner-card h4 {
+        margin: 4px 0 8px;
+        color: #f5dfaa;
+        font-size: 1.55rem;
+      }
+      .bot-partner-card p {
+        margin: 0 0 16px;
+      }
+      .bot-link-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .bot-link-row .contact-link-card {
+        min-width: 0;
+      }
+      .bot-price-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+      @media (max-width: 760px) {
+        .bot-partner-grid,
+        .bot-link-row,
+        .bot-price-grid {
+          grid-template-columns: 1fr !important;
+        }
+      }
     </style>
     <script>document.documentElement.classList.add('nineyin-account-pending')</script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
@@ -233,6 +273,87 @@
                 </span>
                 <span class="contact-link-arrow" aria-hidden="true">↗</span>
               </a>
+            </div>
+          </section>
+
+          <div class="partner-divider" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+
+          <section class="bot-partners-block" aria-labelledby="bot-partners-title">
+            <header class="secondary-partner-heading">
+              <span class="card-kicker">Автоматизация для Тайвани и Пиратки</span>
+              <h3 id="bot-partners-title">Игровые боты TCN и ZDN</h3>
+            </header>
+
+            <div class="seller-price-grid bot-price-grid" aria-label="Стоимость ботов">
+              <article>
+                <small>Один аккаунт</small>
+                <strong>5 $</strong>
+                <span>30 дней</span>
+              </article>
+              <article>
+                <small>Один ПК</small>
+                <strong>15 $</strong>
+                <span>30 дней</span>
+              </article>
+            </div>
+
+            <aside class="partner-warning">
+              <strong>Оплата и пополнение</strong>
+              <p>Актуальный способ оплаты смотрите в соответствующем разделе Discord выбранного бота. Также возможно пополнение бота через тайваньского селлера. Бот приобретается либо на один аккаунт, либо на весь ПК.</p>
+            </aside>
+
+            <div class="bot-partner-grid">
+              <article class="bot-partner-card">
+                <span class="card-kicker">Бот для Тайвани и Пиратки</span>
+                <h4>TCN</h4>
+                <p>Актуальная версия TCN. Доступ приобретается на 30 дней.</p>
+                <div class="bot-link-row">
+                  <a class="contact-link-card" href="https://autotcn.com" target="_blank" rel="noreferrer">
+                    <span class="contact-link-symbol" aria-hidden="true">TCN</span>
+                    <span class="contact-link-copy">
+                      <small>Официальный сайт</small>
+                      <strong>Сайт TCN</strong>
+                      <span>Открыть autotcn.com</span>
+                    </span>
+                    <span class="contact-link-arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <a class="contact-link-card contact-discord" href="https://discord.gg/WT4CANtArE" target="_blank" rel="noreferrer">
+                    <span class="contact-link-symbol" aria-hidden="true">D</span>
+                    <span class="contact-link-copy">
+                      <small>Поддержка и оплата</small>
+                      <strong>Discord TCN</strong>
+                      <span>Инструкции и способы оплаты</span>
+                    </span>
+                    <span class="contact-link-arrow" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+
+              <article class="bot-partner-card">
+                <span class="card-kicker">Старый бот для Тайвани и Пиратки</span>
+                <h4>ZDN</h4>
+                <p>Старый ZDN. Доступ приобретается на 30 дней.</p>
+                <div class="bot-link-row">
+                  <a class="contact-link-card" href="https://auto.cuuamdaidien.com" target="_blank" rel="noreferrer">
+                    <span class="contact-link-symbol" aria-hidden="true">ZDN</span>
+                    <span class="contact-link-copy">
+                      <small>Сайт старого ZDN</small>
+                      <strong>Сайт ZDN</strong>
+                      <span>Открыть сайт бота</span>
+                    </span>
+                    <span class="contact-link-arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <a class="contact-link-card contact-discord" href="https://discord.gg/VzSMpVwGRq" target="_blank" rel="noreferrer">
+                    <span class="contact-link-symbol" aria-hidden="true">D</span>
+                    <span class="contact-link-copy">
+                      <small>Поддержка и оплата</small>
+                      <strong>Discord ZDN</strong>
+                      <span>Инструкции и способы оплаты</span>
+                    </span>
+                    <span class="contact-link-arrow" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
             </div>
           </section>
 
