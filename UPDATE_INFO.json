@@ -1,0 +1,67 @@
+{
+  "version": "0.0.43",
+  "type": "incremental_update",
+  "changes": [
+    "Approved WebP artwork for all 4 beginner guide cards",
+    "Transparent image backgrounds preserved",
+    "beginners.html switched from SVG v5 to WebP v6",
+    "Cache-busting query updated to 0.0.43"
+  ],
+  "files": [
+    "assets/beginner-meridians-v6.webp",
+    "assets/beginner-jade-dolls-v6.webp",
+    "assets/beginner-pets-v6.webp",
+    "assets/beginner-tables-v6.webp",
+    "beginners.html"
+  ],
+  "image_info": {
+    "assets/beginner-meridians-v6.webp": {
+      "source": "мистический_медальон_энергетических_меридианов.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha_minmax": [
+        0,
+        255
+      ],
+      "bytes": 508844
+    },
+    "assets/beginner-jade-dolls-v6.webp": {
+      "source": "изумрудный_дух_в_золотом_медальоне.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha_minmax": [
+        0,
+        255
+      ],
+      "bytes": 484122
+    },
+    "assets/beginner-pets-v6.webp": {
+      "source": "мистический_лис_и_панда_в_магическом_медальоне.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha_minmax": [
+        0,
+        255
+      ],
+      "bytes": 533286
+    },
+    "assets/beginner-tables-v6.webp": {
+      "source": "золотой_нефритовый_медальон_со_свитком.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha_minmax": [
+        0,
+        255
+      ],
+      "bytes": 518272
+    }
+  }
+}
