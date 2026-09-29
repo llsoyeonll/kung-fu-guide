@@ -60,8 +60,27 @@
     link.textContent='← К СПРАВОЧНИКУ НОВИЧКАМ';
   };
 
+  const normalizePartnersCommunityHeading=()=>{
+    const file=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    if(file!=='partnership.html') return;
+    const heading=document.querySelector('.contact-hub-heading');
+    if(!heading) return;
+    const description=heading.querySelector('p');
+    if(description) description.remove();
+    const title=heading.querySelector('h2');
+    if(title){
+      title.style.width='100%';
+      title.style.maxWidth='none';
+      title.style.whiteSpace='nowrap';
+    }
+    heading.style.display='block';
+    heading.style.width='100%';
+    heading.style.maxWidth='none';
+  };
+
   normalizeLegacyCharacterLinks();
   normalizePetsBackLink();
+  normalizePartnersCommunityHeading();
 
   const observer=new MutationObserver(mutations=>{
     for(const mutation of mutations){
@@ -69,6 +88,7 @@
     }
     normalizeLegacyCharacterLinks();
     normalizePetsBackLink();
+    normalizePartnersCommunityHeading();
   });
   observer.observe(document.body,{childList:true,subtree:true});
 
