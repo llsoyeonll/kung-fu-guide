@@ -51,13 +51,24 @@
       else if(text==='← О персонаже') link.textContent='← Справочник новичкам';
     });
   };
+
+  const normalizePetsBackLink=()=>{
+    if(!document.querySelector('.pet-guide-site-shell')) return;
+    const link=document.querySelector('.pet-page-header .collection-kicker a');
+    if(!link) return;
+    link.setAttribute('href','beginners.html');
+    link.textContent='← К СПРАВОЧНИКУ НОВИЧКАМ';
+  };
+
   normalizeLegacyCharacterLinks();
+  normalizePetsBackLink();
 
   const observer=new MutationObserver(mutations=>{
     for(const mutation of mutations){
       for(const node of mutation.addedNodes) processNode(node);
     }
     normalizeLegacyCharacterLinks();
+    normalizePetsBackLink();
   });
   observer.observe(document.body,{childList:true,subtree:true});
 
