@@ -42,10 +42,8 @@
       const raw=link.getAttribute('href')||'';
       const base=raw.split('#')[0].split('?')[0];
       if(!base.endsWith('character.html')) return;
-
       const hash=raw.includes('#') ? `#${raw.split('#').slice(1).join('#')}` : '';
       link.setAttribute('href', `beginners.html${hash}`);
-
       const text=(link.textContent||'').trim();
       if(text==='О персонаже') link.textContent='Справочник новичкам';
       else if(text==='← О персонаже') link.textContent='← Справочник новичкам';
@@ -64,18 +62,39 @@
     const file=(location.pathname.split('/').pop()||'index.html').toLowerCase();
     if(file!=='partnership.html') return;
     const heading=document.querySelector('.contact-hub-heading');
-    if(!heading) return;
-    const description=heading.querySelector('p');
-    if(description) description.remove();
-    const title=heading.querySelector('h2');
-    if(title){
-      title.style.width='100%';
-      title.style.maxWidth='none';
-      title.style.whiteSpace='nowrap';
+    if(heading){
+      const description=heading.querySelector('p');
+      if(description) description.remove();
+      const title=heading.querySelector('h2');
+      if(title){
+        title.style.width='100%';
+        title.style.maxWidth='none';
+        title.style.whiteSpace='nowrap';
+      }
+      heading.style.display='block';
+      heading.style.width='100%';
+      heading.style.maxWidth='none';
     }
-    heading.style.display='block';
-    heading.style.width='100%';
-    heading.style.maxWidth='none';
+
+    if(!document.getElementById('nineyin-partner-links-fix')){
+      const style=document.createElement('style');
+      style.id='nineyin-partner-links-fix';
+      style.textContent=`
+        @media (min-width:760px){
+          .partner-links{
+            display:grid!important;
+            grid-template-columns:minmax(390px,1fr) minmax(320px,1fr)!important;
+            width:100%!important;
+            max-width:none!important;
+          }
+          .partner-links .translator-link .contact-link-copy strong{
+            white-space:nowrap!important;
+            font-size:clamp(1rem,1.45vw,1.15rem)!important;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    }
   };
 
   normalizeLegacyCharacterLinks();
@@ -109,11 +128,10 @@
 
   document.addEventListener('keydown',e=>{
     const k=(e.key||'').toLowerCase();
-    const ctrl=e.ctrlKey||e.metaKey, shift=e.shiftKey, alt=e.altKey;
+    const ctrl=e.ctrlKey||e.metaKey, shift=e.shiftKey;
     const blocked = k==='f12' || k==='printscreen' ||
       (ctrl&&!isEditable(e.target)&&['a','c','x','s','u','p'].includes(k)) ||
-      (ctrl&&shift&&['i','j','c','s','k'].includes(k)) ||
-      (ctrl&&alt&&['i','j','c'].includes(k));
+      (ctrl&&shift&&['i','j','c','s','k'].includes(k));
     if(blocked){
       e.preventDefault();
       e.stopPropagation();
