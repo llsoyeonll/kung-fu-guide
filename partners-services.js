@@ -107,6 +107,9 @@
         .contact-hub-heading h2{
           white-space:nowrap!important;
         }
+        .partner-links .translator-link .contact-link-copy strong{
+          white-space:nowrap!important;
+        }
         #topup-services,#translation-services,#tools-services,#community-services{scroll-margin-top:96px}
       `;
       document.head.appendChild(style);
