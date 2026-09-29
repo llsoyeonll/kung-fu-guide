@@ -37,7 +37,7 @@
         const h2 = heading.querySelector('h2');
         const p = heading.querySelector('p');
         if (h2) h2.textContent = 'Партнеры и доступные услуги';
-        if (p) p.textContent = 'Пополнение, переводы и игровые инструменты собраны прямо в карточках партнеров — без повторяющихся контактов и цен.';
+        if (p) p.remove();
 
         if (!heading.querySelector('.merged-topup-note')) {
           const note = document.createElement('aside');
@@ -55,10 +55,18 @@
     if (taiwan) {
       taiwan.id = 'tools-services';
       taiwan.dataset.service = 'topup tools';
+      const heading = taiwan.querySelector('.secondary-partner-heading');
+      const p = heading?.querySelector('p');
+      if (p) p.remove();
     }
 
     const translator = document.querySelector('.pirate-translator-block');
-    if (translator) translator.id = 'translation-services';
+    if (translator) {
+      translator.id = 'translation-services';
+      const heading = translator.querySelector('.secondary-partner-heading');
+      const p = heading?.querySelector('p');
+      if (p) p.remove();
+    }
 
     const daddy = document.querySelector('.partner-profile');
     if (daddy) daddy.dataset.service = 'topup translation';
@@ -77,6 +85,18 @@
         }
         .merged-topup-note strong{color:#e9c675}
         .merged-topup-note p{margin:5px 0 0!important;color:#aebbc3!important;font-size:13px;line-height:1.55}
+        .partner-section-heading,
+        .secondary-partner-heading{
+          display:block!important;
+          width:100%!important;
+          max-width:none!important;
+          grid-template-columns:1fr!important;
+        }
+        .partner-section-heading h2,
+        .secondary-partner-heading h3{
+          width:100%!important;
+          max-width:none!important;
+        }
         #topup-services,#translation-services,#tools-services,#community-services{scroll-margin-top:96px}
       `;
       document.head.appendChild(style);
