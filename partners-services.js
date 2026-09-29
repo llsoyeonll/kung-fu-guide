@@ -27,7 +27,12 @@
     }
 
     const community = document.querySelector('.contact-hub');
-    if (community) community.id = 'community-services';
+    if (community) {
+      community.id = 'community-services';
+      const heading = community.querySelector('.contact-hub-heading');
+      const p = heading?.querySelector('p');
+      if (p) p.remove();
+    }
 
     const partnerSection = document.querySelector('.partner-section');
     if (partnerSection) {
@@ -85,6 +90,7 @@
         }
         .merged-topup-note strong{color:#e9c675}
         .merged-topup-note p{margin:5px 0 0!important;color:#aebbc3!important;font-size:13px;line-height:1.55}
+        .contact-hub-heading,
         .partner-section-heading,
         .secondary-partner-heading{
           display:block!important;
@@ -92,10 +98,14 @@
           max-width:none!important;
           grid-template-columns:1fr!important;
         }
+        .contact-hub-heading h2,
         .partner-section-heading h2,
         .secondary-partner-heading h3{
           width:100%!important;
           max-width:none!important;
+        }
+        .contact-hub-heading h2{
+          white-space:nowrap!important;
         }
         #topup-services,#translation-services,#tools-services,#community-services{scroll-margin-top:96px}
       `;
