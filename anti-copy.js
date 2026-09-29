@@ -37,10 +37,27 @@
   };
   document.querySelectorAll('img').forEach(img=>{ protectImage(img); watermarkImage(img); });
 
+  const normalizeLegacyCharacterLinks=()=>{
+    document.querySelectorAll('a[href]').forEach(link=>{
+      const raw=link.getAttribute('href')||'';
+      const base=raw.split('#')[0].split('?')[0];
+      if(!base.endsWith('character.html')) return;
+
+      const hash=raw.includes('#') ? `#${raw.split('#').slice(1).join('#')}` : '';
+      link.setAttribute('href', `beginners.html${hash}`);
+
+      const text=(link.textContent||'').trim();
+      if(text==='О персонаже') link.textContent='Справочник новичкам';
+      else if(text==='← О персонаже') link.textContent='← Справочник новичкам';
+    });
+  };
+  normalizeLegacyCharacterLinks();
+
   const observer=new MutationObserver(mutations=>{
     for(const mutation of mutations){
       for(const node of mutation.addedNodes) processNode(node);
     }
+    normalizeLegacyCharacterLinks();
   });
   observer.observe(document.body,{childList:true,subtree:true});
 
