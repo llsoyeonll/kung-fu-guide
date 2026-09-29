@@ -97,9 +97,32 @@
     }
   };
 
+  const normalizeTaiwanSellerPricing=()=>{
+    const file=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    if(file!=='partnership.html') return;
+    const block=document.querySelector('.taiwan-seller-block');
+    if(!block) return;
+
+    const description=block.querySelector('.partner-description');
+    if(description){
+      description.textContent='Помогает с пополнением золота на официальном сервере Тайвани. Стоимость рассчитывается с учётом текущего курса доллара.';
+    }
+
+    const grid=block.querySelector('.seller-price-grid');
+    if(grid){
+      [...grid.querySelectorAll('article')].forEach(article=>{
+        const strong=(article.querySelector('strong')?.textContent||'').trim();
+        if(strong==='5 $' || strong==='15 $' || strong==='MyCard') article.remove();
+      });
+      grid.style.gridTemplateColumns='1fr';
+      grid.style.maxWidth='520px';
+    }
+  };
+
   normalizeLegacyCharacterLinks();
   normalizePetsBackLink();
   normalizePartnersCommunityHeading();
+  normalizeTaiwanSellerPricing();
 
   const observer=new MutationObserver(mutations=>{
     for(const mutation of mutations){
@@ -108,6 +131,7 @@
     normalizeLegacyCharacterLinks();
     normalizePetsBackLink();
     normalizePartnersCommunityHeading();
+    normalizeTaiwanSellerPricing();
   });
   observer.observe(document.body,{childList:true,subtree:true});
 
