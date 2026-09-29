@@ -8,13 +8,19 @@
     <link rel="icon" href="favicon.ico?v=16" sizes="any" />
     <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
     <link rel="stylesheet" href="styles.css?v=0.0.30" />
-  
     <link rel="stylesheet" href="community-auth.css?v=0.0.30" />
     <style>
       @media (min-width: 980px) {
         .contact-link-grid.partner-contact-row {
           grid-template-columns: repeat(3, minmax(0, 1fr));
         }
+        .contact-hub-heading h2,
+        .partner-links .translator-link .contact-link-copy strong {
+          white-space: nowrap;
+        }
+      }
+      .seller-price-grid.seller-price-grid-single {
+        grid-template-columns: 1fr !important;
       }
     </style>
     <script>document.documentElement.classList.add('nineyin-account-pending')</script>
@@ -36,11 +42,8 @@
           </a>
           <nav class="topnav" aria-label="Основная навигация">
             <a href="index.html">Главная</a><a href="forum/index.html">Форум</a>
-            
-            <a href="character.html">О персонаже</a>
             <a class="topnav-current" href="partnership.html" aria-current="page">Партнеры</a>
             <a href="registration.html">Регистрация</a>
-            <a href="topup.html">Пополнение</a>
           </nav>
         </div>
       </header>
@@ -82,7 +85,6 @@
           <header class="contact-hub-heading">
             <span class="card-kicker">Сообщества проекта</span>
             <h2 id="contact-hub-title">Связаться и присоединиться</h2>
-            <p>Все основные ссылки проекта собраны ниже.</p>
           </header>
 
           <div class="contact-link-grid partner-contact-row">
@@ -122,7 +124,6 @@
           <header class="partner-section-heading">
             <span class="card-kicker">Проверенный контакт</span>
             <h2 id="partner-title">Партнер</h2>
-            <p>Перевод, русификатор и пополнение золота для игроков Тайвани и Приватного сервера.</p>
           </header>
 
           <div class="partner-profile">
@@ -197,7 +198,6 @@
             <header class="secondary-partner-heading">
               <span class="card-kicker">Пополнение и игровые инструменты</span>
               <h3 id="taiwan-seller-title">Селлер Тайвани</h3>
-              <p>Поможет пополнить золото на официальном сервере и оплатить ботов для Тайвани и Пиратки.</p>
             </header>
 
             <div class="partner-profile partner-profile-secondary">
@@ -206,28 +206,13 @@
               <div class="partner-profile-copy">
                 <p class="partner-role"><span aria-hidden="true">✦</span> Партнер · Селлер Тайвани</p>
                 <h3>Пополнение Тайвани</h3>
-                <p class="partner-description">Помогает с пополнением золота и оплатой ботов. Стоимость рассчитывается с учётом текущего курса доллара. Пополнение официального сервера Тайвани выполняется специальными картами <strong>MyCard Taiwan</strong>.</p>
+                <p class="partner-description">Помогает с пополнением золота на официальном сервере Тайвани. Стоимость рассчитывается с учётом текущего курса доллара.</p>
 
-                <div class="seller-price-grid" aria-label="Ориентировочные цены">
-                  <article>
-                    <small>ZDN · один аккаунт</small>
-                    <strong>5 $</strong>
-                    <span>на один месяц</span>
-                  </article>
-                  <article>
-                    <small>ZDN · один ПК</small>
-                    <strong>15 $</strong>
-                    <span>на один месяц</span>
-                  </article>
+                <div class="seller-price-grid seller-price-grid-single" aria-label="Ориентировочная цена">
                   <article>
                     <small>Тайвань · официальный сервер</small>
                     <strong>≈ 1350 ₽</strong>
                     <span>за 100 золота</span>
-                  </article>
-                  <article>
-                    <small>Способ пополнения</small>
-                    <strong>MyCard</strong>
-                    <span>карты Taiwan</span>
                   </article>
                 </div>
 
@@ -244,7 +229,7 @@
                 <span class="contact-link-copy">
                   <small>Связь с селлером</small>
                   <strong>Страница ВК</strong>
-                  <span>Уточнить курс, оплату ботов и пополнение Тайвани</span>
+                  <span>Уточнить курс и пополнение Тайвани</span>
                 </span>
                 <span class="contact-link-arrow" aria-hidden="true">↗</span>
               </a>
@@ -257,7 +242,6 @@
             <header class="secondary-partner-heading">
               <span class="card-kicker">Локализация Приватного сервера</span>
               <h3 id="pirate-translator-title">Переводчик Пиратки</h3>
-              <p>Автор русификатора и GUI-файлов интерфейса для актуальной версии игры.</p>
             </header>
 
             <div class="partner-profile pirate-translator-profile">
@@ -310,6 +294,6 @@
       </footer>
     </main>
     <script src="script.js?v=0.0.30" defer></script>
-      <script src="anti-copy.js?v=0.0.30" defer></script>
+    <script src="anti-copy.js?v=0.0.45" defer></script>
   </body>
 </html>
