@@ -51,11 +51,42 @@
   };
 
   const normalizePetsBackLink=()=>{
-    if(!document.querySelector('.pet-guide-site-shell')) return;
-    const link=document.querySelector('.pet-page-header .collection-kicker a');
-    if(!link) return;
-    link.setAttribute('href','beginners.html');
-    link.textContent='← К СПРАВОЧНИКУ НОВИЧКАМ';
+    const shell=document.querySelector('.pet-guide-site-shell');
+    if(!shell) return;
+
+    const oldLink=document.querySelector('.pet-page-header .collection-kicker a');
+    if(oldLink){
+      oldLink.setAttribute('href','beginners.html');
+      oldLink.textContent='← К СПРАВОЧНИКУ НОВИЧКАМ';
+    }
+
+    if(!document.getElementById('nineyin-pets-back-style')){
+      const style=document.createElement('style');
+      style.id='nineyin-pets-back-style';
+      style.textContent=`
+        .nineyin-pets-back-wrap{display:flex;justify-content:flex-start;margin:18px 0 28px}
+        .nineyin-pets-back-wrap.bottom{justify-content:center;margin:34px 0 12px}
+        .nineyin-pets-back-btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid rgba(224,176,73,.7);background:rgba(5,20,31,.88);color:#f6df9e!important;text-decoration:none!important;font-weight:800;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 0 18px rgba(224,176,73,.08);transition:.2s ease}
+        .nineyin-pets-back-btn:hover{transform:translateY(-1px);border-color:#e0b049;box-shadow:0 0 22px rgba(224,176,73,.16)}
+      `;
+      document.head.appendChild(style);
+    }
+
+    const page=document.querySelector('.pet-guide-page-content');
+    const header=document.querySelector('.pet-page-header');
+    if(page && header && !document.querySelector('.nineyin-pets-back-wrap.top')){
+      const topWrap=document.createElement('div');
+      topWrap.className='nineyin-pets-back-wrap top';
+      topWrap.innerHTML='<a class="nineyin-pets-back-btn" href="beginners.html">← К справочнику новичкам</a>';
+      header.insertAdjacentElement('afterend',topWrap);
+    }
+
+    if(page && !document.querySelector('.nineyin-pets-back-wrap.bottom')){
+      const bottomWrap=document.createElement('div');
+      bottomWrap.className='nineyin-pets-back-wrap bottom';
+      bottomWrap.innerHTML='<a class="nineyin-pets-back-btn" href="beginners.html">← К справочнику новичкам</a>';
+      page.appendChild(bottomWrap);
+    }
   };
 
   const normalizePartnersCommunityHeading=()=>{
