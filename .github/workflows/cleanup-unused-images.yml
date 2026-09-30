@@ -1,0 +1,68 @@
+name: Cleanup unused legacy images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cleanup-unused-images.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Remove only unreferenced legacy image candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          candidates=(
+            assets/beginner-icons-set.jpg
+            assets/beginner-jade-dolls-v5.svg
+            assets/beginner-jade-dolls.webp
+            assets/beginner-meridians-v3.webp
+            assets/beginner-meridians-v5.svg
+            assets/beginner-meridians.webp
+            assets/beginner-pets-v3.webp
+            assets/beginner-pets-v5.svg
+            assets/beginner-pets.webp
+            assets/beginner-tables-v5.svg
+            assets/beginner-tables.webp
+            assets/meridian-guide-icon.svg
+            assets/jade-doll-icon.svg
+            assets/jade-doll-stats.svg
+            assets/guide-icons.webp
+            assets/guide-icons-dragon.webp
+            assets/card-qr.png
+            assets/binance-usdt-gift-card.png
+            assets/world-neigun-icons.png
+            assets/meridian-guide/skill-upgrade-compact.png
+          )
+          removed=0
+          for file in "${candidates[@]}"; do
+            [ -f "$file" ] || continue
+            base=$(basename "$file")
+            if ! grep -RIl --exclude="$base" --exclude-dir=.git --include='*.html' --include='*.css' --include='*.js' --include='*.json' --include='*.md' --include='*.txt' -F "$base" . >/dev/null; then
+              echo "Removing unused: $file"
+              rm "$file"
+              removed=$((removed+1))
+            else
+              echo "Keeping referenced: $file"
+            fi
+          done
+          echo "Removed $removed files"
+      - name: Commit cleanup
+        run: |
+          if git diff --quiet; then
+            echo "No unused candidates found"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Remove unreferenced legacy images"
+          git push
