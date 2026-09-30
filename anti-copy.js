@@ -50,42 +50,39 @@
     });
   };
 
-  const normalizePetsBackLink=()=>{
-    const shell=document.querySelector('.pet-guide-site-shell');
-    if(!shell) return;
+  const normalizeBeginnerGuideBackButtons=()=>{
+    const file=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    const guideFiles=new Set(['meridian-guide.html','jade-dolls.html','pets.html','tables.html']);
+    if(!guideFiles.has(file)) return;
+    const page=document.querySelector('.page-content');
+    if(!page) return;
 
-    const oldLink=document.querySelector('.pet-page-header .collection-kicker a');
-    if(oldLink){
-      oldLink.setAttribute('href','beginners.html');
-      oldLink.textContent='← К СПРАВОЧНИКУ НОВИЧКАМ';
-    }
-
-    if(!document.getElementById('nineyin-pets-back-style')){
+    if(!document.getElementById('nineyin-beginner-back-style')){
       const style=document.createElement('style');
-      style.id='nineyin-pets-back-style';
+      style.id='nineyin-beginner-back-style';
       style.textContent=`
-        .nineyin-pets-back-wrap{display:flex;justify-content:flex-start;margin:18px 0 28px}
-        .nineyin-pets-back-wrap.bottom{justify-content:center;margin:34px 0 12px}
-        .nineyin-pets-back-btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid rgba(224,176,73,.7);background:rgba(5,20,31,.88);color:#f6df9e!important;text-decoration:none!important;font-weight:800;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 0 18px rgba(224,176,73,.08);transition:.2s ease}
-        .nineyin-pets-back-btn:hover{transform:translateY(-1px);border-color:#e0b049;box-shadow:0 0 22px rgba(224,176,73,.16)}
+        .nineyin-guide-back-wrap{display:flex;justify-content:flex-start;margin:18px 0 28px}
+        .nineyin-guide-back-wrap.bottom{justify-content:center;margin:34px 0 12px}
+        .nineyin-guide-back-btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid rgba(224,176,73,.7);border-radius:10px;background:linear-gradient(180deg,rgba(8,33,46,.94),rgba(4,22,33,.96));color:#f6df9e!important;text-decoration:none!important;font-weight:800;letter-spacing:.035em;box-shadow:0 8px 22px rgba(0,0,0,.2),0 0 18px rgba(224,176,73,.07);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+        .nineyin-guide-back-btn:hover{transform:translateY(-1px);border-color:#e0b049;box-shadow:0 10px 26px rgba(0,0,0,.24),0 0 22px rgba(224,176,73,.14)}
+        @media(max-width:640px){.nineyin-guide-back-wrap{margin:14px 0 22px}.nineyin-guide-back-btn{width:100%;justify-content:center;padding:11px 14px}}
       `;
       document.head.appendChild(style);
     }
 
-    const page=document.querySelector('.pet-guide-page-content');
-    const header=document.querySelector('.pet-page-header');
-    if(page && header && !document.querySelector('.nineyin-pets-back-wrap.top')){
-      const topWrap=document.createElement('div');
-      topWrap.className='nineyin-pets-back-wrap top';
-      topWrap.innerHTML='<a class="nineyin-pets-back-btn" href="beginners.html">← К справочнику новичкам</a>';
-      header.insertAdjacentElement('afterend',topWrap);
-    }
+    document.querySelectorAll('.nineyin-pets-back-wrap').forEach(el=>el.remove());
 
-    if(page && !document.querySelector('.nineyin-pets-back-wrap.bottom')){
-      const bottomWrap=document.createElement('div');
-      bottomWrap.className='nineyin-pets-back-wrap bottom';
-      bottomWrap.innerHTML='<a class="nineyin-pets-back-btn" href="beginners.html">← К справочнику новичкам</a>';
-      page.appendChild(bottomWrap);
+    if(!page.querySelector('.nineyin-guide-back-wrap.top')){
+      const top=document.createElement('div');
+      top.className='nineyin-guide-back-wrap top';
+      top.innerHTML='<a class="nineyin-guide-back-btn" href="beginners.html">← Назад в справочник</a>';
+      page.insertBefore(top,page.firstChild);
+    }
+    if(!page.querySelector('.nineyin-guide-back-wrap.bottom')){
+      const bottom=document.createElement('div');
+      bottom.className='nineyin-guide-back-wrap bottom';
+      bottom.innerHTML='<a class="nineyin-guide-back-btn" href="beginners.html">← Назад в справочник</a>';
+      page.appendChild(bottom);
     }
   };
 
@@ -151,7 +148,7 @@
   };
 
   normalizeLegacyCharacterLinks();
-  normalizePetsBackLink();
+  normalizeBeginnerGuideBackButtons();
   normalizePartnersCommunityHeading();
   normalizeTaiwanSellerPricing();
 
@@ -160,7 +157,7 @@
       for(const node of mutation.addedNodes) processNode(node);
     }
     normalizeLegacyCharacterLinks();
-    normalizePetsBackLink();
+    normalizeBeginnerGuideBackButtons();
     normalizePartnersCommunityHeading();
     normalizeTaiwanSellerPricing();
   });
