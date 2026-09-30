@@ -147,10 +147,53 @@
     }
   };
 
+  const normalizeBotPricingForZdn=()=>{
+    const file=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    if(file!=='partnership.html') return;
+    const block=document.querySelector('.bot-partners-block');
+    if(!block) return;
+    const cards=[...block.querySelectorAll('.bot-partner-card')];
+    const tcn=cards.find(card=>(card.querySelector('h4')?.textContent||'').trim()==='TCN');
+    const zdn=cards.find(card=>(card.querySelector('h4')?.textContent||'').trim()==='ZDN');
+    if(!zdn) return;
+
+    const price=block.querySelector('.bot-price-grid');
+    const warning=block.querySelector(':scope > .partner-warning');
+    let details=zdn.querySelector('.zdn-pricing-details');
+    if(!details){
+      details=document.createElement('div');
+      details.className='zdn-pricing-details';
+      const links=zdn.querySelector('.bot-link-row');
+      zdn.insertBefore(details,links||null);
+    }
+    if(price && price.parentElement!==details) details.appendChild(price);
+    if(warning && warning.parentElement!==details) details.appendChild(warning);
+
+    if(price){
+      price.setAttribute('aria-label','Стоимость ZDN');
+      price.style.marginTop='14px';
+    }
+    if(warning){
+      const strong=warning.querySelector('strong');
+      const text=warning.querySelector('p');
+      if(strong) strong.textContent='Оплата и пополнение ZDN';
+      if(text) text.textContent='Актуальный способ оплаты смотрите в разделе Discord ZDN. Также возможно пополнение ZDN через тайваньского селлера. Лицензия приобретается либо на один аккаунт, либо на весь ПК.';
+    }
+    const zdnDescription=zdn.querySelector(':scope > p');
+    if(zdnDescription) zdnDescription.textContent='Старый ZDN для Тайвани и Пиратки. Лицензия доступна на 30 дней.';
+    const tcnDescription=tcn?.querySelector(':scope > p');
+    if(tcnDescription) tcnDescription.textContent='TCN для Тайвани и Пиратки. Актуальные условия использования и оплаты смотрите на сайте и в Discord TCN.';
+    const tcnDiscord=tcn?.querySelector('.contact-discord .contact-link-copy small');
+    if(tcnDiscord) tcnDiscord.textContent='Поддержка и информация';
+    const tcnDiscordText=tcn?.querySelector('.contact-discord .contact-link-copy span');
+    if(tcnDiscordText) tcnDiscordText.textContent='Инструкции и актуальные условия';
+  };
+
   normalizeLegacyCharacterLinks();
   normalizeBeginnerGuideBackButtons();
   normalizePartnersCommunityHeading();
   normalizeTaiwanSellerPricing();
+  normalizeBotPricingForZdn();
 
   const observer=new MutationObserver(mutations=>{
     for(const mutation of mutations){
@@ -160,6 +203,7 @@
     normalizeBeginnerGuideBackButtons();
     normalizePartnersCommunityHeading();
     normalizeTaiwanSellerPricing();
+    normalizeBotPricingForZdn();
   });
   observer.observe(document.body,{childList:true,subtree:true});
 
@@ -180,10 +224,11 @@
 
   document.addEventListener('keydown',e=>{
     const k=(e.key||'').toLowerCase();
-    const ctrl=e.ctrlKey||e.metaKey, shift=e.shiftKey;
+    const ctrl=e.ctrlKey||e.metaKey, shift=e.shiftKey, alt=e.altKey;
     const blocked = k==='f12' || k==='printscreen' ||
       (ctrl&&!isEditable(e.target)&&['a','c','x','s','u','p'].includes(k)) ||
-      (ctrl&&shift&&['i','j','c','s','k'].includes(k));
+      (ctrl&&shift&&['i','j','c','s','k'].includes(k)) ||
+      (ctrl&&alt&&['i','j','c'].includes(k));
     if(blocked){
       e.preventDefault();
       e.stopPropagation();
