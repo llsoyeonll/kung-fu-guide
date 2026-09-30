@@ -17,15 +17,16 @@ jobs:
         with:
           fetch-depth: 0
       - name: Replace personal admin block with team block
-        shell: python
+        shell: bash
         run: |
+          python - <<'PY'
           from pathlib import Path
           import re
 
           path = Path('partnership.html')
           html = path.read_text(encoding='utf-8')
 
-          team_css = r'''
+          team_css = '''
       /* Mystic Scroll Team */
       .team-profile {
         display: grid;
@@ -107,7 +108,7 @@ jobs:
           if '/* Mystic Scroll Team */' not in html:
               html = html.replace('    </style>', team_css + '    </style>', 1)
 
-          team_section = r'''        <section class="team-profile" aria-labelledby="team-name">
+          team_section = '''        <section class="team-profile" aria-labelledby="team-name">
           <span class="team-profile-art" role="img" aria-label="Mystic Scroll Team"></span>
 
           <div class="team-profile-copy">
@@ -138,6 +139,7 @@ jobs:
               raise SystemExit(f'Expected one admin-profile block, replaced {count}')
 
           path.write_text(html, encoding='utf-8')
+          PY
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
