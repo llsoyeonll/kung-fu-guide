@@ -46,7 +46,7 @@ jobs:
           for file in "${candidates[@]}"; do
             [ -f "$file" ] || continue
             base=$(basename "$file")
-            if ! grep -RIl --exclude="$base" --exclude-dir=.git --include='*.html' --include='*.css' --include='*.js' --include='*.json' --include='*.md' --include='*.txt' -F "$base" . >/dev/null; then
+            if ! grep -RIl --exclude="$base" --exclude-dir=.git --exclude-dir=.github --include='*.html' --include='*.css' --include='*.js' --include='*.json' --include='*.md' --include='*.txt' -F "$base" . >/dev/null; then
               echo "Removing unused: $file"
               rm "$file"
               removed=$((removed+1))
