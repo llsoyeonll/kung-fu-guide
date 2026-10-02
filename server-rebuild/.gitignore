@@ -1,0 +1,6 @@
+build/
+captures/
+*.log
+*.exe
+*.bin
+mysql.env
