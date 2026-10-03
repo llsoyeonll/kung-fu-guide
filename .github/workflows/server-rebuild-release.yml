@@ -58,10 +58,10 @@ jobs:
       - name: Publish release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: server-rebuild-v0.1.0
-          name: 9Yin Server Rebuild v0.1.0
+          tag_name: server-rebuild-v0.1.1
+          name: 9Yin Server Rebuild v0.1.1
           body: |
-            Первый проверенный пакет восстановления сервера 9Yin.
+            Исправленная сборка восстановления сервера 9Yin: добавлен прямой запуск fxgame.exe в обход fxupdate.
             
             Включает:
             - исходники Go;
