@@ -1,0 +1,77 @@
+name: Server Rebuild Release
+
+on:
+  push:
+    branches:
+      - nineyin-server-rebuild
+    paths:
+      - "server-rebuild/**"
+      - ".github/workflows/server-rebuild-release.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-release:
+    runs-on: windows-latest
+
+    defaults:
+      run:
+        working-directory: server-rebuild
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.23.2"
+
+      - name: Restore module checksums
+        run: go mod tidy
+
+      - name: Test
+        run: go test ./...
+
+      - name: Build proxy
+        run: go build -trimpath -o build/9yin-protocol-proxy.exe ./cmd/protocol-probe
+
+      - name: Build capture inspector
+        run: go build -trimpath -o build/9yin-capture-inspect.exe ./cmd/capture-inspect
+
+      - name: Build frame scanner
+        run: go build -trimpath -o build/9yin-frame-scan.exe ./cmd/frame-scan
+
+      - name: Build DB checker
+        run: go build -trimpath -o build/9yin-db-check.exe ./cmd/db-check
+
+      - name: Pack release
+        shell: pwsh
+        run: |
+          if (Test-Path ..\nineyin-server-rebuild-package.zip) {
+            Remove-Item ..\nineyin-server-rebuild-package.zip -Force
+          }
+          Compress-Archive -Path * -DestinationPath ..\nineyin-server-rebuild-package.zip -Force
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: server-rebuild-v0.1.0
+          name: 9Yin Server Rebuild v0.1.0
+          body: |
+            Первый проверенный пакет восстановления сервера 9Yin.
+            
+            Включает:
+            - исходники Go;
+            - 9yin-protocol-proxy.exe;
+            - 9yin-capture-inspect.exe;
+            - 9yin-frame-scan.exe;
+            - 9yin-db-check.exe;
+            - Windows BAT-скрипты запуска, анализа и упаковки capture.
+            
+            Эта сборка не заменяет старый сервер автоматически.
+          files: nineyin-server-rebuild-package.zip
+          target_commitish: nineyin-server-rebuild
+          fail_on_unmatched_files: true
