@@ -997,7 +997,8 @@ nav a.active::after{
   *::before,
   *::after{
     animation-duration:.01ms !important;
-    animation-iteration-count:1 !important;    transition-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
     scroll-behavior:auto !important;
   }
   .reveal,
@@ -1996,7 +1997,8 @@ body.wuxia-site-v5{
   isolation:auto !important;
 }
 
-.guide-zone-v21::before,.guide-zone-v21::after{
+.guide-zone-v21::before,
+.guide-zone-v21::after{
   display:none !important;
 }
 
@@ -2995,7 +2997,8 @@ body.wuxia-site-v34{
 }
 
 .wuxia-site-v40 .brand-copy{
-  display:flex !important;  flex-direction:column !important;
+  display:flex !important;
+  flex-direction:column !important;
   justify-content:center !important;
   gap:3px !important;
 }
@@ -3994,6 +3997,7 @@ body.wuxia-site-v34{
   border-color:rgba(216,173,86,.38);
   background:rgba(216,173,86,.045);
 }
+
 .wuxia-site-v50 .pirate-download-grid-v50 small{
   color:#829b9e;
   text-transform:uppercase;
@@ -4993,7 +4997,8 @@ body.wuxia-site-v34{
   border-color:rgba(216,173,86,.14)!important;
 }
 
-.wuxia-site-v58 .azure-content-v58 > section,.wuxia-site-v58 .azure-content-v58 > article,
+.wuxia-site-v58 .azure-content-v58 > section,
+.wuxia-site-v58 .azure-content-v58 > article,
 .wuxia-site-v58 .azure-content-v58 > aside{
   padding:28px 28px 30px;
   background:linear-gradient(145deg, rgba(5,20,26,.78), rgba(3,15,20,.9));
@@ -5992,7 +5997,8 @@ body.wuxia-site-v34{
   text-transform:uppercase;
 }
 
-.wuxia-site-v62 .point-box-v62 strong{  display:block;
+.wuxia-site-v62 .point-box-v62 strong{
+  display:block;
   color:#f2dfaa;
   font-size:1.2rem;
   line-height:1.25;
