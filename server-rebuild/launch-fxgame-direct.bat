@@ -73,7 +73,7 @@ if "%PORT_BUSY%"=="0" (
 )
 
 echo Starting fxgame.exe directly...
-start "Nine Yin Client Direct" /D "%FXBIN%" "%FXGAME%" 105466859 0 127.0.0.1 19061 AOWPR-AOWPR 127.0.0.1 4000 0 0
+start "Nine Yin Client Direct" /D "%FXBIN%" "%FXGAME%" %LOGIN_KEY% 0 127.0.0.1 19061 AOWPR-AOWPR 127.0.0.1 4000 0 0
 
 echo.
 echo Client process requested.
