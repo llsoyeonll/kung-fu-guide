@@ -34,3 +34,6 @@ jobs:
 
       - name: Build capture inspector
         run: go build -trimpath -o build/9yin-capture-inspect.exe ./cmd/capture-inspect
+
+      - name: Build frame scanner
+        run: go build -trimpath -o build/9yin-frame-scan.exe ./cmd/frame-scan
