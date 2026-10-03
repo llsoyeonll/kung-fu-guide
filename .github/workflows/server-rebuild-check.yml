@@ -37,3 +37,15 @@ jobs:
 
       - name: Build frame scanner
         run: go build -trimpath -o build/9yin-frame-scan.exe ./cmd/frame-scan
+
+
+      - name: Upload rebuilt tools
+        uses: actions/upload-artifact@v4
+        with:
+          name: nineyin-server-rebuild-tools
+          path: |
+            server-rebuild/build/9yin-protocol-proxy.exe
+            server-rebuild/build/9yin-capture-inspect.exe
+            server-rebuild/build/9yin-frame-scan.exe
+          if-no-files-found: error
+          retention-days: 14
