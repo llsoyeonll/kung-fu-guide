@@ -998,3 +998,76 @@ nav a.active::after{
   *::after{
     animation-duration:.01ms !important;
     animation-iteration-count:1 !important;
+
+/* ===== v74 hotfix: header brand icon sizing ===== */
+.header{
+  overflow:visible;
+}
+.header-inner{
+  position:relative;
+}
+.brand{
+  flex:0 0 auto;
+  min-width:0;
+}
+.round-brand-icon,
+.brand .round-brand-icon,
+.brand .v40-brand-image{
+  flex:0 0 48px !important;
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  min-height:48px !important;
+  max-width:48px !important;
+  max-height:48px !important;
+  display:grid !important;
+  place-items:center !important;
+  overflow:hidden !important;
+  border-radius:50% !important;
+  border:1px solid rgba(216,173,86,.55) !important;
+  background:rgba(4,22,29,.96) !important;
+  box-shadow:0 0 0 4px rgba(216,173,86,.035), inset 0 0 18px rgba(73,131,139,.12) !important;
+}
+.round-brand-icon img,
+.brand .round-brand-icon img,
+.brand .v40-brand-image img{
+  display:block !important;
+  width:38px !important;
+  height:38px !important;
+  min-width:0 !important;
+  max-width:38px !important;
+  max-height:38px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.brand-copy{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+}
+.brand-copy strong{
+  white-space:nowrap;
+}
+@media(max-width:780px){
+  .round-brand-icon,
+  .brand .round-brand-icon,
+  .brand .v40-brand-image{
+    flex-basis:44px !important;
+    width:44px !important;
+    height:44px !important;
+    min-width:44px !important;
+    min-height:44px !important;
+    max-width:44px !important;
+    max-height:44px !important;
+  }
+  .round-brand-icon img,
+  .brand .round-brand-icon img,
+  .brand .v40-brand-image img{
+    width:34px !important;
+    height:34px !important;
+    max-width:34px !important;
+    max-height:34px !important;
+  }
+}
