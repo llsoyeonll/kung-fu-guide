@@ -1,127 +1,251 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Руководство по школам, фракциям, нейгунам, меридианам, навыкам и предметам мира Легенды Кунг-Фу." />
-    <title>Руководство Легенды Кунг-Фу</title>
-    <link rel="icon" href="favicon.ico?v=16" sizes="any" />
-    <link rel="icon" type="image/png" href="assets/site-icon.webp?v=16" />
-    <link rel="apple-touch-icon" href="assets/site-icon.webp?v=16" />
-    <link rel="stylesheet" href="styles.css?v=0.0.30" />
-    <link rel="stylesheet" href="community-auth.css?v=0.0.30" />
-    <style>
-      .home-support .qr-code-image{display:block;width:100%;height:100%;object-fit:contain;background:none!important}
-      .home-development-status{font-weight:800;color:#e6b75d;text-transform:uppercase;letter-spacing:.08em}
-      .home-disabled-entry{cursor:pointer!important;user-select:none}
-      .home-disabled-entry:focus-visible{outline:2px solid #e6b75d;outline-offset:3px}
-      .development-modal[hidden]{display:none}
-      .development-modal{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:24px;background:rgba(2,8,14,.78);backdrop-filter:blur(6px)}
-      .development-modal-card{position:relative;width:min(92vw,520px);padding:34px 30px 28px;text-align:center;border:1px solid rgba(230,183,93,.55);background:linear-gradient(180deg,rgba(7,25,38,.98),rgba(4,16,27,.98));box-shadow:0 24px 70px rgba(0,0,0,.55),0 0 30px rgba(230,183,93,.08)}
-      .development-modal-kicker{display:block;margin-bottom:10px;color:#e6b75d;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
-      .development-modal-card h2{margin:0 0 10px;color:#f5dfaa;font-size:clamp(2rem,5vw,3rem)}
-      .development-modal-card p{margin:0 0 24px;color:rgba(236,241,245,.78);font-size:1rem}
-      .development-modal-close{min-width:150px;padding:11px 20px;border:1px solid rgba(230,183,93,.65);background:rgba(230,183,93,.08);color:#f5dfaa;font:inherit;font-weight:800;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
-      .development-modal-close:hover{background:rgba(230,183,93,.16)}
-    </style>
-    <script src="vendor/supabase.js?v=2.110.9" defer></script>
-    <script src="i18n.js?v=0.0.30" defer></script><script src="supabase-config.js?v=0.0.38" defer></script>
-  </head>
-  <body class="compact-home">
-    <main class="site-shell">
-      <div class="mist" aria-hidden="true"></div>
-      <div class="golden-particles" aria-hidden="true"></div>
-      <div class="cursor-aura" aria-hidden="true"></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Руководство 9 Инь</title>
+  <link rel="icon" type="image/png" href="assets/site-icon.webp">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="wuxia-site-v5 wuxia-site-v6 wuxia-site-v34 wuxia-site-v39 wuxia-site-v40 wuxia-site-v41 wuxia-site-v42 wuxia-site-v43 wuxia-site-v44 wuxia-site-v45">
+  <div class="mist-layer-v26" aria-hidden="true"></div>
+  <div class="ash-layer-v26" aria-hidden="true"></div>
+  <div class="ember-layer-v26" aria-hidden="true"></div>
+  <div class="leaf-layer-v39" aria-hidden="true"></div>
 
-      <header class="topbar" id="top">
-        <div class="topbar-inner">
-          <a class="topbar-logo" href="index.html" aria-label="Руководство Легенды Кунг-Фу — главная">
-            <span class="topbar-logo-image" aria-hidden="true"></span>
-            <span class="nine-yin-wordmark" role="img" aria-label="9 Инь"></span>
-          </a>
-          <nav class="topnav" aria-label="Основная навигация">
-            <a class="topnav-current" href="index.html" aria-current="page">Главная</a><a href="forum/index.html">Форум</a>
-            <a href="partnership.html">Партнеры</a>
-            <a href="registration.html">Регистрация</a>
-          </nav>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="Руководство 9 Инь">
+        <span class="round-brand-icon v40-brand-image" aria-hidden="true"><img src="assets/site-icon.webp" alt=""></span>
+        <span class="brand-copy">
+          <strong>Руководство 9 Инь</strong>
+          <small>БАЗА ГАЙДОВ И СПРАВОЧНЫХ МАТЕРИАЛОВ</small>
+        </span>
+      </a>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="taiwan.html">Тайвань</a>
+        <a href="pirate.html">Пиратка</a>
+        <a href="game-content.html">Игровой контент</a>
+        <a href="users.html">Пользователи</a>
+        <a href="profile.html">Личный кабинет</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero hero-v4 reveal reveal-hero">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="hero-copy">
+        <div class="hero-kicker-row">
+          <p class="kicker">БАЗА ЗНАНИЙ</p>
+          <span aria-hidden="true"></span>
         </div>
-      </header>
-
-      <div class="page-content home-content">
-        <header class="hero-header">
-          <span class="hero-title-image" role="img" aria-label="Руководство Легенды Кунг-Фу"></span>
-          <div class="hero-subtitle-line" aria-hidden="true"><span></span><p>Всё, что нужно знать мастеру</p><span></span></div>
-        </header>
-
-        <nav class="primary-guide" id="sections" aria-label="Основные разделы руководства">
-          <a class="guide-card guide-card-compact" id="novichkam" href="beginners.html?v=0.0.43"><span class="guide-icon guide-icon-1" aria-hidden="true"></span><span class="compact-copy"><h2>Справочник новичкам</h2><p>Первые шаги, основы развития и полезные советы</p><span class="guide-action"><span>Подробнее</span><span class="guide-arrow" aria-hidden="true">→</span></span></span></a>
-          <a class="guide-card guide-card-compact" id="schools" href="schools.html"><span class="guide-icon guide-icon-2" aria-hidden="true"></span><span class="compact-copy"><h2>Школы, Фракции, Секты</h2><p>Пути развития и требования для вступления</p><span class="guide-action"><span>Подробнее</span><span class="guide-arrow" aria-hidden="true">→</span></span></span></a>
-          <a class="guide-card guide-card-compact" id="neiguns" href="#neiguns"><span class="guide-icon guide-icon-3" aria-hidden="true"></span><span class="compact-copy"><h2>Нейгуны</h2><p>Внутренняя сила и развитие энергии</p><span class="guide-action"><span>Подробнее</span><span class="guide-arrow" aria-hidden="true">→</span></span></span></a>
-          <a class="guide-card guide-card-compact" id="meridians" href="meridians.html"><span class="guide-icon guide-icon-4" aria-hidden="true"></span><span class="compact-copy"><h2>Меридианы</h2><p>Каналы, усиления и схемы развития</p><span class="guide-action"><span>Подробнее</span><span class="guide-arrow" aria-hidden="true">→</span></span></span></a>
-          <a class="guide-card guide-card-compact" id="skills" href="#skills"><span class="guide-icon guide-icon-5" aria-hidden="true"></span><span class="compact-copy"><h2>Навыки</h2><p>Боевые приёмы и особенности применения</p><span class="guide-action"><span>Подробнее</span><span class="guide-arrow" aria-hidden="true">→</span></span></span></a>
-        </nav>
-
-        <div class="utility-row">
-          <div class="collection-entry home-disabled-entry" role="button" tabindex="0" data-development-section="Хранилище предметов" aria-label="Хранилище предметов — в разработке">
-            <span class="collection-entry-copy"><span class="card-kicker">Отдельный каталог</span><h2>Хранилище предметов</h2><p>Изображения и описания предметов, артефактов, еды, ресурсов и экипировки.</p></span>
-          </div>
-
-          <a class="collection-entry game-content-entry" href="game-content.html" aria-label="Открыть Игровой контент">
-            <span class="collection-entry-copy"><span class="card-kicker">Испытания и приключения</span><h2>Игровой Контент</h2><p>Башни, арены, острова, пески, миражи и другие игровые активности.</p></span><span class="collection-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <div class="collection-entry other-entry home-disabled-entry" role="button" tabindex="0" data-development-section="Остальное" aria-label="Остальное — в разработке">
-            <span class="collection-entry-copy"><span class="card-kicker">Дополнительные материалы</span><h2>Остальное</h2><p>NPC, животный мир и задания Легенд Кунг-Фу.</p></span>
-          </div>
-        </div>
+        <h1 class="hero-title-v41">
+          <span class="hero-title-main-v41">Руководство</span>
+          <span class="hero-title-accent-v45">9 Инь</span>
+        </h1>
+        <p>Большой сборник полезных гайдов и актуальной информации о серверах.</p>
       </div>
 
-      <section class="thanks-card home-support" id="thanks" aria-labelledby="thanks-title">
-        <div class="thanks-copy"><p class="thanks-kicker">Поддержать автора</p><h2 id="thanks-title"><span aria-hidden="true">♡</span>Сказать Спасибо</h2><p>Отсканируйте QR-код или нажмите на него</p></div>
-        <a class="qr-link" href="https://www.donationalerts.com/r/age_of_wushu_tp" target="_blank" rel="noreferrer" aria-label="Поддержать проект через DonationAlerts">
-          <span class="qr-frame"><img class="qr-code-image" src="assets/thanks-qr-donationalerts-v0044.png?v=0.0.44" alt="QR-код DonationAlerts для поддержки автора" decoding="async" /></span>
-          <span>Нажмите, чтобы открыть DonationAlerts</span>
-        </a>
-      </section>
+      <div class="hero-seal" aria-hidden="true">
+        <span class="seal-ring seal-ring-one"></span>
+        <span class="seal-ring seal-ring-two"></span>
+        <b>✦</b>
+      </div>
+    </section>
 
-      <footer class="site-footer"><div class="footer-inner"><span class="footer-ornament" aria-hidden="true"></span><p>Руководство Легенды Кунг-Фу 2026</p><span class="footer-ornament" aria-hidden="true"></span></div></footer>
-    </main>
+    <div class="ornament"><span></span><b>◇</b><span></span></div>
 
-    <div class="development-modal" id="development-modal" role="dialog" aria-modal="true" aria-labelledby="development-modal-title" hidden>
-      <div class="development-modal-card">
-        <span class="development-modal-kicker">Статус раздела</span>
-        <h2 id="development-modal-title">В разработке</h2>
-        <p id="development-modal-text">Этот раздел пока находится в разработке.</p>
-        <button class="development-modal-close" id="development-modal-close" type="button">Закрыть</button>
+    <section class="guide-zone-v21">
+      <div class="guide-zone-backdrop" aria-hidden="true"></div>
+      <div class="guide-zone-content">
+        <section class="guide-section-intro reveal">
+          <p class="tag">РАЗДЕЛЫ РУКОВОДСТВА</p>
+          <h2>Выберите интересующее направление</h2>
+          <p>Основные материалы собраны по ключевым игровым системам.</p>
+        </section>
+
+        <section class="cards reveal-group">
+          <a class="scroll-card reveal-card" href="beginners.html" target="_blank" rel="noopener">
+            <span class="tag card-tag-v45">01 · ПЕРВЫЕ ШАГИ</span>
+            <h2>Справочник Новичкам</h2>
+            <p>Базовые системы игры, развитие персонажа, меридианы, питомцы, полезные таблицы и материалы, которые помогут быстрее освоиться в мире 9 Инь.</p>
+            <span class="arrow guide-cta-v33">Подробнее →</span>
+          </a>
+          <a class="scroll-card reveal-card" href="schools.html" target="_blank" rel="noopener">
+            <span class="tag card-tag-v45">02 · ПУТИ</span>
+            <h2>Школы, секты, фракции</h2>
+            <p>Школы, скрытые секты и фракции: требования для вступления, особенности развития, внутренние стили, ограничения и важные условия перехода.</p>
+            <span class="arrow guide-cta-v33">Подробнее →</span>
+          </a>
+          <a class="scroll-card reveal-card" href="meridians.html" target="_blank" rel="noopener">
+            <span class="tag card-tag-v45">03 · МЕРИДИАНЫ</span>
+            <h2>Меридианы</h2>
+            <p>Ци, акупунктура, активные меридианы, типы урона, атакующие и защитные направления, комбо-навыки, книги и полезные предметы.</p>
+            <span class="arrow guide-cta-v33">Подробнее →</span>
+          </a>
+          <a class="scroll-card reveal-card" href="#">
+            <span class="tag card-tag-v45">04 · ЭНЕРГИЯ</span>
+            <h2>Нейгуны</h2>
+            <p>Нейгуны школ, фракций и игрового мира: свойства внутренней силы, уровни развития, бонусы характеристик и особенности использования.</p>
+            <span class="arrow guide-cta-v33">Подробнее →</span>
+          </a>
+          <a class="scroll-card reveal-card" href="#">
+            <span class="tag card-tag-v45">05 · БОЙ</span>
+            <h2>Навыки</h2>
+            <p>Боевые комплексы и отдельные навыки: эффекты, типы урона, усиления, ослабления, условия применения и полезные особенности в бою.</p>
+            <span class="arrow guide-cta-v33">Подробнее →</span>
+          </a>
+          <a class="scroll-card reveal-card" href="game-content.html" target="_blank" rel="noopener">
+            <span class="tag card-tag-v45">06 · АКТИВНОСТИ</span>
+            <h2>Игровой Контент</h2>
+            <p>Игровые активности и события: Жаровни, Боевой Пропуск, награды, условия участия и новые разделы контента по мере их добавления.</p>
+            <span class="arrow guide-cta-v33">Подробнее →</span>
+          </a>
+          <a class="scroll-card reveal-card" href="other.html" target="_blank" rel="noopener">
+            <span class="tag card-tag-v45">07 · ДОПОЛНИТЕЛЬНО</span>
+            <h2>Остальное</h2>
+            <p>Дополнительные материалы, полезные ссылки, справочные разделы и будущий контент, который не относится к основным категориям руководства.</p>
+            <span class="arrow guide-cta-v33">Подробнее →</span>
+          </a>
+        </section>
+
+        <section class="utility-hub reveal reveal-utility" aria-label="Быстрый доступ">
+          <button class="utility-card community-card" id="community-open" type="button">
+            <span class="utility-symbol">✦</span>
+            <span class="utility-copy">
+              <small>БЫСТРЫЙ ДОСТУП</small>
+              <strong>Сообщества</strong>
+              <span>Discord, игровой чат и ВК</span>
+            </span>
+            <span class="utility-arrow">↗</span>
+          </button>
+
+          <a class="utility-card donation-card" href="https://www.donationalerts.com/r/age_of_wushu_tp" target="_blank" rel="noreferrer">
+            <span class="utility-copy">
+              <small>ПОДДЕРЖАТЬ РУКОВОДСТВО</small>
+              <strong>Сказать спасибо</strong>
+              <span>Поддержать развитие проекта</span>
+            </span>
+            <span class="donation-qr"><img src="assets/thanks-qr-donationalerts-v0044.png" alt="QR-код DonationAlerts"></span>
+          </a>
+        </section>
+      </div>
+    </section>
+
+    <div class="community-modal" id="community-modal" hidden>
+      <div class="community-dialog" role="dialog" aria-modal="true" aria-labelledby="community-title">
+        <button class="community-close" id="community-close" type="button" aria-label="Закрыть">×</button>
+        <span class="tag">СООБЩЕСТВА ПРОЕКТА</span>
+        <h2 id="community-title">Быстрый доступ</h2>
+        <p>Выберите нужное сообщество.</p>
+
+        <div class="community-links">
+          <a href="https://discord.gg/REx7ybZrtf" target="_blank" rel="noreferrer">
+            <b>Сообщество Discord</b>
+            <span>Общий чат, информация и предложения</span>
+          </a>
+          <a href="https://discord.gg/" target="_blank" rel="noreferrer">
+            <b>Сообщество ДУБУ Приват</b>
+            <span>Discord игроков приватного сервера ДУБУ</span>
+          </a>
+          <a href="https://discord.gg/AcQXyRpSm" target="_blank" rel="noreferrer">
+            <b>Сообщество Китай Приват</b>
+            <span>Discord игроков китайского приватного сервера</span>
+          </a>
+          <a href="https://vk.ru/ageofwulinru" target="_blank" rel="noreferrer">
+            <b>Сообщество ВК</b>
+            <span>Новости и публикации проекта</span>
+          </a>
+        </div>
+        <p class="community-help-v68">Не работает ссылка? Свяжись с нами.</p>
       </div>
     </div>
+  </main>
 
-    <script>
-      (()=>{
-        const modal=document.getElementById('development-modal');
-        const text=document.getElementById('development-modal-text');
-        const close=document.getElementById('development-modal-close');
-        let opener=null;
-        const openModal=(el)=>{
-          opener=el;
-          text.textContent=`Раздел «${el.dataset.developmentSection}» пока находится в разработке.`;
-          modal.hidden=false;
-          close.focus();
-        };
-        const closeModal=()=>{
-          modal.hidden=true;
-          opener?.focus();
-        };
-        document.querySelectorAll('[data-development-section]').forEach(el=>{
-          el.addEventListener('click',()=>openModal(el));
-          el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openModal(el)}});
+  <footer class="site-footer-v44"><div class="footer-inner-v44"><span class="footer-title-v46">Руководство 9 Инь 2026</span></div></footer>
+
+  <script>
+    (() => {
+      const modal = document.getElementById('community-modal');
+      const open = document.getElementById('community-open');
+      const close = document.getElementById('community-close');
+      modal.hidden = true;
+      const show = () => { modal.hidden = false; close.focus(); };
+      const hide = () => { modal.hidden = true; open.focus(); };
+      open.addEventListener('click', show);
+      close.addEventListener('click', hide);
+      modal.addEventListener('click', (event) => { if (event.target === modal) hide(); });
+      document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !modal.hidden) hide(); });
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const revealItems = document.querySelectorAll('.reveal, .reveal-card');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
         });
-        close.addEventListener('click',closeModal);
-        modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
-        document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)closeModal()});
-      })();
-    </script>
-    <script src="script.js?v=0.0.30" defer></script>
-    <script src="anti-copy.js?v=0.0.30" defer></script>
-  </body>
+      }, { threshold: 0.12 });
+      revealItems.forEach((el, index) => {
+        if (el.classList.contains('reveal-card')) el.style.setProperty('--reveal-delay', `${(index % 6) * 80}ms`);
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const ashLayer = document.querySelector('.ash-layer-v26');
+      const emberLayer = document.querySelector('.ember-layer-v26');
+      if (!ashLayer || !emberLayer) return;
+
+      const rnd = (min, max) => Math.random() * (max - min) + min;
+
+      for (let i = 0; i < 26; i++) {
+        const p = document.createElement('i');
+        p.className = 'ash-particle-v26';
+        p.style.left = `${rnd(0, 100)}%`;
+        p.style.setProperty('--size', `${rnd(2.5, 5.5)}px`);
+        p.style.setProperty('--drift', `${rnd(-110, 110)}px`);
+        p.style.setProperty('--duration', `${rnd(16, 28)}s`);
+        p.style.setProperty('--delay', `${rnd(-30, 0)}s`);
+        p.style.setProperty('--opacity', rnd(.16, .34).toFixed(2));
+        ashLayer.appendChild(p);
+      }
+
+      for (let i = 0; i < 7; i++) {
+        const e = document.createElement('i');
+        e.className = 'ember-particle-v26';
+        e.style.left = `${rnd(4, 96)}%`;
+        e.style.setProperty('--size', `${rnd(2.2, 4.4)}px`);
+        e.style.setProperty('--drift', `${rnd(-70, 70)}px`);
+        e.style.setProperty('--duration', `${rnd(14, 24)}s`);
+        e.style.setProperty('--delay', `${rnd(-24, 0)}s`);
+        emberLayer.appendChild(e);
+      }
+
+      const leafLayer = document.querySelector('.leaf-layer-v39');
+      if (leafLayer) {
+        for (let i = 0; i < 7; i++) {
+          const leaf = document.createElement('i');
+          leaf.className = 'leaf-particle-v39';
+          leaf.style.left = `${rnd(-4, 104)}%`;
+          leaf.style.setProperty('--leaf-size', `${rnd(7, 12)}px`);
+          leaf.style.setProperty('--leaf-drift', `${rnd(-150, 150)}px`);
+          leaf.style.setProperty('--leaf-duration', `${rnd(24, 38)}s`);
+          leaf.style.setProperty('--leaf-delay', `${rnd(-36, 0)}s`);
+          leafLayer.appendChild(leaf);
+        }
+      }
+    })();
+  </script>
+</body>
 </html>

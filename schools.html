@@ -1,92 +1,131 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Школы, фракции и секты мира Легенды Кунг-Фу." name="description"/>
-<title>Школы, Фракции, Секты — Легенды Кунг-Фу</title>
-<link href="favicon.ico?v=16" rel="icon" sizes="any"/>
-<link href="assets/site-icon.webp?v=16" rel="icon" type="image/png"/>
-<link href="assets/site-icon.webp?v=8" rel="apple-touch-icon"/>
-<link href="styles.css?v=0.0.33" rel="stylesheet"/>
-<link href="community-auth.css?v=0.0.30" rel="stylesheet"/>
-<script>document.documentElement.classList.add('nineyin-account-pending')</script>
-<script defer="" src="vendor/supabase.js?v=2.110.9"></script>
-<script defer="" src="supabase-config.js?v=0.0.30"></script>
-<script defer="" src="account.js?v=0.0.30"></script>
-<script src="i18n.js?v=0.0.33" defer></script></head>
-<body>
-<main class="site-shell inner-site-shell">
-<div aria-hidden="true" class="mist"></div>
-<div aria-hidden="true" class="golden-particles"></div>
-<div aria-hidden="true" class="cursor-aura"></div>
-<header class="topbar" id="top">
-<div class="topbar-inner">
-<a aria-label="Руководство Легенды Кунг-Фу — главная" class="topbar-logo" href="index.html">
-<span aria-hidden="true" class="topbar-logo-image"></span>
-<span aria-label="9 Инь" class="nine-yin-wordmark" role="img"></span>
-</a>
-<nav aria-label="Основная навигация" class="topnav">
-<a href="index.html">Главная</a><a href="forum/index.html">Форум</a>
-<a href="character.html">О персонаже</a>
-<a href="partnership.html">Партнёрство и связь</a>
-<a href="registration.html">Регистрация</a>
-<a href="topup.html">Пополнение</a>
-</nav>
-</div>
-</header>
-<div class="page-content collection-page-content directory-page-content schools-page-content">
-<header class="collection-page-header">
-<p class="collection-kicker">Пути развития</p>
-<h1>Школы, Фракции, Секты</h1>
-<p>Три больших направления со своими условиями вступления, особенностями и возможностями.</p>
-</header>
-<div aria-label="Школы, фракции и секты" class="development-groups">
-<section aria-labelledby="schools-title" class="development-group" id="schools-list">
-<header class="development-group-header">
-<span aria-hidden="true" class="directory-icon directory-icon-school">Ш</span>
-<span class="development-group-copy">
-<span class="card-kicker">Направление обучения</span>
-<h2 id="schools-title">Школы</h2>
-<p>Основные направления обучения, требования для вступления и доступные боевые стили.</p>
-</span>
-</header>
-<div class="development-slots"><article class="development-slot directory-image-card"><img alt="Эмей" decoding="async" loading="lazy" src="assets/directory/school-emei.webp"/><span>Эмей</span></article><article class="development-slot directory-image-card"><img alt="Лейб-Гвардия" decoding="async" loading="lazy" src="assets/directory/school-royal-guard.webp"/><span>Лейб-Гвардия</span></article><article class="development-slot directory-image-card"><img alt="Город Наказаний" decoding="async" loading="lazy" src="assets/directory/school-punishment-city.webp"/><span>Город Наказаний</span></article><article class="development-slot directory-image-card"><img alt="Блаженные" decoding="async" loading="lazy" src="assets/directory/school-blessed.webp"/><span>Блаженные</span></article><article class="development-slot directory-image-card"><img alt="Тан" decoding="async" loading="lazy" src="assets/directory/school-tang.webp"/><span>Тан</span></article><article class="development-slot directory-image-card"><img alt="Шаолинь" decoding="async" loading="lazy" src="assets/directory/school-shaolin.webp"/><span>Шаолинь</span></article><article class="development-slot directory-image-card"><img alt="Ученые" decoding="async" loading="lazy" src="assets/directory/school-scholars.webp"/><span>Ученые</span></article><article class="development-slot directory-image-card"><img alt="Минг" decoding="async" loading="lazy" src="assets/directory/school-ming.webp"/><span>Минг</span></article><article class="development-slot directory-image-card"><img alt="Куньлунь" decoding="async" loading="lazy" src="assets/directory/school-kunlun.webp"/><span>Куньлунь</span></article><article class="development-slot directory-image-card"><img alt="Удан" decoding="async" loading="lazy" src="assets/directory/school-wudang.webp"/><span>Удан</span></article><article class="development-slot directory-image-card"><img alt="Нищие" decoding="async" loading="lazy" src="assets/directory/school-beggars.webp"/><span>Нищие</span></article><article class="development-slot directory-image-card"><img alt="Тяньшань" decoding="async" loading="lazy" src="assets/directory/school-tianshan.webp"/><span>Тяньшань</span></article><article class="development-slot directory-image-card"><img alt="Святилище Шаманов" decoding="async" loading="lazy" src="assets/directory/school-shaman-sanctuary.webp"/><span>Святилище Шаманов</span></article></div>
-</section>
-<section aria-labelledby="factions-title" class="development-group" id="factions-list">
-<header class="development-group-header">
-<span aria-hidden="true" class="directory-icon directory-icon-faction">Ф</span>
-<span class="development-group-copy">
-<span class="card-kicker">Союзы мира</span>
-<h2 id="factions-title">Фракции</h2>
-<p>Особенности репутации, задания и награды за развитие отношений.</p>
-</span>
-</header>
-<div class="development-slots"><a aria-label="Открыть страницу Лазурная Стража" class="development-slot directory-image-card directory-link-card" href="azure-guard.html"><img alt="Лазурная Стража" decoding="async" loading="lazy" src="assets/azure-guard.png?v=11"/><span>Лазурная Стража</span></a><article class="development-slot directory-image-card"><img alt="Клан Безродных" decoding="async" loading="lazy" src="assets/directory/faction-rootless.webp"/><span>Клан Безродных</span></article><article class="development-slot directory-image-card"><img alt="Усадьба Зверей" decoding="async" loading="lazy" src="assets/directory/faction-beast-villa.webp"/><span>Усадьба Зверей</span></article><article class="development-slot directory-image-card"><img alt="Дворец Цветов" decoding="async" loading="lazy" src="assets/directory/faction-flower-palace.webp"/><span>Дворец Цветов</span></article><article class="development-slot directory-image-card"><img alt="Усадьба Сюй" decoding="async" loading="lazy" src="assets/directory/faction-xu-manor.webp"/><span>Усадьба Сюй</span></article><article class="development-slot directory-image-card"><img alt="Остров Персиков" decoding="async" loading="lazy" src="assets/directory/faction-peach-island.webp"/><span>Остров Персиков</span></article><article class="development-slot directory-image-card"><img alt="Семья Шень" decoding="async" loading="lazy" src="assets/directory/faction-shen-family.webp"/><span>Семья Шень</span></article><article class="development-slot directory-image-card"><img alt="Храм Небесного Колеса" decoding="async" loading="lazy" src="assets/directory/faction-heavenly-wheel.webp"/><span>Храм Небесного Колеса</span></article></div>
-</section>
-<section aria-labelledby="sects-title" class="development-group" id="sects-list">
-<header class="development-group-header">
-<span aria-hidden="true" class="directory-icon directory-icon-sect">С</span>
-<span class="development-group-copy">
-<span class="card-kicker">Особые пути</span>
-<h2 id="sects-title">Секты</h2>
-<p>Условия принятия, уникальные навыки и ограничения особых путей развития.</p>
-</span>
-</header>
-<div class="development-slots"><article class="development-slot directory-image-card"><img alt="Остров Сияющих Надежд" decoding="async" loading="lazy" src="assets/directory/sect-shining-hope.webp"/><span>Остров Сияющих Надежд</span></article><article class="development-slot directory-image-card"><img alt="Гора Хуа" decoding="async" loading="lazy" src="assets/directory/sect-mount-hua.webp?v=0.0.33"/><span>Гора Хуа</span></article><article class="development-slot directory-image-card"><img alt="Морской Дворец Тианья" decoding="async" loading="lazy" src="assets/directory/sect-tianya-sea-palace.webp?v=0.0.33"/><span>Морской Дворец Тианья</span></article><article class="development-slot directory-image-card"><img alt="Дамба Няньло" decoding="async" loading="lazy" src="assets/directory/sect-nianluo-dam.webp?v=0.0.33"/><span>Дамба Няньло</span></article><article class="development-slot directory-image-card"><img alt="Древняя Гробница" decoding="async" loading="lazy" src="assets/directory/sect-ancient-tomb.webp?v=0.0.33"/><span>Древняя Гробница</span></article><article class="development-slot directory-image-card"><img alt="Пять Бессмертных" decoding="async" loading="lazy" src="assets/directory/sect-five-immortals.webp?v=0.0.33"/><span>Пять Бессмертных</span></article><article class="development-slot directory-image-card"><img alt="Дворец Святой Воды" decoding="async" loading="lazy" src="assets/directory/sect-holy-water-palace.webp?v=0.0.33"/><span>Дворец Святой Воды</span></article><article class="development-slot directory-image-card"><img alt="Лагерь Шеньчжи" decoding="async" loading="lazy" src="assets/directory/sect-shenzhi-camp.webp?v=0.0.33"/><span>Лагерь Шеньчжи</span></article><article class="development-slot directory-image-card"><img alt="Павильон Звездного Неба" decoding="async" loading="lazy" src="assets/directory/sect-starry-sky-pavilion.webp?v=0.0.33"/><span>Павильон Звездного Неба</span></article><article class="development-slot directory-image-card"><img alt="Конвой Чан Фэн" decoding="async" loading="lazy" src="assets/directory/sect-chang-feng-escort.webp?v=0.0.33"/><span>Конвой Чан Фэн</span></article><article class="development-slot directory-image-card"><img alt="Секта Дхармы" decoding="async" loading="lazy" src="assets/directory/sect-dharma.webp?v=0.0.33"/><span>Секта Дхармы</span></article><article class="development-slot directory-image-card"><img alt="Мастерская Радости" decoding="async" loading="lazy" src="assets/directory/sect-joy-workshop.webp?v=0.0.33"/><span>Мастерская Радости</span></article><article class="development-slot directory-image-card"><img alt="Кровавая Сабля" decoding="async" loading="lazy" src="assets/directory/sect-blood-saber.webp?v=0.0.33"/><span>Кровавая Сабля</span></article></div>
-</section>
-</div>
-</div>
-<footer class="site-footer">
-<div class="footer-inner">
-<span aria-hidden="true" class="footer-ornament"></span>
-<p>Руководство Легенды Кунг-Фу 2026</p>
-<span aria-hidden="true" class="footer-ornament"></span>
-</div>
-</footer>
+  <script>document.documentElement.classList.add('auth-pending')</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/site-icon.webp">
+  <link rel="stylesheet" href="styles.css">
+  <title>Школы, секты, фракции — Руководство 9 Инь</title>
+</head>
+<body class="wuxia-site-v5 wuxia-site-v6 wuxia-site-v34 wuxia-site-v39 wuxia-site-v40 wuxia-site-v41 wuxia-site-v42 wuxia-site-v43 wuxia-site-v44 wuxia-site-v45 wuxia-site-v54 wuxia-site-v62">
+  <div class="mist-layer-v26" aria-hidden="true"></div>
+  <div class="ash-layer-v26" aria-hidden="true"></div>
+  <div class="ember-layer-v26" aria-hidden="true"></div>
+  <div class="leaf-layer-v39" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Руководство 9 Инь">
+        <span class="round-brand-icon v40-brand-image" aria-hidden="true"><img src="assets/site-icon.webp" alt=""></span>
+        <span class="brand-copy">
+          <strong>Руководство 9 Инь</strong>
+          <small>БАЗА ГАЙДОВ И СПРАВОЧНЫХ МАТЕРИАЛОВ</small>
+        </span>
+      </a>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="taiwan.html">Тайвань</a>
+        <a href="pirate.html">Пиратка</a>
+        <a href="game-content.html">Игровой контент</a>
+        <a href="users.html">Пользователи</a>
+        <a href="profile.html">Личный кабинет</a>
+      </nav>
+    </div>
+  </header>
+
+
+<main class="world-directory-v54 world-directory-v55 subpage-shell-v62">
+  <header class="subpage-hero-v62 world-head-v54 world-head-v55 reveal">
+    <div class="subpage-hero-inner-v62">
+      <p class="subpage-hero-kicker-v62">МИР 9 ИНЬ</p>
+      <h1 class="subpage-hero-title-v62">Школы, секты, фракции</h1>
+      <p class="subpage-hero-text-v62">Собрание школ, сект и фракций мира 9 Инь с кратким обзором направлений, чтобы было проще выбрать путь развития и познакомиться с особенностями каждого объединения.</p>
+    </div>
+  </header>
+  <section class="world-group-v54 world-group-v55 reveal"><h2>Школы</h2><div class="world-grid-v54"><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/school-emei.webp" alt="Эмей" loading="lazy"><span>Эмей</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/school-royal-guard.webp" alt="Лейб-Гвардия" loading="lazy"><span>Лейб-Гвардия</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/school-punishment-city.webp" alt="Город Наказаний" loading="lazy"><span>Город Наказаний</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/school-blessed.webp" alt="Блаженные" loading="lazy"><span>Блаженные</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/school-tang.webp" alt="Тан" loading="lazy"><span>Тан</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/school-shaolin.webp" alt="Шаолинь" loading="lazy"><span>Шаолинь</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/school-scholars.webp" alt="Ученые" loading="lazy"><span>Ученые</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/school-ming.webp" alt="Минг" loading="lazy"><span>Минг</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/school-kunlun.webp" alt="Куньлунь" loading="lazy"><span>Куньлунь</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/school-wudang.webp" alt="Удан" loading="lazy"><span>Удан</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/school-beggars.webp" alt="Нищие" loading="lazy"><span>Нищие</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/school-tianshan.webp" alt="Тяньшань" loading="lazy"><span>Тяньшань</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/school-shaman-sanctuary.webp" alt="Святилище Шаманов" loading="lazy"><span>Святилище Шаманов</span></article></div></section>
+  <section class="world-group-v54 world-group-v55 reveal"><h2>Фракции</h2><div class="world-grid-v54"><a class="world-card-v54" href="azure-guard.html" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/azure-guard.png" alt="Лазурная Стража" loading="lazy"><span>Лазурная Стража</span><b>Подробнее →</b></a><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/faction-rootless.webp" alt="Клан Безродных" loading="lazy"><span>Клан Безродных</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/faction-beast-villa.webp" alt="Усадьба Зверей" loading="lazy"><span>Усадьба Зверей</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/faction-flower-palace.webp" alt="Дворец Цветов" loading="lazy"><span>Дворец Цветов</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/faction-xu-manor.webp" alt="Усадьба Сюй" loading="lazy"><span>Усадьба Сюй</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/faction-peach-island.webp" alt="Остров Персиков" loading="lazy"><span>Остров Персиков</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/faction-shen-family.webp" alt="Семья Шень" loading="lazy"><span>Семья Шень</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/faction-heavenly-wheel.webp" alt="Храм Небесного Колеса" loading="lazy"><span>Храм Небесного Колеса</span></article></div></section>
+  <section class="world-group-v54 world-group-v55 reveal"><h2>Секты</h2><div class="world-grid-v54"><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/sect-shining-hope.webp" alt="Остров Сияющих Надежд" loading="lazy"><span>Остров Сияющих Надежд</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/sect-mount-hua.webp" alt="Гора Хуа" loading="lazy"><span>Гора Хуа</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/sect-tianya-sea-palace.webp" alt="Морской Дворец Тианья" loading="lazy"><span>Морской Дворец Тианья</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/sect-nianluo-dam.webp" alt="Дамба Няньло" loading="lazy"><span>Дамба Няньло</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/sect-ancient-tomb.webp" alt="Древняя Гробница" loading="lazy"><span>Древняя Гробница</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/sect-five-immortals.webp" alt="Пять Бессмертных" loading="lazy"><span>Пять Бессмертных</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/sect-holy-water-palace.webp" alt="Дворец Святой Воды" loading="lazy"><span>Дворец Святой Воды</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/sect-shenzhi-camp.webp" alt="Лагерь Шеньчжи" loading="lazy"><span>Лагерь Шеньчжи</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/sect-starry-sky-pavilion.webp" alt="Павильон Звездного Неба" loading="lazy"><span>Павильон Звездного Неба</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/sect-chang-feng-escort.webp" alt="Конвой Чан Фэн" loading="lazy"><span>Конвой Чан Фэн</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/sect-dharma.webp" alt="Секта Дхармы" loading="lazy"><span>Секта Дхармы</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/sect-joy-workshop.webp" alt="Мастерская Радости" loading="lazy"><span>Мастерская Радости</span></article><article class="world-card-v54"><img src="https://raw.githubusercontent.com/llsoyeonll/kung-fu-guide/main/assets/directory/sect-blood-saber.webp" alt="Кровавая Сабля" loading="lazy"><span>Кровавая Сабля</span></article></div></section>
 </main>
-<script defer="" src="script.js?v=0.0.33"></script>
-<script defer="" src="anti-copy.js?v=0.0.33"></script>
+
+
+  <footer class="site-footer-v44">
+    <div class="footer-inner-v44">
+      <span class="footer-title-v46">Руководство 9 Инь 2026</span>
+    </div>
+  </footer>
+
+
+  <script>
+    (() => {
+      const revealItems = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach((el, index) => {
+        el.style.setProperty('--reveal-delay', `${index * 90}ms`);
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+
+  <script>
+    (() => {
+      const ashLayer = document.querySelector('.ash-layer-v26');
+      const emberLayer = document.querySelector('.ember-layer-v26');
+      const leafLayer = document.querySelector('.leaf-layer-v39');
+      const rnd = (min, max) => Math.random() * (max - min) + min;
+
+      if (ashLayer) {
+        for (let i = 0; i < 18; i++) {
+          const p = document.createElement('i');
+          p.className = 'ash-particle-v26';
+          p.style.left = `${rnd(0, 100)}%`;
+          p.style.setProperty('--size', `${rnd(2.5, 5)}px`);
+          p.style.setProperty('--drift', `${rnd(-100, 100)}px`);
+          p.style.setProperty('--duration', `${rnd(18, 30)}s`);
+          p.style.setProperty('--delay', `${rnd(-30, 0)}s`);
+          p.style.setProperty('--opacity', rnd(.12, .28).toFixed(2));
+          ashLayer.appendChild(p);
+        }
+      }
+
+      if (emberLayer) {
+        for (let i = 0; i < 5; i++) {
+          const e = document.createElement('i');
+          e.className = 'ember-particle-v26';
+          e.style.left = `${rnd(4, 96)}%`;
+          e.style.setProperty('--size', `${rnd(2, 4)}px`);
+          e.style.setProperty('--drift', `${rnd(-60, 60)}px`);
+          e.style.setProperty('--duration', `${rnd(16, 26)}s`);
+          e.style.setProperty('--delay', `${rnd(-24, 0)}s`);
+          emberLayer.appendChild(e);
+        }
+      }
+
+      if (leafLayer) {
+        for (let i = 0; i < 5; i++) {
+          const leaf = document.createElement('i');
+          leaf.className = 'leaf-particle-v39';
+          leaf.style.left = `${rnd(-4, 104)}%`;
+          leaf.style.setProperty('--leaf-size', `${rnd(7, 11)}px`);
+          leaf.style.setProperty('--leaf-drift', `${rnd(-130, 130)}px`);
+          leaf.style.setProperty('--leaf-duration', `${rnd(26, 40)}s`);
+          leaf.style.setProperty('--leaf-delay', `${rnd(-36, 0)}s`);
+          leafLayer.appendChild(leaf);
+        }
+      }
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="auth-guard.js"></script>
 </body>
 </html>

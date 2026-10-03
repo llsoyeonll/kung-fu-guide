@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет — Руководство 9 Инь</title>
+  <link rel="icon" type="image/png" href="assets/site-icon.webp">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="wuxia-site-v5 wuxia-site-v39 wuxia-site-v44 wuxia-site-v69">
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="round-brand-icon v40-brand-image"><img src="assets/site-icon.webp" alt=""></span>
+        <span class="brand-copy"><strong>Руководство 9 Инь</strong><small>БАЗА ГАЙДОВ И СПРАВОЧНЫХ МАТЕРИАЛОВ</small></span>
+      </a>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="taiwan.html">Тайвань</a>
+        <a href="pirate.html">Пиратка</a>
+        <a href="game-content.html">Игровой контент</a>
+        <a href="users.html">Пользователи</a>
+        <a class="active" href="profile.html">Личный кабинет</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="community-shell-v69">
+    <section class="community-hero-v69">
+      <div>
+        <p class="tag">ПРОФИЛЬ ПОЛЬЗОВАТЕЛЯ</p>
+        <h1>Личный кабинет</h1>
+        <p>Управление аккаунтом, игровым никнеймом, сервером и личной информацией.</p>
+      </div>
+      <div class="community-hero-orb-v69"><span>帳</span></div>
+    </section>
+
+    <section class="community-auth-v69" id="profile-auth">
+      <div class="community-auth-grid-v69">
+        <form class="community-panel-v69" id="profile-login-form">
+          <p class="tag">ВХОД</p><h2>Войти в аккаунт</h2>
+          <label>Email<input name="email" type="email" required autocomplete="email"></label>
+          <label>Пароль<input name="password" type="password" required minlength="8" autocomplete="current-password"></label>
+          <button type="submit">Войти</button>
+        </form>
+        <form class="community-panel-v69" id="profile-register-form">
+          <p class="tag">РЕГИСТРАЦИЯ</p><h2>Создать аккаунт</h2>
+          <label>Email<input name="email" type="email" required autocomplete="email"></label>
+          <label>Пароль<input name="password" type="password" required minlength="8"></label>
+          <label>Повторите пароль<input name="password2" type="password" required minlength="8"></label>
+          <button type="submit">Зарегистрироваться</button>
+        </form>
+      </div>
+      <p class="community-message-v69" id="profile-auth-message"></p>
+      
+    </section>
+
+    <section class="community-profile-grid-v69 community-profile-single-v70" id="profile-editor" hidden>
+      <form class="community-panel-v69" id="profile-form">
+        <p class="tag">МОЙ ПРОФИЛЬ</p>
+        <h2>Данные аккаунта</h2>
+        <label>Email<input id="profile-email" type="email" readonly></label>
+        <small class="community-private-v69">Почта видна только владельцу аккаунта.</small>
+        <label>Игровой никнейм<input id="profile-nickname" name="game_nickname" type="text" maxlength="60" required placeholder="Например: Soyeon"></label>
+        <fieldset class="community-server-field-v71">
+          <legend>Серверы</legend>
+          <p>Можно выбрать несколько серверов.</p>
+          <div class="community-server-options-v71">
+            <label><input type="checkbox" name="servers" value="taiwan"> Тайвань</label>
+            <label><input type="checkbox" name="servers" value="pirate"> Пиратка</label>
+            <label><input type="checkbox" name="servers" value="private-dubu"> Приват Дубу</label>
+            <label><input type="checkbox" name="servers" value="china"> Китай</label>
+          </div>
+        </fieldset>
+        <label>О себе<textarea id="profile-about" name="about" maxlength="1000" placeholder="Эта информация видна только вам."></textarea></label>
+        <small class="community-private-v69">Раздел «О себе» является личным и другим пользователям не показывается.</small>
+        <div class="community-actions-v69"><button type="submit">Сохранить</button><button id="profile-logout" type="button" class="secondary">Выйти</button></div>
+        <p class="community-message-v69" id="profile-save-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer-v44"><div class="footer-inner-v44"><span class="footer-title-v46">Руководство 9 Инь 2026</span></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="community-profile.js"></script>
+  <script>window.NineYinCommunityProfile.initProfilePage();</script>
+</body>
+</html>

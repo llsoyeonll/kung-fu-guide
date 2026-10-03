@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <script>document.documentElement.classList.add('auth-pending')</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пользователи — Руководство 9 Инь</title>
+  <link rel="icon" type="image/png" href="assets/site-icon.webp">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="wuxia-site-v5 wuxia-site-v39 wuxia-site-v44 wuxia-site-v69">
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="round-brand-icon v40-brand-image"><img src="assets/site-icon.webp" alt=""></span>
+        <span class="brand-copy"><strong>Руководство 9 Инь</strong><small>БАЗА ГАЙДОВ И СПРАВОЧНЫХ МАТЕРИАЛОВ</small></span>
+      </a>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="taiwan.html">Тайвань</a>
+        <a href="pirate.html">Пиратка</a>
+        <a href="game-content.html">Игровой контент</a>
+        <a class="active" href="users.html">Пользователи</a>
+        <a href="profile.html">Личный кабинет</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="community-shell-v69">
+    <section class="community-hero-v69">
+      <div>
+        <p class="tag">СООБЩЕСТВО</p>
+        <h1>Пользователи</h1>
+        <p>Список игроков сообщества Руководства 9 Инь.</p>
+      </div>
+      <div class="community-hero-orb-v69"><span>人</span></div>
+    </section>
+
+    <section class="community-users-section-v69">
+      <div class="community-users-head-v69"><div><p class="tag">ИГРОКИ РУКОВОДСТВА</p><h2>Список пользователей</h2></div><p>5 карточек в строку · 3 ряда на страницу</p></div>
+      <div class="community-users-grid-v69" id="users-grid"><div class="community-empty-v69">Загрузка пользователей…</div></div>
+      <div class="community-pagination-v69"><button id="users-prev" type="button" aria-label="Предыдущая страница">←</button><span id="users-counter">—</span><button id="users-next" type="button" aria-label="Следующая страница">→</button></div>
+    </section>
+  </main>
+
+  <footer class="site-footer-v44"><div class="footer-inner-v44"><span class="footer-title-v46">Руководство 9 Инь 2026</span></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="community-profile.js"></script>
+  <script>window.NineYinCommunityProfile.initUsersPage();</script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="auth-guard.js"></script>
+</body>
+</html>
