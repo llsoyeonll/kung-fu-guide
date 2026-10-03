@@ -7,29 +7,34 @@ echo  Nine Yin server rebuild - build tools
 echo =========================================
 echo.
 
-echo [1/5] Tests
+echo [1/6] Restore module checksums
+go mod tidy
+if errorlevel 1 goto :error
+
+echo.
+echo [2/6] Tests
 go test ./...
 if errorlevel 1 goto :error
 
 if not exist build mkdir build
 
 echo.
-echo [2/5] Capture proxy
+echo [3/6] Capture proxy
 go build -trimpath -o build\9yin-protocol-proxy.exe .\cmd\protocol-probe
 if errorlevel 1 goto :error
 
 echo.
-echo [3/5] Capture inspector
+echo [4/6] Capture inspector
 go build -trimpath -o build\9yin-capture-inspect.exe .\cmd\capture-inspect
 if errorlevel 1 goto :error
 
 echo.
-echo [4/5] Frame scanner
+echo [5/6] Frame scanner
 go build -trimpath -o build\9yin-frame-scan.exe .\cmd\frame-scan
 if errorlevel 1 goto :error
 
 echo.
-echo [5/5] Database compatibility checker
+echo [6/6] Database compatibility checker
 go build -trimpath -o build\9yin-db-check.exe .\cmd\db-check
 if errorlevel 1 goto :error
 
