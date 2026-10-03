@@ -6942,3 +6942,230 @@ body.home-restore-v85 .hero-seal{
   body.home-restore-v85 .hero-v4 .hero-art{inset:0 !important;opacity:.34 !important}
   body.home-restore-v85 .hero-seal{display:none !important}
 }
+
+
+/* ===== v86: homepage restored from supplied v72 build ===== */
+body.home-restore-v85{
+  background-color:#06151b !important;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(3,14,19,.30) 0%,
+      rgba(3,14,19,.38) 40%,
+      rgba(3,14,19,.48) 72%,
+      rgba(3,14,19,.58) 100%
+    ),
+    url('assets/site-bg-v25-v72.webp') !important;
+  background-size:cover !important;
+  background-position:center top !important;
+  background-repeat:no-repeat !important;
+  background-attachment:fixed !important;
+  animation:none !important;
+}
+
+body.home-restore-v85::before,
+body.home-restore-v85::after,
+body.home-restore-v85 .shell::before,
+body.home-restore-v85 .shell::after{
+  content:none !important;
+  display:none !important;
+}
+
+body.home-restore-v85 .shell{
+  width:min(1180px,calc(100% - 40px)) !important;
+  margin:auto !important;
+  padding:40px 0 58px !important;
+  background:transparent !important;
+}
+
+body.home-restore-v85 .hero-v4{
+  position:relative !important;
+  min-height:360px !important;
+  display:flex !important;
+  align-items:center !important;
+  padding:48px 54px !important;
+  overflow:hidden !important;
+  border:1px solid rgba(216,173,86,.28) !important;
+  background:#061820 !important;
+  box-shadow:
+    0 26px 64px rgba(0,0,0,.30),
+    0 0 0 1px rgba(216,173,86,.02) !important;
+}
+
+body.home-restore-v85 .hero-v4::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:14px !important;
+  z-index:4 !important;
+  pointer-events:none !important;
+  border:1px solid rgba(216,173,86,.10) !important;
+}
+
+body.home-restore-v85 .hero-v4::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+  background:
+    linear-gradient(90deg,rgba(2,15,21,.98) 0%,rgba(2,15,21,.92) 36%,rgba(2,15,21,.42) 62%,rgba(2,15,21,.15) 100%),
+    linear-gradient(0deg,rgba(2,15,21,.42),transparent 42%) !important;
+}
+
+body.home-restore-v85 .hero-v4 .hero-art{
+  position:absolute !important;
+  inset:0 0 0 34% !important;
+  z-index:0 !important;
+  display:block !important;
+  background:url('assets/hero-wuxia-v72.webp') center right/cover no-repeat !important;
+  opacity:.92 !important;
+  animation:none !important;
+  transform:none !important;
+}
+
+body.home-restore-v85 .hero-v4 .hero-shade{
+  position:absolute !important;
+  inset:0 !important;
+  z-index:2 !important;
+  pointer-events:none !important;
+  background:
+    radial-gradient(circle at 84% 28%,rgba(216,173,86,.10),transparent 18rem),
+    linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.20)) !important;
+}
+
+body.home-restore-v85 .hero-v4 .hero-copy{
+  position:relative !important;
+  z-index:5 !important;
+  width:min(62%,690px) !important;
+  max-width:690px !important;
+}
+
+body.home-restore-v85 .hero-title-v41{
+  display:block !important;
+  margin:8px 0 18px !important;
+  font-family:Georgia,"Times New Roman",serif !important;
+  font-size:clamp(4rem,7.4vw,6.7rem) !important;
+  line-height:.84 !important;
+  font-weight:500 !important;
+  letter-spacing:-.035em !important;
+  text-shadow:0 4px 22px rgba(0,0,0,.28) !important;
+}
+
+body.home-restore-v85 .hero-title-main-v41,
+body.home-restore-v85 .hero-title-accent-v45{
+  display:block !important;
+  position:static !important;
+  top:auto !important;
+  transform:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  font:inherit !important;
+  line-height:.84 !important;
+}
+
+body.home-restore-v85 .hero-title-main-v41{
+  color:#f3efea !important;
+}
+
+body.home-restore-v85 .hero-title-accent-v45{
+  margin-top:.04em !important;
+  color:#e8c773 !important;
+  white-space:nowrap !important;
+}
+
+body.home-restore-v85 .hero-title-main-v41::after{
+  content:none !important;
+}
+
+body.home-restore-v85 .hero-v4 .hero-copy>p{
+  max-width:570px !important;
+  margin:0 !important;
+  color:#9cb3b3 !important;
+  font-size:.96rem !important;
+  line-height:1.62 !important;
+}
+
+body.home-restore-v85 .hero-seal{
+  right:6.5% !important;
+  width:144px !important;
+  height:144px !important;
+}
+
+body.home-restore-v85 .guide-zone-v21{
+  background:transparent !important;
+  border:none !important;
+  overflow:visible !important;
+}
+
+body.home-restore-v85 .guide-zone-backdrop{
+  display:none !important;
+}
+
+body.home-restore-v85 .guide-zone-v21 .scroll-card,
+body.home-restore-v85 .guide-zone-v21 .utility-card{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.014),rgba(255,255,255,0) 28%),
+    linear-gradient(145deg,rgba(6,24,31,.88),rgba(4,19,25,.92)) !important;
+  border-color:rgba(216,173,86,.22) !important;
+  backdrop-filter:blur(5px) !important;
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.14),
+    inset 0 0 0 1px rgba(255,255,255,.01) !important;
+}
+
+body.home-restore-v85 .scroll-card{
+  min-height:185px !important;
+  padding:24px 27px !important;
+}
+
+body.home-restore-v85 .scroll-card h2{
+  margin:10px 0 10px !important;
+  font-size:1.28rem !important;
+  font-weight:500 !important;
+  color:#f0ddaa !important;
+  line-height:1.12 !important;
+}
+
+body.home-restore-v85 .scroll-card p{
+  max-width:520px !important;
+  color:#83a1a2 !important;
+  line-height:1.45 !important;
+  font-size:.86rem !important;
+}
+
+body.home-restore-v85 .scroll-card .arrow{
+  left:27px !important;
+  bottom:22px !important;
+}
+
+body.home-restore-v85 .header{
+  background:rgba(3,14,19,.90) !important;
+  backdrop-filter:blur(10px) !important;
+}
+
+@media(max-width:780px){
+  body.home-restore-v85{
+    background-attachment:scroll !important;
+  }
+  body.home-restore-v85 .shell{
+    width:min(100% - 24px,1180px) !important;
+    padding:28px 0 48px !important;
+  }
+  body.home-restore-v85 .hero-v4{
+    min-height:320px !important;
+    padding:36px 27px !important;
+  }
+  body.home-restore-v85 .hero-v4 .hero-copy{
+    width:100% !important;
+  }
+  body.home-restore-v85 .hero-v4 .hero-art{
+    inset:0 !important;
+    opacity:.34 !important;
+  }
+  body.home-restore-v85 .hero-seal{
+    display:none !important;
+  }
+  body.home-restore-v85 .hero-title-v41{
+    font-size:4rem !important;
+  }
+}
