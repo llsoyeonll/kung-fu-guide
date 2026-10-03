@@ -6642,3 +6642,188 @@ body.wuxia-site-v34{
 
 /* v73 auth gate */
 html.auth-pending body{visibility:hidden!important;}
+
+/* ===== v79 visual restore: dark page + contained hero ===== */
+
+/* The site itself is dark. Large scenery must never be used as a page background. */
+html, body{
+  background:#03131a !important;
+}
+body.wuxia-site-v5,
+body[class*="wuxia-site"]{
+  background:
+    radial-gradient(circle at 15% 18%, rgba(12,63,82,.12), transparent 28%),
+    radial-gradient(circle at 78% 22%, rgba(15,70,82,.08), transparent 24%),
+    linear-gradient(180deg,#021117 0%,#02131b 32%,#041722 100%) !important;
+  background-image:
+    radial-gradient(circle at 15% 18%, rgba(12,63,82,.12), transparent 28%),
+    radial-gradient(circle at 78% 22%, rgba(15,70,82,.08), transparent 24%),
+    linear-gradient(180deg,#021117 0%,#02131b 32%,#041722 100%) !important;
+  background-attachment:scroll !important;
+}
+body.wuxia-site-v5::before,
+body.wuxia-site-v5::after,
+body[class*="wuxia-site"]::before,
+body[class*="wuxia-site"]::after,
+.shell::before,
+.shell::after{
+  content:none !important;
+  display:none !important;
+}
+
+/* Header from the clean version. */
+.header{
+  background:rgba(2,16,22,.94) !important;
+  border-bottom:1px solid rgba(190,152,86,.18) !important;
+  box-shadow:none !important;
+}
+.header-inner{
+  width:min(1320px,calc(100% - 40px)) !important;
+  min-height:auto !important;
+  padding:14px 0 !important;
+}
+.brand-copy strong{
+  color:#e6d2a0 !important;
+}
+.brand-copy small{
+  color:#8fa8af !important;
+}
+
+/* Main "Руководство 9 Инь" card: scenery only inside the card. */
+.wuxia-site-v5 .shell{
+  width:min(1320px,calc(100% - 40px)) !important;
+  margin:28px auto 56px !important;
+  padding:0 !important;
+  background:transparent !important;
+}
+.wuxia-site-v5 .hero-v4{
+  position:relative !important;
+  min-height:330px !important;
+  padding:42px !important;
+  display:flex !important;
+  align-items:center !important;
+  overflow:hidden !important;
+  border:1px solid rgba(191,154,92,.28) !important;
+  background:linear-gradient(90deg,rgba(4,29,39,.98),rgba(3,21,31,.96)) !important;
+  box-shadow:0 18px 40px rgba(0,0,0,.35) !important;
+}
+.wuxia-site-v5 .hero-v4::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:16px !important;
+  z-index:4 !important;
+  border:1px solid rgba(191,154,92,.15) !important;
+  box-shadow:none !important;
+  animation:none !important;
+  pointer-events:none !important;
+}
+.wuxia-site-v5 .hero-v4::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+  background:
+    linear-gradient(90deg,rgba(2,15,21,.99) 0%,rgba(2,15,21,.94) 42%,rgba(2,15,21,.56) 68%,rgba(2,15,21,.22) 100%),
+    linear-gradient(0deg,rgba(2,15,21,.36),transparent 48%) !important;
+}
+.wuxia-site-v5 .hero-v4 .hero-art{
+  position:absolute !important;
+  inset:0 0 0 42% !important;
+  z-index:0 !important;
+  display:block !important;
+  background:url('assets/kung-fu-background.webp') center right/cover no-repeat !important;
+  opacity:.52 !important;
+  animation:none !important;
+  transform:none !important;
+}
+.wuxia-site-v5 .hero-v4 .hero-shade{
+  position:absolute !important;
+  inset:0 !important;
+  z-index:2 !important;
+  background:radial-gradient(circle at 84% 28%,rgba(216,173,86,.08),transparent 18rem) !important;
+}
+.wuxia-site-v5 .hero-v4 .hero-shade::after{
+  content:none !important;
+  display:none !important;
+}
+.wuxia-site-v5 .hero-v4 .hero-copy{
+  position:relative !important;
+  z-index:5 !important;
+  width:min(68%,760px) !important;
+  max-width:760px !important;
+}
+.wuxia-site-v5 .hero-title-v41{
+  display:block !important;
+  margin:8px 0 18px !important;
+  max-width:760px !important;
+  font-family:Georgia,"Times New Roman",serif !important;
+  font-size:clamp(3.8rem,6.4vw,5.7rem) !important;
+  font-weight:500 !important;
+  line-height:.92 !important;
+  letter-spacing:-.035em !important;
+  color:#f6f1e8 !important;
+}
+.wuxia-site-v5 .hero-title-main-v41,
+.wuxia-site-v5 .hero-title-accent-v45{
+  display:inline !important;
+  position:static !important;
+  top:auto !important;
+  transform:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  font:inherit !important;
+  line-height:inherit !important;
+  color:#f6f1e8 !important;
+  white-space:normal !important;
+}
+.wuxia-site-v5 .hero-title-main-v41::after{
+  content:" " !important;
+}
+.wuxia-site-v5 .hero-v4 .hero-copy>p{
+  max-width:620px !important;
+  color:#b8c7ca !important;
+  font-size:1.05rem !important;
+  line-height:1.55 !important;
+}
+.wuxia-site-v5 .hero-seal{
+  right:7% !important;
+  width:170px !important;
+  height:170px !important;
+  animation:none !important;
+}
+
+/* Guide zone stays on the dark page, never on top of a giant illustration. */
+.wuxia-site-v5 .guide-zone-v21,
+.wuxia-site-v5 .guide-zone-content{
+  background:transparent !important;
+}
+.wuxia-site-v5 .guide-zone-backdrop{
+  display:none !important;
+}
+
+/* Don't allow old page-wide scenery rules to reappear on inner pages. */
+.page-scenery-v18,
+.page-scenery-image,
+.page-scenery-mist,
+.page-scenery-mountains,
+.page-decor-v20,
+.temple-corner-v20,
+.mountain-ridge-v20,
+.mist-v20{
+  display:none !important;
+}
+
+@media(max-width:900px){
+  .wuxia-site-v5 .hero-v4 .hero-copy{width:78% !important}
+  .wuxia-site-v5 .hero-v4 .hero-art{inset:0 0 0 28% !important;opacity:.34 !important}
+}
+@media(max-width:700px){
+  .header-inner{width:min(100% - 24px,1320px) !important}
+  .wuxia-site-v5 .shell{width:min(100% - 24px,1320px) !important}
+  .wuxia-site-v5 .hero-v4{min-height:320px !important;padding:32px 26px !important}
+  .wuxia-site-v5 .hero-v4 .hero-copy{width:100% !important}
+  .wuxia-site-v5 .hero-title-v41{font-size:clamp(2.8rem,13vw,4rem) !important}
+  .wuxia-site-v5 .hero-v4 .hero-art{inset:0 !important;opacity:.22 !important}
+  .wuxia-site-v5 .hero-seal{display:none !important}
+}
