@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Руководство 9 Инь">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="60%">
+      <stop offset="0" stop-color="#0b2b35"/>
+      <stop offset="1" stop-color="#03131a"/>
+    </radialGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f1d27e"/>
+      <stop offset=".55" stop-color="#d5a84f"/>
+      <stop offset="1" stop-color="#8e6a2b"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#bg)" stroke="#b98f45" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="23" fill="none" stroke="#7c6335" stroke-width="1" opacity=".75"/>
+  <path d="M19 24c8-7 18-6 24 0-6 1-10 4-12 8 5-2 10-1 14 3-8 1-13 5-16 10-4-5-9-8-14-9 4-3 8-5 13-5-3-3-6-5-9-7Z" fill="none" stroke="url(#g)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 19c3 1 5 3 7 6M39 17c-2 3-3 6-3 9M44 42c-4-1-8-1-11 1" fill="none" stroke="#e2bd68" stroke-width="1.5" stroke-linecap="round" opacity=".8"/>
+  <circle cx="47" cy="18" r="1.4" fill="#e8c56f"/>
+  <circle cx="17" cy="43" r="1" fill="#b98f45"/>
+</svg>
