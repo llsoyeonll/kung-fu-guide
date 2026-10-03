@@ -89,6 +89,7 @@ chunks.jsonl сохраняет границы фактических socket Rea
     go test ./...
     go build -trimpath -o build\9yin-protocol-proxy.exe .\cmd\protocol-probe
     go build -trimpath -o build\9yin-capture-inspect.exe .\cmd\capture-inspect
+    go build -trimpath -o build\9yin-frame-scan.exe .\cmd\frame-scan
 
 ## Снятие новой трассы
 
@@ -111,12 +112,19 @@ chunks.jsonl сохраняет границы фактических socket Rea
     build\9yin-capture-inspect.exe -file captures\local\<session>\c2s.bin
     build\9yin-capture-inspect.exe -file captures\local\<session>\s2c.bin
 
-Анализатор пока специально не делает вывод о формате заголовка. Он показывает:
+Первый анализатор специально не делает вывод о формате заголовка. Он показывает:
 
 - первые байты;
 - частоты байтов;
 - возможные 16/32-bit length/header integers;
 - длинные нулевые области.
+
+Дополнительно добавлен автоматический frame scanner:
+
+    build\9yin-frame-scan.exe -file captures\local\<session>\c2s.bin
+    build\9yin-frame-scan.exe -file captures\local\<session>\s2c.bin
+
+Он перебирает offset length-поля, uint16/uint32, little/big endian, варианты включения header в длину и размер header, а затем ранжирует гипотезы по полноте разбиения TCP-потока. Это диагностические гипотезы, а не утверждение о формате FxNet2.
 
 ## Следующий этап
 
