@@ -141,3 +141,82 @@ chunks.jsonl сохраняет границы фактических socket Rea
 9. постепенно заменяем старый EXE собственным сервером.
 
 Старый сервер до завершения этого этапа не удалять и не заменять.
+
+
+## Проверка существующей MySQL
+
+Новый код уже знает точные core-таблицы из сохранённого nineyin_schema.sql:
+
+    accounts
+    roles
+    role_locations
+
+Проверка ничего не меняет в базе. Она только делает Ping и читает information_schema.
+
+Если NINEYIN_MYSQL_DSN уже задан:
+
+    build\9yin-db-check.exe
+
+Или явно:
+
+    build\9yin-db-check.exe -dsn "nineyin:пароль@tcp(127.0.0.1:3306)/nineyin"
+
+Успешный результат:
+
+    OK: MySQL connection and core schema are compatible
+
+## Самый простой способ снять трассу
+
+1. Закрыть уже запущенный игровой сервер на 19061.
+2. Не удалять старый EXE.
+3. Из папки server-rebuild выполнить:
+
+    start-capture-session.bat D:\9yin\9yin-go-server1
+
+Скрипт сам:
+
+- проверит, что 19061/19063/19064 не конфликтуют;
+- найдёт старый build\9yin-game-native-menu.exe;
+- прочитает NINEYIN_MYSQL_DSN из старого mysql.env, если он есть;
+- запустит старый сервер на 19063;
+- запустит его временный GM endpoint на 19064;
+- запустит прозрачный proxy на 19061;
+- начнёт запись capture.
+
+Он намеренно не завершает чужие процессы автоматически.
+
+После запуска зайти клиентом в аккаунт, выбрать персонажа и дождаться полного входа в мир.
+
+После этого закрыть proxy через Ctrl+C.
+
+## Анализ захвата
+
+Для созданной папки session:
+
+    analyze-capture.bat captures\local\<session>
+
+Результат:
+
+    captures\local\<session>\analysis.txt
+
+В нём будут первичный hex-анализ и лучшие гипотезы frame length/header отдельно для c2s и s2c.
+
+## Упаковка захвата
+
+После анализа:
+
+    pack-capture.bat captures\local\<session>
+
+Будет создан файл:
+
+    <session>-protocol-capture.zip
+
+Внутри только данные, нужные для восстановления протокола:
+
+    c2s.bin
+    s2c.bin
+    chunks.jsonl
+    meta.json
+    analysis.txt
+
+Именно этот ZIP нужен для следующего этапа decoder/encoder.
