@@ -39,6 +39,9 @@ jobs:
         run: go build -trimpath -o build/9yin-frame-scan.exe ./cmd/frame-scan
 
 
+      - name: Build DB checker
+        run: go build -trimpath -o build/9yin-db-check.exe ./cmd/db-check
+
       - name: Upload complete rebuild package
         uses: actions/upload-artifact@v4
         with:
